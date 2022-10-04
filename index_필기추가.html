@@ -1,0 +1,171 @@
+<!DOCTYPE html> <!-- HTML5 표준을 사용하도록 문서를 설정 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- 문자 인코딩을 설정함. 국제 표준은 거의 모든 언어에 대응하는 UTF-8이지만 혹시 일본에서 웹 개발을 하게 된다면 만악의 근원인 Shift-JIS를 사용하게 될 수도 있다. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- IE와 같은 구형 브라우저에서 접속했을 때의 지시 사항 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹 디자인과 관련된 meta 태그 -->
+    <title>Portfolio</title> <!-- 맨 위의 탭에 표시되는 사이트 제목 -->
+    <style>
+        /* CSS: Cascading Style Sheet의 약자로, 본래는 말 그대로 각각의 웹 요소의 스타일을 지정해 주는 표 역할을 하였으나, 웹사이트가 점점 복잡해지고 요소의 단계가 많아지면서 지금의 부모-자손 상속 형태가 되었다. */
+        /* 태그 초기화 CSS */
+        * {margin:0; padding:0; font-family:sans-serif;}
+        ul, ol, li {list-style:none;}
+        a {text-decoration:none; color:#333;}/* 웹에서는 눈에 피로를 줄 수 있기에 원색은 되도록 사용하지 않음 */
+
+        /* .hedr css */
+        .hedr {
+            border-bottom:1px solid #ccc;
+            padding:25px 0;
+        } /* 헤더 요소의 일반적인 경계선과 내부 여백을 설정 */
+        .hedr:after {content:""; display:block; clear:both;}
+        /* 실행한 후에는 공백 요소를 블럭으로 바꾸고 float시켜 놓은 요소를 해제하기 */
+        /* 달리 말하자면, float되어 있는 부모 태그에게 해제 css를 부여한다 */
+        .hedr .hedr-box {width:1000px; margin:0 auto;} /* 헤더 요소의 폭 결정, 좌우 여백을 자동으로 설정함으로써 브라우저의 가로 크기에 요소가 반응하도록 설정 */
+        .hedr .logo {float:left; margin:-12px 200px 0 0;} /* 헤더 > 로고 클래스의 위치 결정, 왼쪽으로 플로트함과 동시에 상부 여백을 음수(-)로 줌으로써 요소 위치보다 위로 가도록 설정 */
+        .hedr nav ul li {float:left;} /* div가 아니라 nav인 이유는 기능적으론 같으나 웹 접근성을 위해 다르게 이름을 설정한 것. 로고와 함께 왼쪽으로 정렬해야 하기 때문에 플로트. */
+        .hedr nav ul li a {padding:12px 16px;} /* 안에 있는 a(하이퍼텍스트) 태그의 내부 여백을 설정 */
+        .hedr nav ul li a:hover { /* a 태그 위에 커서를 위에 올렸을(hover) 때의 a 태그 영역의 행동을 설정 */
+            background-color: #333; /* a 태그 영역의 배경이 짙은 회색으로 됨 */
+            color:#ccc; /* a 태그 영역의 텍스트가 옅은 회색이 됨 */
+        }
+        /* 웹문서가 이쁘게 보이려면? 여백 지정만 잘 하면 안정감이 있으면서 신비성과 주목도도 살아남 */
+
+        /* .mainvisual css */
+        .mainvisual { /* 로고 바로 밑에 있는 메인비주얼 요소 */
+            height:600px; /* 메인비주얼을 전체 가로 길이에 걸쳐서 넣기로 디자인적인 의도를 했기 때문에 높이만 설정 */
+            /* 사진 URL을 넣고 이 주석은 지울 것 */background:url() no-repeat top center; /* 사진 위에 텍스트를 놓아야 하기 때문에 내용으로써 이미지를 삽입하는 것이 아닌 영역의 배경으로써 이미지를 삽입 */
+            /* background 태그는 여러 요소로 나뉘어 있는데, 맨 처음 오는 변수는 background-image로써 background 요소가 되는 이미지의 파일시스템적 위치를, 이후에 오는 건 순서대로 background-repeat(배경 이미지의 폭이 브라우저의 폭보다 작을 경우 반복 여부) 그리고 background-position을 타타낸다. 다른 요소들도 많지만 그 순서나 세부 사항은 아직 모르는 내용이다. */
+            background-size:cover; /* 요소의, 그러니까 이 클래스에선 .mainvisual의 크기에 맞도록 배경 이미지의 표시된 크기를 조정하는 것. 반드시 요소를 꽉 채우도록 조정되며, 만일 요소를 꽉 채우고 이미지의 폭이 남는다면 폭을, 너비가 남는다면 너비를 자르게 된다. */
+            margin-bottom:30px; /* 다음 요소와 거리를 벌리기 위해 여백을 설정 */
+        }
+        .mainvisual h1, .mainvisual p {
+            width:1000px; /* .mainvisual의 가로 크기는 브라우저 폭에 맞추게 설정되었고 디자인의 의도 상 배경 위 텍스트가 .hedr와 맞춰지도록 설계했으므로 텍스트 영역 역시 .hedr와 폭이 같도록 설정한다. */
+            margin:0 auto; /* 역시 좌우 여백이 브라우저의 가로 크기에 반응하도록 설정 */
+            color:#fff; /* 글자 색깔 */
+            text-shadow:1px 1px 1px #555; /* 순서대로 글자(text) 그림자(shadow)의 X축, Y축, 글자와의 거리(distance), 글자색 */
+            line-height:120%; /* 줄 간격, 또는 직역하면 한 줄(line)의 높이(height)를 그 줄에 있는 텍스트 크기의 퍼센테이지로 나타낸 것 */
+        }
+        .mainvisual h1 {
+            padding:80px 0 0 0; /* 숫자 네 개로 여백을 설정할 경우 시계 방향으로 상-우-하-좌 여백을 설정하게 된다. 이 경우 .hedr와 거리를 두기 위해 상부 여백만 설정 */
+            font-size:96px; /* 사이트 중앙에 크게 강조될 내용이 될 것으로 디자인을 의도했으므로 큼지막하게 설정 */
+        }
+        .mainvisual p {font-size:24px;} /* 사이트 중앙의 큰 내용 밑의 부제목 같은 느낌이 되도록 디자인을 의도했으므로 적절하게 작게 설정 */
+
+        /* .portfolio css */
+        .portfolio { /* 이미지 썸네일이 가로로 배열되도록 디자인한 영역 */
+            width:1000px; /* .hedr와 .mainvisual과 똑같이 가운데 정렬이 되면서 같은 선상에 놓여야 하기 때문에 같은 폭으로 설정 */
+            margin:0 auto; /* 역시 좌우 여백이 브라우저의 가로 크기에 반응하도록 */
+            padding:60px 0; /* 두 개로 설정된 여백은 상하-좌우 순서. 아래위 요소와 거리를 두도록 상하 여백을 두었다. */
+            border-bottom:1px solid #ccc; /* 또한 .mainvisual과 달리 아래쪽 요소와 배경적인 경계선이 없기 때문에 따로 경계선을 두도록 디자인 */
+
+        }
+        .portfolio:after {content:""; display:block; clear:both;} /* 플로트된 요소들이 다음 요소와 간섭하지 않도록 표시 설정을 초기화 */
+        .portfolio h2 { /* .portfolio의 제목이 되는 텍스트 스타일 */
+            font-size:32px; /* h1이 주제목이 되고 h2가 부제목이 될 것이므로 적절하게 설정 */
+            padding:0 0 30px 0; /* 아래쪽의 이미지 썸네일과 거리를 두도록 내부 여백을 설정 */
+        }
+        .portfolio .image li { /* 이미지 썸네일이 들어갈 영역에 대한 공통 스타일 */
+            float:left; /* 왼쪽 플로트 정렬 */
+            width:227.5px; /* 1000px의 폭을 채우면서 아래쪽의 여백까지 채우는 폭 */
+            height:227.5px;/* 요소의 '배경'으로 그림이 들어가기 때문에 요소의 높이 값을 지정해 줘야 그림이 요소 상자 안에 보인다 */
+            margin:0 30px 0 0; /* 이미지끼리 30px씩 띄워 주기로 한다 */
+            background-repeat:no-repeat; /* background 태그 다음에 나오는 설정을 구체적으로 쪼개서 코딩함. 코드 작성자 개인의 기호이므로, 굳이 이렇게 하지 않아도 됨 */
+            background-position:center center; /* 배경 이미지의 가운데 위치가 요소의 가운데 위치와 일치하도록 설정 */
+            background-size:cover; /* 요소의 크기에 맞게 배경 이미지의 표시 크기를 조정 */
+        }
+        /* 사진 URL을 넣고 이 주석은 지울 것 */.portfolio .image .image1 {background-image:url();} /* 첫 번째 포트폴리오 이미지 */
+        /* 사진 URL을 넣고 이 주석은 지울 것 */.portfolio .image .image2 {background-image:url();} /* 두 번째 포트폴리오 이미지 */
+        /* 사진 URL을 넣고 이 주석은 지울 것 */.portfolio .image .image3 {background-image:url();} /* 세 번째 포트폴리오 이미지 */
+        /* 사진 URL을 넣고 이 주석은 지울 것 */.portfolio .image .image4 {background-image:url(); margin-right:0;} /* 네 번째 포트폴리오 이미지, 맨 오른쪽에 있기 때문에 여백을 0으로 오버라이드 */
+
+        /* .resume css */
+        .resume { /* 왼편의 공간엔 이미지가, 오른편의 공간엔 텍스트가 들어가도록 디자인한 영역 */
+            width:1000px; /* .hedr ~ .portfolio와 일관된 너비 설정 */
+            margin:0 auto; /* 일관된 가운데 정렬 */
+            border-bottom:1px solid #ccc; /* 일관된 경계선 */
+        }
+        .resume h2 { /* .portfolio와 동일한 설정, 부모 클래스 없이 전체 h2 태그를 정의할 수도 있으나 이후의 작은 디자인 변경에 대응하기 위해 구체적으로 부모 클래스를 설정 */
+            padding:30px 0 0 0; /* 설령 .portfolio와 같게 되더라도 이렇게 코딩하는 편이 이후의 유지보수에 편하게 대응할 수 있다 */
+            font-size:32px;
+        }
+        .resume .resume_box { /* 이미지-텍스트가 들어간 영역이 두 번 반복될 것이기 때문에, 설정의 편함을 위해 영역 전체를 구체적인 클래스로 정의 */
+            padding:30px 0; /* 영역끼리의 상하 여백이 나오도록 디자인 */
+        }
+        .resume .resume_box:after {content:""; display:block; clear:both;} /* 또한 .resume_box 클래스 안에서 요소들이 float될 것이기 때문에 다음 .resume_box 개체의 내용이 곧바로 float되어서 달라붙지 않게 하기 위해 표시 설정을 초기화 */
+        .resume .resume_box .resume_img { /* .resume_box 안에서의 이미지의 크기 설정. */
+            float:left; /* 왼쪽 정렬 */
+            width:30%; /* 중요한 부분. 폭을 구체적인 숫자가 아닌 %로 설정하게 되면 부모 클래스인 .resume_box에서 상속받은 width 속성에 대해서 일정한 비율로 .resume_jpg의 width 속성을 정의한다는 말이 된다. 반드시 구체적인 숫자로써 부모 클래스에 width가 정의되어 있어야 함에 주목. */
+        }
+        .resume .resume_box .resume_img img {
+            width:100%; /* 중요한 부분. 방금의 .resume_img 요소의 경우 width 속성을 .resume_box에서 상속받게 되나, img 태그의 부모 클래스는 .resume_box가 아닌 .resume_img이기 때문에, .resume_img에 대해서 상대적인 img 요소의 폭(width)이 어느 정도 비율이 되어야 하는가에 대해서 정의하여야 한다. img의 100%는 .resume_img에서 정의된 .resume_box의 width의 30%를 기준 width로 받는다. */
+        }
+        .resume .resume_box .resume_text { /* .resume_img의 왼쪽(left)에 float해서 붙어 있는 텍스트 요소 영역 */
+            float:left;
+            width:70%; /* .resume_text와 .resume_img가 부모 클래스인 .resume_box를 꽉 채우도록(즉 100%가 되도록) 상대 너비를 설정한다 */
+        }
+        .resume .resume_box .resume_text * { /* 왼쪽에 붙은 .resume_text의 텍스트 요소가 .resume_img의 이미지 요소와 떨어져서 보이도록 디자인 */
+            padding:0 0 0 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--헤더-->
+    <header class="hedr">
+        <div class="hedr-box">
+            <h1 class="logo">My Portfolio</h1> <!-- 디자인 의도는 HTML로 먼저 생각해야 한다. -->
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="">About</a></li>
+                    <!--a 태그의 기본 css: 파란색, 밑줄, 손가락 모양으로 커서 변경-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--div는 의미 없는 블록 영역, section은 의미 있는 블록 영역. 독립적인 영역에서는 h1 태그를 독립적으로 쓸 수 있다.-->
+
+    <!-- 메인 비주얼 -->
+    <section class="mainvisual">
+        <h1>Insert<br>Your Text</h1>
+        <p>And then insert your small text here<br>
+        Maybe one more line of text also</p>
+    </section>
+
+    <!-- 포트폴리오 썸네일 -->
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div>
+            <ul class="image">
+                <li class="image1"></li>
+                <li class="image2"></li>
+                <li class="image3"></li>
+                <li class="image4"></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 이력서 -->
+    <section class="resume">
+        <h2>Resume</h2>
+        <div class="resume_box">
+            <!-- 사진 URL을 넣고 이 주석은 지울 것 --><div class="resume_img"><img src="" alt="첫 번째 이력서 이미지"></div>
+            <div class="resume_text">
+                <h3>Insert your big career here</h3>
+                <p>Your first career here</p>
+                <p>Maybe two</p>
+            </div>
+        </div>
+        <div class="resume_box">
+            <!-- 사진 URL을 넣고 이 주석은 지울 것 --><div class="resume_img"><img src="" alt="두 번째 이력서 이미지"></div>
+            <div class="resume_text">
+                <h3>Insert your other information here</h3>
+                <p>Any information will do</p>
+                <p>We won't use this webpage for real resume after all, right?</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
