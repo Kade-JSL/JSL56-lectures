@@ -1,0 +1,42 @@
+@charset "utf-8";
+.subtitle {
+    padding: 40px 0; /* margin, padding은 숫자 두 개로 정의할 땐 상하 여백-좌우 여백 */
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+}
+.subtitle h2 {
+    font-size: 42px;
+    color: #333;
+    text-align: center;
+}
+.subcontent {
+    width: 1000px;
+    margin: 0 auto;
+}
+.subcontent .sub-wrap {
+    clear: both;
+    padding: 30px 0 0 0;
+}
+.subcontent .sub-wrap .subimg {
+    float: left;
+    width: 20%;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 2% 30px 0;
+}
+.subcontent .sub-wrap .subimg img {
+    width: 100%;
+}
+.subcontent .sub-wrap .subtext {
+    float: left;
+    width: 78%;
+}
+.subcontent .sub-wrap .subtext h3 {
+    font-size: 28px;
+    padding: 0 0 16px 0;
+}
+.subcontent .sub-wrap .subtext p {
+    line-height: 140%;
+    text-align: justify;
+    text-align-last: left;
+}
