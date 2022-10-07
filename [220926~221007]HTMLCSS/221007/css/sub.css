@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* sub common */
+.subtitle {
+    margin: 0 0 30px 0;
+    padding: 40px 0; /* margin, padding은 숫자 두 개로 정의할 땐 상하 여백-좌우 여백 */
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+}
+.subtitle h2 {
+    font-size: 42px;
+    color: #333;
+    text-align: center;
+}
+.subcontent {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* portfolio.html */
+.subcontent .sub-wrap {
+    margin: 0 0 30px 0;
+}
+.subcontent .sub-wrap::after {content: ""; display: block; clear: both;}
+.subcontent .sub-wrap .subimg {
+    float: left;
+    width: 20%;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 2% 30px 0;
+}
+.subcontent .sub-wrap .subimg img {
+    width: 100%;
+}
+.subcontent .sub-wrap .subtext {
+    float: left;
+    width: 78%;
+}
+.subcontent .sub-wrap .subtext h3 {
+    font-size: 28px;
+    padding: 0 0 16px 0;
+}
+.subcontent .sub-wrap .subtext p {
+    line-height: 140%;
+    margin: 0 0 10px 0;
+    text-align: justify;
+    text-align-last: left;
+}
+.subcontent .sub-wrap .sub-btn-view {
+    width: 213px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    border: 0 none;
+    background-color: #34495e;
+}
+
+/* bbs.html */
+/* .sub-notice-board */
+.subcontent .sub-notice-board::after {content: ""; display: block; clear: both;}
+.subcontent .sub-notice-board table {
+    width: 100%;
+}
+.subcontent .sub-notice-board table th {
+    border-top: 1px solid #999;
+    border-bottom: 2px solid #333;
+    padding: 16px 0;
+}
+.subcontent .sub-notice-board table td {
+    text-align: center;
+    border-bottom: 1px solid #999;
+    padding: 12px 0;
+}
+.subcontent .sub-notice-board table td.table-title {
+    /* 태그와 클래스 이름을 같이 사용할 때는 붙여서 쓸 것 */
+    text-align: left;
+    padding-left: 12px;
+}
+.subcontent .sub-notice-board table td.table-small {
+    width:10%;
+}
+.subcontent .sub-notice-board table td.table-middle {
+    width:15%;
+}
+/* .sub-notice-pages */
+.subcontent .sub-notice-pages {
+    padding: 30px 0;
+    text-align: center;
+}
+.subcontent .sub-notice-pages a.active {
+    padding: 12px;
+    color: #fff;
+    background: #34495e;
+}
+.subcontent .sub-notice-pages a {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+.subcontent .sub-notice-pages .btn-write a {
+    float: right;
+    color: #fff;
+    background-color: #34495e;
+}
+
+/* view.html */
+.subcontent .view-header {
+    text-align: center;
+    font-size: 42px;
+    padding: 0 0 30px 0;
+    border-bottom: 2px solid #ccc;
+}
+.subcontent .view-title {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.subcontent .view-title p {
+    text-align: center;
+}
+.subcontent .view-content {
+    clear: both;
+    padding: 20px 0;
+    border-bottom: 2px solid #ccc;
+}
+.subcontent .view-content p {
+    text-align: justify;
+    text-align-last: left;
+}
+.subcontent .view-links {
+    text-align: center;
+    margin: 36px auto 42px auto;
+}
+.subcontent .view-links a {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+}
+
+/* member.html */
+.subcontent .signup-title {
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+.subcontent .sub-signup .signup-table {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 2px solid #333;
+}
+.subcontent .sub-signup .signup-table th {
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+}
+.subcontent .sub-signup .signup-table td {
+    padding: 12px 0 12px 16px;
+    border-bottom: 1px solid #ccc;
+}
+.subcontent .sub-signup .signup-table input, .subcontent .sub-signup .signup-table select {
+    border: 1px solid #ccc;
+    padding: 6px;
+}
+.subcontent .sub-signup textarea {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 200px;
+    padding: 6px;
+}
+.subcontent .sub-signup .yy, .subcontent .sub-signup .dd {
+    width: 40px;
+}
+.subcontent .signup-foot {
+    padding: 16px 0;
+    text-align: center;
+}
