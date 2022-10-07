@@ -7,10 +7,11 @@
 
 ## Changelog
 
-**22-10-06** 
+**22-10-07** 
 - `<form>` 태그 내용 추가
   - `<input>`, `<textarea>`, `<select>` 및 `<option>` 태그 내용 추가
 - `221006.md`에 수업 필기 내용도 추가
+- HTML 강의가 종료됨에 따라 관련 강의 내용을 `[220926~221007]HTMLCSS` 폴더에 정리
 ___
 **22-10-06** 
 - `bbs.html`, `login.html`, `member.html` 추가
