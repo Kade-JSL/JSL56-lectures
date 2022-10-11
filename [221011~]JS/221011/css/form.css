@@ -1,0 +1,6 @@
+/* margin 태그에 숫자를 3개 쓸 경우에는 상-좌우-하 순서대로 정해진다 */
+@charset "utf-8";
+/* write.html */
+.subcontent .sub-write {
+    width: 100%;
+}
