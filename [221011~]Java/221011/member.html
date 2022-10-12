@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/sub.css">
+</head>
+<body>
+    <header class="hedr">
+        <div class="hedr-box">
+            <h1 class="logo">Kade</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="bbs.html">Community</a></li>
+                </ul>
+                <ul>
+                    <li><a href="member.html">Sign Up</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- subcontent start -->
+    <section class="subtitle">
+        <h2>JOIN US</h2>
+    </section>
+    <section class="subcontent">
+        <h2 class="signup-title">会員登録</h2>
+        <div class="sub-signup">
+            <form name="signup" method="post" action="">
+                <table class="signup-table">
+                    <tr>
+                        <th>ログインID</th>
+                        <td><input type="text" name="id"></td>
+                    </tr>
+                    <tr>
+                        <th>パスワード</th>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <th>趣味</th>
+                        <td>
+                            <input type="checkbox" name="hobby" value="exercise"/>運動
+                            <input type="checkbox" name="hobby" value="pcbuild"/>自作PC
+                            <input type="checkbox" name="hobby" value="music"/>音楽鑑賞
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>性別</th>
+                        <td>
+                            <input type="radio" name="gender" id="male">男
+                            <input type="radio" name="gender" id="female">女
+                            <input type="radio" name="gender" value="nonbinary" checked>ノンバイナリー
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>自己紹介</th>
+                        <td><textarea name="intro"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>誕生日</th>
+                        <td>
+                            <input type="text" name="yy" class="yy">年
+                            <select name="mm">
+                                <option value="jan">1</option>
+                                <option value="feb">2</option>
+                                <option value="mar">3</option>
+                                <option value="apr">4</option>
+                                <option value="may">5</option>
+                                <option value="jun">6</option>
+                                <option value="jul">7</option>
+                                <option value="aug">8</option>
+                                <option value="sep">9</option>
+                                <option value="oct">10</option>
+                                <option value="nov">11</option>
+                                <option value="dec">12</option>
+                            </select>月
+                            <input type="text" name="dd" class="dd">日
+                        </td>
+                    </tr>
+                </table>
+                <div class="signup-foot">
+                    <input type="submit" value="会員登録">
+                    <input type="reset" value="初期化">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- subcontent end -->
+    <footer>
+        <div class="ftr">
+            <div class="logo">
+                <p>765 Production Live Theater</p>
+            </div>
+            <div class="fbody">
+                <p>Fictional address in fictional city</p>
+                <p>CEO Junjiro Takagi | TEL idk</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
