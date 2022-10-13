@@ -1,0 +1,111 @@
+C:\Users\cucup>sqlplus system/1234
+
+SQL*Plus: Release 11.2.0.2.0 Production on 목 10월 13 17:29:08 2022
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> create user kade05 identified by 1234;
+
+User created.
+
+SQL> grant connect, resource, dba to kade05;
+
+Grant succeeded.
+
+SQL> create table test (
+  2  bno number(4) not null,
+  3  name varchar2(10) not null,
+  4  kor number(3) not null,
+  5  eng number(3) not null,
+  6  mat number(3) not null,
+  7  tot number(3),
+  8  avg number(6,2)
+  9  );
+
+Table created.
+
+SQL> insert into test (bno,name,kor,eng,mat) values (0001,'aaron',65,57,25);
+
+1 row created.
+
+SQL> insert into test (bno,name,kor,eng,mat) values (0002,'betty',64,96,89);  
+
+1 row created.
+
+SQL> insert into test (bno,name,kor,eng,mat) values (0003,'chris',48,84,83); 
+
+1 row created.
+
+SQL> insert into test (bno,name,kor,eng,mat) values (0004,'derek',97,84,65); 
+
+1 row created.
+
+SQL> insert into test (bno,name,kor,eng,mat) values (0005,'erwin',89,98,46);   
+
+1 row created.
+
+SQL> insert into test (bno,name,kor,eng,mat) values (0006,'foley',64,63,76); 
+
+1 row created.
+
+SQL> select * from test;
+
+       BNO NAME                        KOR        ENG        MAT        TOT
+---------- -------------------- ---------- ---------- ---------- ----------
+       AVG
+----------
+         1 aaron                        65         57         25
+
+
+         2 betty                        64         96         89
+
+
+         3 chris                        48         84         83
+
+
+
+       BNO NAME                        KOR        ENG        MAT        TOT
+---------- -------------------- ---------- ---------- ---------- ----------
+       AVG
+----------
+         4 derek                        97         84         65
+
+
+         5 erwin                        89         98         46
+
+
+         6 foley                        64         63         76
+
+
+
+6 rows selected.
+
+SQL> select bno,name from test; 
+
+       BNO NAME
+---------- --------------------
+         1 aaron
+         2 betty
+         3 chris
+         4 derek
+         5 erwin
+         6 foley
+
+6 rows selected.
+
+SQL> select bno,name,tot,avg from test; 
+
+       BNO NAME                        TOT        AVG
+---------- -------------------- ---------- ----------
+         1 aaron
+         2 betty
+         3 chris
+         4 derek
+         5 erwin
+         6 foley
+
+6 rows selected.
