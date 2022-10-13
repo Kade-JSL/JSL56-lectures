@@ -5,6 +5,7 @@
 ### 22-10-13
 
 - [Oracle DB 11g Express Edition (Release 2) 다운로드 링크](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
+    - 집에서 해 보실 분을 위해서 여기에 적어 둡니다.
 
 ---
 
