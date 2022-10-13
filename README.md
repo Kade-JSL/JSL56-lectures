@@ -2,6 +2,12 @@
 
 # Changelog
 
+### 22-10-13
+
+- [Oracle DB 11g Express Edition (Release 2) 다운로드 링크](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
+
+---
+
 ### 22-10-12
 
 - Java를 시작했습니다. 이에 따라서 리포지토리 구조를 이것저것 바꿨습니다.
