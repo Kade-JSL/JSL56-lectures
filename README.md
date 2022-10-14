@@ -6,7 +6,7 @@
 
 - Oracle DB를 설치하고 `sqlplus`에 들어가서 여러 가지 명령어들을 배웠습니다.
     - [221013.md](/221011-_JAVA_AND_ETC/221013/221013.md)에 필기 내용을 저장해 두었습니다.
-    - 숙제 내용은 [숙제 내역 파일](/221011-_JAVA_AND_ETC/221013/숙제%20내역)에 복사해 두었습니다.
+    - 숙제 내용은 [숙제 내역 파일](/221011-_JAVA_AND_ETC/221013/숙제_내역)에 복사해 두었습니다.
 - [Oracle DB 11g Express Edition (Release 2) 다운로드 링크](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
     - 집에서 해 보실 분을 위해서 여기에 적어 둡니다.
 
