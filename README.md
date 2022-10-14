@@ -1,8 +1,8 @@
 **각 날짜에 해당하는 폴더 안에 그 날짜에 해당하는 소스 코드와 필기, 내부 프로젝트 폴더가 들어가 있습니다.**
 
----
+# [처음 오시는 분들은 여기를 먼저 읽어 주세요(FAQ.md)](/FAQ.md)
 
-# Downloads(현재 수업에서 사용하고 있는 개발 환경)
+## Downloads(현재 수업에서 사용하고 있는 개발 환경)
 
 - [Oracle Database 11gR2 Express Edition](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
 - [Java 1.8.0_202(오라클 계정 생성 및 로그인 필요)](https://download.oracle.com/otn/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-x64.exe)
