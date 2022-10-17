@@ -5,7 +5,7 @@
 ## Downloads(현재 수업에서 사용하고 있는 개발 환경)
 
 - [Oracle Database 11gR2 Express Edition](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
-- [Java 1.8.0_202(오라클 계정 생성 및 로그인 필요)](https://download.oracle.com/otn/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-x64.exe)
+- [Java Development Kit 1.8.0_202(오라클 계정 생성 및 로그인 필요)](https://download.oracle.com/otn/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-x64.exe)
 - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
 
 ---
@@ -15,6 +15,8 @@
 ### 22-10-14
 
 - 오늘의 DB 강의 필기 내용 및 팁은 [221014.md](/221011-_JAVA_AND_ETC/221014/221014.md)에 저장해 두었습니다.
+- `ALTER TABLE`문, `SELECT`문, `WHERE`문을 배웠습니다.
+- 배운 내용을 이용해 예제 테이블을 만들어 보았습니다.
 
 ---
 
