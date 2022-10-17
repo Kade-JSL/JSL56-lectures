@@ -6,7 +6,7 @@
 
 ## Downloads(현재 수업에서 사용하고 있는 개발 환경)
 
-- [Oracle Database 11gR2 Express Edition](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
+- [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
 - [Java Development Kit 1.8.0_202(오라클 계정 생성 및 로그인 필요)](https://download.oracle.com/otn/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-x64.exe)
 - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
 
