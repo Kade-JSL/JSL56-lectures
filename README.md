@@ -2,6 +2,8 @@
 
 # [처음 오시는 분들은 여기를 먼저 읽어 주세요(FAQ.md)](/FAQ.md)
 
+---
+
 ## Downloads(현재 수업에서 사용하고 있는 개발 환경)
 
 - [Oracle Database 11gR2 Express Edition](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
