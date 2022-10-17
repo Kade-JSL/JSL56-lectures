@@ -4,15 +4,18 @@
 
 ---
 
-## Downloads(현재 수업에서 사용하고 있는 개발 환경)
-
-- [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
-- [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
-- [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
-
----
-
 # Changelog
+
+### 22-10-17
+
+- 필기 파일은 언제나처럼 [221017.md](/221011-_JAVA_AND_ETC/221017/221017.md)에 있습니다.
+    - 코드에 필기할 내용은 코드에 있습니다.
+- 예제 코드:
+    - [Java01.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java01.java)
+    - [Java02.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java02.java)
+    - [Java03.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java03.java)
+    - 프로젝트 파일 구조에 맞게 저장(링크를 클릭하세요)되어 있습니다
+    - 다만 필기 파일에도 언급되어 있듯이 이대로 Java 프로젝트가 되는 것은 아니므로, 소스 코드만 봐 주세요.
 
 ### 22-10-14
 
@@ -59,3 +62,11 @@
 
 - 기존의 이 페이지, 즉 [README.md]에 있던 내용을 [220926-221007_HTMLCSS/README_HTMLCSS](/220926-221007_HTMLCSS/README_HTMLCSS.md)로 옮겼습니다. 
 - 이제 백엔드 개발을 할 준비가 되었습니다.
+
+---
+
+## Downloads(현재 수업에서 사용하고 있는 개발 환경)
+
+- [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
+- [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
+- [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
