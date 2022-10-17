@@ -7,13 +7,16 @@
 ### 22-10-17
 
 - 필기 파일은 언제나처럼 [221017.md](/221011-_JAVA_AND_ETC/221017/221017.md)에 있습니다.
-    - 코드에 필기할 내용은 코드에 있습니다.
+    - 코딩 중에 필기한 내용은 코드에 있습니다.
 - 예제 코드:
     - [Java01.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java01.java)
     - [Java02.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java02.java)
     - [Java03.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java03.java)
-    - 프로젝트 파일 구조에 맞게 저장(링크를 클릭하세요)되어 있습니다
+    - 프로젝트 파일 구조에 맞게 저장(링크를 클릭하세요)되어 있습니다.
     - 다만 필기 파일에도 언급되어 있듯이 이대로 Java 프로젝트가 되는 것은 아니므로, 소스 코드만 봐 주세요.
+- Eclipse IDE 구축과 함께 기본적인 자바 코드를 만드는 법을 배웠습니다.
+- `System.out.print()` 메소드와 유사 메소드인 `System.out.println()`를 배웠습니다.
+- 제어문자 `\t`와 `\n`을 배웠습니다.
 
 ---
 
@@ -30,7 +33,7 @@
 - Oracle DB를 설치하고 `sqlplus`에 들어가서 여러 가지 명령어들을 배웠습니다.
     - [221013.md](/221011-_JAVA_AND_ETC/221013/221013.md)에 필기 내용을 저장해 두었습니다.
     - 숙제 내용은 [숙제 내역 파일](/221011-_JAVA_AND_ETC/221013/숙제_내역)에 복사해 두었습니다.
-- [Oracle DB 11g Express Edition (Release 2) 다운로드 링크](https://download.oracle.com/otn/nt/oracle11g/xe/OracleXE112_Win64.zip)
+- [Oracle DB 11g Express Edition (Release 2) 다운로드 페이지](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
     - 집에서 해 보실 분을 위해서 여기에 적어 둡니다.
 
 ---
