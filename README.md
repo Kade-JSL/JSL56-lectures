@@ -4,6 +4,14 @@
 
 # Changelog
 
+### 22-10-18
+
+- 필기 파일: [221018.md](/221011-_JAVA_AND_ETC/221018/221018.md)
+- 예제 코드: [Java04.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java04.java)
+- 변수 선언과 그 변수를 `print`문에 넣어 출력하는 법을 배웠습니다.
+
+---
+
 ### 22-10-17
 
 - 필기 파일은 언제나처럼 [221017.md](/221011-_JAVA_AND_ETC/221017/221017.md)에 있습니다.
