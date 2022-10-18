@@ -7,16 +7,16 @@ public class Java06 {
     // 요기는 수업 과정에 맞게 코딩한 부분입니다.
 
     public static void main(String[] args) {
-		// 1. 변수 선언
-		int bno, kor, eng, mat, tot;
-		double avg;
-		String name;
-		
-		// 2. 객체 생성
-		Scanner sc = new Scanner(System.in);
-		
-		// 3. 데이터 입력
-		System.out.print("번호?: ");
+        // 1. 변수 선언
+        int bno, kor, eng, mat, tot;
+        double avg;
+        String name;
+        
+        // 2. 객체 생성
+        Scanner sc = new Scanner(System.in);
+        
+        // 3. 데이터 입력
+        System.out.print("번호?: ");
         bno = sc.nextInt();
         System.out.print("이름?: ");
         name = sc.next();
