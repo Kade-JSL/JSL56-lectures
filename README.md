@@ -6,7 +6,6 @@
 
 ### 22-10-18
 
-- 필기 파일: [221018.md](/221011-_JAVA_AND_ETC/221018/221018.md)
 - 예제 코드:
     - [Java04.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java04.java)
         - `main()` 메소드의 구성(선언-처리-출력)을 배웠습니다.
@@ -16,6 +15,9 @@
         - 콘솔 화면에서 값을 입력받아 변수에 저장하는 방법을 배웠습니다.
     - [Java06.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java06.java)
         - 이 때까지 배운 내용을 연습문제로써 코딩해 보았습니다.
+    - [Java07.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java07.java)
+        - 역시나 연습문제.
+- 필기 파일: [221018.md](/221011-_JAVA_AND_ETC/221018/221018.md)
 
 ---
 
