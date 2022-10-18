@@ -10,7 +10,7 @@ public class Java07 {
         int bno; String name; int base, bonus, pay;
         // 선언: 객체 생성
         Scanner sc = new Scanner(System.in);
-        // 처리: 키보드 입력
+        // 입력: 콘솔 창에서 키보드 입력
         System.out.print("사원번호: ");
         bno = sc.nextInt();
         System.out.print("이름: ");
@@ -22,10 +22,8 @@ public class Java07 {
         // 처리: 내부 변수 계산
         pay = base + bonus;
         // 출력: 조건에 맞게 출력
-        System.out.println("\t\t급여명세서");
-        System.out.println("-------------------------------------------");
-        System.out.println("번호\t이름\t기본급\t상여금\t금액");
-        System.out.println("-------------------------------------------");
+        System.out.println("급여관리");
+        System.out.println("번호\t이름\t기본급\t상여금\t총지급액");
         System.out.println(bno + "\t" + name + "\t" + base + "\t" + bonus + "\t" + pay);
     }
 

@@ -8,7 +8,8 @@
 
 - 예제 코드:
     - [Java04.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java04.java)
-        - `main()` 메소드의 구성(선언-처리-출력)을 배웠습니다.
+        - `main()` 메소드의 의미를 배웠습니다.
+        - 코딩을 할 때에 하면 좋을 생각 순서(선언-처리-출력)에 대해서 배웠습니다.
         - 제어 문자와 `+` 연산자를 조합한 출력에 대해서 배웠습니다.
     - [Java05.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java05.java)
         - `java.util` 패키지의 `Scanner` 클래스 객체를 만드는 방법을 배웠습니다.
