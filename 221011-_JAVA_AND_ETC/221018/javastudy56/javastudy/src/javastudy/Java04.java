@@ -68,6 +68,6 @@ public class Java04 { // 설계도
         탭을 삽입한 형태가 되는 것입니다. */
         System.out.println(bno22 + "\t" + name22 + "\t" + kor22 + "\t" + eng22 + "\t" + mat22 + "\t" + tot22 + "\t" + avg22 + "\t" + score22); // 총점이랑 평균은 자동으로 계산이 되어 나옴을 알 수 있다.
         System.out.println(bno33 + "\t" + name33 + "\t" + kor33 + "\t" + eng33 + "\t" + mat33 + "\t" + tot33 + "\t" + avg33 + "\t" + score33);
-    } // 열린 중괄호는 반드시 닫혀야 한다. 그렇지 않으면 문법 오류(Systax Error)가 난다.
+    } // 열린 중괄호는 반드시 닫혀야 한다. 그렇지 않으면 문법 오류(Syntax Error)가 난다.
 
 }
