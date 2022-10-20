@@ -20,10 +20,8 @@
 ## 22-10-19
 
 - 예제 코드
-    - [Java09.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java09.java)
-        - 각종 산술 연산자 연습 문제
-    - [Java10.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java10.java)
-        - 각종 관계 연산자, 논리 연산자 연습 문제
+    - [Java09.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java09.java): 각종 산술 연산자 연습 문제
+    - [Java10.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java10.java): 각종 관계 연산자, 논리 연산자 연습 문제
 - 수업 필기: [221019.md](/221011-_JAVA_AND_ETC/221019/221019.md)
 
 ---
@@ -38,10 +36,8 @@
     - [Java05.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java05.java)
         - `java.util` 패키지의 `Scanner` 클래스 객체를 만드는 방법을 배웠습니다.
         - 콘솔 화면에서 값을 입력받아 변수에 저장하는 방법을 배웠습니다.
-    - [Java06.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java06.java)
-        - 이 때까지 배운 내용을 연습문제로써 코딩해 보았습니다.
-    - [Java07.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java07.java)
-        - 역시나 연습문제.
+    - [Java06.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java06.java): 이 때까지 배운 내용을 연습문제로써 코딩해 보았습니다.
+    - [Java07.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java07.java): 역시나 연습문제.
 - 필기 파일: [221018.md](/221011-_JAVA_AND_ETC/221018/221018.md)
 
 ---
