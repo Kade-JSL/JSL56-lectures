@@ -4,6 +4,19 @@
 
 # Changelog
 
+## 22-10-20
+
+- 오늘은 정말 온 힘과 정성을 들여서 필기를 했습니다. 봐 주셨으면 좋겠어요.
+    - [221020.md](/221011-_JAVA_AND_ETC/221020/221020.md)
+- 예제 코드
+    - [Java11.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java11.java): 변수 덮어쓰기, `++`, `--`
+    - [Java12.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java12.java): 축약된 연산과 대입 `*=`
+    - [Java13.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java13.java): `if`, `else`문
+    - [Java14.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java14.java)
+        - `if`, `else`문 실습
+        - `String msg = "";`: 코드를 간단하게 쓰는 법을 다시금 리마인드
+    - [Java15.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java15.java): `else if`문
+
 ## 22-10-19
 
 - 예제 코드
