@@ -1,5 +1,7 @@
 package javastudy;
 
+import java.util.Scanner;
+
 public class Java16 {
 
     public static void main(String[] args) {
@@ -15,7 +17,35 @@ public class Java16 {
         // 학번: 1111 \n 이름: 홍길동 \n 점수: 76
         // 출력예:
         // 학점: C학점
+        Scanner sc = new Scanner(System.in);
+        System.out.print("학번: ");
+        int bno = sc.nextInt();
+        System.out.print("이름: ");
+        String name = sc.next();
+        System.out.print("점수: ");
+        int score = sc.nextInt();
 
+        String grade = "";
+        if (score >= 90) {
+            grade = "A+";
+        } else if (score >= 85) {
+            grade = "A";
+        } else if (score >= 80) {
+            grade = "B+";
+        } else if (score >= 75) {
+            grade = "B";
+        } else if (score >= 70) {
+            grade = "C+";
+        } else if (score >= 65) {
+            grade = "C";
+        } else {
+            grade = "재시험";
+        }
+
+        System.out.println("\t성적표");
+        System.out.println("-----------------------------");
+        System.out.println("번호\t이름\t점수\t학점");
+        System.out.println(bno + "\t" + name + "\t" + score + "\t" + grade);
     }
 
 }
