@@ -1,10 +1,21 @@
 **각 날짜에 해당하는 폴더 안에 그 날짜에 해당하는 소스 코드와 필기, 내부 프로젝트 폴더가 들어가 있습니다.**
 
-# [처음 오시는 분들은 여기를 먼저 읽어 주세요(FAQ.md)](/FAQ.md)
+## [처음 오시는 분들은 여기를 먼저 읽어 주세요(FAQ.md)](/FAQ.md)
 
 # Changelog
 
-### 22-10-18
+## 22-10-19
+
+- 예제 코드
+    - [Java09.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java09.java)
+        - 각종 산술 연산자 연습 문제
+    - [Java10.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java10.java)
+        - 각종 관계 연산자, 논리 연산자 연습 문제
+- 수업 필기: [221019.md](/221011-_JAVA_AND_ETC/221019/221019.md)
+
+---
+
+## 22-10-18
 
 - 예제 코드:
     - [Java04.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java04.java)
@@ -22,7 +33,7 @@
 
 ---
 
-### 22-10-17
+## 22-10-17
 
 - 필기 파일은 언제나처럼 [221017.md](/221011-_JAVA_AND_ETC/221017/221017.md)에 있습니다.
     - 코딩 중에 필기한 내용은 코드에 있습니다.
@@ -38,7 +49,7 @@
 
 ---
 
-### 22-10-14
+## 22-10-14
 
 - 오늘의 DB 강의 필기 내용 및 팁은 [221014.md](/221011-_JAVA_AND_ETC/221014/221014.md)에 저장해 두었습니다.
 - `ALTER TABLE`문, `SELECT`문, `WHERE`문을 배웠습니다.
@@ -46,7 +57,7 @@
 
 ---
 
-### 22-10-13
+## 22-10-13
 
 - Oracle DB를 설치하고 `sqlplus`에 들어가서 여러 가지 명령어들을 배웠습니다.
     - [221013.md](/221011-_JAVA_AND_ETC/221013/221013.md)에 필기 내용을 저장해 두었습니다.
@@ -56,7 +67,7 @@
 
 ---
 
-### 22-10-12
+## 22-10-12
 
 - Java를 시작했습니다. 이에 따라서 리포지토리 구조를 이것저것 바꿨습니다.
 - [221012.md](/221011-_JAVA_AND_ETC/221012/221012.md)에 필기 내용을 저장해 뒀습니다.
@@ -70,7 +81,7 @@
 
 ---
 
-### 22-10-11
+## 22-10-11
 
 - 수업에서 나온 자바스크립트(`var`, `function` 등) 추가
 - `form` 태그에서의 `action` 특성과 `onsubmit` 특성의 이해
@@ -79,14 +90,14 @@
 
 ---
 
-### 22-10-07
+## 22-10-07
 
 - 기존의 이 페이지, 즉 [README.md]에 있던 내용을 [220926-221007_HTMLCSS/README_HTMLCSS](/220926-221007_HTMLCSS/README_HTMLCSS.md)로 옮겼습니다. 
 - 이제 백엔드 개발을 할 준비가 되었습니다.
 
 ---
 
-## Downloads(현재 수업에서 사용하고 있는 개발 환경)
+### Downloads(현재 수업에서 사용하고 있는 개발 환경)
 
 - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
 - [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
