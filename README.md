@@ -4,6 +4,18 @@
 
 # Changelog
 
+## 22-10-21
+
+- 예제 코드
+    - [Java17.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java17.java): `else if`문 복습
+    - [Java18.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java18.java): `switch`, `case`문
+    - [Java19.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java19.java): `switch`, `case`문 연습 문제(계산기 만들기)
+    - [Java20.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java20.java): `java.text.DecimalFormat` 클래스
+    - [Java21.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java21.java): `switch`, `case`문 연습 문제(가위바위보)
+    - [Java22.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java22.java): `for`문
+- 수업 필기: 그닥 많이 하진 않았습니다. 예제 코드를 봐 주세요.
+    - [221021.md](/221011-_JAVA_AND_ETC/221021/221021.md)
+
 ## 22-10-20
 
 - 오늘은 정말 온 힘과 정성을 들여서 필기를 했습니다. 봐 주셨으면 좋겠어요.

@@ -11,5 +11,11 @@ public class Java22 {
         * }
         */
         
+        int sum = 0;
+        for (int a = 2; a <= 10; a += 2) {
+            System.out.println(sum + "에 " + a + "를 더함");
+            sum += a;
+        }
+        System.out.println(sum);
     }
 }
