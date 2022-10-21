@@ -24,8 +24,6 @@
     - [Java10.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java10.java): 각종 관계 연산자, 논리 연산자 연습 문제
 - 수업 필기: [221019.md](/221011-_JAVA_AND_ETC/221019/221019.md)
 
----
-
 ## 22-10-18
 
 - 예제 코드:
@@ -39,8 +37,6 @@
     - [Java06.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java06.java): 이 때까지 배운 내용을 연습문제로써 코딩해 보았습니다.
     - [Java07.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java07.java): 역시나 연습문제.
 - 필기 파일: [221018.md](/221011-_JAVA_AND_ETC/221018/221018.md)
-
----
 
 ## 22-10-17
 
@@ -64,8 +60,6 @@
 - `ALTER TABLE`문, `SELECT`문, `WHERE`문을 배웠습니다.
 - 배운 내용을 이용해 예제 테이블을 만들어 보았습니다.
 
----
-
 ## 22-10-13
 
 - Oracle DB를 설치하고 `sqlplus`에 들어가서 여러 가지 명령어들을 배웠습니다.
@@ -73,8 +67,6 @@
     - 숙제 내용은 [숙제 내역 파일](/221011-_JAVA_AND_ETC/221013/숙제_내역)에 복사해 두었습니다.
 - [Oracle DB 11g Express Edition (Release 2) 다운로드 페이지](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
     - 집에서 해 보실 분을 위해서 여기에 적어 둡니다.
-
----
 
 ## 22-10-12
 
@@ -87,8 +79,6 @@
         - 수업 따라가는 건 Eclipse로 하겠습니다만, 되도록이면 VSCode 확장인 **OpenJDK**를 써서 빌드할 것 같습니다.
 - 경로를 특정하거나 링크를 걸거나 할 때 여러 환경에서 오류를 일으키지 않도록 리포지토리 내부 폴더 이름들을 다시금 바꾸었습니다.
     - 이제는 더 이상 안 바꿨으면 좋겠습니다.
-
----
 
 ## 22-10-11
 
