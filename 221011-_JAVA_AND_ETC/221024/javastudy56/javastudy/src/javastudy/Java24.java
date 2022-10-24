@@ -7,12 +7,12 @@ public class Java24 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int inc = 0, sum = 0, cnt = 0; double avg = 0.0;
-        // avgは実際出力だけで使われるので、宣言する必要まではないんですが、コードの可読性のため宣言しました。
-        while (inc != -1) { // incが-1じゃない限り、ループは抜けません。
+        // 그냥 출력에서 avg 식을 넣어서 써도 됩니다만, 이 편이 가독성이 더 좋겠죠.
+        while (inc != -1) { // inc가 -1이 아닌 이상 계속 반복
             System.out.print("次の整数：");
-            inc = sc.nextInt(); // 抜けるにはここに-1を入力します。
+            inc = sc.nextInt(); // 반복을 멈추려면 여기에 -1을 입력
             if (inc == -1) {
-                break; // ループ文を抜けます。
+                break; // 반복문을 즉시 나감
             }
             cnt++;
             sum += inc;
