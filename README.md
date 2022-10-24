@@ -8,7 +8,8 @@
 
 ## 22-10-24
 
-- `for`문 한 번 실습, `while`문 입문
+- [Java23.java](/221011-_JAVA_AND_ETC/221024/javastudy56/javastudy/src/javastudy/Java23.java): `for`문 복습
+- [Java24.java](/221011-_JAVA_AND_ETC/221024/javastudy56/javastudy/src/javastudy/Java24.java): `while`문 입문, 주석 처리된 예제 포함 총 예제 3개
 - 수요일에 할 과정평가형 내부 시험 내용 체크
     - 저도 못 외웠습니다.
     - 어떻게든 되겠죠 뭐. ＼(^o^)／
