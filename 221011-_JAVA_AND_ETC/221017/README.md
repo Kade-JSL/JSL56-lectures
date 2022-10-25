@@ -1,6 +1,17 @@
-***!!주의!! 이 폴더에 있는 소스 코드는 완성된 형태의 프로젝트 파일이 아닌, 파일 구조만 흉내낸 말 그대로 그냥 파일입니다. 실제로 해보실 테는 Eclipse에서 새로 프로젝트를 생성해서 해 보시길 바랍니다.***
-
 ***코딩하면서 강의한 내용은 소스 파일의 주석에 있습니다.***
+
+# 이날 배웠던 것
+
+- [Java01.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java01.java)
+- [Java02.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java02.java)
+- [Java03.java](/221011-_JAVA_AND_ETC/221017/javastudy56/javastudy/src/javastudy/Java03.java)
+    - 프로젝트 파일 구조에 맞게 저장(링크를 클릭하세요)되어 있습니다.
+    - 이대로 Java 프로젝트가 되는 것은 아니므로, 소스 코드만 봐 주세요. 
+- Eclipse IDE 구축과 함께 기본적인 자바 코드를 만드는 법을 배웠습니다.
+- `System.out.print()` 메소드와 유사 메소드인 `System.out.println()`를 배웠습니다.
+- 제어문자 `\t`와 `\n`을 배웠습니다.
+
+---
 
 ## 숙제
 

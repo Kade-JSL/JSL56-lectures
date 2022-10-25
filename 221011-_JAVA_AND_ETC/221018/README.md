@@ -1,3 +1,17 @@
+## 이날 배웠던 것
+
+- [Java04.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java04.java)
+    - `main()` 메소드의 의미를 배웠습니다.
+    - 코딩을 할 때에 하면 좋을 생각 순서(선언-처리-출력)에 대해서 배웠습니다.
+    - 제어 문자와 `+` 연산자를 조합한 출력에 대해서 배웠습니다.
+- [Java05.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java05.java)
+    - `java.util` 패키지의 `Scanner` 클래스 객체를 만드는 방법을 배웠습니다.
+    - 콘솔 화면에서 값을 입력받아 변수에 저장하는 방법을 배웠습니다.
+- [Java06.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java06.java): 이 때까지 배운 내용을 연습문제로써 코딩해 보았습니다.
+- [Java07.java](/221011-_JAVA_AND_ETC/221018/javastudy56/javastudy/src/javastudy/Java07.java): 역시나 연습문제.
+
+---
+
 ## 자바를 쓰는 이유?
 
 - 많이 쓰는 3개의 언어가 대체로 자바랑 C랑 파이썬인데

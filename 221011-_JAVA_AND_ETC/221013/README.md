@@ -1,3 +1,12 @@
+# 이날 배웠던 것
+
+- Oracle DB를 설치하고 `sqlplus`에 들어가서 여러 가지 명령어들을 배웠습니다.
+    - 숙제 내용은 [숙제 내역 파일](/221011-_JAVA_AND_ETC/221013/숙제_내역)에 복사해 두었습니다.
+- [Oracle DB 11g Express Edition (Release 2) 다운로드 페이지](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
+    - 집에서 해 보실 분을 위해서 여기에 적어 둡니다.
+
+---
+
 # 숙제
 - 계정명이 `jslhrd05`(아니면 뭐 아무거나) 비밀번호가 `1234`(아니면 뭐 아무거나)인 계정 생성하기
 - `CONNECT`, `RESOURCE`, `DBA` 권한을 위 계정에 부여하기
