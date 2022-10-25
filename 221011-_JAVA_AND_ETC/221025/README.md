@@ -1,4 +1,4 @@
-﻿# 이 날 배운 것
+﻿# 이날 배웠던 것
 
 - 링크를 클릭하면 각 주제별 실습 코드로 이동합니다.
 - [`do`...`while()`문](/221011-_JAVA_AND_ETC/221025/javastudy56/javastudy/src/javastudy/Java25.java)

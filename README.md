@@ -1,35 +1,15 @@
 [처음 오시거나 시간이 남으시는 분들은 이 리포지토리에 대한 설명을 읽어 주세요.](/FAQ.md)
 
----
-
 **날짜 이름을 클릭하시면 그 날에 배운 필기 내용과 실습 코드에 대한 링크가 있는 페이지로 넘어갑니다.**
+
+---
 
 # Calendar
 
 || [24](/221011-_JAVA_AND_ETC/221024/) | [25](/221011-_JAVA_AND_ETC/221025/) | ~~26~~ | ~~27~~ | ~~28~~ |
 |---|---|---|---|---|---|
-|||||| [21](/221011-_JAVA_AND_ETC/221021/) |
+|||| [19](/221011-_JAVA_AND_ETC/221019/) | [20](/221011-_JAVA_AND_ETC/221020/) | [21](/221011-_JAVA_AND_ETC/221021/) |
 | 10월 | 월 | 화 | 수 | 목 | 금 |
-
-## 22-10-20
-
-- 오늘은 정말 온 힘과 정성을 들여서 필기를 했습니다. 봐 주셨으면 좋겠어요.
-    - [221020.md](/221011-_JAVA_AND_ETC/221020/221020.md)
-- 예제 코드
-    - [Java11.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java11.java): 변수 덮어쓰기, `++`, `--`
-    - [Java12.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java12.java): 축약된 연산과 대입 `*=`
-    - [Java13.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java13.java): `if`, `else`문
-    - [Java14.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java14.java)
-        - `if`, `else`문 실습
-        - `String msg = "";`: 코드를 간단하게 쓰는 법을 다시금 리마인드
-    - [Java15.java](/221011-_JAVA_AND_ETC/221020/javastudy56/javastudy/src/javastudy/Java15.java): `else if`문
-
-## 22-10-19
-
-- 예제 코드
-    - [Java09.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java09.java): 각종 산술 연산자 연습 문제
-    - [Java10.java](/221011-_JAVA_AND_ETC/221019/javastudy56/javastudy/src/javastudy/Java10.java): 각종 관계 연산자, 논리 연산자 연습 문제
-- 수업 필기: [221019.md](/221011-_JAVA_AND_ETC/221019/221019.md)
 
 ## 22-10-18
 

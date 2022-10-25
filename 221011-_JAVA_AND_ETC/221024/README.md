@@ -1,4 +1,4 @@
-# 이 날 배웠던 것
+# 이날 배웠던 것
 
 - [Java23.java](/221011-_JAVA_AND_ETC/221024/javastudy56/javastudy/src/javastudy/Java23.java): `for`문 복습
 - [Java24.java](/221011-_JAVA_AND_ETC/221024/javastudy56/javastudy/src/javastudy/Java24.java): `while`문 입문, 주석 처리된 예제 포함 총 예제 3개
@@ -6,7 +6,9 @@
     - 저도 못 외웠습니다.
     - 어떻게든 되겠죠 뭐. ＼(^o^)／
 
-***그냥 오늘은 일어로 필기하고 싶었던 기분이라 이렇게 했습니다. 근데 피곤해서 다신 안할듯.***
+---
+
+***그냥 일어로 필기하고 싶었던 기분이라 이렇게 했습니다. 근데 피곤해서 다신 안할듯.***
 
 # `for`文を実際に使ってみる
 

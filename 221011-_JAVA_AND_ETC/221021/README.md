@@ -1,5 +1,6 @@
-# 이 날 배웠던 것
+# 이날 배웠던 것
 
+- 링크를 클릭하면 각 주제별 실습 코드로 이동합니다.
 - [`else if`문 복습](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java17.java)
 - [`switch`, `case`문](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java18.java)
 - [`switch`, `case`문 연습 문제(계산기 만들기)](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java19.java)
