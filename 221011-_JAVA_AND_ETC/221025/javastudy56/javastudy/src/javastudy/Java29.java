@@ -34,12 +34,44 @@ public class Java29 {
         */
 
         // 그럼 do...while 문으로!
-
+        /*
         int i = 0, sum = 0;
         do {
             sum += i;
             i += 2;
         } while (i <= 100);
+        System.out.println(sum);
+        */
+
+        // 1에서 100까지 3의 배수의 합을 구하시오
+
+        int i = 0, sum = 0;
+        // while
+        /*
+        while (true) {
+            if (i == 100) { break; }
+            if (i % 3 == 0) {
+                sum += i;
+            }
+            i++;
+        }
+        */
+
+        // for
+        /*
+        for (i = 3; i <= 100; i += 3) {
+            sum += i;
+        }
+        */
+
+        // do...while
+
+        do {
+            sum += i;
+            i += 3;
+        } while (i <= 100);
+
+        
         System.out.println(sum);
     }
 }

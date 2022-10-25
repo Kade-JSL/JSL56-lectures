@@ -1,32 +1,15 @@
-**폴더 이름: [배웠던-기간]_[배운-언어]**
-
-**아래의 Changelog에서도 소스코드 링크를 보실 수 있습니다.**
-
-## [처음 오시는 분은 여기를 봐 주세요(FAQ.md)](/FAQ.md)
-
-# Changelog
-
-## 22-10-24
-
-- [Java23.java](/221011-_JAVA_AND_ETC/221024/javastudy56/javastudy/src/javastudy/Java23.java): `for`문 복습
-- [Java24.java](/221011-_JAVA_AND_ETC/221024/javastudy56/javastudy/src/javastudy/Java24.java): `while`문 입문, 주석 처리된 예제 포함 총 예제 3개
-- 수요일에 할 과정평가형 내부 시험 내용 체크
-    - 저도 못 외웠습니다.
-    - 어떻게든 되겠죠 뭐. ＼(^o^)／
+[처음 오시거나 시간이 남으시는 분들은 이 리포지토리에 대한 설명을 읽어 주세요.](/FAQ.md)
 
 ---
 
-## 22-10-21
+**날짜 이름을 클릭하시면 그 날에 배운 필기 내용과 실습 코드에 대한 링크가 있는 페이지로 넘어갑니다.**
 
-- 예제 코드
-    - [Java17.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java17.java): `else if`문 복습
-    - [Java18.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java18.java): `switch`, `case`문
-    - [Java19.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java19.java): `switch`, `case`문 연습 문제(계산기 만들기)
-    - [Java20.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java20.java): `java.text.DecimalFormat` 클래스
-    - [Java21.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java21.java): `switch`, `case`문 연습 문제(가위바위보)
-    - [Java22.java](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java22.java): `for`문
-- 수업 필기: 그닥 많이 하진 않았습니다. 예제 코드를 봐 주세요.
-    - [221021.md](/221011-_JAVA_AND_ETC/221021/221021.md)
+# Calendar
+
+|| [24](/221011-_JAVA_AND_ETC/221024/) | [25](/221011-_JAVA_AND_ETC/221025/) | ~~26~~ | ~~27~~ | ~~28~~ |
+|---|---|---|---|---|---|
+|||||| [21](/221011-_JAVA_AND_ETC/221021/) |
+| 10월 | 월 | 화 | 수 | 목 | 금 |
 
 ## 22-10-20
 

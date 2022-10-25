@@ -1,3 +1,14 @@
+# 이 날 배웠던 것
+
+- [`else if`문 복습](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java17.java)
+- [`switch`, `case`문](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java18.java)
+- [`switch`, `case`문 연습 문제(계산기 만들기)](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java19.java)
+- [`java.text.DecimalFormat` 클래스](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java20.java)
+- [`switch`, `case`문 연습 문제(가위바위보)](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java21.java)
+- [`for`문](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java22.java)
+
+---
+
 # Switch - Case 조건문
 
 - 조건식의 값에 따라 여러 개의 경우들 중에서 하나를 선택하여 처리하도록 하는 조건문.
