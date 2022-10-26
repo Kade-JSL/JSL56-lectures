@@ -1,12 +1,11 @@
 ﻿# 이날 배웠던 것
 
 - 링크를 클릭하면 해당 주제에 대해서 공부했던 소스 코드로 이동합니다.
-- [`else if`문 복습](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java17.java)
-- [`switch`, `case`문](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java18.java)
-- [`switch`, `case`문 연습 문제(계산기 만들기)](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java19.java)
-- [`java.text.DecimalFormat` 클래스](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java20.java)
-- [`switch`, `case`문 연습 문제(가위바위보)](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java21.java)
-- [`for`문](/221011-_JAVA_AND_ETC/221021/javastudy56/javastudy/src/javastudy/Java22.java)
+    - [`do`...`while`문 연습(업다운 게임)](/221011-_JAVA_AND_ETC/221025/javastudy56/javastudy/src/javastudy/Java25.java)
+    - [중첩 `for`문](/221011-_JAVA_AND_ETC/221025/javastudy56/javastudy/src/javastudy/Java26.java)
+    - [`continue`문](/221011-_JAVA_AND_ETC/221025/javastudy56/javastudy/src/javastudy/Java27.java)
+    - [`contunue`, `break`문 연습(프로그램 메뉴)](/221011-_JAVA_AND_ETC/221025/javastudy56/javastudy/src/javastudy/Java28.java)
+    - [`for`, `while`, `do`...`while`문 종합 실습](/221011-_JAVA_AND_ETC/221025/javastudy56/javastudy/src/javastudy/Java29.java)
 
 ---
 

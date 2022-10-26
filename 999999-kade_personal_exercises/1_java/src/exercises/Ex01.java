@@ -3,7 +3,7 @@ package exercises;
 public class Ex01 {
 
     public static void main(String[] args) {
-        int dsize = 6;
+        int dsize = Integer.parseInt(args[0]);
         for (int i = 1; i <= 2 * dsize - 1; i++) {
             // 공백 부분
             for (int j = 1; j <= dsize - i || j <= i - dsize; j++) {
