@@ -27,3 +27,5 @@
 ---
 
 ### [개인 연습용 코드 저장소](/999999-kade_personal_exercises)
+
+- [/1_java/src/exercises/Ex02.java](999999-kade_personal_exercises/1_java/src/exercises/Ex02.java)
