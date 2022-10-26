@@ -24,4 +24,4 @@
 
 ---
 
-### [개인 연습용 코드 저장소](/999999_kade_personal_exercises)
+### [개인 연습용 코드 저장소](/999999-kade_personal_exercises)
