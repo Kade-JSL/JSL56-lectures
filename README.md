@@ -1,6 +1,6 @@
 [처음 오시거나 시간이 남으시는 분들은 이 리포지토리에 대한 설명을 읽어 주세요.](/FAQ.md)
 
-**날짜 이름을 클릭하시면 그 날에 배운 필기 내용과 실습 코드에 대한 링크가 있는 페이지로 넘어갑니다.**
+**날짜를 클릭하시면 그 날에 배운 필기 내용과 실습 코드에 대한 링크가 있는 페이지로 넘어갑니다.**
 
 ---
 
@@ -21,3 +21,7 @@
 - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
 - [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
 - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
+
+---
+
+### [개인 연습용 코드 저장소](/999999_kade_personal_exercises)
