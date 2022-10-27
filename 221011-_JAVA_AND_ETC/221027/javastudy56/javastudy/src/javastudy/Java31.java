@@ -1,9 +1,21 @@
 package javastudy;
 
+import java.util.Scanner;
+
 public class Java31 {
     
     public static void main(String[] args) {
-        int[] arr = {21, 64, 98, 35, 75, 14, 62, 10, 48, 30, 98, 74, 65, 58, 19, 64, 81}; // 어떤 배열이든 상관 없음
+        // int[] arr = {21, 64, 98, 35, 75, 14, 62, 10, 48, 30, 98, 74, 65, 58, 19, 64, 81};
+        // 어떤 배열이든 상관 없음
+
+        // 숙제: 배열에 저장하는 초기화 값 5개를 키보드로부터 입력받기
+        int[] arr = new int[5];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            System.out.print(i + 1 + "번째 정수 입력: ");
+            arr[i] = sc.nextInt();
+        }
+
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
@@ -28,5 +40,7 @@ public class Java31 {
         double avg = (double)sum / (double)arr.length; // 평균은 정확해야 한다는 개인의 취향 반영
         System.out.println("합계: " + sum + ", 평균: " + avg);
         // 출력 셋째 줄: 합계와 평균
+
+        sc.close();
     }
 }
