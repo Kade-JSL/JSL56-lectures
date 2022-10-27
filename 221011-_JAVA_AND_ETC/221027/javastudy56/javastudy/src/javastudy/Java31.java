@@ -15,8 +15,18 @@ public class Java31 {
             }
             // 그 작업을 arr의 길이만큼 반복
         }
-        for (int i = 0; i < arr.length; i++) {
+        System.out.println("최솟값: " + arr[0] + ", 최댓값: " + arr[arr.length - 1]);
+        // 출력 첫째 줄: 최솟값과 최댓값
+
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) { // 출력 둘째 줄: arr이 잘 정렬되었는지 확인
             System.out.print(arr[i] + " ");
-        } // arr이 잘 정렬되었는지 확인하는 출력부
+            sum += arr[i]; // 합계 구하기를 꼽사리 끼움
+        } 
+        System.out.println();
+
+        double avg = (double)sum / (double)arr.length; // 평균은 정확해야 한다는 개인의 취향 반영
+        System.out.println("합계: " + sum + ", 평균: " + avg);
+        // 출력 셋째 줄: 합계와 평균
     }
 }
