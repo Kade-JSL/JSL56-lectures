@@ -5,13 +5,13 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Ex03 {
-    private static int[] stackinput() { // 입력받은 정수를 배열로 만들어서 돌려줌
-        System.out.println("엔터를 누르면 정수가 입력됩니다. -9999를 눌러서 입력을 중지하세요.");
+    private static int[] stackinput(int stop) { // 입력받은 정수를 배열로 만들어서 돌려줌
+        System.out.println("엔터를 누르면 정수가 입력됩니다. " + stop + "(을)를 눌러서 입력을 중지하세요.");
         Stack<Integer> stk = new Stack<>();
         Scanner sc = new Scanner(System.in);
         while (true) {
             stk.push(sc.nextInt());
-            if (stk.peek() == -9999) {
+            if (stk.peek() == stop) {
                 stk.pop();
                 break;
             }
@@ -44,8 +44,9 @@ public class Ex03 {
         }
         return arr;
     }
+    
     public static void main(String[] args) {
-        int[] arr = stackinput();// 스택을 사용해서 무한정 입력받기
+        int[] arr = stackinput(-9999);// 스택을 사용해서 무한정 입력받기
         arr = selsort(arr);
 
         for (int i = 0; i < arr.length; i++) {
