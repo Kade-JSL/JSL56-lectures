@@ -42,5 +42,5 @@ public class Java31 {
         // 출력 셋째 줄: 합계와 평균
 
         sc.close();
-    }
-}
+    } // main
+} // class
