@@ -6,7 +6,7 @@ public class Java04 { // 설계도
     public static void main(String args[]) { 
 
         /*
-        - public: 접근 제한자, 아무나 접근할 수 있는 메소드라는 뜻
+        - public: 접근 제한자, 아무나 접근할 수 있는 메서드라는 뜻
         - static: 객체 생성 없이 사용 가능한 메서드
         - void: main() 메서드를 실행한 후 리턴해줄 값이 없음
         - main(): 반드시 1개는 존재해야 하는 메서드
@@ -57,8 +57,8 @@ public class Java04 { // 설계도
         System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균\t학점");
         // 한 줄에 출력하고 싶으면 println이 아니라 print!
         System.out.println(bno + "\t" + name + "\t" + kor + "\t" + eng + "\t" + mat + "\t" + tot + "\t" + avg + "\t" + score);
-        // print 메소드 안에 변수를 넣으면 변수에 저장된 값을 출력하라는 의미.
-        /* print 메소드 안에서 변수는
+        // print 메서드 안에 변수를 넣으면 변수에 저장된 값을 출력하라는 의미.
+        /* print 메서드 안에서 변수는
         콘솔 화면에서의 출력을 위해 문자열이 됩니다.
         그리고 문자열끼리의 덧셈은 순서대로 쭉 나열해 놓는 것과 같습니다.
         즉 "가나"+"다라"="가나다라"가 된다는 뜻입니다.

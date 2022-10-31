@@ -7,7 +7,7 @@ public class Java01 {
 		/* 참고로 여러 줄 주석처리는 이렇게 한다. */
 		/* 콘솔로 출력하고 싶다면 System.out.print(), 내지는 System.out.println()
 		Java로 출력한 결과는 콘솔 메시지로 나온다. */
-		System.out.print("안녕하세요"); // print 메소드는 콘솔 창에 괄호 안의 무언가를 출력하는 것.
+		System.out.print("안녕하세요"); // print 메서드는 콘솔 창에 괄호 안의 무언가를 출력하는 것.
 		System.out.print("*"); // System.out은 그 print가 이루어지는 개체.
 		System.out.print("**");
 		System.out.print("***"); // 문장이 끝나면 반드시 세미콜론(;)을 찍어 두자.
