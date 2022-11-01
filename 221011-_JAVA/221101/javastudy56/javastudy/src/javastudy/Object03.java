@@ -32,5 +32,8 @@ public class Object03 {
     }
     public static void main(String[] args) {
         String fName = barStr();
+        int fPrice = fooInt();
+        String result = fName + " 가격 " + fPrice + "원";
+        System.out.println(result);
     }
 }
