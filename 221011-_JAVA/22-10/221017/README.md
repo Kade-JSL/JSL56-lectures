@@ -2,9 +2,9 @@
 
 # 이날 배웠던 것
 
-- [Java01.java](/221011-_JAVA/221017/javastudy56/javastudy/src/javastudy/Java01.java)
-- [Java02.java](/221011-_JAVA/221017/javastudy56/javastudy/src/javastudy/Java02.java)
-- [Java03.java](/221011-_JAVA/221017/javastudy56/javastudy/src/javastudy/Java03.java)
+- [Java01.java](/221011-_JAVA/22-10/221017/javastudy56/javastudy/src/javastudy/Java01.java)
+- [Java02.java](/221011-_JAVA/22-10/221017/javastudy56/javastudy/src/javastudy/Java02.java)
+- [Java03.java](/221011-_JAVA/22-10/221017/javastudy56/javastudy/src/javastudy/Java03.java)
     - 프로젝트 파일 구조에 맞게 저장(링크를 클릭하세요)되어 있습니다.
     - 이대로 Java 프로젝트가 되는 것은 아니므로, 소스 코드만 봐 주세요. 
 - Eclipse IDE 구축과 함께 기본적인 자바 코드를 만드는 법을 배웠습니다.

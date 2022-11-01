@@ -1,12 +1,12 @@
 # 이날 배웠던 것
 
 - 링크를 클릭하면 각 주제별 실습 코드로 이동합니다.
-- [`else if`문 복습](/221011-_JAVA/221021/javastudy56/javastudy/src/javastudy/Java17.java)
-- [`switch`, `case`문](/221011-_JAVA/221021/javastudy56/javastudy/src/javastudy/Java18.java)
-- [`switch`, `case`문 연습 문제(계산기 만들기)](/221011-_JAVA/221021/javastudy56/javastudy/src/javastudy/Java19.java)
-- [`java.text.DecimalFormat` 클래스](/221011-_JAVA/221021/javastudy56/javastudy/src/javastudy/Java20.java)
-- [`switch`, `case`문 연습 문제(가위바위보)](/221011-_JAVA/221021/javastudy56/javastudy/src/javastudy/Java21.java)
-- [`for`문](/221011-_JAVA/221021/javastudy56/javastudy/src/javastudy/Java22.java)
+- [`else if`문 복습](/221011-_JAVA/22-10/221021/javastudy56/javastudy/src/javastudy/Java17.java)
+- [`switch`, `case`문](/221011-_JAVA/22-10/221021/javastudy56/javastudy/src/javastudy/Java18.java)
+- [`switch`, `case`문 연습 문제(계산기 만들기)](/221011-_JAVA/22-10/221021/javastudy56/javastudy/src/javastudy/Java19.java)
+- [`java.text.DecimalFormat` 클래스](/221011-_JAVA/22-10/221021/javastudy56/javastudy/src/javastudy/Java20.java)
+- [`switch`, `case`문 연습 문제(가위바위보)](/221011-_JAVA/22-10/221021/javastudy56/javastudy/src/javastudy/Java21.java)
+- [`for`문](/221011-_JAVA/22-10/221021/javastudy56/javastudy/src/javastudy/Java22.java)
 
 ---
 

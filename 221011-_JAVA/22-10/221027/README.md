@@ -1,6 +1,6 @@
 # 이날 배웠던 것
 
-- [정수 배열과 그 배열을 오름차순 내지는 내림차순으로 정렬하는 방법에 대한 실습](/221011-_JAVA/221027/javastudy56/javastudy/src/javastudy/Java31.java)
+- [정수 배열과 그 배열을 오름차순 내지는 내림차순으로 정렬하는 방법에 대한 실습](/221011-_JAVA/22-10/221027/javastudy56/javastudy/src/javastudy/Java31.java)
     - 최솟값과 최댓값을 구하는 알고리즘
     - 정렬하는 알고리즘
     - 연습 삼아 합이랑 평균도 구해 보고
@@ -8,7 +8,7 @@
 
 ---
 
-## [Java30.java](/221011-_JAVA/221026/javastudy56/javastudy/src/javastudy/Java30.java)를 좀 복습해 보는 시간
+## [Java30.java](/221011-_JAVA/22-10/221026/javastudy56/javastudy/src/javastudy/Java30.java)를 좀 복습해 보는 시간
 
 - `int[] arr = new int[10];`으로 배열을 선언하자
 
@@ -59,7 +59,7 @@
 
 - 그렇게 `i = arr.length - 1`(`i < arr.length`인 마지막 정수)까지 반복하면 당연히, 각자의 자리에 그 자리 번호만큼 큰 숫자가 오게 된다. 오름차순으로 정렬이 된 채로 배열이 바뀌어 있다는 것.
 
-- 이제 다시 한 번 [Java31.java](/221011-_JAVA/221027/javastudy56/javastudy/src/javastudy/Java31.java)를 보자. 그리고 `i`값과 `j`값, 그리고 그것이 `arr`에 끼치는 영향에 대해서 생각해 보자.
+- 이제 다시 한 번 [Java31.java](/221011-_JAVA/22-10/221027/javastudy56/javastudy/src/javastudy/Java31.java)를 보자. 그리고 `i`값과 `j`값, 그리고 그것이 `arr`에 끼치는 영향에 대해서 생각해 보자.
 
 ## 대체 이 머리 터지는 경험을 왜 하는가?
 

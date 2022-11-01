@@ -2,7 +2,7 @@
 
 - 수업에서 나온 자바스크립트(`var`, `function` 등) 추가
 - `form` 태그에서의 `action` 특성과 `onsubmit` 특성의 이해
-- 위의 내용은 주로 [write.html](/221011-_JAVA/221011/write.html) 파일에 주석으로 적어 두었습니다.
+- 위의 내용은 주로 [write.html](/221011-_JAVA/22-10/221011/write.html) 파일에 주석으로 적어 두었습니다.
 
 ---
 

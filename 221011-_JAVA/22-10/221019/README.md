@@ -1,7 +1,7 @@
 # 이날 배웠던 것
 
-- [Java09.java](/221011-_JAVA/221019/javastudy56/javastudy/src/javastudy/Java09.java): 각종 산술 연산자 연습 문제
-- [Java10.java](/221011-_JAVA/221019/javastudy56/javastudy/src/javastudy/Java10.java): 각종 관계 연산자, 논리 연산자 연습 문제
+- [Java09.java](/221011-_JAVA/22-10/221019/javastudy56/javastudy/src/javastudy/Java09.java): 각종 산술 연산자 연습 문제
+- [Java10.java](/221011-_JAVA/22-10/221019/javastudy56/javastudy/src/javastudy/Java10.java): 각종 관계 연산자, 논리 연산자 연습 문제
 
 ---
 

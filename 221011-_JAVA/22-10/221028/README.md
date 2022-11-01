@@ -1,6 +1,6 @@
 ﻿# 이날 배웠던 것들
 
-- [2차원 배열 입문과 배열 입출력 실습](/221011-_JAVA/221028/javastudy56/javastudy/src/javastudy/Java32.java)
+- [2차원 배열 입문과 배열 입출력 실습](/221011-_JAVA/22-10/221028/javastudy56/javastudy/src/javastudy/Java32.java)
 
 ---
 

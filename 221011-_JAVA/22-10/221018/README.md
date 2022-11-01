@@ -1,14 +1,14 @@
 ## 이날 배웠던 것
 
-- [Java04.java](/221011-_JAVA/221018/javastudy56/javastudy/src/javastudy/Java04.java)
+- [Java04.java](/221011-_JAVA/22-10/221018/javastudy56/javastudy/src/javastudy/Java04.java)
     - `main()` 메서드의 의미를 배웠습니다.
     - 코딩을 할 때에 하면 좋을 생각 순서(선언-처리-출력)에 대해서 배웠습니다.
     - 제어 문자와 `+` 연산자를 조합한 출력에 대해서 배웠습니다.
-- [Java05.java](/221011-_JAVA/221018/javastudy56/javastudy/src/javastudy/Java05.java)
+- [Java05.java](/221011-_JAVA/22-10/221018/javastudy56/javastudy/src/javastudy/Java05.java)
     - `java.util` 패키지의 `Scanner` 클래스 객체를 만드는 방법을 배웠습니다.
     - 콘솔 화면에서 값을 입력받아 변수에 저장하는 방법을 배웠습니다.
-- [Java06.java](/221011-_JAVA/221018/javastudy56/javastudy/src/javastudy/Java06.java): 이 때까지 배운 내용을 연습문제로써 코딩해 보았습니다.
-- [Java07.java](/221011-_JAVA/221018/javastudy56/javastudy/src/javastudy/Java07.java): 역시나 연습문제.
+- [Java06.java](/221011-_JAVA/22-10/221018/javastudy56/javastudy/src/javastudy/Java06.java): 이 때까지 배운 내용을 연습문제로써 코딩해 보았습니다.
+- [Java07.java](/221011-_JAVA/22-10/221018/javastudy56/javastudy/src/javastudy/Java07.java): 역시나 연습문제.
 
 ---
 
@@ -54,7 +54,7 @@
 - 변수: 처리하고자 하는 하나의 데이터를 저장하는 기억장소
     - *変数とは：処理しようとする一つのデータを置く記憶装置の中の場所*
     - *변수는 음독 그대로 変数(へんすう)라고 쓰고, 값은 あたい라고 읽는 値라는 한자를 사용합니다.*
-- [202217.md](/221011-_JAVA/221017/221017.md)에서 변수와 그 자료형들의 정의를 돌아보는 시간을 가지자
+- [202217.md](/221011-_JAVA/22-10/221017/221017.md)에서 변수와 그 자료형들의 정의를 돌아보는 시간을 가지자
 
     | 변수형 | 변수 | = | 변수 or 수식 or 리터럴 | ; |
     |---|---|---|---|---|
