@@ -8,17 +8,15 @@ public class Object03 {
     // int：戻り値が整数型
     // ()：引数を受け取る部分
     // {}：ブロック
-    // static：「らしいね」と今は次に行こう
-    // public：「らしいね」
-    public static int foo() {
+    // 
+    public static void foo() {
     /* 
      * メソッド名の先頭は小文字、2語目からは先頭は大文字
      * そしてクラス名の先頭は大文字
      * コンパイルが出来ないわけではない。
      * これは不文律。プログラマー同士のルールである。
      */
-        int price = 4500;
-        return price;
+
     }
     public static void main(String[] args) {
 
