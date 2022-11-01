@@ -10,7 +10,6 @@ public class Object05 {
         return sum;
     }
 
-    
     public static void main(String[] args) {
         System.out.println(getSum(60, 70));
     }

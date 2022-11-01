@@ -1,6 +1,6 @@
 package javastudy;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Java23 {
     
