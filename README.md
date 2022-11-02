@@ -1,8 +1,9 @@
-<p align="center">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br><a href="/999999_ETC/0_docs/HowTo.md"><b>리포지토리 사용 설명서</b></a><br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
+### <p align="center">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br><a href="/999999_ETC/0_docs/HowTo.md"><b>리포지토리 사용 설명서</b></a><br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
 
 # 유용한 링크
 
-- [**한국어-일본어 용어 대조표**](/999999_ETC/0_docs/Vocabulary.md)
+- [**한국어-일본어 코딩 용어 사전**](/999999_ETC/0_docs/Vocabulary.md)
+    - [(WIP)한국어-일본어 용어 요약 정리](/999999_ETC/0_docs/Glossary.md)
 - [자바 코딩 맞춤법](/999999_ETC/0_docs/1_java/README.md)
 - 개발 환경 다운로드 링크
     - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)

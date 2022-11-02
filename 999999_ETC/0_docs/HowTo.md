@@ -13,10 +13,9 @@
         - 그 곳의 링크를 클릭하면 됩니다.
         - 그 날 했던 필기도 곧바로 그 페이지에 있습니다.
         - 이전 날짜나 다음 날짜로 이동하는 링크도 넣었습니다.
-- 메인 페이지로 돌아가고 싶다면 맨 위의 Kade-JSL / [JSL56-lectures](https://github.com/Kade-JSL/JSL56-lectures) 링크를 클릭하시면 됩니다.
+            - 그 외에 리포지토리 이용에 불편이 있으시다면 [이슈 게시판](https://github.com/Kade-JSL/JSL56-lectures/issues)에 올리시거나 직접 저에게 대면으로 알려주세요.
+- 메인 페이지로 돌아가고 싶다면 맨 위의 **Kade-JSL / [JSL56-lectures](https://github.com/Kade-JSL/JSL56-lectures)** 링크를 클릭하시면 됩니다.
 - [999999_ETC](/999999_ETC) 폴더는 저의 개인적인 연습 소스 코드나, 이 설명서 파일이나, 기타 읽을거리 등을 저장해 두는 폴더입니다.
-
----
 
 ---
 
