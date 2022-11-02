@@ -1,4 +1,4 @@
-## 이날 배웠던 것
+# 이날 배웠던 것
 
 - [Java04.java](/221011-_JAVA/22-10/221018/javastudy56/javastudy/src/javastudy/Java04.java)
     - `main()` 메서드의 의미를 배웠습니다.

@@ -1,4 +1,6 @@
-﻿# 이날 배웠던 것
+﻿### [← 2022/10/28 ←](/221011-_JAVA/22-10/221028/) / [→ 2022/11/01 →](/221011-_JAVA/221101/)
+
+# 이날 배웠던 것
 
 - [가변 배열(Zagged array)](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Java33.java)
 - [`main()`메소드, 그리고 일본어 필기](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Object01.java)

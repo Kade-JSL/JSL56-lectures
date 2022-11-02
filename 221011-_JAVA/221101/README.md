@@ -1,4 +1,6 @@
-﻿# 이날 배웠던 것
+﻿### [← 2022/10/31 ←](/221011-_JAVA/22-10/221031/) / [→ 2022/11/02 →](/221011-_JAVA/221102/)
+
+# 이날 배웠던 것
 
 - [메소드에 대한 약간 다른 접근?](/221011-_JAVA/221101/javastudy56/javastudy/src/javastudy/Object03.java): Object03.java
 - [이런저런 메소드 만들어보기](/221011-_JAVA/221101/javastudy56/javastudy/src/javastudy/Object04.java): Object04.java
