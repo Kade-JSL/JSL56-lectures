@@ -3,8 +3,8 @@
 # 이날 배웠던 것
 
 - [가변 배열(Zagged array)](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Java33.java)
-- [`main()`메소드, 그리고 일본어 필기](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Object01.java)
-- [메소드 만들기 및 호출, 일본어 필기](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Object02.java)
+- [`main()`메서드, 그리고 일본어 필기](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Object01.java)
+- [메서드 만들기 및 호출, 일본어 필기](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Object02.java)
 
 ---
 
@@ -17,6 +17,6 @@
     - 애초에 정의 자체를 네모반듯하게 한 게 아니기 때문에, 그 배열 안에 몇 번째 줄의 길이가 몇인가를 전부 따로따로 정의해 줄 수 있습니다.
     - 고것이 위에 있는 [Java33.java](/221011-_JAVA/22-10/221031/javastudy56/javastudy/src/javastudy/Java33.java)의 내용이 되겠습니다.
 
-## 메소드
+## 메서드
 
 - WIP

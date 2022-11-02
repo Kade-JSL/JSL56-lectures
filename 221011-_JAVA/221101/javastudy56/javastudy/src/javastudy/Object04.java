@@ -1,7 +1,7 @@
 ﻿package javastudy;
 
 public class Object04 {
-    public static int getHeight() { // 리턴 타입은 메소드의 사용 목적에 맞게
+    public static int getHeight() { // 리턴 타입은 메서드의 사용 목적에 맞게
         return 176;
     }
     public static String getName() { // (), {} 잊지 말 것
