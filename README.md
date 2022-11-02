@@ -1,4 +1,4 @@
-<p align="center">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br><a href="https://github.com/Kade-JSL/JSL56-lectures/blob/main/999999_ETC/HowTo.md"><b>리포지토리 사용 설명서</b></a><br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
+<p align="center">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br><a href="/JSL56-lectures/999999_ETC/HowTo.md"><b>리포지토리 사용 설명서</b></a><br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
 
 # 유용한 링크
 
