@@ -3,6 +3,8 @@
 # 이날 배웠던 것
 
 - 오늘은 왠지 마크다운으로 필기를 하고 싶은 기분이었습니다.
+- [메서드 만들기, 호출하기 연습문제 "100배"](/221011-_JAVA/221103/javastudy56/javastudy/src/javastudy/Object08.java): Object08.java
+- [배열을 메서드 인수로 집어넣기](/221011-_JAVA/221103/javastudy56/javastudy/src/javastudy/Object09.java): Object09.java
 
 ---
 
