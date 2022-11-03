@@ -19,10 +19,17 @@ public class Object08 {
         String total = getTotal(kor, eng, mat);
         double ave = getAve(total, 3);
         String result = getResult(ave, gender);
+        String result2 = getResult2(name, gender, kor, eng, mat);
+        // 홍길동 님 합격! 이 출력되도록 짜 보자.
         System.out.println("\n\t성적표");
         System.out.println("이름\t국어\t영어\t수학\t총점\t평균\t합격여부");
         System.out.println(name + "\t" + kor + "\t" + eng + "\t" + mat + "\t" + total + "\t" + ave + "\t" + result);
+        System.out.println(result2);
         sc.close();
+    }
+
+    private static String getResult2(String n, int g, int... s) {
+        return n + "님 " + getResult(getAve(getTotal(s), s.length), g) + "!";
     }
 
     private static String getResult(double a, int g) {
