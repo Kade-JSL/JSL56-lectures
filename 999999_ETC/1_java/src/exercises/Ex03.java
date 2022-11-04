@@ -10,7 +10,7 @@ public class Ex03 {
      * 
      * @param stop Specifies the integer input to stop. When it's 0<=stop<=100, the param sets to default -9999.
      * @param m Default: null. Bunch of console messages. 
-     * m[0]: first message before stop param(e.g. Type an integer to input. When the input was "<br>
+     * m[0]: first message before stop param(e.g. "Type an integer to input. When the input was "<br>
      * m[1]: message after stop param(e.g. ", this function will stop and return the integers that has input.")<br>
      * m[2]: indicator for the length of the array(e.g. "Integers typed: ")
      * @return An array that contains all integer inputs, <b>excluding</b> the stop param.
