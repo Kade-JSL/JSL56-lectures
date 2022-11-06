@@ -57,8 +57,7 @@
 
 # `enum`
 
-- Enumeration의 약자
-    - 사전에선 목록 또는 일람이라는 의미
+- Enumeration의 약자. 한글로는 `열거형`이라 부른다. 일본어도 동일.
 - 자세한 내용은 [Enum01.java](/999999_ETC/1_java/src/exercises/Enum01.java)랑 이후 코드에서 서술
 - `enum` 역시 클래스처럼 특성과 메서드를 가진다.
     - `public`, `static`, `final` 특성을 가짐
