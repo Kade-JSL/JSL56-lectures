@@ -1,6 +1,10 @@
 ﻿package javastudy;
 
+// import java.util.InputMismatchException;
+// import java.util.Scanner;
+
 public class Object05 {
+    
     public static void main(String[] args) {
         // 프로그램 오류 처리
         // 어떤 원인에 의해서 오동작을 하거나 비정상적으로 종료되는 경우가 있다
@@ -22,6 +26,7 @@ public class Object05 {
         // IOException: 입출력 동작 실패 또는 인터럽트 발생
         // IllegalArgumentException: 잘못된 인자 전달 시 발생
 
+        /*
         try {
             int[] a = new int [5];
             a[4] = 0;
@@ -30,6 +35,36 @@ public class Object05 {
         } finally {
             System.out.println("여튼 finally는 무조건 실행함.");
         }
+        */
 
+        /*
+        Scanner sc = new Scanner(System.in);
+        int[] a = new int[3];
+        int s = 0;
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(i + 1 + "번째 정수를 입력해 주세요: ");
+            try {
+                a[i] = sc.nextInt();
+            } catch(InputMismatchException e) {
+                System.out.println("정수가 아닙니다. 다시 입력하세요.");
+                sc.next(); // 입력 스트림에 있는 정수가 아닌 토큰을 버리는 역할
+                i--; continue;
+            }
+            s += a[i];
+        }
+        System.out.println(a.length + "개 정수의 합: " + s);
+        sc.close();
+         */
+
+        String[] s = new String[] {"23", "66", "3.14", "999"};
+        int i;
+        for (i = 0; i < s.length; i++) {
+            try {
+                System.out.println(Integer.parseInt(s[i]));
+            } catch (NumberFormatException e) {
+                System.out.println(s[i] + "는 정수로 변환할 수 없습니다.");
+                continue;
+            }
+        }
     }
 }
