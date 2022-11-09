@@ -1,6 +1,11 @@
-﻿### [221107 ←](/221011-_JAVA/221107) | *→ 221109*<!--(/221011-_JAVA/221109/)-->
+﻿### [221107 ←](/221011-_JAVA/221107) | [→ 221109](/221011-_JAVA/221109/)
 
 # 이날 배웠던 것
+
+- [Object06.java: `try` ~ `catch`문, 그리고 `throws`문](/221011-_JAVA/221108/javastudy56/javastudy/src/javastudy/Object06.java)
+- [Object07.java: 클래스 입문](/221011-_JAVA/221108/javastudy56/javastudy/src/javastudy/Object07.java)
+
+## [(일본어) 클래스, 객체, 인스턴스의 구분에 대한 좋은 글](https://freesworder.net/class-instance-object/)
 
 ---
 
