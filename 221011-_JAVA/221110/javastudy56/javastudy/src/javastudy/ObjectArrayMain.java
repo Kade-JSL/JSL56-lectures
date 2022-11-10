@@ -9,6 +9,7 @@ class ObjectArray {
     int tot;
     double avg;
     String grade;
+    int rank;
 
     public ObjectArray() {}
     public ObjectArray(int num, String name, int kor, int eng, int mat) {
@@ -32,18 +33,26 @@ class ObjectArray {
         } else {
             grade = "F";
         }
+        rank = 1;
     }
 
     public void printTitleMsg() {
         System.out.println("\t\t성적표");
-        System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균\t학점");
+        System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균\t학점\t성적");
     }
     public void printRecordMsg() {
-        System.out.println(num + "\t" + name + "\t" + kor + "\t" + eng + "\t" + mat + "\t" + tot + "\t" + avg + "\t" + grade);
+        System.out.println(num + "\t" + name + "\t" + kor + "\t" + eng + "\t" + mat + "\t" + tot + "\t" + avg + "\t" + grade + "\t" + rank);
     }
 }
 
 public class ObjectArrayMain {
+    static void rankObjectArrayByAvg(ObjectArray[] o) {
+        for (int i = 0; i < o.length; i++) {
+            for (int j = 0; j < o.length; j++) {
+                if(o[i].avg < o[j].avg) o[i].rank++;
+            }
+        }
+    }
     public static void main(String[] args) {
         ObjectArray[] arr = new ObjectArray[4];
         String[] msg = new String[] {
@@ -63,10 +72,12 @@ public class ObjectArrayMain {
             int eng = s.nextInt();
             System.out.print((c + 1) + "번 학생의 " + msg[4] + ": ");
             int mat = s.nextInt();
-            
+
             arr[c] = new ObjectArray(num, name, kor, eng, mat);
             c++;
         }
+
+        rankObjectArrayByAvg(arr);
 
         arr[0].printTitleMsg();
         for (int i = 0; i < arr.length; i++) {
