@@ -17,6 +17,7 @@ public class ObjectArrayMain {
         Scanner s = new Scanner(System.in);
         
         while (true) {
+            // 프로그램 메뉴 구현
             System.out.println("\n정수를 입력하여 메뉴 선택:\n");
             System.out.println("[1] 레코드 입력하기");
             System.out.println("[2] 전체 출력하기");
@@ -34,6 +35,7 @@ public class ObjectArrayMain {
                     System.out.print((i + 1) + "번 학생의 이름: ");
                     arr[i].name = s.next();
 
+                    // 점수 범위에 따라 재입력 프롬프트 출력
                     for (Subject sub : Subject.values()) {
                         do {
                             arr[i].printScoresMsg(i, sub);
