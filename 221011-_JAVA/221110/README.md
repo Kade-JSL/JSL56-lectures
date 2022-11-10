@@ -2,6 +2,7 @@
 
 # 이날 배웠던 것
 
+- 두 파일 모두 수업에서 다뤘던 클래스를 한 데 모아두었습니다. 이유는 제가 파일 나누기 귀찮아서입니다.
 - [OverloadingMain.java: 클래스 생성자 오버로딩](/221011-_JAVA/221110/javastudy56/javastudy/src/javastudy/OverloadingMain.java)
 - [ObjectArrayMain.java: 클래스 배열](/221011-_JAVA/221110/javastudy56/javastudy/src/javastudy/ObjectArrayMain.java)
 
@@ -45,6 +46,7 @@
     class Cats {
         ...
     }
+    
     public class Main {
         public static void main(String[] args) {
             Cats[] = new Cats[10];
