@@ -2,14 +2,13 @@
 
 # 유용한 링크
 
-- [**한국어-일본어 코딩 용어 사전**](/999999_ETC/0_docs/Vocabulary.md)
-    - [(WIP)한국어-일본어 용어 요약 정리](/999999_ETC/0_docs/Glossary.md)
-- [자바 코딩 맞춤법](/999999_ETC/1_java/README.md)
+- [**한국어-일본어 코딩 용어 간단 비교표**](/999999_ETC/0_docs/Vocabulary.md)
+- [**한국어-일본어 코딩 용어 설명 및 번역 정리**](/999999_ETC/0_docs/Glossary.md)
 - 개발 환경 다운로드 링크
-    - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
-    - [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
     - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
-
+    - [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
+    - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
+    
 # Calendar
 
 **최근 5주간의 내용만 메인에 있습니다.**
@@ -28,4 +27,5 @@
 
 # 기타
 
+- [계정주의 개인적인 Java 연습 코드](/999999_ETC/1_java/)
 - [2022-11-06 자바 선행학습 필기](/999999_ETC/1_java/docs/221106_abstract.md)
