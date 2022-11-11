@@ -36,19 +36,21 @@ public class ObjectArrayMain {
                     arr[i].name = s.next();
 
                     // 점수 범위에 따라 재입력 프롬프트 출력
+                    // foreach문
                     for (Subject sub : Subject.values()) {
-                        do {
+                        while (true) {
                             arr[i].printScoresMsg(i, sub);
                             arr[i].setScores(s.nextInt(), sub);
-                        } while(!arr[i].isScoresInRange());
+                            if (arr[i].isScoresInRange()) {
+                                break;
+                            }
+                        }
                     }
 
                     arr[i].setGradeByAvg();
                 }
-            } else if (a == 2) {
-
                 rankObjectArrayByAvg(arr);
-
+            } else if (a == 2) {
                 arr[0].printTitleMsg();
                 for (int i = 0; i < arr.length; i++) {
                     arr[i].printRecordMsg();
