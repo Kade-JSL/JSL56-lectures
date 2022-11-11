@@ -9,10 +9,10 @@ abstract class StudentVars { // 멤버 변수들의 목록
 }
 
 class Student extends StudentVars {
-    public void printSetterMsg(int arrIndex, String msg) { // 앞의 값들을 입력할 떄 프롬프트에 출력되는 메시지
+    void printSetterMsg(int arrIndex, String msg) { // 앞의 값들을 입력할 떄 프롬프트에 출력되는 메시지
         System.out.print((arrIndex + 1) + "번 학생의 " + msg + " 입력: ");
     }
-    public void printSetScoresMsg(int arrIndex, IntVarIndex v) { // 성적을 입력할 때 프롬프트에 출력되는 메시지
+    void printSetScoresMsg(int arrIndex, IntVarIndex v) { // 성적을 입력할 때 프롬프트에 출력되는 메시지
         String memberString = null;
         switch (v) {
             case kor: memberString = "국어"; break;
@@ -21,7 +21,7 @@ class Student extends StudentVars {
         }
         System.out.print((arrIndex + 1) + "번 학생의 " + memberString + " 입력: ");
     }
-    public void setScores(int setVal, IntVarIndex v) { // 성적을 실제로 입력하는 메서드
+    void setScores(int setVal, IntVarIndex v) { // 성적을 실제로 입력하는 메서드
         switch (v) {
             case kor: this.kor = setVal; break;
             case eng: this.eng = setVal; break;
@@ -32,16 +32,23 @@ class Student extends StudentVars {
         }
     }
 
-    public boolean isScoreOutOfRange() { // 성적 변수들이 범위 밖에 있는지 없는지 판단하는 합수
+    boolean isScoreOutOfRange() { // 성적 변수들이 범위 밖에 있는지 없는지 판단하는 합수
         if (kor > 100 || kor < 0 || eng > 100 || eng < 0 || mat > 100 || mat < 0) {
             return true;
         } else {
             return false;
         }
     }
-    public void setGradeByAvg() {
-        tot = kor + eng + mat;
-        avg = (double)tot / 3.;
+    void setGradeByAvg() {
+        tot = 0;
+        for (IntVarIndex v : IntVarIndex.values()){
+            switch (v) {
+                case kor: tot += kor; break;
+                case eng: tot += eng; break;
+                case mat: tot += mat; break;
+            }
+        }
+        avg = (double)tot / (double)IntVarIndex.values().length;
         if (avg >= 90) {
             grade = "A";
         } else if (avg >= 80) {
@@ -56,11 +63,11 @@ class Student extends StudentVars {
         rank = 1;
     }
 
-    public static void printResultHeader() { // 결과 출력 헤더
+    static void printResultHeader() { // 결과 출력 헤더, 객체의 요소를 전혀 가지고 있지 않으므로 static으로 간단하게 호출
         System.out.println("\t\t성적표");
         System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균\t학점\t등수");
     }
-    public void printResultBody() { // 레코드 결과 출력
+    void printResultBody() { // 레코드 결과 출력
         System.out.println(num + "\t" + name + "\t" + kor + "\t" + eng + "\t" + mat + "\t" + tot + "\t" + avg + "\t" + grade  + "\t" + rank);
     }
 }
