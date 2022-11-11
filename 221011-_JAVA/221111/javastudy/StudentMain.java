@@ -10,6 +10,7 @@ public class StudentMain {
 
         System.out.print("오늘 시험 본 명수?: ");
         int studentNums = scanner.nextInt();
+        
         Student[] stuArr = new Student[studentNums];
 
         /* 메뉴가 반복되는 걸 무한반복으로 구현 */
