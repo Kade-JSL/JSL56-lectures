@@ -6,7 +6,8 @@ class StudentArraySort { // 기본적인 선택 정렬 알고리즘을 구현했
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
-                if(arr[i].avg < arr[j].avg) arr[i].rank++;
+                if (arr[i].avg < arr[j].avg)
+                    arr[i].rank++;
             }
         }
     }

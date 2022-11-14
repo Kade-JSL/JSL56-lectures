@@ -12,6 +12,7 @@ class MyClass {
     }
 }
 
+
 public class VariableScope {
     public static void main(String[] args) {
         MyClass myObj = new MyClass();
