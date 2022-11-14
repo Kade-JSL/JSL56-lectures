@@ -2,22 +2,17 @@
 
 public class Student {
 
-    private int num;
+    private int num, kor, eng, mat, tot, rank = 1;
+    private double avg;
     private String name, address, tel;
 
-    public Student() {}
-
-    public Student(int num, String name, String address, String tel) {
-        this.num = num;
-        this.name = name;
-        this.address = address;
-        this.tel = tel;
-    }
+    public static enum Subjects { KOR, ENG, MAT }
 
     // getters and setters
     public int getNum() {
         return num;
     }
+
     public void setNum(int num) {
         this.num = num;
     }
@@ -44,5 +39,53 @@ public class Student {
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public int getKor() {
+        return kor;
+    }
+
+    public void setKor(int kor) {
+        this.kor = kor;
+    }
+
+    public int getEng() {
+        return eng;
+    }
+
+    public void setEng(int eng) {
+        this.eng = eng;
+    }
+
+    public int getMat() {
+        return mat;
+    }
+
+    public void setMat(int mat) {
+        this.mat = mat;
+    }
+
+    public int getTot() {
+        return tot;
+    }
+
+    public void setTot(int tot) {
+        this.tot = tot;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    public double getAvg() {
+        return avg;
+    }
+
+    public void setAvg(double avg) {
+        this.avg = avg;
     }
 }
