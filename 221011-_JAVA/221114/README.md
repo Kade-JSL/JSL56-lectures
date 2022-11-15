@@ -24,7 +24,7 @@
     - 패키지 단위로 클래스, 메서드, 변수 등의 접근 제한(=정보 은닉)(=캡슐화)을 할 수 있다.
 - 다른 패키지의 클래스나 메서드를 사용하고 싶으면 그 패키지를 `import`해 와야 한다.
 
-## `controller`, `dao`, `dto`, `utility` 패키지
+## 항상 자바 프로젝트엔 들어가는 `controller`, `dao`, `dto`, `utility` 패키지
 
 - `controller`: 말 그대로 제어 패키지
 - `dao`: Database Access Object, 데이터베이스와 연동을 하는 기능들을 담당하는 메서드와 클래스들을 넣어 두는 패키지
