@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "221011-_JAVA\\221115\\javastudy"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\jdbc\\lib\\ojdbc6.jar"
+    ]
+}
