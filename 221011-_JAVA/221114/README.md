@@ -2,7 +2,19 @@
 
 # 이날 배웠던 것
 
--
+- [소스 코드 폴더](/221011-_JAVA/221114/javastudy/src)
+    - controller
+        - Main.java
+    - dao
+        - StudentDao.java
+    - dto
+        - Student.java
+    - javastudy
+        - Main.java
+        - PackageAccess.java
+    - service
+    - utility
+
 
 ---
 
