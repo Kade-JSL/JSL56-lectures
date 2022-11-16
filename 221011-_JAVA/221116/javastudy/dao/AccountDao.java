@@ -2,7 +2,7 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import dto.Account;
+import dto.AccountDto;
 
 // 메서드가 들어가는 클래스
 public class AccountDao {
@@ -17,14 +17,14 @@ public class AccountDao {
 
     Scanner s = new Scanner(System.in);
 
-    private static ArrayList<Account> accArr = new ArrayList<Account>();
+    private static ArrayList<AccountDto> accArr = new ArrayList<AccountDto>();
 
     public void createAccount() {
         System.out.print("예금주명 입력: ");
         String ownerName = s.next();
         System.out.print("초기 입금액: ");
         int balance = s.nextInt();
-        accArr.add(new Account(ownerName, balance));
+        accArr.add(new AccountDto(ownerName, balance));
     }
 
     public void accountList() {
@@ -40,7 +40,7 @@ public class AccountDao {
     public void deposit() {
         System.out.print("계좌번호를 입력하세요: ");
         int accNumber = s.nextInt();
-        Account a;
+        AccountDto a;
         try {
             a = findAccount(accNumber); 
         } catch (NullPointerException e) {
@@ -58,7 +58,7 @@ public class AccountDao {
     public void withdraw() {
         System.out.print("계좌번호를 입력하세요: ");
         int accNumber = s.nextInt();
-        Account a;
+        AccountDto a;
         try {
             a = findAccount(accNumber); 
         } catch (NullPointerException e) {
@@ -78,8 +78,8 @@ public class AccountDao {
         }
     }
     
-    public Account findAccount(int accNumber) {
-        Account a = null;
+    public AccountDto findAccount(int accNumber) {
+        AccountDto a = null;
         for (int i = 0; i < accArr.size(); i++) {
             if (accNumber == accArr.get(i).getAccNumber()) {
                 a = accArr.get(i);

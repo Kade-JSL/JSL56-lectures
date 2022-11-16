@@ -1,6 +1,6 @@
 ﻿package dto;
 
-public class Student {
+public class StudentDto {
 
     private int num, kor, eng, mat, tot, rank = 1;
     private double avg;

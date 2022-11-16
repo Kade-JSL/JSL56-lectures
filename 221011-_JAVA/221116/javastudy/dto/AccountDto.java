@@ -1,14 +1,14 @@
 ﻿package dto;
 
-public class Account {
+public class AccountDto {
     
     // 계좌번호, 예금주, 잔액
     private int accNumber;
     private String ownerName;
     private int balance; // 21억까지밖에 못 넣는 은행;;
 
-    public Account() {}
-    public Account(String ownerName, int balance) {
+    public AccountDto() {}
+    public AccountDto(String ownerName, int balance) {
         setAccNumber((int)(1000000000 + Math.random() * 100000000 + 1));
         setOwnerName(ownerName);
         setBalance(balance);

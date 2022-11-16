@@ -2,11 +2,11 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import dto.Student;
+import dto.StudentDto;
 
 public class StudentDao {
 
-    ArrayList<Student> stuArr = new ArrayList<Student>();
+    ArrayList<StudentDto> stuArr = new ArrayList<StudentDto>();
 
     Scanner s = new Scanner(System.in);
 
@@ -28,7 +28,7 @@ public class StudentDao {
         int mat = s.nextInt();
 
         int tot = 0;
-        for (Student.Subjects s : Student.Subjects.values()) {
+        for (StudentDto.Subjects s : StudentDto.Subjects.values()) {
             switch (s) {
                 case KOR:
                     tot += kor;
@@ -41,9 +41,9 @@ public class StudentDao {
                     break;
             }
         }
-        double avg = (double) tot / (double) Student.Subjects.values().length;
+        double avg = (double) tot / (double) StudentDto.Subjects.values().length;
 
-        Student s = new Student();
+        StudentDto s = new StudentDto();
         s.setNum(num);
         s.setName(name);
         s.setAddress(address);
