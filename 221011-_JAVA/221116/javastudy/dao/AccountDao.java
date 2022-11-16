@@ -40,7 +40,13 @@ public class AccountDao {
     public void deposit() {
         System.out.print("계좌번호를 입력하세요: ");
         int accNumber = s.nextInt();
-        Account a = findAccount(accNumber);
+        Account a;
+        try {
+            a = findAccount(accNumber); 
+        } catch (NullPointerException e) {
+            System.out.println("찾으시는 계좌가 없습니다. 다시 입력해 주세요.");
+            return;
+        }
         System.out.println("계좌번호 " + a.getAccNumber() + " 잔액: " + a.getBalance());
         System.out.print("입금할 금액을 입력하세요: ");
         int d = s.nextInt();
@@ -52,7 +58,13 @@ public class AccountDao {
     public void withdraw() {
         System.out.print("계좌번호를 입력하세요: ");
         int accNumber = s.nextInt();
-        Account a = findAccount(accNumber);
+        Account a;
+        try {
+            a = findAccount(accNumber); 
+        } catch (NullPointerException e) {
+            System.out.println("찾으시는 계좌가 없습니다. 다시 입력해 주세요.");
+            return;
+        }
         System.out.println("계좌번호 " + a.getAccNumber() + " 잔액: " + a.getBalance());
         System.out.print("출금할 금액을 입력하세요: ");
         int w = s.nextInt();
