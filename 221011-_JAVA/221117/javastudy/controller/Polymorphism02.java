@@ -1,6 +1,6 @@
 ﻿package controller;
 
-class Cat /* extends Object */{ // 아름다운 커널에 어셈블리에 Object 클래스가 터 잡으시고
+class Cat /* extends Object */{ // 아름다운 자바에 java.lang에 Object 클래스가 터 잡으시고
     int soundCount;
     int purrCount;
 
