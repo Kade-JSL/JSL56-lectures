@@ -1,0 +1,85 @@
+﻿package controller;
+
+class Cat {
+    int soundCount;
+    int purrCount;
+
+    Cat(int soundCount) {
+        System.out.print("This cat says: ");
+        this.soundCount = soundCount;
+        purrCount = (int)(soundCount / 3.0);
+    }
+}
+
+class BlueCat extends Cat {
+    BlueCat() {
+        super(10);
+        for (int i = 0; i < this.soundCount; i++) {
+            System.out.print("Nyaa! ");
+        }
+        System.out.println();
+    }
+}
+
+class GrayCat extends Cat {
+    GrayCat() {
+        super(7);
+        for (int i = 0; i < this.soundCount; i++) {
+            System.out.print("Meow... ");
+        }
+        System.out.println();
+    }
+}
+
+class InvisibleCat extends Cat {
+    InvisibleCat() {
+        super(3);
+        for (int i = 0; i < this.soundCount; i++) {
+            System.out.print("(*invisible meowing*) ");
+        }
+        System.out.println();
+        
+    }
+}
+
+class Kade {
+    int strokeCount = 1000;
+    int purrCount = 0;
+
+    void stroke(BlueCat j) {
+        System.out.println("Stroked BlueCat " + j.soundCount + " times!");
+        strokeCount -= j.soundCount;
+        purrCount += j.purrCount;
+        System.out.println("Kade earned: " + j.purrCount + " purrs!");
+    }
+    void stroke(GrayCat k) {
+        System.out.println("Stroked GrayCat " + k.soundCount + " times!");
+        strokeCount -= k.soundCount;
+        purrCount += k.purrCount;
+        System.out.println("Kade earned: " + k.purrCount + " purrs!");
+    }
+    void stroke(InvisibleCat n) {
+        System.out.println("Stroked InvisibleCat " + n.soundCount + " times!");
+        strokeCount -= n.soundCount;
+        purrCount += n.purrCount;
+        System.out.println("Kade earned: " + n.purrCount + " purrs!");
+    }
+}
+
+class Polymorphism02 {
+    public static void main(String[] args) {
+
+        Kade k = new Kade();
+
+        BlueCat jin = new BlueCat();
+        GrayCat kyu = new GrayCat();
+        InvisibleCat nan = new InvisibleCat();
+
+        k.stroke(kyu);
+        k.stroke(jin);
+        k.stroke(nan);
+
+        System.out.println("Now Kade has " + k.strokeCount + " strokes left.");
+        System.out.println("But he earned " + k.purrCount + " purrs of the cats!");
+    }
+}

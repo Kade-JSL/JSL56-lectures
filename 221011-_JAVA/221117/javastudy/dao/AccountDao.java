@@ -1,5 +1,6 @@
 ﻿package dao;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 import dto.AccountDto;
@@ -96,6 +97,7 @@ public class AccountDao {
         for (int i = 0; i < accArr.size(); i++) {
             tda += accArr.get(i).getBalance();
         }
-        System.out.println("총 계좌 수: " + accArr.size() + "개\n총 예금액: " + tda);
+        DecimalFormat f = new DecimalFormat("￦ #,###");
+        System.out.println("총 계좌 수: " + accArr.size() + "개\n총 예금액: " + f.format(tda));
     }
 }
