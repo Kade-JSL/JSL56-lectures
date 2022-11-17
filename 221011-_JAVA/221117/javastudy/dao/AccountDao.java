@@ -43,11 +43,10 @@ public class AccountDao {
         AccountDto a;
         try {
             a = findAccount(accNumber); 
+            System.out.println("계좌번호 " + a.getAccNumber() + " 잔액: " + a.getBalance());
         } catch (NullPointerException e) {
-            System.out.println("찾으시는 계좌가 없습니다. 다시 입력해 주세요.");
             return;
         }
-        System.out.println("계좌번호 " + a.getAccNumber() + " 잔액: " + a.getBalance());
         System.out.print("입금할 금액을 입력하세요: ");
         int d = s.nextInt();
         a.setBalance(a.getBalance() + d);
@@ -97,6 +96,6 @@ public class AccountDao {
         for (int i = 0; i < accArr.size(); i++) {
             tda += accArr.get(i).getBalance();
         }
-        System.out.println("총 예금액: " + tda);
+        System.out.println("총 계좌 수: " + accArr.size() + "개\n총 예금액: " + tda);
     }
 }

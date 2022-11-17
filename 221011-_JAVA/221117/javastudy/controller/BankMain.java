@@ -1,5 +1,6 @@
 ﻿package controller;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import dao.AccountDao;
 
@@ -16,7 +17,14 @@ public class BankMain {
             System.out.println("--------------------------------------------------------------------------------");
             System.out.println("1. 계좌생성 | 2. 계좌목록 | 3. 입금하기 | 4. 출금하기 | 5. 전체 예금액 | 0. 종료하기");
             System.out.print("작업 선택 > ");
-            int sel = s.nextInt();
+            int sel;
+            try {
+                sel = s.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("정수만 입력해 주세요.");
+                s.next();
+                continue;
+            }
 
             if (sel == 1) {
                 /* 계좌 생성 */

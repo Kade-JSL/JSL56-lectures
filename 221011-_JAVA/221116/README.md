@@ -2,7 +2,9 @@
 
 # 이날 배웠던 것
 
-- [**/controller/BankMain.java**: ]
+- [**/controller/BankMain.java**: 뭔가 했음. 근데 영양가는 없는 듯하다.](/221011-_JAVA/221116/javastudy/controller/BankMain.java)
+- [**/dao/AccountDao.java**: 뭔가 한 것에서 사용되는 메서드 클래스](/221011-_JAVA/221116/javastudy/dao/AccountDao.java)
+- [**/dto/AccountDto.java**: 뭔가 한 것에서 사용되는 멤버 변수와 `get()`, `set()`이 있는 클래스](/221011-_JAVA/221116/javastudy/dto/AccountDto.java)
 
 ---
 
