@@ -1,7 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "221011-_JAVA\\221116\\javastudy",
-        "221011-_JAVA/221116/javastudy"
+        "221011-_JAVA\\221117\\javastudy"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
