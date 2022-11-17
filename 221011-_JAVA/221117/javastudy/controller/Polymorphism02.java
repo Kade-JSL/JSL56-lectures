@@ -46,23 +46,31 @@ class Kade {
     int strokeCount = 1000;
     int purrCount = 0;
 
-    void stroke(BlueCat j) {
-        System.out.println("Stroked BlueCat " + j.soundCount + " times!");
-        strokeCount -= j.soundCount;
-        purrCount += j.purrCount;
-        System.out.println("Kade earned: " + j.purrCount + " purrs!");
-    }
-    void stroke(GrayCat k) {
-        System.out.println("Stroked GrayCat " + k.soundCount + " times!");
-        strokeCount -= k.soundCount;
-        purrCount += k.purrCount;
-        System.out.println("Kade earned: " + k.purrCount + " purrs!");
-    }
-    void stroke(InvisibleCat n) {
-        System.out.println("Stroked InvisibleCat " + n.soundCount + " times!");
-        strokeCount -= n.soundCount;
-        purrCount += n.purrCount;
-        System.out.println("Kade earned: " + n.purrCount + " purrs!");
+    // void stroke(BlueCat j) {
+    //     System.out.println("Stroked BlueCat " + j.soundCount + " times!");
+    //     strokeCount -= j.soundCount;
+    //     purrCount += j.purrCount;
+    //     System.out.println("Kade earned: " + j.purrCount + " purrs!");
+    // }
+    // void stroke(GrayCat k) {
+    //     System.out.println("Stroked GrayCat " + k.soundCount + " times!");
+    //     strokeCount -= k.soundCount;
+    //     purrCount += k.purrCount;
+    //     System.out.println("Kade earned: " + k.purrCount + " purrs!");
+    // }
+    // void stroke(InvisibleCat n) {
+    //     System.out.println("Stroked InvisibleCat " + n.soundCount + " times!");
+    //     strokeCount -= n.soundCount;
+    //     purrCount += n.purrCount;
+    //     System.out.println("Kade earned: " + n.purrCount + " purrs!");
+    // }
+    // 근데 이거, 좀 불편하지 않나...? 고양이가 1000마리면 메서드가 1000개나 필요하다...
+
+    void stroke(Cat c) { // 다형성 개념: 상위 클래스 타입의 참조로 하위 클래스를 받음
+        System.out.println("Stroked a cat " + c.soundCount + " times!"); // 그리고 클래스의 멤버에 접근함
+        strokeCount -= c.soundCount; // 멤버에 또 접근함
+        purrCount += c.purrCount; // 멤버에 또또 접근함
+        System.out.println("Kade earned: " + c.purrCount + " purrs!");
     }
 }
 
