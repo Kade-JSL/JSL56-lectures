@@ -47,7 +47,7 @@ class InvisibleCat extends Cat {
 }
 
 class Kade {
-    int strokeCount = 11;
+    int strokeCount = 100;
     int purrCount = 0;
 
     // void stroke(BlueCat j) {
@@ -94,12 +94,11 @@ class Polymorphism02 {
         InvisibleCat nan = new InvisibleCat();
 
         k.stroke(kyu);
+        System.out.println(kyu.toString());
         k.stroke(new BlueCat());
         k.stroke(nan);
 
         System.out.println("Now Kade has " + k.strokeCount + " strokes left.");
         System.out.println("But he earned " + k.purrCount + " purrs of the cats!");
-
-        System.out.println(kyu.toString());
     }
 }
