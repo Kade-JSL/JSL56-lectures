@@ -10,7 +10,7 @@ abstract class Cat {
     public abstract double meowIndex(int... a);
 
     public void meow() {
-        System.out.println("Meow");
+        System.out.println("Meow.");
     }
 }
 
