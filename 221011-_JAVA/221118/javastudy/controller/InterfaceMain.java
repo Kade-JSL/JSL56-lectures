@@ -80,6 +80,7 @@ class 점수처리 extends Student implements 점수 {
     public void 성적출력() {
         System.out.println("성적표");
         System.out.println("번호\t이름\t주소\t전화\t국어\t영어\t수학\t총점\t평균");
+        
         for (Student 학생 : 학생목록) {
             System.out.println(학생.getNum() + "\t " + 학생.getName() + "\t " + 학생.getAddress() + "\t "
                     + 학생.getTel() + "\t " + 학생.getKor() + "\t " + 학생.getEng() + "\t " + 학생.getMat()
