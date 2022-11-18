@@ -1,9 +1,17 @@
 ﻿package controller;
 
 abstract class Cat {
+
+    int meow;
+    String catName;
+
     public abstract int catProperties(int age, int breedIndex);
     public abstract int stroke(int strokeRate, int duration);
     public abstract double meowIndex(int... a);
+
+    public void meow() {
+        System.out.println("Meow");
+    }
 }
 
 class BlueCat extends Cat {
@@ -50,5 +58,6 @@ public class AbstractMain {
         b.stroke(10, 24);
         double meowIndex = b.meowIndex(3, 72, 10, 24);
         System.out.println("Then, the blue cat's Meow Index is: " + meowIndex);
+        b.meow();
     }
 }
