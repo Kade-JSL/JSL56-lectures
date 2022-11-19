@@ -55,4 +55,16 @@ class GeneralActions implements AccountActions {
         a.setBalance(a.getBalance() + amount);
         System.out.print("%d원의 입금이 성공적으로 완료되었습니다.\n");
     }
+
+    public void withdraw(BankAccount a) {
+
+    }
+
+    public void transfer(BankAccount a) {
+
+    }
+
+    public void deleteAccount(BankAccount a) {
+        
+    }
 }
