@@ -24,8 +24,7 @@ public abstract class BankAccount {
     public void setAccountNum(int accountNum) { this.accountNum = accountNum; }
     public String getOwnerName() { return ownerName; }
     public void setOwnerName(String ownerName) { this.ownerName = ownerName; }
-    public int getPassword() { return password; }
-    public void setPassword(int password) { this.password = password; }
+    public int getPassword() { return password; } // 일단은 비밀번호 변경은 막아둠
     public int getBalance() { return balance; }
     public void setBalance(int balance) { this.balance = balance; }
 }

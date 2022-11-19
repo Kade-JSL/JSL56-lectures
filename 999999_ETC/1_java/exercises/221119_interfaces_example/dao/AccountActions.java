@@ -16,7 +16,9 @@ interface AccountActions {
 
     void transfer(BankAccount a);
 
-    void deleteAccount(BankAccount a);
+    void deleteAccount(BankAccount a); // CRUD를 의식하면서 메서드 이름 작명
+
+    BankAccount numToAccount(int num);
 }
 
 class GeneralActions implements AccountActions {
@@ -53,18 +55,50 @@ class GeneralActions implements AccountActions {
         System.out.print("입금할 금액을 입력해 주세요 >> ");
         int amount = s.nextInt();
         a.setBalance(a.getBalance() + amount);
-        System.out.print("%d원의 입금이 성공적으로 완료되었습니다.\n");
+        System.out.printf("%d원의 입금이 성공적으로 완료되었습니다.\n입금 후 잔액: %d원");
     }
 
     public void withdraw(BankAccount a) {
-
+        System.out.printf("%s 회원님의 %s번 계좌에서 출금합니다.\n", a.getOwnerName(), a.getAccountNum());
+        while(true) {
+            System.out.print("계좌 비밀번호를 입력해 주세요(4자리) >> ");
+            int guess = s.nextInt();
+            if (passwordMatch(a, guess)) break;
+            System.out.println("비밀번호가 틀렸습니다.");
+        }
+        System.out.printf("잔액: %d원\n출금할 금액을 입력해 주세요. >> ", a.getBalance());
+        int amount = s.nextInt();
+        a.setBalance(a.getBalance() - amount);
+        System.out.printf("%d원의 출금이 정상적으로 완료되었습니다.\n출금 후 잔액: %d원\n", amount, a.getBalance());
     }
 
     public void transfer(BankAccount a) {
-
+        System.out.printf("%s 회원님의 %s번 계좌에서 이체합니다.\n", a.getOwnerName(), a.getAccountNum());
     }
 
     public void deleteAccount(BankAccount a) {
-        
+
+    }
+
+    public BankAccount numToAccount(int num) {
+        BankAccount b = null;
+        if (AccountList.getLength() != 0) {
+            for (int i = 0; i < AccountList.getLength(); i++) {
+                if (AccountList.getList()[i].getAccountNum() == num) {
+                    b = AccountList.getList()[i];
+                    break;
+                }
+            }
+        }
+        return b;
+    }
+
+    public boolean passwordMatch(BankAccount a, int password) {
+        if (password < 10000) {
+            return a.getPassword() == password;
+        } else {
+            System.out.println("알맞은 비밀번호를 입력해 주세요.");
+            return false;
+        }
     }
 }
