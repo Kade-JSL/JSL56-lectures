@@ -8,7 +8,7 @@ public class GeneralAccount extends BankAccount {
         super.accountType = 0;
     }
 
-    public GeneralAccount(String name, long initialDeposit) {
+    public GeneralAccount(String name, int initialDeposit) {
         super(name, initialDeposit);
         super.accountType = 0;
     }

@@ -33,7 +33,7 @@ class GeneralActions implements AccountActions {
             System.out.print("성함을 입력하세요 >> ");
             String name = s.next();
             System.out.print("초기 잔액을 입금해 주세요 >> ");
-            long amount = s.nextLong();
+            int amount = s.nextInt();
             BankAccount a = new GeneralAccount(name, amount);
             AccountList.addList(a);
             System.out.printf("계좌가 성공적으로 생성되었습니다.\n비밀번호(한 번만 알려드리니 적어 두세요): %d\n", a.getPassword());
@@ -51,7 +51,7 @@ class GeneralActions implements AccountActions {
     public void deposit(BankAccount a) {
         System.out.printf("%s 회원님의 %s번 계좌에 입금합니다.\n", a.getOwnerName(), a.getAccountNum());
         System.out.print("입금할 금액을 입력해 주세요 >> ");
-        long amount = s.nextLong();
+        int amount = s.nextInt();
         a.setBalance(a.getBalance() + amount);
         System.out.print("%d원의 입금이 성공적으로 완료되었습니다.\n");
     }

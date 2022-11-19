@@ -6,28 +6,28 @@ package dto;
 public abstract class BankAccount {
     public int accountType;
     public static boolean isOtherTypeExists = false;
-    private long accountNum;
+    private int accountNum;
     private String ownerName;
     private int password;
-    private long balance;
+    private int balance;
 
     public BankAccount() {
-        this.accountNum = 10000000000l + (long) (Math.random() * 10000000000l);
+        this.accountNum = 1000000000 + (int) (Math.random() * 1000000000);
         this.password = (int) (Math.random() * 10000);
     }
-    public BankAccount(String name, long initialDeposit) {
+    public BankAccount(String name, int initialDeposit) {
         this();
         this.ownerName = name;
         this.balance = initialDeposit;
     }
-    public long getAccountNum() { return accountNum; }
-    public void setAccountNum(long accountNum) { this.accountNum = accountNum; }
+    public int getAccountNum() { return accountNum; }
+    public void setAccountNum(int accountNum) { this.accountNum = accountNum; }
     public String getOwnerName() { return ownerName; }
     public void setOwnerName(String ownerName) { this.ownerName = ownerName; }
     public int getPassword() { return password; }
     public void setPassword(int password) { this.password = password; }
-    public long getBalance() { return balance; }
-    public void setBalance(long balance) { this.balance = balance; }
+    public int getBalance() { return balance; }
+    public void setBalance(int balance) { this.balance = balance; }
 }
 
 /* 테스트 코드 */
