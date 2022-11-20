@@ -13,7 +13,13 @@ public abstract class BankAccount {
 
     public BankAccount() {
         this.accountNum = 1000000000 + (int) (Math.random() * 1000000000);
-        this.password = (int) (Math.random() * 10000);
+        int p = (int) (Math.random() * 10000);
+        if (p < 1000) {
+            p *= 10;
+        } else if (p == 10000) {
+            p /= 10;
+        }
+        this.password = p;
     }
     public BankAccount(String name, int initialDeposit) {
         this();

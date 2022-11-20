@@ -20,4 +20,31 @@ public class AccountList { // 싱글톤 객체
         getList()[listLength] = a;
         listLength++;
     } // 리스트가 private이므로 리스트에 추가하는 부분을 간단하게 메서드로 만들어서 구현.
+
+    public static void removeList(BankAccount a) {
+        for (int i = 0; i < getLength(); i++) {
+            if(getList()[i].equals(a)) {
+                getList()[i] = null;
+            }
+        }
+    }
+
+    public static void sortItAndPrintIt() {
+        BankAccount[] b = new BankAccount[getLength()];
+        for (int i = 0; i < b.length; i++) {
+            b[i] = getList()[i];
+        }
+        for (int i = 0; i < b.length; i++) {
+            for (int j = i; j < b.length; j++) {
+                if (b[i].getAccountNum() > b[j].getAccountNum()) {
+                    BankAccount temp = b[i];
+                    b[i] = b[j];
+                    b[j] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < b.length; i++) {
+            System.out.printf("일반\t%d\t\t%s\t%d\n", b[i].getAccountNum(), b[i].getOwnerName(), b[i].getBalance());
+        }
+    }
 }
