@@ -1,5 +1,3 @@
-## _아직 미완성 코드(WIP)라 그대로 복붙하는 것에 대해서 발생하는 재산상의 피해는 보상하지 않습니다._
-
 # 소스코드 구조
 
 - [/controller](/999999_ETC/1_java/exercises/221119_interfaces_example/controller/)
