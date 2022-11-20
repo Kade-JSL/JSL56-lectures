@@ -5,7 +5,7 @@
 # 소스코드 구조
 
 - [/controller](/999999_ETC/1_java/exercises/221119_interfaces_example/controller/)
-    - [/Main.java](/999999_ETC/1_java/exercises/221119_interfaces_example/controller/Main.java): 메뉴가 실행되는 클래스
+    - [/Menu.java](/999999_ETC/1_java/exercises/221119_interfaces_example/controller/Menu.java): 메뉴가 실행되는 클래스
 - [/dao](/999999_ETC/1_java/exercises/221119_interfaces_example/dao/)
     - [/AccountActions.java](/999999_ETC/1_java/exercises/221119_interfaces_example/dao/AccountActions.java): 인터페이스와 그것의 구현. 해당 클래스 타입의 인스턴스는 데이터 처리만을 담당하므로 싱글톤 객체로 만들었다.
 - [/dto](/999999_ETC/1_java/exercises/221119_interfaces_example/dto/)
