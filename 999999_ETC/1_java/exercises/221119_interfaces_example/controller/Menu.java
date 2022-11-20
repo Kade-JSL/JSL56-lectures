@@ -54,10 +54,12 @@ public class Menu {
                         System.out.println("아직 이 은행엔 계좌랄 게 없어요...\n");
                         break;
                     }
-                    System.out.print("관리자 메뉴\n[1] 계좌 목록 출력(가입 순서순 정렬)\n[2] 계좌 목록 출력(계좌번호순 출력)\n[3] (테스트용임시)비밀번호 목록 출력\n[other] 이전 메뉴로 돌아가기\n---------------------------------------------------\n>> ");
+                    System.out.print(
+                            "관리자 메뉴\n[1] 계좌 목록 출력(가입 순서순 정렬)\n[2] 계좌 목록 출력(계좌번호순 출력)\n[3] (테스트용임시)비밀번호 목록 출력\n[other] 이전 메뉴로 돌아가기\n---------------------------------------------------\n>> ");
                     int adminMenu = s.nextInt();
                     if (adminMenu == 1) {
-                        System.out.println("계좌 목록\n타입\t계좌번호\t\t예금주\t잔액\n---------------------------------------------------");
+                        System.out.println(
+                                "계좌 목록\n타입\t계좌번호\t\t예금주\t잔액\n---------------------------------------------------");
                         for (int i = 0; i < AccountList.getLength(); i++) {
                             g.readAccount(AccountList.getList()[i]);
                         }

@@ -15,8 +15,8 @@ public class AccountList { // 싱글톤 객체
     // 여기까지가 모두 싱글톤 객체로서의 특성.
 
     private static int listLength;
-
     // ↑ 리스트 길이를 알기 쉽게 멤버변수로 설정. 하나뿐인 인스턴스가 생성될 때 0을 초기화된다.
+    
     public static int getLength() {
         return listLength;
     }

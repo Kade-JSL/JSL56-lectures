@@ -106,7 +106,6 @@ public class GeneralActions implements AccountActions {
                 b.getOwnerName(), b.getAccountNum(), a.getBalance());
         int yesorno = s.nextInt();
         if (yesorno == 1) {
-
             System.out.println("계좌 제거가 완료되었습니다. 이용해 주셔서 감사합니다.");
         } else {
             System.out.println("처음부터 다시 반복합니다.");
