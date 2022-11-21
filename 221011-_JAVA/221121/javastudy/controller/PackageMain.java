@@ -55,15 +55,50 @@ public class PackageMain /* extends Object */ {
         // System.out.println(i2);
         // System.out.println(i.toString());
 
+        /* Wrapper의 박싱과 언박싱 */
         // Integer ten = 10; // 자동 박싱 == new Integer(10)
         // int teni = ten; // 자동 언박싱 == ten.intValue(10)
 
-        String s0 = "Hello";
-        String s1 = new String("Hello");
-        String s2 = "Hello";
+        /* String 객체의 특징 */
+        // String s0 = "Hello1";
+        // String s1 = new String("Hello2");
+        // // String s2 = new String("Hello1");
+        // String s2 = "Hello1";
 
-        System.out.println(s0.hashCode());
-        System.out.println(s1.hashCode());
-        System.out.println(s2.hashCode());
+        /* concat() */
+        // System.out.println(s0.toString());
+        // System.out.println(s1.toString());
+        // System.out.println(s2.toString());
+        // System.out.println(s0 == s2);
+        // System.out.println(s0 == s1);
+        // System.out.println(s0.concat("java"));
+
+        /* trim(), charAt() */
+        String trim = "        Hello Java         ";
+        System.out.println(trim);
+        System.out.println(trim.trim());
+        String charat = "class"; // "대한민국" 글자를 쳐도 정상적으로 3번째 글자는 "민"이다
+        System.out.println(charat.charAt(2));
+        int cnt = 0;
+        for (char c : charat.toCharArray()) {
+            if (c == 's') cnt++;
+        }
+        System.out.println(cnt);
+
+        /* replace() */
+        System.out.println(charat.replace("s", "S"));
+
+        String split = "a, b, c, d";
+        String[] sp = split.split(", ");
+        for (String s : sp) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+        
+        /* substring() */
+        System.out.println(split.substring(2));
+
+        /* toUpperCase() */
+        System.out.println(split.toUpperCase());
     } // main
 } // class
