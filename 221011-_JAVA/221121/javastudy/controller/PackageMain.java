@@ -55,7 +55,15 @@ public class PackageMain /* extends Object */ {
         // System.out.println(i2);
         // System.out.println(i.toString());
 
-        Integer ten = 10; // 자동 박싱 == new Integer(10)
-        int teni = ten; // 자동 언박싱 == ten.intValue(10)
+        // Integer ten = 10; // 자동 박싱 == new Integer(10)
+        // int teni = ten; // 자동 언박싱 == ten.intValue(10)
+
+        String s0 = "Hello";
+        String s1 = new String("Hello");
+        String s2 = "Hello";
+
+        System.out.println(s0.hashCode());
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
     } // main
 } // class

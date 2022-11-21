@@ -40,3 +40,7 @@
 
 - Boxing(박싱): 기본타입 변수를 wrapper 객체로 변환
 - Unboxing(언박싱): wrapper 객체를 기본타입 변수로 변환
+
+## String 객체
+
+- String은 박싱 형태로 대입한 내용이 똑같다면 똑같은 메모리 주소를 가리키게 된다.
