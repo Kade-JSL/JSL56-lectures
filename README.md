@@ -1,19 +1,10 @@
 ### <p align="center">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br><a href="/999999_ETC/0_docs/HowTo.md"><b>리포지토리 사용 설명서</b></a><br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
 
-# 유용한 링크
-
-- [**한-일 코딩 용어 간단 비교표**(Vocabulary.md)](/999999_ETC/0_docs/Vocabulary.md)
-- [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
-- 개발 환경 다운로드 링크
-    - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
-    - [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
-    - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
-    
 # Calendar
 
 **최근 5주간의 내용만 메인에 있습니다.**
 
-| → | [21](/221011-_JAVA/221121/) | _22_ | _23_ | _24_ | _25_ |
+| → | [21](/221011-_JAVA/221121/) | [22](/221011-_JAVA/221122/) | _23_ | _24_ | _25_ |
 |--:|:-:|:-:|:-:|:-:|:-:|
 || [14](/221011-_JAVA/221114/) | [15](/221011-_JAVA/221115/) | [16](/221011-_JAVA/221116/) | [17](/221011-_JAVA/221117/) | [18](/221011-_JAVA/221118/) |
 || [7](/221011-_JAVA/221107/) | [8](/221011-_JAVA/221108/) | [9](/221011-_JAVA/221109/) | [10](/221011-_JAVA/221110/) | [11](/221011-_JAVA/221111/) |
@@ -23,6 +14,15 @@
 
 (~~취소선~~: 휴일 또는 휴강, **굵은 글씨**: 현재 주차)
 
+# 유용한 링크
+
+- [**한-일 코딩 용어 간단 비교표**(Vocabulary.md)](/999999_ETC/0_docs/Vocabulary.md)
+- [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
+- 개발 환경 다운로드 링크
+    - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
+    - [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
+    - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
+    
 ---
 
 # 개인 연습장에서 있었던 일
