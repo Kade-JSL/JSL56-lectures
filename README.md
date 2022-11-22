@@ -1,4 +1,4 @@
-### <p align="center">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br><a href="/999999_ETC/0_docs/Tutorial.md"><b>리포지토리 사용 설명서</b></a><br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
+### <p align="center">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br><a href="https://github.com/Kade-JSL/JSL56-lectures/blob/main/999999_ETC/0_docs/Tutorial.md#%EB%8F%8C%EC%95%84%EC%98%A4%EC%85%A8%EB%82%98%EC%9A%94-%EC%9E%98-%ED%95%98%EC%85%A8%EC%8A%B5%EB%8B%88%EB%8B%A4"><b>리포지토리 사용 설명서</b></a><br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
 
 # Calendar
 
