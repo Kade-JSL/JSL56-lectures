@@ -60,7 +60,7 @@
 <br>
 
 - 중간의 큰 네모에 있는 링크들: 그 날짜에서 학습한 내용이 담긴 소스 코드들로 연결되는 링크들입니다.
-    - [`/controller/`](/221011-_JAVA/221121/javastudy/controller/)나 [`/dao/`](/221011-_JAVA/221121/javastudy/dao/), [`/dto/`](/221011-_JAVA/221121/javastudy/dto/)와 같은 상위 폴더 링크도 일단은 달아 뒀습니다. 폴더들의 트리 구조를 흉내내고 싶었거든요.
+    - [`/controller/`](/221011-_JAVA/221122/javastudy/controller/)나 [`/dao/`](/221011-_JAVA/221122/javastudy/dao/), [`/dto/`](/221011-_JAVA/221122/javastudy/dto/)와 같은 상위 폴더 링크도 일단은 달아 뒀습니다. 폴더들의 트리 구조를 흉내내고 싶었거든요.
 
 <br>
 
