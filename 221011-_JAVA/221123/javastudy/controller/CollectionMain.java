@@ -14,7 +14,7 @@ public class CollectionMain {
         boolean exitb = true;
         do {
 
-            System.out.print("[1] insert / [2] print / [3] delete / [4] select / [5] update / [etc] exit\n----------------------------------------------------------------------------\n> ");
+            System.out.print("[1] insert / [2] print / [3] delete / [4] select / [5] update / [0] exit\n----------------------------------------------------------------------------\n> ");
 
             int menu = s.nextInt();
 
@@ -50,7 +50,8 @@ public class CollectionMain {
                     System.out.print("수정할 학생의 번호를 입력해 주세요. 없는 학생일 경우 맨 마지막으로 입력한 학생을 수정합니다.\n>> ");
                     c.update(s.nextInt());
                     break;
-                } default: exitb = false; break;
+                } case 0: exitb = false; break; 
+                default: continue;
             }
         } while (exitb);
         System.out.println("exiting the program.");

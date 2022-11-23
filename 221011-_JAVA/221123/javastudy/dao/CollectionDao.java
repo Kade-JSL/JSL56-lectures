@@ -18,9 +18,9 @@ public class CollectionDao {
     private static ArrayList<Student> studentArray = new ArrayList<Student>();
     public static ArrayList<Student> getStudentArray() { return studentArray; }
 
-    Scanner s = new Scanner(System.in);
-    Student.Subjects[] ja = Student.Subjects.values();
-    HashMap<Student.Subjects, String> subStrings = new HashMap<Student.Subjects, String>();
+    private Scanner s = new Scanner(System.in);
+    private Student.Subjects[] ja = Student.Subjects.values();
+    private HashMap<Student.Subjects, String> subStrings = new HashMap<Student.Subjects, String>();
 
     public void insert() {
         System.out.println("성적 입력을 시작합니다. 총 학생 수: " + studentArray.size());
@@ -38,18 +38,14 @@ public class CollectionDao {
             System.out.print(subStrings.get(j) + " 점수 입력: ");
             st.setSub(j, s.nextInt());
         }
-        int tot = 0;
-        for (Student.Subjects j : ja) {
-            tot += st.getSub(j);
-        }
-        st.setTot(tot);
+        st.setTot(intTot(st));
         st.setAvg((double) st.getTot() / (double) ja.length);
 
         studentArray.add(st);
     }
 
     public void print(Student st) {
-            System.out.printf("%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%.2f\n", st.getNum(), st.getName(), st.getAddress(), st.getTel(), st.getSub(Student.Subjects.KOR), st.getSub(Student.Subjects.ENG), st.getSub(Student.Subjects.MAT), st.getTot(), st.getAvg());
+        System.out.printf("%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%.2f\n", st.getNum(), st.getName(), st.getAddress(), st.getTel(), st.getSub(Student.Subjects.KOR), st.getSub(Student.Subjects.ENG), st.getSub(Student.Subjects.MAT), st.getTot(), st.getAvg());
     }
 
     public void delete(int num) {
@@ -69,23 +65,27 @@ public class CollectionDao {
             System.out.print(subStrings.get(j) + " 점수 입력: ");
             st.setSub(j, s.nextInt());
         }
-        int tot = 0;
-        for (Student.Subjects j : ja) {
-            tot += st.getSub(j);
-        }
-        st.setTot(tot);
+        st.setTot(intTot(st));
         st.setAvg((double) st.getTot() / (double) ja.length);
 
         System.out.println("수정이 성공적으로 완료되었습니다.");
     }
 
-    int numToIndex(int num) {
+    private int numToIndex(int num) {
         for (int i = 0; i < studentArray.size(); i++) {
             if (studentArray.get(i).getNum() == num) {
                 return i;
             }
         }
+        System.out.println("학생을 찾을 수 없습니다.");
         return studentArray.size() - 1;
     }
 
+    private int intTot(Student st) {
+        int tot = 0;
+        for (Student.Subjects j : ja) {
+            tot += st.getSub(j);
+        }
+        return tot;
+    }
 }

@@ -46,7 +46,11 @@ public abstract class BankAccount {
 
     public int getPassword() {
         return password;
-    } // 일단은 비밀번호 변경은 막아둠
+    }
+
+    public void setPassword(int password) {
+        this.password = password;
+    }
 
     public int getBalance() {
         return balance;
@@ -60,9 +64,9 @@ public abstract class BankAccount {
 /* 테스트 코드 */
 // class BankDao {
 // public static void main(String[] args) {
-// AccountList.addList(new GeneralAccount("홍길동", 100000));
-// AccountList.addList(new GeneralAccount("이순신", 200000));
-// AccountList.addList(new GeneralAccount("강감찬", 300000));
+// AccountList.addList(new LiteAccount("홍길동", 100000));
+// AccountList.addList(new LiteAccount("이순신", 200000));
+// AccountList.addList(new LiteAccount("강감찬", 300000));
 // BankAccount[] accList = AccountList.getList();
 // for(int i = 0; i < AccountList.getLength(); i++) {
 // System.out.println(accList[i].getAccountNum() + " " +

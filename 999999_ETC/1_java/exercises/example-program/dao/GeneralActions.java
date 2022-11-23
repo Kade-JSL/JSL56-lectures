@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import dto.*;
@@ -23,13 +24,11 @@ interface AccountActions {
 
 public class GeneralActions implements AccountActions {
     private static GeneralActions ga = new GeneralActions();
+    private GeneralActions() {}
+    public static GeneralActions getInstance() { return ga; } // 역시나 싱글톤 객체
 
-    private GeneralActions() {
-    }
-
-    public static GeneralActions getInstance() {
-        return ga;
-    } // 역시나 싱글톤 객체
+    private static ArrayList<BankAccount> accList = new ArrayList<BankAccount>();
+    public ArrayList<BankAccount> getList() { return accList; }
 
     Scanner s = new Scanner(System.in);
 
@@ -41,15 +40,15 @@ public class GeneralActions implements AccountActions {
             String name = s.next();
             System.out.print("초기 잔액을 입금해 주세요 >> ");
             int amount = s.nextInt();
-            BankAccount a = new GeneralAccount(name, amount);
-            AccountList.addList(a);
+            BankAccount a = new LiteAccount(name, amount);
+            accList.add(a);
             System.out.printf("계좌가 성공적으로 생성되었습니다.\n계좌번호: %d\n비밀번호(한 번만 알려드리니 적어 두세요): %d\n", a.getAccountNum(),
                     a.getPassword());
         }
     }
 
     public void readAccount(BankAccount a) {
-        if (AccountList.getLength() == 0) {
+        if (accList.size() == 0) {
             System.out.println("아직은 계좌가 없습니다.");
         } else if (a.accountType == 0) {
             System.out.printf("일반\t%d\t\t%s\t%d\n", a.getAccountNum(), a.getOwnerName(), a.getBalance());
@@ -73,7 +72,7 @@ public class GeneralActions implements AccountActions {
     }
 
     public void transfer(BankAccount a) {
-        if (AccountList.getLength() == 1) {
+        if (accList.size() == 1) {
             System.out.println("근데 이 은행엔 당신 혼자뿐인데요. 누구한테 보낸다는 거죠?");
             return;
         }
@@ -106,6 +105,8 @@ public class GeneralActions implements AccountActions {
                 b.getOwnerName(), b.getAccountNum(), a.getBalance());
         int yesorno = s.nextInt();
         if (yesorno == 1) {
+            b.setBalance(b.getBalance() + a.getBalance());
+            accList.remove(a);
             System.out.println("계좌 제거가 완료되었습니다. 이용해 주셔서 감사합니다.");
         } else {
             System.out.println("처음부터 다시 반복합니다.");
@@ -115,10 +116,10 @@ public class GeneralActions implements AccountActions {
 
     public BankAccount numToAccount(int num) {
         BankAccount b = null;
-        if (AccountList.getLength() != 0) {
-            for (int i = 0; i < AccountList.getLength(); i++) {
-                if (AccountList.getList()[i].getAccountNum() == num) {
-                    b = AccountList.getList()[i];
+        if (accList.size() != 0) {
+            for (BankAccount a : accList) {
+                if (a.getAccountNum() == num) {
+                    b = a;
                     break;
                 }
             }
@@ -146,6 +147,28 @@ public class GeneralActions implements AccountActions {
             } else {
                 return amount;
             }
+        }
+    }
+
+    public static void sortItAndPrintIt() {
+        ArrayList<BankAccount> b = new ArrayList<BankAccount>();
+        // BankAccount[] b = new BankAccount[accList.size()];
+        for (BankAccount a : accList) {
+            b.add(a);
+        }
+        for (int i = 0; i < b.size(); i++) {
+            for (int j = i; j < b.size(); j++) {
+                if (b.get(i).getAccountNum() > b.get(j).getAccountNum()) {
+                    BankAccount temp = b.get(i);
+                    b.set(i, b.get(j));
+                    b.set(j, temp);
+                }
+            }
+        }
+        System.out.println("계좌 목록\n타입\t계좌번호\t예금주\t잔액\n---------------------------------------------------");
+
+        for (BankAccount ba : b) {
+            System.out.printf("일반\t%d\t%s\t%d\n", ba.getAccountNum(), ba.getOwnerName(), ba.getBalance());
         }
     }
 }
