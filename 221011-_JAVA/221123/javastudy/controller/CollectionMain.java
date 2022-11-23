@@ -1,63 +1,63 @@
 ﻿package controller;
 
-import java.util.ArrayList;
+import dao.CollectionDao;
 import dto.Student;
+import java.util.Scanner;
 
 public class CollectionMain {
+
     public static void main(String[] args) {
-        // ArrayList<Integer> arrayList = new ArrayList<Integer>(); 
-        // arrayList.add(10);
-        // arrayList.add(20);
-        // arrayList.add(30);
-        // System.out.println(arrayList.size());
-        // int sum = 0;
-        // for (int i = 0; i < arrayList.size(); i++) {
-        //     System.out.print(arrayList.get(i) + " ");
-        //     sum += arrayList.get(i);
-        // }
-        // System.out.println("\nsum = " + sum);
+        
+        CollectionDao c = CollectionDao.getInstance();
+        Scanner s = new Scanner(System.in);
 
-        ArrayList<Student> stuList = new ArrayList<Student>();
-        Student.Subjects[] jv = Student.Subjects.values();
+        boolean exitb = true;
+        do {
 
-        Student student1 = new Student();
-        student1.setNum(1111);
-        student1.setName("케이드");
-        student1.setAddress("대전광역시");
-        for (Student.Subjects j : jv) {
-            student1.setSub(j, 100);
-        }
+            System.out.print("[1] insert / [2] print / [3] delete / [4] select / [5] update / [etc] exit\n----------------------------------------------------------------------------\n> ");
 
-        stuList.add(student1);
+            int menu = s.nextInt();
 
-        Student student2 = new Student();
-        student2.setNum(2222);
-        student2.setName("파랑이");
-        student2.setAddress("서울특별시");
-        for (Student.Subjects j : jv) {
-            student2.setSub(j, 90);
-        }
+            if (CollectionDao.getStudentArray().size() == 0 && menu != 1) continue;
 
-        stuList.add(student2);
-
-        stuList.add(new Student(3333, "페시아", "서울특별시", 80, 100, 80));
-
-        // 출력 한 번 시켜봐.
-        for (Student s : stuList) {
-            int tot = 0;
-            System.out.print(s.getNum() + " ");
-            System.out.print(s.getName() + " ");
-            System.out.print(s.getAddress() + " ");
-            for (Student.Subjects j : jv) {
-                System.out.print(s.getSub(j));
-                tot += s.getSub(j);
-                System.out.print(" ");
+            switch(menu) {
+                case 1 : {
+                    int exit = 1;
+                    while (true) {
+                        c.insert();
+                        System.out.print("입력을 종료하시겠습니까? 계속 입력하시려면 정수 " + exit + "(을)를 눌러 주세요 >> ");
+                        int input = s.nextInt();
+                        if (input != exit) break;
+                    }
+                    break;
+                } case 2 : {
+                    studentHeader();
+                    for (Student student : CollectionDao.getStudentArray()) {
+                        c.print(student);
+                    }
+                    break;
+                } case 3 : {
+                    System.out.print("제거할 학생의 번호를 입력해 주세요. 없는 학생일 경우 맨 마지막으로 입력한 학생을 제거합니다.\n>> ");
+                    c.delete(s.nextInt());
+                    break;
+                } case 4 : {
+                    System.out.print("검색할 학생의 번호를 입력해 주세요. 없는 학생일 경우 맨 마지막으로 입력한 학생을 출력합니다.\n>> ");
+                    Student sel = c.select(s.nextInt());
+                    System.out.println("검색 결과:\n학번\t이름\t주소\t번호\t국어\t영어\t수학\t총점\t평균");
+                    c.print(sel);
+                    break;
+                } case 5 : {
+                    System.out.print("수정할 학생의 번호를 입력해 주세요. 없는 학생일 경우 맨 마지막으로 입력한 학생을 수정합니다.\n>> ");
+                    c.update(s.nextInt());
+                    break;
+                } default: exitb = false; break;
             }
-            s.setTot(tot);
-            s.setAvg((double) tot / (double) jv.length);
-            System.out.print(s.getTot() + " ");
-            System.out.print(s.getAvg() + " ");
-            System.out.println();
-        }
+        } while (exitb);
+        System.out.println("exiting the program.");
+        s.close();
+    }
+
+    static void studentHeader() {
+        System.out.println("\t학생목록\n학번\t이름\t주소\t번호\t국어\t영어\t수학\t총점\t평균");
     }
 }

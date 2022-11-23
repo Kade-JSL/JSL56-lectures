@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
         "221011-_JAVA\\221123\\javastudy",
-        "999999_ETC/1_java/exercises/221119_interfaces_example"
+        "999999_ETC/1_java/exercises/example-program"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

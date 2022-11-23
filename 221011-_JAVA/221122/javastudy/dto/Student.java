@@ -8,21 +8,6 @@ public class Student {
 
     public static enum Subjects { KOR, ENG, MAT }
 
-    public Student() {}
-
-    public Student(int num, String name, int kor, int eng, int mat) {
-        this.num = num;
-        this.name = name;
-        this.kor = kor;
-        this.eng = eng;
-        this.mat = mat;
-    }
-
-    public Student(int num, String name, String addr, int kor, int eng, int mat) {
-        this(num, name, kor, eng, mat);
-        this.address = addr;
-    }
-
     // getters and setters
     public int getNum() {
         return num;
