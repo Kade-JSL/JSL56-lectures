@@ -27,6 +27,6 @@
 
 # 개인 연습장에서 있었던 일
 
-- [2022-11-19 현재까지 배운 내용들로만 구현한 은행 계좌 프로그램](/999999_ETC/1_java/exercises/example-program/)
+- [은행 계좌 프로그램(라이브 디렉터리)](/999999_ETC/1_java/exercises/example-program/)
 - [계정주의 개인적인 Java 연습 코드들](/999999_ETC/1_java/src/exercises/)
 - [2022-11-06 자바 선행학습 필기](/999999_ETC/1_java/docs/221106_abstract.md)
