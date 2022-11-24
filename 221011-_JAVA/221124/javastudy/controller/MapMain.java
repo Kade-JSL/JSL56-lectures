@@ -17,17 +17,17 @@ public class MapMain {
         // map.put(2, "사과");
 
         // while (true) {
-        //     System.out.print("검색하고자 하는 단어 입력 >> ");
-        //     int key = sc.nextInt();
-        //     if (key == 9) {
-        //         System.out.println("'9' 입력됨. 프로그램 종료.");
-        //         break;
-        //     }
-        //     if (map.get(key) != null) {
-        //         System.out.println(key + "의 값은 " + map.get(key) + "입니다.");
-        //     } else {
-        //         System.out.println(map.get(key) + "의 값을 찾을 수 없습니다.");
-        //     }
+        // System.out.print("검색하고자 하는 단어 입력 >> ");
+        // int key = sc.nextInt();
+        // if (key == 9) {
+        // System.out.println("'9' 입력됨. 프로그램 종료.");
+        // break;
+        // }
+        // if (map.get(key) != null) {
+        // System.out.println(key + "의 값은 " + map.get(key) + "입니다.");
+        // } else {
+        // System.out.println(map.get(key) + "의 값을 찾을 수 없습니다.");
+        // }
         // }
 
         HashMap<String, Integer> score = new HashMap<String, Integer>();

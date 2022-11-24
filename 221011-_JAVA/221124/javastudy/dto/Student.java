@@ -6,7 +6,9 @@ public class Student {
     private double avg;
     private String name, address, tel;
 
-    public static enum Subjects { KOR, ENG, MAT }
+    public static enum Subjects {
+        KOR, ENG, MAT
+    }
 
     // getters and setters
     public int getNum() {
@@ -91,18 +93,27 @@ public class Student {
 
     public int getSub(Subjects j) {
         switch (j) {
-            case KOR: return kor;
-            case ENG: return eng;
-            case MAT: return mat;
-            default: return 0;
+            case KOR:
+                return kor;
+            case ENG:
+                return eng;
+            case MAT:
+                return mat;
+            default:
+                return 0;
         }
     }
 
     public void setSub(Subjects j, int s) {
         switch (j) {
-            case KOR: this.kor = s; break;
-            case ENG: this.eng = s; break;
-            case MAT: this.mat = s;
+            case KOR:
+                this.kor = s;
+                break;
+            case ENG:
+                this.eng = s;
+                break;
+            case MAT:
+                this.mat = s;
         }
     }
 }

@@ -8,7 +8,8 @@ class Student { // 패키지가 다르면 import라도 하지 않는 이상 뭐 
     String name;
     String tel;
 
-    public Student() {}
+    public Student() {
+    }
 
     public Student(int id, String name, String tel) {
         this.id = id;
@@ -20,7 +21,7 @@ class Student { // 패키지가 다르면 import라도 하지 않는 이상 뭐 
 public class MapMainTwo {
 
     public static void main(String[] args) {
-        
+
         HashMap<Integer, Student> map = new HashMap<>();
 
         map.put(1, new Student(111, "aaa", "030"));
@@ -32,7 +33,8 @@ public class MapMainTwo {
         while (true) {
             System.out.print("검색키 입력 >> ");
             int keys = sc.nextInt();
-            if (keys == 0) break;
+            if (keys == 0)
+                break;
 
             Student stu = map.get(keys);
 

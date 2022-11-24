@@ -10,8 +10,13 @@ import dto.Student;
 public class ScoreDaoImpl implements ScoreDao {
 
     private static ScoreDaoImpl scoreDao = new ScoreDaoImpl();
-    private ScoreDaoImpl() {}
-    public static ScoreDaoImpl getInstance() { return scoreDao; }
+
+    private ScoreDaoImpl() {
+    }
+
+    public static ScoreDaoImpl getInstance() {
+        return scoreDao;
+    }
 
     private static HashMap<String, Student> stuMap = new HashMap<String, Student>();
 
@@ -21,12 +26,24 @@ public class ScoreDaoImpl implements ScoreDao {
     public void run() {
         while (true) {
             switch (selectMenu()) {
-                case 1: scoreAdd(); break;
-                case 2: scoreSelect(); break;
-                case 3: scoreUpdate(); break;
-                case 4: scoreDelete(); break;
-                case 0: System.out.println("exiting the program."); return;
-                default: System.out.println("enter the right number...\n"); break;
+                case 1:
+                    scoreAdd();
+                    break;
+                case 2:
+                    scoreSelect();
+                    break;
+                case 3:
+                    scoreUpdate();
+                    break;
+                case 4:
+                    scoreDelete();
+                    break;
+                case 0:
+                    System.out.println("exiting the program.");
+                    return;
+                default:
+                    System.out.println("enter the right number...\n");
+                    break;
             }
         }
     }
@@ -56,14 +73,14 @@ public class ScoreDaoImpl implements ScoreDao {
     }
 
     // public void scoreDelete() {
-    //     System.out.print("삭제하고자 하는 학생 이름을 입력하세요 >> ");
-    //     String remove = s.next();
-    //     if (stuMap.containsKey(remove)) {
-    //         stuMap.remove(remove);
-    //         System.out.println(remove + " 학생의 기록 제거가 성공적으로 완료되었습니다.");
-    //     } else {
-    //         System.out.println(remove + " 학생은 목록에 없습니다.");
-    //     }
+    // System.out.print("삭제하고자 하는 학생 이름을 입력하세요 >> ");
+    // String remove = s.next();
+    // if (stuMap.containsKey(remove)) {
+    // stuMap.remove(remove);
+    // System.out.println(remove + " 학생의 기록 제거가 성공적으로 완료되었습니다.");
+    // } else {
+    // System.out.println(remove + " 학생은 목록에 없습니다.");
+    // }
     // }
 
     public void scoreDelete() {
@@ -76,7 +93,7 @@ public class ScoreDaoImpl implements ScoreDao {
         while (it.hasNext()) {
             String n = it.next();
             if (name.equals(n)) {
-                stuMap.remove(n); 
+                stuMap.remove(n);
                 System.out.println(name + " 학생의 기록 제거가 성공적으로 완료되었습니다.");
                 return;
             }
@@ -87,15 +104,18 @@ public class ScoreDaoImpl implements ScoreDao {
     public void scoreSelect() {
         System.out.println("전체 목록(총 인원수: " + stuMap.size() + "명)");
         System.out.println("학번\t이름\t주소\t번호\t국어\t영어\t수학\t총점\t평균");
-        
+
         Iterator<String> it = stuMap.keySet().iterator();
 
         while (it.hasNext()) {
             String name = it.next();
-            System.out.printf("%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%.2f\n", stuMap.get(name).getNum(), stuMap.get(name).getName(), stuMap.get(name).getAddress(), stuMap.get(name).getTel(), stuMap.get(name).getSub(Student.Subjects.KOR), stuMap.get(name).getSub(Student.Subjects.ENG), stuMap.get(name).getSub(Student.Subjects.MAT), stuMap.get(name).getTot(), stuMap.get(name).getAvg());
+            System.out.printf("%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%.2f\n", stuMap.get(name).getNum(),
+                    stuMap.get(name).getName(), stuMap.get(name).getAddress(), stuMap.get(name).getTel(),
+                    stuMap.get(name).getSub(Student.Subjects.KOR), stuMap.get(name).getSub(Student.Subjects.ENG),
+                    stuMap.get(name).getSub(Student.Subjects.MAT), stuMap.get(name).getTot(),
+                    stuMap.get(name).getAvg());
         }
     }
-    
 
     public void scoreUpdate() {
         System.out.print("수정할 학생의 이름을 입력하세요 >> ");
