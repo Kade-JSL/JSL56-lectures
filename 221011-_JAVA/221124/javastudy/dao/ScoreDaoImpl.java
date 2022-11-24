@@ -3,6 +3,8 @@
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Set;
+
 import dto.Student;
 
 public class ScoreDaoImpl implements ScoreDao {
@@ -53,16 +55,33 @@ public class ScoreDaoImpl implements ScoreDao {
         System.out.println(student.getName() + " 학생의 정보 입력이 완료되었습니다.");
     }
 
+    // public void scoreDelete() {
+    //     System.out.print("삭제하고자 하는 학생 이름을 입력하세요 >> ");
+    //     String remove = s.next();
+    //     if (stuMap.containsKey(remove)) {
+    //         stuMap.remove(remove);
+    //         System.out.println(remove + " 학생의 기록 제거가 성공적으로 완료되었습니다.");
+    //     } else {
+    //         System.out.println(remove + " 학생은 목록에 없습니다.");
+    //     }
+    // }
+
     public void scoreDelete() {
         System.out.print("삭제하고자 하는 학생 이름을 입력하세요 >> ");
-        String remove = s.next();
-        if (stuMap.containsKey(remove)) {
-            stuMap.remove(remove);
-            System.out.println(remove + " 학생의 기록 제거가 성공적으로 완료되었습니다.");
-        } else {
-            System.out.println(remove + " 학생은 목록에 없습니다.");
-        }
+        String name = s.next();
 
+        Set<String> set = stuMap.keySet();
+        Iterator<String> it = set.iterator();
+
+        while (it.hasNext()) {
+            String n = it.next();
+            if (name.equals(n)) {
+                stuMap.remove(n); 
+                System.out.println(name + " 학생의 기록 제거가 성공적으로 완료되었습니다.");
+                return;
+            }
+        }
+        System.out.println(name + " 학생은 목록에 없습니다.");
     }
 
     public void scoreSelect() {

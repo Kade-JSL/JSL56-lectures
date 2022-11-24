@@ -9,6 +9,8 @@
 - [/dao/](/221011-_JAVA/221124/javastudy/dao/)
     - [**ScoreDaoImpl.java**: 점수 입력 프로그램의 `HashMap` 버전](/221011-_JAVA/221124/javastudy/dao/ScoreDaoImpl.java)
     - [**ScoreDao.java**: 점수 입력 프로그램 인터페이스](/221011-_JAVA/221124/javastudy/dao/ScoreDao.java)
+- [/dto/](/221011-_JAVA/221124/javastudy/dto/)
+    - [**Student.java**: `enum`이 모든 가독성을 망쳤지만... ~~닷떼 오니쨩... enum은 좋은 문명인걸...~~](/221011-_JAVA/221124/javastudy/dto/Student.java)
 
 ---
 
