@@ -1,11 +1,7 @@
-﻿### [221122 ←](/221011-_JAVA/221122) | _→ 221124_<!--(/221011-_JAVA/221124/)-->
+﻿### [221122 ←](/221011-_JAVA/221122) | [→ 221124](/221011-_JAVA/221124/)
 
 # 이날 배웠던 것
 
----
-
-## 필?기
-
-- 대신귀 여운마 프티를 드리겠 습니다
-
-![鳴らない言葉をもう一度描いて](/999999_ETC/0_docs/imgs/pumpkin_dance.gif)
+- [**CollectionDao.java**: 학생 정보 입출력 프로그램을 컬렉션 프레임워크(정확히는 `ArrayList`) 버전으로 개조](/221011-_JAVA/221123/javastudy/dao/CollectionDao.java)
+- [**Student.java**: 입출력되는 학생의 정보를 담은 클래스](/221011-_JAVA/221123/javastudy/dto/Student.java)
+- [**CollectionMain.java**: 입출력 프로그램이 실행되는 클래스](/221011-_JAVA/221123/javastudy/controller/CollectionMain.java)
