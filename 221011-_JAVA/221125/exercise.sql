@@ -32,17 +32,17 @@ select * from student where name like '케%'; -- name이 '케'로 시작하는 �
 select * from student where name like '고%';
 select * from student where name like '멍%';
 select * from student;
-select kor, eng, mat from student;
-select * from student where kor >= 90;
-select * from student where eng < 90;
-select * from student where kor >= 90 or eng >= 90 or mat >= 90;
-select * from student where kor >= 90 and eng >= 90 and mat >= 90;
-select * from student where address like '대전광역시%';
+select kor, eng, mat from student; -- 이하 STUDENT 테이블 검색:
+select * from student where kor >= 90; -- 국어점수 90점 이상
+select * from student where eng < 90; -- 영어점수 90점 미만
+select * from student where kor >= 90 or eng >= 90 or mat >= 90; -- 적어도 과목 하나는 90점 이상
+select * from student where kor >= 90 and eng >= 90 and mat >= 90; -- 전 과목 90점 이상
+select * from student where address like '대전광역시%'; -- 주소 필드 맨 앞에 대전광역시가 있는 레코드
 select * from student where address like '대전광역시%' and name like '케%';
+-- 주소 맨 앞에 대전광역시가 있고 이름이 케로 시작하는 레코드
+
 select * from student;
 select * from student where num = 3333;
-
-/* 수정하는 명령어 UPDATE */
 
 /* 3333번 학번인 고양이 학생의 국어 점수를 50점으로 수정하고 싶다. */
 update student set kor = 50 where num = 3333;
@@ -71,6 +71,9 @@ select * from student order by num desc;
 
 select * from student where name like '페%';
 
+/* 평균이 90점 이하인 레코드 검색 */
+select * from student where avg < 90;
+
 /* 케이드 학생은 무슨 잘못을 했길래 점수가 10점으로 떡락한 걸까요? */
 update student set kor = 10, eng = 10, mat = 10 where num = 1111;
 select * from student;
@@ -93,15 +96,15 @@ select * from student;
 rollback;
 
 /* RESULT 컬럼 만들기, 거기에 조건문에 따라 텍스트 넣기 */
-alter table student add (memo varchar2(50));
-alter table student modify (memo varchar2(100));
-alter table student rename column memo to result;
-alter table student drop column result;
-alter table student add (result varchar2(50));
+alter table student add (memo varchar2(50)); -- 컬럼 추가
+alter table student modify (memo varchar2(100)); -- 컬럼 자료형 수정
+alter table student rename column memo to result; -- 컬럼 이름 변경
+alter table student drop column result; --  컬럼 삭제
+alter table student add (result varchar2(50)); -- 컬럼 다시 추가
 select * from student;
-update student set result = '합격' where avg >= 80;
+update student set result = '합격' where avg >= 80; -- 컬럼에 내용 입력
 select * from student;
-update student set result =
+update student set result = -- 조건에 따른 내용 입력
 case
 when avg >= 80 then '합격'
 when avg < 80 then '불합격'
