@@ -2,6 +2,8 @@
 
 # 이날 배웠던 것
 
+[**exercise.sql**: 뭔가 아주 기다란 연습 기록... Ctrl+Enter로 한 줄 한 줄 실행해 보자.]((/221011-_JAVA/221125/exercise.sql)
+
 ---
 
 ## Oracle SQL Developer 소프트웨어 실습
@@ -30,3 +32,4 @@ INSERT INTO STUDENT (
 - `WHERE`
     - `OR`와 `AND`로 조건의 범위를 결정
     - `LIKE`로 `VARCHAR2` 타입 레코드에 있는 데이터 범위 특정
+- 그리고 뭐... 기타등등
