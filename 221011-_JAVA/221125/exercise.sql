@@ -68,3 +68,5 @@ select * from student;
 
 /* 학번 내림차순으로 출력 */
 select * from student order by num desc;
+
+select * from student where name like '페%';
