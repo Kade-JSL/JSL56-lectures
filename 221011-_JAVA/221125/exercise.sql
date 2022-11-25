@@ -70,3 +70,42 @@ select * from student;
 select * from student order by num desc;
 
 select * from student where name like '페%';
+
+/* 케이드 학생은 무슨 잘못을 했길래 점수가 10점으로 떡락한 걸까요? */
+update student set kor = 10, eng = 10, mat = 10 where num = 1111;
+select * from student;
+update student set tot = kor + eng + mat;
+update student set avg = tot / 3;
+select * from student;
+
+/* 이름 오름차순(ASC는 치지 않아도 된다) */
+select * from student order by name asc;
+
+/* 평균 오름차순 */
+select * from student order by avg desc;
+
+/* 5555번 학생 삭제 */
+delete student where num = 5555;
+select * from student;
+
+delete student where avg <= 80;
+select * from student;
+rollback;
+
+/* RESULT 컬럼 만들기, 거기에 조건문에 따라 텍스트 넣기 */
+alter table student add (memo varchar2(50));
+alter table student modify (memo varchar2(100));
+alter table student rename column memo to result;
+alter table student drop column result;
+alter table student add (result varchar2(50));
+select * from student;
+update student set result = '합격' where avg >= 80;
+select * from student;
+update student set result =
+case
+when avg >= 80 then '합격'
+when avg < 80 then '불합격'
+end;
+select * from student;
+
+select * from student where result = '불합격';
