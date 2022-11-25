@@ -2,7 +2,7 @@
 
 # 이날 배웠던 것
 
-[**exercise.sql**: 뭔가 아주 기다란 연습 기록... Ctrl+Enter로 한 줄 한 줄 실행해 보자.]((/221011-_JAVA/221125/exercise.sql)
+[**exercise.sql**: 뭔가 아주 기다란 연습 기록... Ctrl+Enter로 한 줄 한 줄 실행해 보자.](/221011-_JAVA/221125/exercise.sql)
 
 ---
 
