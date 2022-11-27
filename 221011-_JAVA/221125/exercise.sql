@@ -112,3 +112,49 @@ end;
 select * from student;
 
 select * from student where result = '불합격';
+
+
+create table notice (
+    bno number(3) not null primary key,
+    title varchar2(500) not null,
+    content varchar2(4000) not null,
+    name varchar2(10) not null,
+    viewcount number(3) default 0
+);
+
+desc notice; -- 제 환경(VS Code)에선 안 되더랩니다. 이게 뭐 DB 연결의 주체에 따라 다르다는데, 걍 SQL Developer 프로그램에선 되더군요.
+
+insert into notice (
+    bno, title, content, name
+) values (
+    1, '개발자 모집', '여기 자바 3명이요', '관리자'
+);
+
+select * from notice; -- NOTICE 테이블의 모든 컬럼 검색
+select title, content from notice; -- 제목, 내용 컬럼만 검색
+
+insert into notice
+values (
+    2, '자바 배우기', '객체지향 언어', '관리자', 0
+);  -- 데이터를 순서대로 입력할 땐 컬럼 이름 안 입력해도 된다(디폴트까지 입력해 주자)
+insert into notice (
+    bno, title, content, name
+) values (
+    3, '제목임', '제곧내', '관리자'
+);
+insert into notice (
+    bno, title, content, name
+) values (
+    4, '방구석에선 코딩허접이던 내가 마법학원에 갔더니 기대의 신입생?!', '방구석에서 코딩하다가 어디서 날아온 예외에 맞아서 죽었다. 하지만 죽었더니 웬 인도네시아 여성처럼 생긴 여신이 나타나서 나를 이세계로 부활시킨다고 하는 것이다. 가는 건 이세계인데 왜 나는 체크무늬 옷차림 그대로일까? 아니나다를까 전생해서 간 곳도 마법학원이라 쓰고 그냥 코딩학원이라 읽는 그런 인력양성소 같은 데였다.', '소설가'
+);
+insert into notice (
+    bno, title, content, name
+) values (
+    5, '「別に」なんて言わないで、「またね」って言って', '私のものにならなくていい、傍にいるだけでいい', '千早'
+);
+
+select * from notice;
+
+select * from notice where name = '소설가';
+select * from notice where title like '%な%';
+commit;
