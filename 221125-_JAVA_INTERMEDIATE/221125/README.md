@@ -2,7 +2,7 @@
 
 # 이날 배웠던 것
 
-- [**exercise.sql**: 뭔가 아주 기다란 연습 기록... Ctrl+Enter로 한 줄 한 줄 실행해 보자.](/221125-_JAVA_INTERMEDIATE/exercise.sql)
+- [**exercise.sql**: 뭔가 아주 기다란 연습 기록... Ctrl+Enter로 한 줄 한 줄 실행해 보자.](/221125-_JAVA_INTERMEDIATE/221125/exercise.sql)
     - `NAME` 컬럼에 있는 이름 다섯 개만 바뀌었지 나머지는 모두 동일합니다.
         - _근데 생각해 보니까 그럼 `SELECT`문 쓰는 부분도 좀 달라지네요. 고건 알아서 감안을... ㅎㅎ;;_
 
