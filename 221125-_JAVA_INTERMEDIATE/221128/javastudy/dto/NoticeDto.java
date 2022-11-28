@@ -34,7 +34,5 @@ public class NoticeDto {
     }
     public void setViewcount(int viewcount) {
         this.viewcount = viewcount;
-    }
-
-    
+    }    
 }
