@@ -1,9 +1,10 @@
-# 소스코드 구조
+# 소스코드 구조(ver. 0.1.1)
 
 - [/controller](/999999_ETC/1_java/exercises/example-program/controller/)
     - [/Menu.java](/999999_ETC/1_java/exercises/example-program/controller/Menu.java): 메뉴가 실행되는 클래스
 - [/dao](/999999_ETC/1_java/exercises/example-program/dao/)
-    - [/GeneralActions.java](/999999_ETC/1_java/exercises/example-program/dao/GeneralActions.java): 인터페이스와 그것의 구현. 해당 클래스 타입의 인스턴스는 데이터 처리만을 담당하므로 싱글톤 객체로 만들었다.
+    - [/GeneralActions.java](/999999_ETC/1_java/exercises/example-program/dao/GeneralActions.java): 인터페이스와 그것의 구현. 프리릴리즈 버전에선 계좌 생성 기능밖에 없음.
+    - [/DBConnection.java](/999999_ETC/1_java/exercises/example-program/dao/DBConnection.java)
 - [/dto](/999999_ETC/1_java/exercises/example-program/dto/)
     - [/BankAccount.java](/999999_ETC/1_java/exercises/example-program/dto/BankAccount.java): 일반적인 은행 계좌 특성을 담은 가상 클래스. 다형성을 이용해 여러 타입의 하위 클래스 객체에 접근.
     - [/LiteAccount.java](/999999_ETC/1_java/exercises/example-program/dto/LiteAccount.java): 일반 계정의 실제 멤버를 담은 클래스. `BankAccount`의 하위 클래스이다.
