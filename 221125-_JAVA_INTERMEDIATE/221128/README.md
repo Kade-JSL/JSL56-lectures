@@ -5,7 +5,7 @@
 - [/controller/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/controller/)
     - [**StudentMain.java**: 성적 관리 프로그램 메인 메뉴](/221125-_JAVA_INTERMEDIATE/221128/javastudy/controller/StudentMain.java)
 - [/dao/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dao/)
-    - [**StudentJdbcDao.java**: DB 연동 객체를 포함한 성적 관리 프로그램 메서드](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dao/StudentJdbcDao.java)
+    - [**StudentJdbcDao.java**: 그 프로그램의 각종 기능을 담은 메서드 객체(싱글톤), DB 연동 포함](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dao/StudentJdbcDao.java)
 - [/DBManager/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/DBManager/)
     - [**DBConnection.java**: JDBC 드라이버와 Connection 클래스를 이용한 DB 연동 객체](/221125-_JAVA_INTERMEDIATE/221128/javastudy/DBManager/DBConnection.java)
 - [/dto/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dto/)
@@ -30,7 +30,7 @@
 - JDBC: Java DataBase Connectivity의 약자.
 - 관계형 데이터베이스(Relational database; 関係データベース)에 접속, SQL문을 수행하여 처리하고자 할 때 사용되는 표준 SQL 인터페이스.
 - JDBC 개발 절차
-    1. *JDBC 라이브러리도 불러옵시다.*
+    1. *`import`로 JDBC 라이브러리를 불러오는 것도 잊지 맙시다.*
     1. JDBC 드라이버 로드: `Class.forName()`
     1. 데이터베이스 연결: `java.sql.Connection`
     1. Statement 객체 생성: `java.sql.PreparedStatement`
@@ -43,5 +43,10 @@
     String url = "jdbc:oracle:thin:@localhost:1521:xe"
     ```
 
-- `executeUpdate()`: `INSERT`, `UPDATE`, `DELETE` 실행
-- `executeQuery()`: `SELECT` 실행
+## 쿼리문을 자바로 실행해 보기
+
+- `conn`: DB와의 연결
+- `pstmt`: `PreparedStatement` 객체로써 쿼리문을 작성하고 실행
+    - `executeUpdate()`: `INSERT`, `UPDATE`, `DELETE` 실행
+- `rs`: `ResultSet` 객체로써 역시 쿼리문을 실행하나...
+    - `executeQuery()`: `SELECT`문을 실행한다.

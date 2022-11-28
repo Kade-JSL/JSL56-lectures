@@ -1,6 +1,5 @@
 ﻿package controller;
 
-import java.util.HashMap;
 import java.util.Scanner;
 import dao.StudentJdbcDao;
 import dto.Student;
@@ -11,10 +10,6 @@ public class StudentMain {
         StudentJdbcDao studentDBConn = StudentJdbcDao.getDao();
 
         Scanner sc = new Scanner(System.in);
-
-        Student.Subjects[] subs = Student.Subjects.values();
-        HashMap<Student.Subjects, String> subm = new HashMap<>();
-        subm.put(subs[0], "국어"); subm.put(subs[1], "영어"); subm.put(subs[2], "수학");
 
         boolean run = true;
         while (run) {
@@ -32,15 +27,16 @@ public class StudentMain {
                     stu.setAddress(sc.next());
                     System.out.print("전화번호: ");
                     stu.setTel(sc.next());
+                    System.out.print("국어점수: ");
+                    stu.setKor(sc.nextInt());
+                    System.out.print("영어점수: ");
+                    stu.setEng(sc.nextInt());
+                    System.out.print("수학점수: ");
+                    stu.setMat(sc.nextInt());
 
-                    for (Student.Subjects j : subs) {
-                        System.out.print(subm.get(j) + "점수: ");
-                        stu.setSub(j, sc.nextInt());
-                    }
-
-                    int tot = 0; for (Student.Subjects j : subs) { tot += stu.getSub(j); }
+                    int tot = stu.getKor() + stu.getEng() + stu.getMat();
                     stu.setTot(tot);
-                    double avg = (double) tot / (double) subs.length;
+                    double avg = (double) tot / 3.;
                     stu.setAvg(avg);
 
                     if (avg >= 80.0) stu.setResult("합격");
