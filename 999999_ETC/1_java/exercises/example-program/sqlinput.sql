@@ -1,9 +1,23 @@
-create table liteaccount (
-    accounttype varchar2(6) default '일반',
-    accountnum number(5) not null primary key,
-    ownername varchar2(30) not null,
-    password number(2) not null,
-    balance number(15)
+CREATE TABLE LITEACCOUNT (
+    ACCOUNTTYPE VARCHAR2(6) DEFAULT '일반',
+    ACCOUNTNUM NUMBER(5) NOT NULL PRIMARY KEY,
+    OWNERNAME VARCHAR2(30) NOT NULL,
+    PASSWORD NUMBER(2) NOT NULL,
+    BALANCE NUMBER(15)
 );
 
-insert into liteaccount (accountnum, ownername, password, balance) values (11111, '케이드', 11, 100000);
+INSERT INTO LITEACCOUNT (
+    ACCOUNTNUM,
+    OWNERNAME,
+    PASSWORD,
+    BALANCE
+) VALUES (
+    11111,
+    '케이드',
+    11,
+    100000
+);
+
+select * from liteaccount;
+
+delete liteaccount where ACCOUNTNUM = 16996; 
