@@ -1,9 +1,17 @@
-﻿select * from student;
+﻿SELECT
+    *
+FROM
+    STUDENT;
 
-select max(num) as bno from student;
+SELECT
+    MAX(NUM) AS BNO
+FROM
+    STUDENT;
 
-delete student where num = 6;
+DELETE STUDENT
+WHERE
+    NUM = 7;
 
-update student set num = 5 where num = 5555;
+COMMIT;
 
-commit;
+select * from notice;

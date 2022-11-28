@@ -11,10 +11,6 @@ public class Student {
     // private double avg;
     // private String name, address, tel;
 
-    public static enum Subjects {
-        KOR, ENG, MAT
-    }
-
     // getters and setters
     public int getNum() {
         return num;
@@ -81,11 +77,11 @@ public class Student {
     }
 
     // public int getRank() {
-    //     return rank;
+    // return rank;
     // }
 
     // public void setRank(int rank) {
-    //     this.rank = rank;
+    // this.rank = rank;
     // }
 
     public double getAvg() {
@@ -94,32 +90,6 @@ public class Student {
 
     public void setAvg(double avg) {
         this.avg = avg;
-    }
-
-    public int getSub(Subjects j) {
-        switch (j) {
-            case KOR:
-                return kor;
-            case ENG:
-                return eng;
-            case MAT:
-                return mat;
-            default:
-                return 0;
-        }
-    }
-
-    public void setSub(Subjects j, int s) {
-        switch (j) {
-            case KOR:
-                this.kor = s;
-                break;
-            case ENG:
-                this.eng = s;
-                break;
-            case MAT:
-                this.mat = s;
-        }
     }
 
     public String getResult() {
