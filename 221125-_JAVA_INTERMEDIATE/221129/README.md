@@ -4,10 +4,8 @@
 
 - [/controller/](/221125-_JAVA_INTERMEDIATE/221129/javastudy/controller/)
     - [**StudentMain.java**: 성적 관리 프로그램 메인 메뉴](/221125-_JAVA_INTERMEDIATE/221129/javastudy/controller/StudentMain.java)
-    - [**NoticeMain.java**: 게시물 관리 프로그램 메인 메뉴](/221125-_JAVA_INTERMEDIATE/221129/javastudy/controller/NoticeMain.java)
 - [/dao/](/221125-_JAVA_INTERMEDIATE/221129/javastudy/dao/)
-    - [**StudentJdbcDao.java**: 그 프로그램의 각종 기능을 담은 메서드 객체(싱글톤), DB 연동 포함](/221125-_JAVA_INTERMEDIATE/221129/javastudy/dao/StudentJdbcDao.java)
-    - [**NoticeDao.java**: ]
+    - [**StudentJdbcDao.java**: (그 프로그램의 각종 기능을 담은 메서드 객체(싱글톤), DB 연동 포함) 전체 출력 기능 추가](/221125-_JAVA_INTERMEDIATE/221129/javastudy/dao/StudentJdbcDao.java)
 - [/DBManager/](/221125-_JAVA_INTERMEDIATE/221129/javastudy/DBManager/)
     - [**DBConnection.java**: JDBC 드라이버와 Connection 클래스를 이용한 DB 연동 객체](/221125-_JAVA_INTERMEDIATE/221129/javastudy/DBManager/DBConnection.java)
 - [/dto/](/221125-_JAVA_INTERMEDIATE/221129/javastudy/dto/)
