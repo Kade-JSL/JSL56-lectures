@@ -1,5 +1,6 @@
 ﻿package controller;
 
+import java.util.List;
 import java.util.Scanner;
 import dao.StudentJdbcDao;
 import dto.Student;
@@ -44,6 +45,16 @@ public class StudentMain {
 
                     studentDBConn.insert(stu);
 
+                    break;
+                case 2:
+                    List<Student> stuList = studentDBConn.selectAll();
+                    
+                    System.out.println("학생 목록\n학번\t이름\t주소\t\t번호\t국어\t영어\t수학\t총점\t평균\t결과");
+                    for (Student s : stuList) {
+                        System.out.printf("%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%5.2f\t%s\n", s.getNum(), s.getName(),
+                                s.getAddress(), s.getTel(), s.getKor(), s.getEng(), s.getMat(), s.getTot(),
+                                s.getAvg(), s.getResult());
+                    }
                     break;
                 case 0:
                     System.out.println("프로그램을 종료합니다.");

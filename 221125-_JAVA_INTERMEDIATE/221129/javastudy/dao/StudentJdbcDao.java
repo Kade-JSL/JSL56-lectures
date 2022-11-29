@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import DBManager.DBConnection;
 
@@ -12,11 +14,16 @@ public class StudentJdbcDao { // DB와 연동해서 입력(C), 검색(R), 수정
 
     /* 싱글톤 객체 */
     private static StudentJdbcDao studentJdbcDao = new StudentJdbcDao();
+
     private StudentJdbcDao() {};
-    public static StudentJdbcDao getDao() { return studentJdbcDao; }
+
+    public static StudentJdbcDao getDao() {
+        return studentJdbcDao;
+    }
 
     Scanner sc = new Scanner(System.in); // 시스템 입력 스트림을 통해 데이터를 입력받기 위한 스캐너
 
+    /* 맨 끝 학번을 돌려주는 메서드 */
     public int numAdd() {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -48,11 +55,7 @@ public class StudentJdbcDao { // DB와 연동해서 입력(C), 검색(R), 수정
         conn = DBConnection.getInstance().getConnection();
 
         String query =
-            "INSERT INTO STUDENT (" +
-                "NUM, NAME, ADDRESS, TEL, KOR, ENG, MAT, TOT, AVG, RESULT" +
-            ") VALUES (" +
-                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?" +
-            ")";
+                "INSERT INTO STUDENT (NUM, NAME, ADDRESS, TEL, KOR, ENG, MAT, TOT, AVG, RESULT) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             pstmt = conn.prepareStatement(query);
@@ -69,12 +72,52 @@ public class StudentJdbcDao { // DB와 연동해서 입력(C), 검색(R), 수정
             pstmt.setString(10, stu.getResult());
 
             int status = pstmt.executeUpdate();
-            if (status > 0) System.out.println("데이터 입력 완료");
-            else System.out.println("데이터 입력 실패");
+            if (status > 0)
+                System.out.println("데이터 입력 완료");
+            else
+                System.out.println("데이터 입력 실패");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             DBConnection.close(conn, pstmt);
         }
     }
+
+    /* 전체 학생 리스트 출력 */
+    public List<Student> selectAll() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        String query = "SELECT * FROM STUDENT ORDER BY NUM";
+
+        conn = DBConnection.getInstance().getConnection();
+
+        List<Student> stuList = new ArrayList<Student>(); // List 타입으로 받으면 Vector도 된다
+
+        try {
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery(); // PreparedStatement 쿼리 실행, Result 결과 저장
+            while (rs.next()) {
+                Student stu = new Student();
+                stu.setNum(rs.getInt("NUM"));
+                stu.setName(rs.getString("NAME"));
+                stu.setAddress(rs.getString("ADDRESS"));
+                stu.setTel(rs.getString("TEL"));
+                stu.setKor(rs.getInt("KOR"));
+                stu.setEng(rs.getInt("ENG"));
+                stu.setMat(rs.getInt("MAT"));
+                stu.setTot(rs.getInt("TOT"));
+                stu.setAvg(rs.getDouble("AVG"));
+                stu.setResult(rs.getString("RESULT"));
+                stuList.add(stu);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
+        return stuList;
+    }
+
 }
