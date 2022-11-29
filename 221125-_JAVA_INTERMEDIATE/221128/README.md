@@ -1,15 +1,18 @@
-﻿### [221125 ←](/221125-_JAVA_INTERMEDIATE/221125/) | [→ 221129]<!--(/221125-_JAVA_INTERMEDIATE/221129/)-->
+﻿### [221125 ←](/221125-_JAVA_INTERMEDIATE/221125/) | [→ 221129](/221125-_JAVA_INTERMEDIATE/221129/)
 
 # 이날 배웠던 것
 
 - [/controller/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/controller/)
     - [**StudentMain.java**: 성적 관리 프로그램 메인 메뉴](/221125-_JAVA_INTERMEDIATE/221128/javastudy/controller/StudentMain.java)
+    - [**NoticeMain.java**: 게시물 관리 프로그램 메인 메뉴](/221125-_JAVA_INTERMEDIATE/221128/javastudy/controller/NoticeMain.java)
 - [/dao/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dao/)
     - [**StudentJdbcDao.java**: 그 프로그램의 각종 기능을 담은 메서드 객체(싱글톤), DB 연동 포함](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dao/StudentJdbcDao.java)
+    - [**NoticeDao.java**: DB와 연동한 게시물 관리 기능을 담은 싱글톤 메서드 객체](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dao/NoticeDao.java)
 - [/DBManager/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/DBManager/)
     - [**DBConnection.java**: JDBC 드라이버와 Connection 클래스를 이용한 DB 연동 객체](/221125-_JAVA_INTERMEDIATE/221128/javastudy/DBManager/DBConnection.java)
 - [/dto/](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dto/)
     - [**Student.java**: DB에 저장하는 레코드의 원형이 되는 객체](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dto/Student.java)
+    - [**NoticeDto.java**: 게시물 객체](/221125-_JAVA_INTERMEDIATE/221128/javastudy/dto/NoticeDto.java)
 
 ---
 
