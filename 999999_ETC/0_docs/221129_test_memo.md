@@ -128,6 +128,17 @@ System.out.println("10까지 홀수의 합: " + sum);
 
 ## JavaScript
 
+    ```html
+    <html>
+        <script>
+            var a = 10 + 10;
+            window.alert(a);
+            document.write(a);
+            console.log(a);
+        </script>
+    </html>
+    ```
+
 1. `window.alert()`
 1. `document.write()`
 1. `console.log()`
