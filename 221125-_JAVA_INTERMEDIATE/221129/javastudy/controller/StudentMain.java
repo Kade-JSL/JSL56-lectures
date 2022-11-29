@@ -56,6 +56,22 @@ public class StudentMain {
                                 s.getAvg(), s.getResult());
                     }
                     break;
+                case 4:
+                    System.out.print("삭제하고자 하는 학번을 입력하세요 >> ");
+                    int deleteNum = sc.nextInt();
+                    Student s = studentDBConn.selectNum(deleteNum);
+                    System.out.printf("%d\t%s\t%s\t%s\t%d\t%d\t%d\t%d\t%5.2f\t%s\n", s.getNum(), s.getName(),
+                                s.getAddress(), s.getTel(), s.getKor(), s.getEng(), s.getMat(), s.getTot(),
+                                s.getAvg(), s.getResult());
+                    System.out.print("정말로 이 학생을 삭제하시겠습니까(Y/n(default))? >> ");
+                    if (sc.next().equals("Y")) {
+                        int result = studentDBConn.delete(deleteNum);
+                        if (result > 0) System.out.println("삭제가 완료되었습니다.");
+                        else System.out.println("정상적으로 삭제가 완료되지 않았습니다. 다시 시도해 주세요."); break;
+                    } else {
+                        System.out.println("삭제가 취소되었습니다.");
+                    }
+                    break;
                 case 0:
                     System.out.println("프로그램을 종료합니다.");
                     run = false;

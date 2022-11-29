@@ -3,7 +3,7 @@
 FROM
     STUDENT;
 
-select * from student order by num desc;
+select * from student order by num;
 
 SELECT
     MAX(NUM) AS BNO
@@ -15,6 +15,10 @@ WHERE
     BNO = 6;
 
 COMMIT;
+
+delete from student;
+
+delete from student where num = 3;
 
 rollback;
 

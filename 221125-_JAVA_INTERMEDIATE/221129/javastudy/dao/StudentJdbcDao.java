@@ -120,4 +120,59 @@ public class StudentJdbcDao { // DB와 연동해서 입력(C), 검색(R), 수정
         return stuList;
     }
 
+    /* 한 줄 검색 */
+    public Student selectNum(int num) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        conn = DBConnection.getInstance().getConnection();
+        Student stu = new Student();
+
+        String query = "SELECT * FROM STUDENT WHERE NUM = ?";
+
+        try {
+            pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, num);
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                stu.setNum(rs.getInt("NUM"));
+                stu.setName(rs.getString("NAME"));
+                stu.setAddress(rs.getString("ADDRESS"));
+                stu.setTel(rs.getString("TEL"));
+                stu.setKor(rs.getInt("KOR"));
+                stu.setEng(rs.getInt("ENG"));
+                stu.setMat(rs.getInt("MAT"));
+                stu.setTot(rs.getInt("TOT"));
+                stu.setAvg(rs.getDouble("AVG"));
+                stu.setResult(rs.getString("RESULT"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
+
+        return stu;
+    }
+
+    public int delete(int deleteNum) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        int result = 0;
+        conn = DBConnection.getInstance().getConnection();
+
+        String query = "DELETE FROM STUDENT WHERE NUM = ?";
+
+        try {
+            pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, deleteNum);
+            result = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(conn, pstmt);
+        }
+        return result;
+    }
+
 }
