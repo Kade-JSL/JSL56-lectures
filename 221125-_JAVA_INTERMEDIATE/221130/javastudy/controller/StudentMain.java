@@ -97,6 +97,8 @@ public class StudentMain {
                     System.out.println("수정 대상 학생");
                     prompt('r', 0);
                     stuDao.read(stu);
+                    System.out.print("정말로 수정하시겠습니까(Y/n(default) >> ");
+                    if (sc.next() != "Y") break;
                     System.out.print("수정할 국어점수: ");
                     int ukor = sc.nextInt();
                     System.out.print("수정할 영어점수: ");
