@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -9,9 +10,9 @@ import dto.*;
 
 /* 공통적 계좌 활동 */
 interface AccountActions {
-    void createAccount(BankAccount a);
+    int createAccount(BankAccount a);
 
-    // void readAccount(BankAccount a);
+    BankAccount readLiteAccount(int an);
 
     // void deposit(BankAccount a);
 
@@ -38,10 +39,13 @@ public class GeneralActions implements AccountActions {
     Scanner s = new Scanner(System.in);
 
     /* 계좌 개설 */
-    public void createAccount(BankAccount a) {
+    public int createAccount(BankAccount a) {
+        int result = 0;
 
         if (!BankAccount.isOtherTypeExists) {
+            Connection conn = DBConnection.getInstance().getConnection();
             PreparedStatement pstmt = null;
+
 
             String query =
                 "INSERT INTO LITEACCOUNT (" +
@@ -58,9 +62,7 @@ public class GeneralActions implements AccountActions {
                 pstmt.setInt(3, a.getPassword());
                 pstmt.setInt(4, a.getBalance());
 
-                int result = pstmt.executeUpdate();
-                if (result > 0) System.out.println("계좌 등록이 정상적으로 완료되었습니다.");
-                else System.out.println("데이터베이스 오류. 다시 시도해 주세요."); return;
+                result = pstmt.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -68,15 +70,35 @@ public class GeneralActions implements AccountActions {
             }
 
         }
+        return result;
     }
 
-    // public void readAccount(BankAccount a) {
-    //     if (accList.size() == 0) {
-    //         System.out.println("아직은 계좌가 없습니다.");
-    //     } else if (a.accountType == 0) {
-    //         System.out.printf("일반\t%d\t\t%s\t%d\n", a.getAccountNum(), a.getOwnerName(), a.getBalance());
-    //     }
-    // }
+    public BankAccount readLiteAccount(int an) {
+        Connection conn = DBConnection.getInstance().getConnection();
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        BankAccount b = new LiteAccount();
+        
+        String query = "SELECT * FROM LITEACCOUNT WHERE ACCOUNTNUM = " + an;
+
+        try {
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                b.setAccountType(0);
+                b.setAccountNum(rs.getInt("ACCOUNTNUM"));
+                b.setOwnerName(rs.getString("OWNERNAME"));
+                b.setPassword(rs.getInt("PASSWORD"));
+                b.setBalance(rs.getInt("BALANCE"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
+
+        return b;
+    }
 
     // public void deposit(BankAccount a) {
     //     System.out.printf("%s 회원님의 %s번 계좌에 입금합니다.\n", a.getOwnerName(), a.getAccountNum());

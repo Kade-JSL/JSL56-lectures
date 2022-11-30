@@ -1,4 +1,4 @@
-﻿# 제3회내부평가시험과목<프로그래밍언어홯용>
+﻿# 제3회내부평가시험과목<프로그래밍언어활용>
 
 ## 구조적 프로그래밍 설계 구조
 
@@ -128,16 +128,16 @@ System.out.println("10까지 홀수의 합: " + sum);
 
 ## JavaScript
 
-    ```html
-    <html>
-        <script>
-            var a = 10 + 10;
-            window.alert(a);
-            document.write(a);
-            console.log(a);
-        </script>
-    </html>
-    ```
+```html
+<html>
+    <script>
+        var a = 10 + 10;
+        window.alert(a);
+        document.write(a);
+        console.log(a);
+    </script>
+</html>
+```
 
 1. `window.alert()`
 1. `document.write()`

@@ -4,14 +4,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import dto.Student;
 
-public class StudentDao {
-    private static StudentDao studentDao = new StudentDao();
-    private StudentDao() {}
-    public static StudentDao getDao() { return studentDao; }
+import dto.StudentDto;
 
-    public void insert(Student stu) {
+public class StudentDaoE {
+    private static StudentDaoE studentDao = new StudentDaoE();
+    private StudentDaoE() {}
+    public static StudentDaoE getDao() { return studentDao; }
+
+    public void insert(StudentDto stu) {
         Connection conn = null;
         PreparedStatement pstmt = null;
 
@@ -22,7 +23,7 @@ public class StudentDao {
                 "?, ?, ?, ?, ?, ?, ?, ?, ?, ?" +
             ")";
         
-        conn = DBConnection.getInstance().getConnection();
+        conn = DBConnectionE.getInstance().getConnection();
 
         try {
             pstmt = conn.prepareStatement(query);
@@ -43,7 +44,7 @@ public class StudentDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            DBConnection.close(conn, pstmt);
+            DBConnectionE.close(conn, pstmt);
         }
     }
 
@@ -53,7 +54,7 @@ public class StudentDao {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
-        conn = DBConnection.getInstance().getConnection();
+        conn = DBConnectionE.getInstance().getConnection();
 
         String query = "SELECT MAX(NUM) AS MNUM FROM JDBCEXERCISE";
 
@@ -64,7 +65,7 @@ public class StudentDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            DBConnection.close(conn, pstmt, rs);
+            DBConnectionE.close(conn, pstmt, rs);
         }
 
         return max;

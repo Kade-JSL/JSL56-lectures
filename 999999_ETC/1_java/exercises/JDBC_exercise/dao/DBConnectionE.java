@@ -6,10 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DBConnection {
-    private static DBConnection instance = new DBConnection();
-    private DBConnection() {}
-    public static DBConnection getInstance() { return instance; }
+public class DBConnectionE {
+    private static DBConnectionE instance = new DBConnectionE();
+    private DBConnectionE() {}
+    public static DBConnectionE getInstance() { return instance; }
 
     public Connection getConnection() {
         Connection conn = null;

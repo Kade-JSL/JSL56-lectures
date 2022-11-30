@@ -1,10 +1,10 @@
 ﻿package controller;
 
 import java.util.Scanner;
-import dao.StudentDao;
-import dto.Student;
+import dao.StudentDaoE;
+import dto.StudentDto;
 
-public class StudentMain {
+public class StudentMainE {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
@@ -15,8 +15,8 @@ public class StudentMain {
             int menu = sc.nextInt();
             switch (menu) {
                 case 1:
-                    Student stu = new Student();
-                    stu.setNum(StudentDao.getMaxNum() + 1);
+                    StudentDto stu = new StudentDto();
+                    stu.setNum(StudentDaoE.getMaxNum() + 1);
                     System.out.printf("num = %d\nname address tel kor eng mat\n>> ", stu.getNum());
                     stu.setName(sc.next());
                     stu.setAddress(sc.next());

@@ -59,6 +59,22 @@ public abstract class BankAccount {
     public void setBalance(int balance) {
         this.balance = balance;
     }
+
+    public int getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(int accountType) {
+        this.accountType = accountType;
+    }
+
+    public static boolean isOtherTypeExists() {
+        return isOtherTypeExists;
+    }
+
+    public static void setOtherTypeExists(boolean isOtherTypeExists) {
+        BankAccount.isOtherTypeExists = isOtherTypeExists;
+    }
 }
 
 /* 테스트 코드 */

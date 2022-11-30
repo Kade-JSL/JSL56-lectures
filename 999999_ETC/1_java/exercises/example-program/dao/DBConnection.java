@@ -24,7 +24,6 @@ public class DBConnection {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver"); // 이건 좀 외울 만 하다.
             conn = DriverManager.getConnection(url, id, pw);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
