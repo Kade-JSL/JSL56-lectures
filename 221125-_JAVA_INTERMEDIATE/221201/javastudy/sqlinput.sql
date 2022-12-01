@@ -1,0 +1,17 @@
+﻿SELECT
+    *
+FROM
+    STUDENT;
+
+SELECT
+    MAX(NUM) AS BNO
+FROM
+    STUDENT;
+
+DELETE STUDENT
+WHERE
+    NUM = 7;
+
+COMMIT;
+
+select * from notice;
