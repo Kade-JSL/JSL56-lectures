@@ -2,13 +2,41 @@
 
 # 이날 배웠던 것
 
-- [/controller/](/221125-_JAVA_INTERMEDIATE/221130/javastudy/controller/)
-    - [**StudentMain.java**: 메인 메뉴. CRUD 중에 U가 추가됨.](/221125-_JAVA_INTERMEDIATE/221130/javastudy/controller/StudentMain.java)
-        - `prompt()` 메서드로 간략하게 메뉴 출력 구현
-- [/dao/](/221125-_JAVA_INTERMEDIATE/221130/javastudy/dao/)
-    - [**StudentDao.java**: 메서드 모임. U를 구현함.](/221125-_JAVA_INTERMEDIATE/221130/javastudy/dao/StudentDao.java)
-        - `read()` 메서드로 간략하게 레코드 출력 구현
-- [/DBManager/](/221125-_JAVA_INTERMEDIATE/221130/javastudy/DBManager/)
-    - [DBConnection.java: JDBC 드라이버와 Connection 클래스를 이용한 DB 연동 객체](/221125-_JAVA_INTERMEDIATE/221130/javastudy/DBManager/DBConnection.java)
-- [/dto/](/221125-_JAVA_INTERMEDIATE/221130/javastudy/dto/)
-    - [Student.java: DB에 저장하는 레코드의 원형이 되는 객체](/221125-_JAVA_INTERMEDIATE/221130/javastudy/dto/Student.java)
+- 
+
+---
+
+## 테이블끼리 `JOIN`을 해 보자
+
+- Join: 결합한다는 뜻.
+    - 그러니까 테이블끼리 서로 결합하여 새로 뭔가 만드는 거.
+    - *Joining tables to make something new about tables... I think?*
+- Kinds of join
+    - Inner join: Doesn's contain `NULL`
+    - Outer join: Contains 'NULL'
+- Methods of join
+    - ANSI join: For version 9 or higher
+        - Since we're using version 11g, we use ANSI join method.
+    - Oracle: For version lower
+- In our certification tests, question 4 and 5 amounts for join.
+
+## Oracle join method
+
+- Find the column in common between two tables
+- `SELECT`, `FROM`, `WHERE`
+    - `FROM`: Tables to join
+        - `AS`: Tables' aliases
+    - `SELECT`: Columns to output, use `.` to specify the table that the column is contained
+    - `WHERE`: Specify values of column that two tables have in common
+
+## ANSI method
+
+- `SELECT`, `FROM`, `INNER JOIN`, `ON`
+    - Whereas Oracle one using just one `FROM` word,
+    - ANSI designates the **main table** as `FROM`,
+    - and the **join table** as `INNER JOIN`.
+
+## `OUTER JOIN`
+
+- There are `LEFT` and `RIGHT` outer joins, but `LEFT` is mostly used
+- Outputs the record that has `NULL` in two tables' common columns

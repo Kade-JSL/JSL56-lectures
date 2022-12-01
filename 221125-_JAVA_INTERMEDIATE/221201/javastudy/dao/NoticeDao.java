@@ -65,4 +65,6 @@ public class NoticeDao {
 
         return cno;
     }
+
+    
 }
