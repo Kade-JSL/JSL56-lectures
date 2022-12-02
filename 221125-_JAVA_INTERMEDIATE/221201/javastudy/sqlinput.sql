@@ -99,7 +99,7 @@ INSERT INTO "KADE01"."TBL_MEMBER" (
     GRADE,
     CITY
 ) VALUES (
-    '100001',
+    100001,
     '김행복',
     '010-1111-2222',
     'M',
@@ -117,7 +117,7 @@ INSERT INTO "KADE01"."TBL_MEMBER" (
     GRADE,
     CITY
 ) VALUES (
-    '100002',
+    100002,
     '이축복',
     '010-1111-3333',
     'M',
@@ -153,7 +153,7 @@ INSERT INTO "KADE01"."TBL_MEMBER" (
     GRADE,
     CITY
 ) VALUES (
-    '100004',
+    100004,
     '최사랑',
     '010-1111-5555',
     'F',
@@ -171,7 +171,7 @@ INSERT INTO "KADE01"."TBL_MEMBER" (
     GRADE,
     CITY
 ) VALUES (
-    '100005',
+    100005,
     '진평화',
     '010-1111-6666',
     'F',
@@ -189,7 +189,7 @@ INSERT INTO "KADE01"."TBL_MEMBER" (
     GRADE,
     CITY
 ) VALUES (
-    '100006',
+    100006,
     '차공단',
     '010-1111-7777',
     'M',
@@ -197,6 +197,10 @@ INSERT INTO "KADE01"."TBL_MEMBER" (
     'C',
     '11'
 );
+
+delete from TBL_MEMBER WHERE custno = 100007;
+
+commit;
 
 SELECT
     *

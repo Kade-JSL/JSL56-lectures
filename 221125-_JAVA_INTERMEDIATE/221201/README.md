@@ -2,7 +2,11 @@
 
 # 이날 배웠던 것
 
-- 
+- [**/sqlinput.sql**: 대충 SQL 실습에 썼던 명령어들](/221125-_JAVA_INTERMEDIATE/221201/javastudy/sqlinput.sql)
+- [/controller/**HomeShoppingMain.java**: 홈쇼핑 회원 관리 프로그램 프런트엔드](/221125-_JAVA_INTERMEDIATE/221201/javastudy/controller/HomeShoppingMain.java)
+- [/dao/**HomeShoppingDao.java**: 관리 프로그램 DB 연동 객체](/221125-_JAVA_INTERMEDIATE/221201/javastudy/dao/HomeShoppingDao.java)
+- [/DBManager/**DBConnection.java**: DB 접속 객체](/221125-_JAVA_INTERMEDIATE/221201/javastudy/DBManager/DBConnection.java)
+- [/dto/**HomeShoppingDto.java**: DB에 전송되는 객체](/221125-_JAVA_INTERMEDIATE/221201/javastudy/dto/HomeShoppingDto.java)
 
 ---
 
@@ -40,3 +44,9 @@
 
 - There are `LEFT` and `RIGHT` outer joins, but `LEFT` is mostly used
 - Outputs the record that has `NULL` in two tables' common columns
+
+## 홈쇼핑 관리 프로그램
+
+- `TBL_MEMBER` 테이블에 회원을 저장(Create)
+- DTO: DB에서 받은 데이터를 객체 형태로 처리하기 위해
+- 회원 출력(Read), 회원 수정(Update), 회원 삭제(Delete)
