@@ -1,5 +1,6 @@
 ﻿package controller;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -15,7 +16,7 @@ public class HomeShoppingMain {
         HomeShoppingDto dto = null;
         int result = 0;
         while (run) {
-            System.out.print("[1]회원등록 [2]회원목록 [3]회원수정 [4]회원매출조회 [0]종료\n>> ");
+            System.out.print("[1]회원등록 [2]회원목록 [3]회원수정 [4]회원매출조회 [5] 회원별매출조회 [0]종료\n>> ");
             int menu = sc.nextInt();
             switch (menu) {
                 case 1:
@@ -72,15 +73,34 @@ public class HomeShoppingMain {
                     break;
                 case 4:
                     List<HomeShoppingDto> saleList = dao.selectSaleList();
+                    DecimalFormat df = new DecimalFormat("￦##,###");
+                    int grandTotal = 0;
                     for (HomeShoppingDto s : saleList) {
-                        System.out.println(
+                        System.out.print(
                             s.getSaleNo() + "\t" + 
                             s.getCustName() + "\t" + 
-                            s.getsDate() + "\t" + 
+                            s.getsDate().substring(0, 4) + "년" +  s.getsDate().substring(4, 6) + "월" + s.getsDate().substring(6) + "일\t" +
                             s.getpName() + "\t" + 
-                            s.getAmount() + "\t" + 
-                            s.getpCost() + "\t" + 
-                            s.getAmountXcost()
+                            s.getAmount());
+                        System.out.printf("%10s%10s\n",
+                            df.format(s.getpCost()), 
+                            df.format(s.getAmountXcost())
+                        );
+                        grandTotal += s.getAmountXcost();
+                    }
+                    System.out.println("총 매출액: " + df.format(grandTotal));
+                    break;
+                case 5:
+                    List<HomeShoppingDto> custSale = dao.selectCustSale();
+                    DecimalFormat df2 = new DecimalFormat("￦##,###");
+                    for (HomeShoppingDto s : custSale) {
+                        System.out.print(
+                            s.getCustNo() + "\t" + 
+                            s.getCustName() + "\t" + 
+                            s.getPhone() + "\t" + 
+                            s.getGrade());
+                        System.out.printf("%10s\n", 
+                            df2.format(s.getAmountXcost())
                         );
                     }
                     break;
@@ -97,10 +117,7 @@ public class HomeShoppingMain {
     }
 
     static void printDto(HomeShoppingDto dto) {
-        System.out.print(
-            dto.getCustNo() + "\t" +
-            dto.getCustName() + "\t" +
-            dto.getPhone() + "\t");
+        System.out.print(dto.getCustNo() + "\t" + dto.getCustName() + "\t" + dto.getPhone() + "\t");
         String gender = null;
         if (dto.getGender().equals("M")) {
             gender = "남자";
@@ -109,10 +126,7 @@ public class HomeShoppingMain {
         } else {
             gender = "그 외";
         }
-        System.out.print(
-            gender + "\t" +
-            dto.getJoinDate() + "\t"
-        );
+        System.out.print(gender + "\t" + dto.getJoinDate() + "\t");
         String grade = null;
         if (dto.getGrade().equals("A")) {
             grade = "VIP";
@@ -121,9 +135,6 @@ public class HomeShoppingMain {
         } else if (dto.getGrade().equals("C")) {
             grade = "직원";
         }
-        System.out.println(
-            grade + "\t" +
-            dto.getCity()
-        );
+        System.out.println(grade + "\t" + dto.getCity());
     }
 }

@@ -212,6 +212,57 @@ public class HomeShoppingDao {
         return dtoList;
     }
 
+    public List<HomeShoppingDto> selectCustSale() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        conn = DBConnection.getInstance().getConnection();
+
+        String query =
+        "SELECT " + 
+            "A.CUSTNO," +
+            "A.CUSTNAME," +
+            "A.PHONE," + 
+            "A.GRADE," +
+            "SUM(B.AMOUNT * C.PCOST) AS TOT " +
+        "FROM " +
+            "TBL_MEMBER A " +
+            "INNER JOIN TBL_MONEY B " +
+            "ON A.CUSTNO = B.CUSTNO " +
+            "INNER JOIN TBL_GOODS C " +
+            "ON B.PCODE = C.PCODE " +
+        "GROUP BY " +
+            "A.CUSTNO," +
+            "A.CUSTNAME," +
+            "A.PHONE," +
+            "A.GRADE " +
+        "ORDER BY " +
+            "TOT DESC";
+        
+        List<HomeShoppingDto> dtoList = new ArrayList<HomeShoppingDto>();
+        HomeShoppingDto dto = null;
+
+        try {
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            while(rs.next()) {
+                dto = new HomeShoppingDto();
+                dto.setCustNo(rs.getInt("CUSTNO"));
+                dto.setCustName(rs.getString("CUSTNAME"));
+                dto.setPhone(rs.getString("PHONE"));
+                dto.setGrade(rs.getString("GRADE"));
+                dto.setAmountXcost(rs.getInt("TOT"));
+                dtoList.add(dto);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
+
+        return dtoList;
+    }
+
     public int getCustNo() {
         Connection conn = null;
         PreparedStatement pstmt = null;
