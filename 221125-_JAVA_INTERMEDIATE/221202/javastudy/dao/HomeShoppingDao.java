@@ -119,7 +119,10 @@ public class HomeShoppingDao {
         PreparedStatement pstmt = null;
         conn = DBConnection.getInstance().getConnection();
 
-        String query = "UPDATE TBL_MEMBER SET CUSTNAME = ?, PHONE = ?, GENDER = ?, GRADE = ?, CITY = ? WHERE CUSTNO = ?";
+        String query = "UPDATE TBL_MEMBER SET " +
+        "CUSTNAME = ?, PHONE = ?, GENDER = ?, GRADE = ?, CITY = ? " +
+        "WHERE " +
+        "CUSTNO = ?";
         int result = 0;
 
         try {
@@ -160,6 +163,53 @@ public class HomeShoppingDao {
         }
 
         return result;
+    }
+
+    public List<HomeShoppingDto> selectSaleList() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        conn = DBConnection.getInstance().getConnection();
+
+        String query =
+        "SELECT " +
+            "MO.SALENO," +
+            "ME.CUSTNAME," +
+            "MO.SDATE," +
+            "GO.PNAME," +
+            "MO.AMOUNT," +
+            "GO.PCOST," +
+            "MO.AMOUNT * GO.PCOST AS TOT " +
+        "FROM " +
+            "TBL_MEMBER ME " +
+            "INNER JOIN TBL_MONEY MO " +
+            "ON MO.CUSTNO = ME.CUSTNO " +
+            "INNER JOIN TBL_GOODS GO " +
+            "ON MO.PCODE = GO.PCODE";
+        List<HomeShoppingDto> dtoList = new ArrayList<HomeShoppingDto>();
+        HomeShoppingDto dto = null;
+
+        try {
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
+            while(rs.next()) {
+                dto = new HomeShoppingDto();
+                dto.setSaleNo(rs.getInt("SALENO"));
+                dto.setCustName(rs.getString("CUSTNAME"));
+                dto.setsDate(rs.getString("SDATE"));
+                dto.setpName(rs.getString("PNAME"));
+                dto.setAmount(rs.getInt("AMOUNT"));
+                dto.setpCost(rs.getInt("PCOST"));
+                dto.setAmountXcost(rs.getInt("TOT"));
+                dtoList.add(dto);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
+
+        return dtoList;
     }
 
     public int getCustNo() {

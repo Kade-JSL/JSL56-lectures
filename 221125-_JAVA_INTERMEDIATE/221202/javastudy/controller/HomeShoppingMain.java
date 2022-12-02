@@ -71,6 +71,18 @@ public class HomeShoppingMain {
                     else { System.out.println("등록이 정상적으로 완료되지 않았습니다. 다시 시도해 주세요."); }
                     break;
                 case 4:
+                    List<HomeShoppingDto> saleList = dao.selectSaleList();
+                    for (HomeShoppingDto s : saleList) {
+                        System.out.println(
+                            s.getSaleNo() + "\t" + 
+                            s.getCustName() + "\t" + 
+                            s.getsDate() + "\t" + 
+                            s.getpName() + "\t" + 
+                            s.getAmount() + "\t" + 
+                            s.getpCost() + "\t" + 
+                            s.getAmountXcost()
+                        );
+                    }
                     break;
                 case 0:
                     run = false;
