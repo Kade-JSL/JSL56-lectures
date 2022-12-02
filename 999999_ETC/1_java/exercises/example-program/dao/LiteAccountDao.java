@@ -10,9 +10,9 @@ import dto.*;
 
 /* 공통적 계좌 활동 */
 interface AccountActions {
-    int createAccount(BankAccount a);
+    int createAccount(BankAccount account);
 
-    BankAccount readLiteAccount(int an);
+    BankAccount readAccount(int accountNum);
 
     // void deposit(BankAccount a);
 
@@ -25,42 +25,41 @@ interface AccountActions {
     // BankAccount numToAccount(int num);
 }
 
-public class GeneralActions implements AccountActions {
+public class LiteAccountDao implements AccountActions {
 
     /* 싱글톤 패턴 */
-    private static GeneralActions ga = new GeneralActions();
-    private GeneralActions() {}
-    public static GeneralActions getInstance() { return ga; } 
+    private static AccountActions instance = new LiteAccountDao();
+    private LiteAccountDao() {}
+    public static LiteAccountDao getInstance() { return (LiteAccountDao) instance; } 
 
-    /* DB 연결 */
-    Connection conn = DBConnection.getInstance().getConnection();
+    /* DB 연결, DTO 객체 생성, 리턴 변수 생성 */
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+    BankAccount bacc = null;
+    int result = 0;
+    String query = null;
 
     /* 입력 스트림 */
     Scanner s = new Scanner(System.in);
 
     /* 계좌 개설 */
-    public int createAccount(BankAccount a) {
-        int result = 0;
+    public int createAccount(BankAccount account) {
 
         if (!BankAccount.isOtherTypeExists) {
-            Connection conn = DBConnection.getInstance().getConnection();
-            PreparedStatement pstmt = null;
+            conn = DBConnection.getInstance().getConnection();
 
-
-            String query =
-                "INSERT INTO LITEACCOUNT (" +
-                    "ACCOUNTNUM, OWNERNAME, PASSWORD, BALANCE" +
-                ") VALUES (" +
-                    "?, ?, ?, ?" +
-                ")";
+            query = "INSERT INTO LITEACCOUNT " +
+                "(ACCOUNTNUM, OWNERNAME, PASSWORD, BALANCE) " +
+                "VALUES (?, ?, ?, ?)";
 
             try {
                 pstmt = conn.prepareStatement(query);
 
-                pstmt.setInt(1, a.getAccountNum());
-                pstmt.setString(2, a.getOwnerName());
-                pstmt.setInt(3, a.getPassword());
-                pstmt.setInt(4, a.getBalance());
+                pstmt.setInt(1, account.getAccountNum());
+                pstmt.setString(2, account.getOwnerName());
+                pstmt.setInt(3, account.getPassword());
+                pstmt.setInt(4, account.getBalance());
 
                 result = pstmt.executeUpdate();
             } catch (SQLException e) {
@@ -73,23 +72,21 @@ public class GeneralActions implements AccountActions {
         return result;
     }
 
-    public BankAccount readLiteAccount(int an) {
-        Connection conn = DBConnection.getInstance().getConnection();
-        PreparedStatement pstmt = null;
-        ResultSet rs = null;
-        BankAccount b = new LiteAccount();
+    public BankAccount readAccount(int accountNum) {
+        conn = DBConnection.getInstance().getConnection();
+        if(!BankAccount.isOtherTypeExists()) bacc = new LiteAccount();
         
-        String query = "SELECT * FROM LITEACCOUNT WHERE ACCOUNTNUM = " + an;
+        query = "SELECT * FROM LITEACCOUNT WHERE ACCOUNTNUM = " + accountNum;
 
         try {
             pstmt = conn.prepareStatement(query);
             rs = pstmt.executeQuery();
             if (rs.next()) {
-                b.setAccountType(0);
-                b.setAccountNum(rs.getInt("ACCOUNTNUM"));
-                b.setOwnerName(rs.getString("OWNERNAME"));
-                b.setPassword(rs.getInt("PASSWORD"));
-                b.setBalance(rs.getInt("BALANCE"));
+                bacc.setAccountType(0);
+                bacc.setAccountNum(rs.getInt("ACCOUNTNUM"));
+                bacc.setOwnerName(rs.getString("OWNERNAME"));
+                bacc.setPassword(rs.getInt("PASSWORD"));
+                bacc.setBalance(rs.getInt("BALANCE"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -97,9 +94,31 @@ public class GeneralActions implements AccountActions {
             DBConnection.close(conn, pstmt, rs);
         }
 
-        return b;
+        return bacc;
     }
 
+    public int updateAccount(BankAccount account) {
+        conn = DBConnection.getInstance().getConnection();
+        if(!BankAccount.isOtherTypeExists()) bacc = new LiteAccount();
+
+        query = "UPDATE LITEACCOUNT SET BALANCE = ? WHERE ACCOUNTNUM = ?, PASSWORD = ?";
+
+        try {
+            pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, account.getBalance());
+            pstmt.setInt(2, account.getAccountNum());
+            pstmt.setInt(3, account.getPassword());
+            rs = pstmt.executeQuery();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(conn, pstmt, rs);
+        }
+
+        return result;
+    }
     // public void deposit(BankAccount a) {
     //     System.out.printf("%s 회원님의 %s번 계좌에 입금합니다.\n", a.getOwnerName(), a.getAccountNum());
     //     System.out.print("입금할 금액을 입력해 주세요 >> ");

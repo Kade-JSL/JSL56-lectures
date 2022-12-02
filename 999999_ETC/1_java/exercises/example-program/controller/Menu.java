@@ -6,7 +6,7 @@ import dto.*;
 
 public class Menu {
     public static void main(String[] args) {
-        GeneralActions genAct = GeneralActions.getInstance();
+        LiteAccountDao genAct = LiteAccountDao.getInstance();
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print(
