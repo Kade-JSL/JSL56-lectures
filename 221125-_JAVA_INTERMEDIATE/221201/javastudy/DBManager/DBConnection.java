@@ -10,9 +10,12 @@ public class DBConnection {
 
     // 싱글톤 패턴으로 만들자
     private static DBConnection instance = new DBConnection();
-    private DBConnection() {}
-    public static DBConnection getInstance() { return instance; }
 
+    private DBConnection() {}
+
+    public static DBConnection getInstance() {
+        return instance;
+    }
 
     public Connection getConnection() {
         Connection conn = null;
@@ -24,7 +27,6 @@ public class DBConnection {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver"); // 이건 좀 외울 만 하다.
             conn = DriverManager.getConnection(url, id, pw);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
