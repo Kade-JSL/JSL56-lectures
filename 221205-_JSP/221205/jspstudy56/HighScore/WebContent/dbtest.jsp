@@ -1,4 +1,4 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="model.*" %> <!-- 패키지의 모든 클래스를 임포트하라 -->
 <%@ page import="java.sql.*" %> 
