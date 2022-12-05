@@ -7,7 +7,7 @@
 - [/WebContent/](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/)
     - [**dbtest.jsp**: DB 연결됐니?](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/dbtest.jsp)
     - [**index.jsp**: 뭔가 자격시험 과제 메인페이지인 모양이다](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/index.jsp)
-    - [**sub1.jsp**: 뭔가 학생등록 페이지인 모양이다](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/dbtest.jsp)
+    - [**sub1.jsp**: 뭔가 학생등록 페이지인 모양이다](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/sub1.jsp)
 - [**sqlinput.sql**: 테이블 등록에 쓰인 쿼리문](/221205-_JSP/221205/sqlinput.sql)
 - ~~**비보) 케이드, 톰캣 서버를 VSCode에 올리지 못해 이클립스에 패배... "레드햇이 밉다" 심경 밝혀**~~
 
