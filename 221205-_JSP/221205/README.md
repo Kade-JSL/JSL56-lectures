@@ -4,7 +4,10 @@
 
 - [**Apache Tomcat 8.5.84** 다운로드 링크](https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84-windows-x64.zip)
 - [/src/model/**DBManager.java**: 오라클 DB 연결 객체](/221205-_JSP/221205/jspstudy56/HighScore/src/model/DBManager.java)
-- [/WebContent/**dbtest.jsp**](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/dbtest.jsp)
+- [/WebContent/](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/)
+    - [**dbtest.jsp**: DB 연결됐니?](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/dbtest.jsp)
+    - [**index.jsp**: 뭔가 자격시험 과제 메인페이지인 모양이다](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/index.jsp)
+    - [**sub1.jsp**: 뭔가 학생등록 페이지인 모양이다](/221205-_JSP/221205/jspstudy56/HighScore/WebContent/dbtest.jsp)
 - [**sqlinput.sql**: 테이블 등록에 쓰인 쿼리문](/221205-_JSP/221205/sqlinput.sql)
 - ~~**비보) 케이드, 톰캣 서버를 VSCode에 올리지 못해 이클립스에 패배... "레드햇이 밉다" 심경 밝혀**~~
 
