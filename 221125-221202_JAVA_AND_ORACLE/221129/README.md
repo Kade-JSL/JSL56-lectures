@@ -1,15 +1,15 @@
-﻿### [221128 ←](/221125-_JAVA_AND_BEYOND/221128/) | [→ 221130](/221125-_JAVA_AND_BEYOND/221130/)
+﻿### [221128 ←](/221125-221202_JAVA_AND_ORACLE/221128/) | [→ 221130](/221125-221202_JAVA_AND_ORACLE/221130/)
 
 # 이날 배웠던 것
 
-- [/controller/](/221125-_JAVA_AND_BEYOND/221129/javastudy/controller/)
-    - [**StudentMain.java**: 성적 관리 프로그램 메인 메뉴](/221125-_JAVA_AND_BEYOND/221129/javastudy/controller/StudentMain.java)
-- [/dao/](/221125-_JAVA_AND_BEYOND/221129/javastudy/dao/)
-    - [**StudentJdbcDao.java**: (그 프로그램의 각종 기능을 담은 메서드 객체(싱글톤), DB 연동 포함) 전체 출력 기능 추가](/221125-_JAVA_AND_BEYOND/221129/javastudy/dao/StudentJdbcDao.java)
-- [/DBManager/](/221125-_JAVA_AND_BEYOND/221129/javastudy/DBManager/)
-    - [**DBConnection.java**: JDBC 드라이버와 Connection 클래스를 이용한 DB 연동 객체](/221125-_JAVA_AND_BEYOND/221129/javastudy/DBManager/DBConnection.java)
-- [/dto/](/221125-_JAVA_AND_BEYOND/221129/javastudy/dto/)
-    - [**Student.java**: DB에 저장하는 레코드의 원형이 되는 객체](/221125-_JAVA_AND_BEYOND/221129/javastudy/dto/Student.java)
+- [/controller/](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/controller/)
+    - [**StudentMain.java**: 성적 관리 프로그램 메인 메뉴](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/controller/StudentMain.java)
+- [/dao/](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/dao/)
+    - [**StudentJdbcDao.java**: (그 프로그램의 각종 기능을 담은 메서드 객체(싱글톤), DB 연동 포함) 전체 출력 기능 추가](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/dao/StudentJdbcDao.java)
+- [/DBManager/](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/DBManager/)
+    - [**DBConnection.java**: JDBC 드라이버와 Connection 클래스를 이용한 DB 연동 객체](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/DBManager/DBConnection.java)
+- [/dto/](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/dto/)
+    - [**Student.java**: DB에 저장하는 레코드의 원형이 되는 객체](/221125-221202_JAVA_AND_ORACLE/221129/javastudy/dto/Student.java)
 
 ---
 
