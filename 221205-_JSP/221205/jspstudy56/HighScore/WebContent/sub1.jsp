@@ -27,6 +27,10 @@
 	p {padding: 0 0 0 16px;}
 	footer {background: #00f; padding: 20px 0;}
 	footer p {color: #fff; text-align: center;}
+	table {margin: 0 auto;}
+	.sname {width: 220px;}
+	.birth {width: 220px;}
+	.tel {width: 60px;}
 </style>
 </head>
 <body>
@@ -44,7 +48,7 @@
 </nav>
 <section>
 	<h2>학생등록</h2>
-	<form name="my" method="post" action="sub1pro.jsp">
+	<form name="my" method="post" action="sub1pro.jsp" onsubmit="return check();">
 		<table>
 			<tr>
 				<th>학년</th>
@@ -60,26 +64,32 @@
 			</tr>
 			<tr>
 				<th>이름</th>
-				<td><input type="text" name="sname">(예)홍길동</td>
+				<td><input type="text" name="sname" class="sname">(예)홍길동</td>
 			</tr>
 			<tr>
 				<th>생년월일</th>
-				<td><input type="text" name="birth">(예)20190301</td>
+				<td><input type="text" name="birth" class="birth">(예)20190301</td>
 			</tr>
 			<tr>
 				<th>성별</th>
 				<td>
-					<input type="radio" name="gender">남성
-					<input type="radio" name="gender">여성
-					<input type="radio" name="gender">그 외
+					<input type="radio" name="gender" value="M">남성
+					<input type="radio" name="gender" value="F">여성
+					<input type="radio" name="gender" value="N">그 외
 				</td>
 			</tr>
 			<tr>
 				<th>전화번호</th>
 				<td>
-					<input type="text" name="tel1"> - 
-					<input type="text" name="tel2"> - 
-					<input type="text" name="tel3">
+					<input type="text" name="tel1" class="tel"> - 
+					<input type="text" name="tel2" class="tel"> - 
+					<input type="text" name="tel3" class="tel">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center;">
+					<input type="submit" value="학생등록">
+					<input type="reset" value="다시쓰기">
 				</td>
 			</tr>
 		</table>
@@ -88,5 +98,41 @@
 <footer>
 	<p>HRDKOREA Copyright &copy; 2016 All rights reserved. Human Resources Development Service of Korea</p>
 </footer>
+
+<script>
+function check() {
+	if(my.syear.value == "") {
+		alert("학년 정보가 입력되지 않았습니다.");
+		my.syear.focus();
+		return false;
+	}
+	if(my.sclass.value == "") {
+		alert("반 정보가 입력되지 않았습니다.");
+		my.sclass.focus();
+		return false;
+	}
+	if(my.sno.value == "") {
+		alert("번호 정보가 입력되지 않았습니다.");
+		my.sno.focus();
+		return false;
+	}
+	if(my.sname.value == "") {
+		alert("이름 정보가 입력되지 않았습니다.");
+		my.sname.focus();
+		return false;
+	}
+	if(my.birth.value == "") {
+		alert("생년월일 정보가 입력되지 않았습니다.");
+		my.birth.focus();
+		return false;
+	}
+	if(!my.gender[0].checked && !my.gender[1].checked && !my.gender[2].checked) {
+		alert("성별 정보가 입력되지 않았습니다.");
+		my.gender[2].focus();
+		return false;
+	}
+	return true;
+}
+</script>
 </body>
 </html>
