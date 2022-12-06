@@ -1,0 +1,55 @@
+﻿INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '01', '01', '50', '50', '50'
+) INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '01', '03', '70', '70', '70'
+) INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '01', '02', '60', '40', '100'
+) INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '02', '01', '80', '80', '80'
+) INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '02', '02', '50', '50', '50'
+) INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '02', '03', '40', '90', '80'
+) INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '03', '01', '70', '70', '70'
+) INSERT INTO TBL_SCORE (
+    SYEAR, SCLASS, SNO, KOR, ENG, MAT
+) VALUES (
+    '1', '03', '02', '80', '60', '90'
+);
+
+SELECT * FROM TBL_SCORE;
+
+select * from TBL_STUDENT;
+
+SELECT
+    A.SYEAR,
+    A.SCLASS,
+    A.SNO,
+    A.SNAME,
+    A.GENDER,
+    B.KOR,
+    B.ENG,
+    B.MAT,
+    B.KOR + B.ENG + B.MAT AS TOT,
+    ROUND((B.KOR + B.ENG + B.MAT)/3, 1) AS AVG
+FROM
+    TBL_STUDENT A
+    INNER JOIN TBL_SCORE B
+    ON A.SYEAR = B.SYEAR
+    AND A.SCLASS = B.SCLASS
+    AND A.SNO = B.SNO;
