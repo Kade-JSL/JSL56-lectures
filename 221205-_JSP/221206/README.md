@@ -2,6 +2,16 @@
 
 # 이날 배웠던 것
 
+- /src/model/
+    - Vo.java
+    - Dao.java
+- /WebContent/
+    - sub1.jsp
+        - sub1pro.jsp
+    - sub2.jsp
+        - sub2pro.jsp
+    - sub3.jsp
+
 ---
 
 ## Request, response
