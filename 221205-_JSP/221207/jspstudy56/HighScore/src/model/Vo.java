@@ -16,6 +16,9 @@ public class Vo {
 	private int kor, eng, mat, tot;
 	private double avg;
 	
+	private String tname;
+	private double korAvg, engAvg, matAvg;
+	
 	public String getSyear() {
 		return syear;
 	}
@@ -99,5 +102,29 @@ public class Vo {
 	}
 	public void setAvg(double avg) {
 		this.avg = avg;
+	}
+	public String getTname() {
+		return tname;
+	}
+	public void setTname(String tname) {
+		this.tname = tname;
+	}
+	public double getKorAvg() {
+		return korAvg;
+	}
+	public void setKorAvg(double korAvg) {
+		this.korAvg = korAvg;
+	}
+	public double getEngAvg() {
+		return engAvg;
+	}
+	public void setEngAvg(double engAvg) {
+		this.engAvg = engAvg;
+	}
+	public double getMatAvg() {
+		return matAvg;
+	}
+	public void setMatAvg(double matAvg) {
+		this.matAvg = matAvg;
 	}
 }

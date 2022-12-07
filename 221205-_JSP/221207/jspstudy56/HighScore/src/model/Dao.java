@@ -115,7 +115,45 @@ public class Dao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			DBManager.close(conn, pstmt);
+			DBManager.close(conn, pstmt, rs);
+		}
+		
+		return stuList;
+	}
+	
+	public List<Vo> selectAllClass() {
+		conn = dbm.getConnection();
+		
+		String query = "SELECT A.SYEAR, A.SCLASS, A.TNAME, " +
+			    "SUM(B.KOR) AS KORTOT, SUM(B.ENG) AS ENGTOT, SUM(B.MAT) AS MATTOT, " +
+			    "ROUND(SUM(B.KOR) / COUNT(B.SCLASS), 1) AS KORAVG, " +
+			    "ROUND(SUM(B.ENG) / COUNT(B.SCLASS), 1) AS ENGAVG, " +
+			    "ROUND(SUM(B.MAT) / COUNT(B.SCLASS), 1) AS MATAVG " +
+			"FROM TBL_DEPT A INNER JOIN TBL_SCORE B ON A.SYEAR = B.SYEAR AND A.SCLASS = B.SCLASS " +
+			"GROUP BY A.SYEAR, A.SCLASS, A.TNAME ORDER BY A.SCLASS";	
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			rs = pstmt.executeQuery();
+			stuList = new ArrayList<Vo>();
+			
+			while (rs.next()) {
+				vo = new Vo();
+				vo.setSyear(rs.getString("SYEAR"));
+				vo.setSclass(rs.getString("SCLASS"));
+				vo.setTname(rs.getString("TNAME"));
+				vo.setKor(rs.getInt("KORTOT"));
+				vo.setEng(rs.getInt("ENGTOT"));
+				vo.setMat(rs.getInt("MATTOT"));
+				vo.setKorAvg(rs.getDouble("KORAVG"));
+				vo.setEngAvg(rs.getDouble("ENGAVG"));
+				vo.setMatAvg(rs.getDouble("MATAVG"));
+				stuList.add(vo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt, rs);
 		}
 		
 		return stuList;
