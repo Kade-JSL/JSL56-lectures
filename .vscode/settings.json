@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
         "999999_ETC/1_java/exercises/example-program",
-        "221205-_JSP/221205/jspstudy56/HighScore/src"
+        "221205-_JSP/221208/jspstudy56/cbq_01_exercise/src"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

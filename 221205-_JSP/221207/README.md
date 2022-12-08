@@ -24,4 +24,4 @@
     - `insertStudent(Vo vo)`: `INSERT INTO TBL_STUDENT`
     - `insertScore(Vo vo)`: `INSERT INTO TBL_SCORE`
     - `selectAllStudent()`: `JOIN` 쿼리를 이용해서 원하는 컬럼만 추출
-    - `selectAllClass()`: 
+    - `selectAllClass()`: 똑같이 `JOIN`문을 이용,
