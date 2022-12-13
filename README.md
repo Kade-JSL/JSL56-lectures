@@ -19,6 +19,7 @@
 - [**한-일 코딩 용어 간단 비교표**(Vocabulary.md)](/999999_ETC/0_docs/Vocabulary.md)
 - [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
 - 개발 환경 다운로드 링크
+    - [Jakarta Taglibs Standard 1.1.2](http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/jakarta-taglibs-standard-1.1.2.zip)
     - [Apache Tomcat 8.5.84](https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84-windows-x64.zip)
     - [Oracle SQL Developer 21.4.3(for JDK 8)](https://www.oracle.com/tools/downloads/sqldev-downloads-2143.html)
     - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
