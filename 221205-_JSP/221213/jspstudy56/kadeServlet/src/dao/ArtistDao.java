@@ -136,12 +136,24 @@ public class ArtistDao {
 	public List<ArtistDto> selectRank() {
 		conn = dbm.getConnection();
 		
-		query = "SELECT B.ARTIST_ID, B.ARTIST_NAME, B.ARTIST_GENDER, " +
-			    "SUM(A.POINT) AS TOT, ROUND(SUM(A.POINT) / COUNT(C.MENTO_ID), 2) AS AVG " +
-			    "FROM TBL_POINT_201905 A " +
-			        "INNER JOIN TBL_ARTIST_201905 B ON A.ARTIST_ID = B.ARTIST_ID " +
-			        "INNER JOIN TBL_MEMTO_201905 C ON A.MENTO_ID = C.MENTO_ID " +
-			    "GROUP BY B.ARTIST_ID, B.ARTIST_NAME, B.ARTIST_GENDER ORDER BY AVG DESC";
+		query = "SELECT " + 
+					"B.ARTIST_ID, " + 
+					"B.ARTIST_NAME, " + 
+					"B.ARTIST_GENDER, " + 
+					"SUM(A.POINT) AS TOT, " + 
+					"ROUND(SUM(A.POINT) / COUNT(C.MENTO_ID), 2) AS AVG " + 
+				"FROM " + 
+					"TBL_POINT_201905 A " + 
+					"INNER JOIN TBL_ARTIST_201905 B " + 
+					"ON A.ARTIST_ID = B.ARTIST_ID " + 
+					"INNER JOIN TBL_MEMTO_201905 C " + 
+					"ON A.MENTO_ID = C.MENTO_ID " + 
+				"GROUP BY " + 
+					"B.ARTIST_ID, " + 
+					"B.ARTIST_NAME, " + 
+					"B.ARTIST_GENDER " + 
+				"ORDER BY " + 
+					"AVG DESC";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
