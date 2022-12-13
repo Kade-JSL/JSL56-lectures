@@ -15,7 +15,7 @@
     - [**sub2.jsp**](/221205-_JSP/221213/jspstudy56/kadeServlet/WebContent/sub2.jsp): JSTL core 본격 구사하기
     - [**sub3.jsp**](/221205-_JSP/221213/jspstudy56/kadeServlet/WebContent/sub3.jsp)
     - [**sub4.jsp**](/221205-_JSP/221213/jspstudy56/kadeServlet/WebContent/sub4.jsp): fmt까지 써 보도록 하자
-        - _[똑같은 기능을 구현한 다른 소스 코드](221205-_JSP/221208/jspstudy56/cbq_02/WebContent/read-rank.jsp)와 비교해 보죠._
+        - _[똑같은 기능을 구현한 다른 소스 코드](/221205-_JSP/221208/jspstudy56/cbq_02/WebContent/read-rank.jsp)와 비교해 보죠._
 
 ---
 
