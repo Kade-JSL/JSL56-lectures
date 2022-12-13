@@ -34,6 +34,7 @@
     ```
 
 - `<c:choose><c:when test="${list.getArtist_gender} == 'M'"`: 자바의 `if` ~ `else`문과 동일
+- `varStatus`: 반복 상태를 나타내 주는 속성
 
 ## 쓰던 Scriptlet 계속 쓰지 JSTL을 굳이 왜 쓰는가? 
 

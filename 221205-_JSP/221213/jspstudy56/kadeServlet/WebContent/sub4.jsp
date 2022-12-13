@@ -49,7 +49,7 @@
 					<th>평균</th>
 					<th>등수</th>
 				</tr>
-				<c:forEach var="list" items="${dtoList}">
+				<c:forEach var="list" items="${dtoList}" varStatus="status">
 					<tr>
 						<td>${list.artist_id}</td>
 						<td>${list.artist_name}</td>
@@ -62,7 +62,7 @@
 						</td>
 						<td>${list.tot}</td>
 						<td>${list.avg}</td>
-						<td>${list.rank}</td>
+						<td>${status.count}</td>
 					</tr>
 				</c:forEach>
 			</table>
