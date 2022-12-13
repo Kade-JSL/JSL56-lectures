@@ -1,21 +1,21 @@
 ﻿### [221209 ←](/221205-_JSP/221209/) | [→ 221213](/221205-_JSP/221213/)
 
-- /src/
-    - controller/
-        - DbTestServlet.java
-        - IndexServlet.java
-        - Sub1Servlet.java
-            - Sub1ProServlet.java
-    - dao/
-        - ArtistDao.java
-    - DBManager/
-        - DBManager.java
-    - dto/
-        - ArtistDto.java
-- /WebContent/
-    - dbtest.jsp
-    - index.jsp
-    - sub1.jsp
+- [/src/](/221205-_JSP/221212/jspstudy56/kadeServlet/src/)
+    - [controller/](/221205-_JSP/221212/jspstudy56/kadeServlet/src/controller/)
+        - [DbTestServlet.java](/221205-_JSP/221212/jspstudy56/kadeServlet/src/controller/DbTestServlet.java)
+        - [**IndexServlet.java**](/221205-_JSP/221212/jspstudy56/kadeServlet/src/controller/IndexServlet.java): `main.do` 리퀘스트에 `index.jsp` 리스폰스를 보내는 서블릿
+        - [**Sub1Servlet.java**](/221205-_JSP/221212/jspstudy56/kadeServlet/src/controller/Sub1Servlet.java): `sub1.do` 
+            - [**Sub1ProServlet.java**](/221205-_JSP/221212/jspstudy56/kadeServlet/src/controller/Sub1ProServlet.java): `sub1pro.do`, `<form>`으로 받은 데이터를 DTO에 저장하고 DAO에 넘김
+    - [dao/](/221205-_JSP/221212/jspstudy56/kadeServlet/src/dao/)
+        - [**ArtistDao.java**](/221205-_JSP/221212/jspstudy56/kadeServlet/src/dao/ArtistDao.java): `INSERT` 메서드 구현
+    - [DBManager/](/221205-_JSP/221212/jspstudy56/kadeServlet/src/DBManager/)
+        - [DBManager.java](/221205-_JSP/221212/jspstudy56/kadeServlet/src/DBManager/DBManager.java)
+    - [dto/](/221205-_JSP/221212/jspstudy56/kadeServlet/src/dto/)
+        - [**ArtistDto.java**](/221205-_JSP/221212/jspstudy56/kadeServlet/src/dto/ArtistDto.java): 말 그대로 DB에 넘겨주는 객체
+- [/WebContent/](/221205-_JSP/221212/jspstudy56/kadeServlet/WebContent/)
+    - [dbtest.jsp](/221205-_JSP/221212/jspstudy56/kadeServlet/WebContent/dbtest.jsp)
+    - [**index.jsp**](/221205-_JSP/221212/jspstudy56/kadeServlet/WebContent/index.jsp): main.do로 리다이렉트되는 페이지
+    - [**sub1.jsp**](/221205-_JSP/221212/jspstudy56/kadeServlet/WebContent/sub1.jsp): 이제 따로 폼을 넘겨주는 JSP가 없음
 
 ---
 

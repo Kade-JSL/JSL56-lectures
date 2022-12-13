@@ -1,15 +1,20 @@
 ﻿### [221212 ←](/221205-_JSP/221212/) | [→ 221214](/221205-_JSP/221214/)
 
 - [Jakarta Taglibs Standard 1.1.2](http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/jakarta-taglibs-standard-1.1.2.zip)
-- /src/
-    - controller/
-        - Sub2Servlet.java
-    - dao/
-        - ArtistDao.java
-    - dto/
-        - ArtistDto.java
-- /WebContent/
-    - sub2.jsp
+
+- [/src/](/221205-_JSP/221213/jspstudy56/kadeServlet/src/)
+    - [controller/](/221205-_JSP/221213/jspstudy56/kadeServlet/src/controller/)
+        - [**Sub2Servlet.java**](/221205-_JSP/221213/jspstudy56/kadeServlet/src/controller/Sub2Servlet.java): `SELECT *`
+        - [**Sub3Servlet.java**](/221205-_JSP/221213/jspstudy56/kadeServlet/src/controller/Sub3Servlet.java): `INNER JOIN`
+        - [**Sub4Servlet.java**](/221205-_JSP/221213/jspstudy56/kadeServlet/src/controller/Sub4Servlet.java): `INNER JOIN` **"2배"**
+    - [dao/](/221205-_JSP/221213/jspstudy56/kadeServlet/src/dao/)
+        - [**ArtistDao.java**](/221205-_JSP/221213/jspstudy56/kadeServlet/src/dao/ArtistDao.java): 세 개의 `SELECT` 쿼리 메서드 추가
+    - [dto/](/221205-_JSP/221213/jspstudy56/kadeServlet/src/dto/)
+        - [**ArtistDto.java**](/221205-_JSP/221213/jspstudy56/kadeServlet/src/dto/ArtistDto.java)
+- [/WebContent/](/221205-_JSP/221213/jspstudy56/kadeServlet/WebContent/)
+    - [**sub2.jsp**](/221205-_JSP/221213/jspstudy56/kadeServlet/WebContent/sub2.jsp): JSTL core 본격 구사하기
+    - [**sub3.jsp**](/221205-_JSP/221213/jspstudy56/kadeServlet/WebContent/sub3.jsp)
+    - [**sub4.jsp**](/221205-_JSP/221213/jspstudy56/kadeServlet/WebContent/sub4.jsp)
 
 ---
 
