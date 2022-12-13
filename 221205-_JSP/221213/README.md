@@ -1,5 +1,7 @@
 ﻿### [221212 ←](/221205-_JSP/221212/) | [→ 221214](/221205-_JSP/221214/)
 
+# 이날 배웠던 것
+
 - [Jakarta Taglibs Standard 1.1.2](http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/jakarta-taglibs-standard-1.1.2.zip)
 
 - [/src/](/221205-_JSP/221213/jspstudy56/kadeServlet/src/)
