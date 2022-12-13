@@ -141,7 +141,7 @@ public class ArtistDao {
 					"B.ARTIST_NAME, " + 
 					"B.ARTIST_GENDER, " + 
 					"SUM(A.POINT) AS TOT, " + 
-					"ROUND(SUM(A.POINT) / COUNT(C.MENTO_ID), 2) AS AVG " + 
+					"SUM(A.POINT) / COUNT(C.MENTO_ID) AS AVG " + 
 				"FROM " + 
 					"TBL_POINT_201905 A " + 
 					"INNER JOIN TBL_ARTIST_201905 B " + 
