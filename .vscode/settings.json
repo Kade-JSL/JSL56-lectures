@@ -1,10 +1,10 @@
 {
     "java.project.sourcePaths": [
-        "999999_ETC/1_java/exercises/example-program",
+        "999999_ETC/1_Exercisesexample-program",
         "221205-_JSP/221208/jspstudy56/cbq_01_exercise/src"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "999999_ETC/1_java/ref-lib/ojdbc6.jar"
+        "999999_ETC/2_ref-libojdbc6.jar"
     ]
 }

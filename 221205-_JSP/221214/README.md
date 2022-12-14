@@ -1,6 +1,21 @@
-﻿
+﻿### [221213 ←](/221205-_JSP/221213/) | [→ 221215](/221205-_JSP/221215/)
+
+# 이날 배웠던 것
+
+- [**다음날 할 내부평가 시험 문제 필기**](#제4회내부평가시험과목프로그래밍언어응용)
+- [프로젝트 파일 폴더](/999999_ETC/3_project/jslhrdServlet/)
+    - [**/src**](/999999_ETC/3_project/jslhrdServlet/src/): 이런저런 자바 소스
+    - [**/WebContent**](/999999_ETC/3_project/jslhrdServlet/WebContent/): 이런저런 JSP 소스, HTML의 잔해들
 
 ---
+
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../header.jsp"%>
+
+<%@ include file="../footer.jsp" %>
+```
 
 # 제4회내부평가시험과목<프로그래밍언어응용>
 
