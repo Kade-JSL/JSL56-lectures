@@ -9,6 +9,8 @@
 
 ---
 
+## 프로젝트 웹페이지 기본 틀
+
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -16,6 +18,8 @@
 
 <%@ include file="../footer.jsp" %>
 ```
+
+##
 
 # 제4회내부평가시험과목<프로그래밍언어응용>
 

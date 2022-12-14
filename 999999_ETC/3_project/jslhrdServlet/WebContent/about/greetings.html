@@ -59,11 +59,11 @@
 					<ul class="nav_1depth">
 						<li><a href="greetings.do">기업소개</a>
 							<ul class="nav_2depth">
-								<li><a href="../about/greetings.do">인사말</a></li>
-								<li><a href="../about/history.do">연혁 및 </a></li>
-								<li><a href="../about/greetings.do">교직원소개</a></li>
+								<li><a href="greetings.do">인사말</a></li>
+								<li><a href="history.do">연혁 및 </a></li>
+								<li><a href="greetings.do">교직원소개</a></li>
 								<li><a href="../gallery/photo.do">대우갤러리</a></li>
-								<li><a href="../about/map.do">찾아오시는길</a></li>
+								<li><a href="map.do">찾아오시는길</a></li>
 							</ul>
 						</li>
 						<!-- <li><a href="allclass.do">학과및모집안내</a>
@@ -72,7 +72,7 @@
 								<li><a href="#">스마트웹콘텐츠개발과정</a></li>
 							</ul>
 						</li> -->
-						<li><a href="../portfolio/portfolio.do">포트폴리오</a>
+						<li><a href="../portfolio.do">포트폴리오</a>
 							<ul class="nav_2depth">
 								<li><a href="../portfolio/portfolio.do">포트폴리오</a></li>
 							</ul>
@@ -85,7 +85,7 @@
 						</li> -->
 						<li><a href="../notice.do">커뮤니티</a>
 							<ul class="nav_2depth">
-								<li><a href="notice.do">공지사항</a></li>
+								<li><a href="../notice/notice.do">공지사항</a></li>
 								<li><a href="../qna/qa.do">질문과답변</a></li>
 								<li><a href="../faq/faq.do">FAQ</a></li>
 								<li><a href="../pds/pds.do">자료실</a></li>
@@ -133,7 +133,7 @@
 	
 	<!-- sub contents -->
 	<div class="sub_title">
-		<h2>자료실</h2>
+		<h2>인사말</h2>
 		<div class="container">
 		  <div class="location">
 			<ul>
@@ -141,21 +141,21 @@
 					<a href="main.do"><i class="fa fa-home btn_plus"></i></a>
 				</li>
 				<li class="dropdown">
-					<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
+					<a href="">기업소개<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="greetings.do">공지사항</a>
-						<a href="allclass.do">학과및모집안내</a>
+						<a href="greetings.do">기업소개</a>
 						<a href="portfolio.do">포트폴리오</a>
-						<a href="online.do">온라인접수</a>
 						<a href="notice.do">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
-					<a href="">공지사항<i class="fa fa-plus btn_plus"></i></a>
+					<a href="">인사말<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="greetings.do">공지사항</a>
-						<a href="greetings.do">DW인터뷰</a>
-						<a href="greetings.do">취업실적</a>
+						<a href="greetings.do">인사말</a>
+						<a href="greetings.do">연혁</a>
+						<a href="greetings.do">비젼및이념</a>
+						<a href="greetings.do">교직원소개</a>
+						<a href="greetings.do">갤러리</a>
 					</div>
 				</li>
 			</ul>
@@ -164,63 +164,18 @@
 	</div>
 
 	<div class="container">
-	  <div class="write_wrap">
-	  <h2 class="sr-only">자료실 글쓰기</h2>
-	  <form name="notice" method="post" action="notice_insert.do" onsubmit="return check()">
-	  <!-- action을 처리하기전에 check()사용자 함수를 실행하고 되돌아 와라-->
-			<table class="bord_table">
-				<caption class="sr-only">공지사항 입력 표</caption>
-				<colgroup>
-					<col width="20%">
-					<col width="*">
-				</colgroup>
-				<tbody>
-					<tr class="first">
-						<th>글쓴이</th>
-						<td><input type="text" name="writer"></td>
-					</tr>
-					<tr>
-						<th>제목</th>
-						<td><input type="text" name="title"></td>
-					</tr>
-					<tr>
-						<th>내용</th>
-						<td><textarea name="contents"></textarea></td>
-					</tr>
-					<tr>
-						<th>첨부</th>
-						<td><input type="file" name="photo"></td>
-					</tr>
-				</tbody>
-			</table>
-			<div class="btn_wrap">
-				<input type="submit" value="저장" class="btn_ok">&nbsp;&nbsp;<input type="reset" value="다시쓰기" class="btn_reset">&nbsp;&nbsp;<input type="button" value="목록" class="btn_list" onClick="location.href='pds.do';">
-			</div>
-		</form>
-	  </div>
-	  
+		<div class="text_center">
+				<p><span class="support_text">JSL인재개발원은</span><br/>
+<strong>우리 사회의 앞선 기술력</strong>으로 능력을 발휘하고 <strong>비젼인</strong>들이 <br/><strong>전문 기술인</strong>으로 거듭나길 바랍니다.</p>
+				<span class="col_bar"></span>
+		</div>
+		<div class="greeting_cont">
+			<img src="../images/ceo.jpg" alt="ceo 이미지" style="float:left; padding:0px 40px;">
+			<div class="text_wrap"><p>우리는 지금 지식 정보화 시대 그리고 무한 경쟁시대의 한가운데 서 있습니다.</p><p>역동적인 기술 혁신으로 인하여 직업 세계는 예측할 수 없을 정도로 빠르게 변화하고 있으며 국경 없는 경쟁으로 인하여 어느 분야에서나 세계적인 표준을 능가할 것을 요구받고 있습니다.</p><p>이러한 시대에 선도적인 임무를 수행하면서 삶을 영위하는 지혜는 끊임없이 직무능력의 개발과 현장 지향적인 실천능력의 함양에 있습니다. 이것이 곧 개인의 입장에서는 자아실현의 길이며 국가적 입장에서는 경쟁력 향상의 길입니다.</p><p>비젼직업전문학교는 이와 같은 시대적 소명에 부응하기 위하여 지식 정보화 시대에 필요한 능력 개발 전문가 양성을 위하여 정부와 협력하여 설립되었습니다.</p><p>21세기는 능력중심사회를 구현하기 위해 시대적 사명감으로 우리 사회의 앞선 기술력으로 능력을 발휘하고 전문 기술 교육인으로서 새 지평선을 열어갈 것입니다.</p><strong class="sign">JSL인재개발원 홍 길 동</strong></div>
+		</div>
 	</div>
 	<!-- end contents -->
-	<script>
-		function check() {
-			if(notice.writer.value=="") {
-				alert("글쓴이 입력");
-				notice.writer.focus();
-				return false;
-			}
-			if(notice.title.value=="") {
-				alert("제목을 입력");
-				notice.title.focus();
-				return false;
-			}
-			if(notice.contents.value=="") {
-				alert("내용을 입력");
-				notice.contents.focus();
-				return false;
-			}
-			return true;
-		}
-	</script>
+	
 	<script>
 		$(function() {
 			$(".location  .dropdown > a").on("click",function(e) {

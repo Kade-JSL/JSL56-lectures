@@ -242,9 +242,9 @@ text-shadow:1px 1px 2px rgba(0,0,0,0.3);}
 .write_wrap input,.write_wrap textarea {border:1px solid #dcdcdc; height:33px; width:100%;}
 .write_wrap textarea {height:270px;}
 .write_wrap .btn_wrap {padding-top:30px; text-align:center;}
-.write_wrap .btn_wrap .btn_ok {width:60px; background:#007dc6; border:0 none; color:#fff;}
-.write_wrap .btn_wrap .btn_reset {width:70px;background:#F78181; border:0 none; color:#fff;}
-.write_wrap .btn_wrap .btn_list {width:70px;background:#F78181; border:0 none; color:#fff;}
+.write_wrap .btn_wrap .btn_ok {width:60px; background:#007dc6; border:0 none; color:#fff; cursor: pointer;}
+.write_wrap .btn_wrap .btn_reset {width:70px;background:#F78181; border:0 none; color:#fff; cursor: pointer;}
+.write_wrap .btn_wrap .btn_list {width:70px;background:#F78181; border:0 none; color:#fff; cursor: pointer;}
 
 .board_view {margin-top:100px;}
 .board_view h2 {margin-bottom:16px; font-size:32px; letter-spacing:-1px; text-align:center;}

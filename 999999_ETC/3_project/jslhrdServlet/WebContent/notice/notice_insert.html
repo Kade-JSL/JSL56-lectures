@@ -7,7 +7,7 @@
 
 */
 
-include_once("common.html");
+include_once("common.do");
 
 $writer = $_POST["writer"];
 $title = $_POST["title"];
@@ -28,7 +28,7 @@ if(!$result) {
 	echo "error :".$query."<br>".mysqli_error($conn);
 }
 
-echo "<script>location.href='notice.html'</script>";
+echo "<script>location.href='notice.do'</script>";
 
 mysqli_close();
 

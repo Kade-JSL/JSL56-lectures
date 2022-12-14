@@ -9,24 +9,24 @@
 		  <div class="location">
 			<ul>
 				<li class="btn_home">
-					<a href="index.html"><i class="fa fa-home btn_plus"></i></a>
+					<a href="main.do"><i class="fa fa-home btn_plus"></i></a>
 				</li>
 				<li class="dropdown">
 					<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="gratings.html">공지사항</a>
-						<a href="allclass.html">학과및모집안내</a>
-						<a href="portfolio.html">포트폴리오</a>
-						<a href="online.html">온라인접수</a>
-						<a href="notice.html">커뮤니티</a>
+						<a href="greetings.do">공지사항</a>
+						<a href="allclass.do">학과및모집안내</a>
+						<a href="portfolio.do">포트폴리오</a>
+						<a href="online.do">온라인접수</a>
+						<a href="notice.do">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">질문답변<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="gratings.html">공지사항</a>
-						<a href="gratings.html">질문답변</a>
-						<a href="gratings.html">취업실적</a>
+						<a href="greetings.do">공지사항</a>
+						<a href="greetings.do">질문답변</a>
+						<a href="greetings.do">취업실적</a>
 					</div>
 				</li>
 			</ul>
@@ -51,7 +51,7 @@
 				</span>
 				</a>
 				<div class="btn_3wrap">
-					<a href="notice.html">목록</a> <a href="notice_modify.html">수정</a> <a href="notice_delete.html" onClick="return confirm('삭제하시겠어요?')">삭제</a>
+					<a href="notice.do">목록</a> <a href="notice_modify.do">수정</a> <a href="notice_delete.do" onClick="return confirm('삭제하시겠어요?')">삭제</a>
 				</div>
 				<a href="" class="btn_next">
 				<span class="next_wrap">
