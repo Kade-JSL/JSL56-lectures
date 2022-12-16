@@ -1,4 +1,4 @@
-package com.jslhrd.controller.notice;
+package com.jslhrd.controller;
 
 import java.io.IOException;
 
@@ -9,17 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/noticeWrite.do")
-public class NoticeWrite extends HttpServlet {
+@WebServlet("/")
+public class Index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   public NoticeWrite() {
+    public Index() {
         super();
         // TODO Auto-generated constructor stub
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeWrite.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
 		rd.forward(request, response);
 	}
 

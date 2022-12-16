@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="location">
 			<ul>
-				<li class="btn_home"><a href="main.do"><i
+				<li class="btn_home"><a href="/"><i
 						class="fa fa-home btn_plus"></i></a></li>
 				<li class="dropdown"><a href="">커뮤니티<i
 						class="fa fa-plus btn_plus"></i></a>
@@ -70,27 +70,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>8</td>
-					<td class="title"><a href="noticeview.do">입학절차에 대하여 알고 싶어요</a></td>
-					<td>관리자</td>
-					<td>18-10-16</td>
-					<td>187</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td class="title"><a href="noticeview.do">무엇이 궁금한가요?</a></td>
-					<td>관리자</td>
-					<td>18-10-16</td>
-					<td>187</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td class="title"><a href="noticeview.do">궁굼한내용제목입니다</a></td>
-					<td>관리자</td>
-					<td>18-10-16</td>
-					<td>187</td>
-				</tr>
+				<c:forEach var="dto" items="${noticelist}">
+					<tr>
+						<td>${dto.bno}</td>
+						<td class="title">${dto.title}</td>
+						<td>${dto.writer}</td>
+						<td>${dto.regdate}</td>
+						<td>${dto.viewcount}</td>
+					</tr>
+				</c:forEach>
 			</tbody>
 		</table>
 		<div class="paging">

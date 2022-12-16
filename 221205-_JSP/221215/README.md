@@ -12,9 +12,9 @@
     - [dto/](/221205-_JSP/221215/jslhrdServlet/src/com/jslhrd/dto/)
         - [NoticeDto.java](/221205-_JSP/221215/jslhrdServlet/src/com/jslhrd/dto/NoticeDto.java)
 - [/WebContent/](/221205-_JSP/221215/jslhrdServlet/WebContent)
-    - [/notice](/221205-_JSP/221215/jslhrdServlet/WebContent/notice)
+    - [notice/](/221205-_JSP/221215/jslhrdServlet/WebContent/notice)
         - [**NoticeWrite.jsp**](/221205-_JSP/221215/jslhrdServlet/WebContent/notice/noticeWrite.jsp)
-    - [/WEB-INF/](/221205-_JSP/221215/jslhrdServlet/WebContent/WEB-INF/)
+    - [WEB-INF/](/221205-_JSP/221215/jslhrdServlet/WebContent/WEB-INF/)
         - [**web.xml**](/221205-_JSP/221215/jslhrdServlet/WebContent/WEB-INF/web.xml): JW 군이 보내준 선물
 
 ---

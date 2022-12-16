@@ -9,7 +9,7 @@
 		  <div class="location">
 			<ul>
 				<li class="btn_home">
-					<a href="main.do"><i class="fa fa-home btn_plus"></i></a>
+					<a href="/"><i class="fa fa-home btn_plus"></i></a>
 				</li>
 				<li class="dropdown">
 					<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
@@ -37,7 +37,7 @@
 	<div class="container">
 	  <div class="write_wrap">
 	  <h2 class="sr-only">공지사항 글쓰기</h2>
-	  <form name="notice" method="post" action="notice_insert.do" onsubmit="return check()">
+	  <form name="notice" method="post" action="noticeWritePro.do" onsubmit="return check()">
 	  <!-- action을 처리하기전에 check()사용자 함수를 실행하고 되돌아 와라-->
 			<table class="bord_table">
 				<caption class="sr-only">공지사항 입력 표</caption>

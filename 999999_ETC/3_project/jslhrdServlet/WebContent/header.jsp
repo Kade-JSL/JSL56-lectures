@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="ko">
  <head>
@@ -40,7 +41,7 @@
 		<header class="header">
 			<nav class="top_left">
 			  <ul>
-			  	<li class="first"><a href="main.do">HOME</a></li>
+			  	<li class="first"><a href="/">HOME</a></li>
 				<li><a href="">모집안내</a></li>
 				<li><a href="">입학상담</a></li>
 				<li><a href="">교육신청</a></li>

@@ -9,7 +9,7 @@
 		  <div class="location">
 			<ul>
 				<li class="btn_home">
-					<a href="main.do"><i class="fa fa-home btn_plus"></i></a>
+					<a href="/"><i class="fa fa-home btn_plus"></i></a>
 				</li>
 				<li class="dropdown">
 					<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
