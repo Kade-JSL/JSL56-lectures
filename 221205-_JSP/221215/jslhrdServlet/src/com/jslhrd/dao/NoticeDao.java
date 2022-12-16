@@ -42,4 +42,32 @@ public class NoticeDao {
 		}
 	}
 	
+	public List<NoticeDto> noticeSelectAll() {
+		conn = dbm.getConnection();
+		
+		query = "SELECT BNO, TITLE, WRITER, TO_CHAR(REGDATE, 'YY-MM-DD') AS RDATE, VIEWCOUNT FROM NOTICE ORDER BY BNO DESC";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			rs = pstmt.executeQuery();
+			
+			if (rs != null) { noticeList = new ArrayList<NoticeDto>(); }
+			while (rs.next()) {
+				dto = new NoticeDto();
+				
+				dto.setBno(rs.getInt("BNO"));
+				dto.setTitle(rs.getString("TITLE"));
+				dto.setWriter(rs.getString("WRITER"));
+				dto.setRegdate(rs.getString("RDATE"));
+				dto.setViewcount(rs.getInt("VIEWCOUNT"));
+				
+				noticeList.add(dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return noticeList;
+	}
+	
 }
