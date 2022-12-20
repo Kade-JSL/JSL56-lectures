@@ -20,7 +20,7 @@
         - [**noticeWrite.jsp**](/221205-_JSP/221219/jslhrdServlet/WebContent/notice/noticeWrite.jsp): Create-View
         - [**notice.jsp**](/221205-_JSP/221219/jslhrdServlet/WebContent/notice/notice.jsp): 일종의 Read-View
         - [**noticeView.jsp**](/221205-_JSP/221219/jslhrdServlet/WebContent/notice/noticeView.jsp): Read-View
-        - [**noticeWrite.jsp**](/221205-_JSP/221219/jslhrdServlet/WebContent/notice/noticeWrite.jsp): Update-View
+        - [**noticeModify.jsp**](/221205-_JSP/221219/jslhrdServlet/WebContent/notice/noticeModify.jsp): Update-View
         - Delete-View는 굳이 말하자면 삭제 확인 창 정도가 되겠습니다만, 당연히 그냥 서블릿으로만 구현되어 있습니다.
     - [faq/](/221205-_JSP/221219/jslhrdServlet/WebContent/faq/)
         - [**faqWrite.jsp**](/221205-_JSP/221219/jslhrdServlet/WebContent/faq/faqWrite.jsp): Create-View
