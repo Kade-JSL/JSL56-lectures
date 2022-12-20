@@ -16,6 +16,7 @@
 
 # 유용한 링크
 
+- [수업에서 사용하는 이클립스 프로젝트(**jslhrdServlet**) 파일](/999999_ETC/3_project/jslhrdServlet.zip)
 - [**한-일 코딩 용어 간단 비교표**(Vocabulary.md)](/999999_ETC/0_docs/Vocabulary.md)
 - [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
 - 개발 환경 다운로드 링크
@@ -30,6 +31,4 @@
 
 # 개인 연습장에서 있었던 일
 
-- [은행 계좌 프로그램(라이브 디렉터리)](/999999_ETC/1_Exercisesexample-program/)
-- [계정주의 개인적인 Java 연습 코드들](/999999_ETC/1_java/src/exercises/)
-- [2022-11-06 자바 선행학습 필기](/999999_ETC/1_java/docs/221106_abstract.md)
+- [은행 계좌 프로그램](/999999_ETC/1_Exercises/example-program/)
