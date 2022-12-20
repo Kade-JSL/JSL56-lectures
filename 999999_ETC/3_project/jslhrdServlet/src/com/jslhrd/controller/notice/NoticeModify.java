@@ -12,17 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 import com.jslhrd.dao.NoticeDao;
 import com.jslhrd.dto.NoticeDto;
 
-@WebServlet("/noticewrite.do")
-public class NoticeWrite extends HttpServlet {
+@WebServlet("/noticemodify.do")
+public class NoticeModify extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   public NoticeWrite() {
+    public NoticeModify() {
         super();
         // TODO Auto-generated constructor stub
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeWrite.jsp");
+		request.setCharacterEncoding("UTF-8");
+		NoticeDto dto = NoticeDao.getInstance().selectBno(Integer.parseInt(request.getParameter("bno")));
+		dto.setContent(dto.getContent().replace("<br>", "\r\n"));
+		request.setAttribute("modify", dto);
+		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeModify.jsp");
+		
 		rd.forward(request, response);
 	}
 
@@ -31,14 +36,14 @@ public class NoticeWrite extends HttpServlet {
 		
 		NoticeDto dto = new NoticeDto();
 		
-		dto.setWriter(request.getParameter("writer"));
+		dto.setBno(Integer.parseInt(request.getParameter("bno")));
 		dto.setTitle(request.getParameter("title"));
 		dto.setContent(request.getParameter("content"));
 		
-		NoticeDao dao = NoticeDao.getInstance();
-		dao.noticeInsert(dto);
+		NoticeDao.getInstance().noticeUpdate(dto);
 		
-		response.sendRedirect("notice.do");
+		RequestDispatcher rd = request.getRequestDispatcher("/noticeview.do?bno=" + dto.getBno());
+		rd.forward(request, response);
 	}
 
 }
