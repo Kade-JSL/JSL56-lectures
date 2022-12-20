@@ -1,9 +1,15 @@
 package com.jslhrd.dao;
 
-import java.sql.*;
-import java.util.*;
-import com.jslhrd.dto.NoticeDto;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.jslhrd.dbmanager.DBManager;
+import com.jslhrd.dto.NoticeDto;
+import com.jslhrd.utility.Criteria;
 
 public class NoticeDao {
 
@@ -45,7 +51,7 @@ public class NoticeDao {
 	public List<NoticeDto> noticeSelectAll() {
 		conn = dbm.getConnection();
 		
-		query = "SELECT BNO, TITLE, WRITER, REGDATE, VIEWCOUNT FROM NOTICE ORDER BY BNO DESC";
+		query = "SELECT /*+ INDEX_DESC (NOTICE NOTICE_PK) */ BNO, TITLE, WRITER, REGDATE, VIEWCOUNT FROM NOTICE";
 		
 		try {
 			pstmt = conn.prepareStatement(query);
@@ -195,5 +201,72 @@ public class NoticeDao {
 		} finally {
 			dbm.close(conn, pstmt);
 		}
+	}
+	
+	public List<NoticeDto> getListWithPaging(Criteria cri) {
+		conn = dbm.getConnection();
+		
+		query = "SELECT * FROM ( " + 
+				"SELECT /*+ INDEX_DESC (NOTICE NOTICE_PK) */ " +
+					"ROWNUM RN, BNO, TITLE, CONTENT, WRITER, REGDATE, VIEWCOUNT " + 
+				"FROM NOTICE WHERE ROWNUM <= ? * ?" + 
+			") WHERE RN > (? - 1) * ?";
+		
+		int size = noticeSize() + 1;
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, cri.getPageNum());
+			pstmt.setInt(2, cri.getAmount());
+			pstmt.setInt(3, cri.getPageNum());
+			pstmt.setInt(4, cri.getAmount());
+			rs = pstmt.executeQuery();
+			
+			if (rs != null) { noticeList = new ArrayList<NoticeDto>(); }
+			while (rs.next()) {
+				dto = new NoticeDto();
+				
+				dto.setBno(size - rs.getInt("RN"));
+				dto.setTitle(rs.getString("TITLE"));
+				dto.setContent(rs.getString("CONTENT"));
+				dto.setWriter(rs.getString("WRITER"));
+				String rdate = rs.getString("REGDATE");
+				rdate = rdate.substring(0,10);
+				dto.setRegdate(rdate);
+				dto.setViewcount(rs.getInt("VIEWCOUNT"));
+				
+				noticeList.add(dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbm.close(conn, pstmt, rs);
+		}
+		
+		return noticeList;
+	}
+	
+	public int noticeSize() {
+		Connection con = dbm.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet r = null;
+		int count = 0;
+		
+		String sql = "SELECT COUNT(*) AS CNT FROM NOTICE";
+		
+		try {
+			stmt = con.prepareStatement(sql);
+			r = stmt.executeQuery();
+			
+			if (r.next()) {
+				count = r.getInt("CNT");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbm.close(con, stmt, r);
+		}
+		
+		return count;
 	}
 }

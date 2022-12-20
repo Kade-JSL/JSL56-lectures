@@ -33,8 +33,7 @@
 	<div class="search_wrap">
 		<div class="record_group">
 			<p>
-				총게시글<span> <?=$count?>
-				</span>건
+				총게시글<span>${count}</span>건
 			</p>
 		</div>
 		<div class="search_group">
@@ -82,15 +81,15 @@
 			</tbody>
 		</table>
 		<div class="paging">
-			<a href=""><i class="fa fa-angle-double-left"></i></a>
-			<a href=""><i class="fa fa-angle-left"></i></a>
-			<a href="" class="active">1</a>
-			<a href="">2</a>
-			<a href="">3</a>
-			<a href="">4</a>
-			<a href="">5</a>
-			<a href=""><i class="fa fa-angle-right"></i></a>
-			<a href=""><i class="fa fa-angle-double-right"></i></a>
+			<c:if test="${pagemaker.prev}">
+				<a href=""><i class="fa fa-angle-double-left"></i></a>
+			</c:if>
+			<c:forEach var="num" begin="${pagemaker.startPage}" end="${pagemaker.endPage}">
+				<a href="?p=${num}" class="${pagemaker.cri.pageNum == num ? 'active':''}">${num}</a>
+			</c:forEach>
+			<c:if test="${pagemaker.next}">
+				<a href=""><i class="fa fa-angle-double-right"></i></a>
+			</c:if>
 			<a href="/noticewrite.do" class="btn_write">글쓰기</a>
 		</div>
 	</div>

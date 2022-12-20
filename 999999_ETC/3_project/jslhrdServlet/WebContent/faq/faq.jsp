@@ -78,7 +78,7 @@
 		</script>
 
 		<div class="paging">
-			<a href=""><i class="fa  fa-angle-double-left"></i></a>
+			<a href=""><i class="fa fa-angle-double-left"></i></a>
 			<a href=""><i class="fa fa-angle-left"></i></a>
 			<a href="" class="active">1</a>
 			<a href="">2</a>
@@ -86,7 +86,7 @@
 			<a href="">4</a>
 			<a href="">5</a>
 			<a href=""><i class="fa fa-angle-right"></i></a>
-			<a href=""><i class="fa  fa-angle-double-right"></i></a>
+			<a href=""><i class="fa fa-angle-double-right"></i></a>
 			<a href="faqinsert.do" class="btn_write">글쓰기</a>
 		</div>
 	  </div>
