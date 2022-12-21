@@ -31,7 +31,7 @@ public class FaqInsert extends HttpServlet {
 		
 		FaqDto dto = new FaqDto();
 		dto.setTitle(request.getParameter("title"));
-		dto.setContent(request.getParameter("content"));
+		dto.setContent(request.getParameter("content").replace("\r\n", "<br>"));
 		FaqDao.getInstance().insertFaq(dto);
 		
 		response.sendRedirect("/faq.do");

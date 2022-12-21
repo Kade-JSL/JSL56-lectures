@@ -32,8 +32,8 @@ public class NoticeDelete extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int bno = Integer.parseInt(request.getParameter("bno"));
 		NoticeDao.getInstance().deleteBno(bno);
-		RequestDispatcher rd = request.getRequestDispatcher("/notice.do");
-		rd.forward(request, response);
+		String fwd = "/notice.do?p=" + request.getParameter("p") + "&a=" + request.getParameter("a");
+		response.sendRedirect(fwd);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

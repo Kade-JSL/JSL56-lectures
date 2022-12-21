@@ -4,15 +4,10 @@
 
 - /src/com/jslhrd/
     - controller/notice/
-        - [Notice.java](/221205-_JSP/221220/jslhrdServlet/src/com/jslhrd/controller/notice/Notice.java)
-    - dao/
-        - [NoticeDao.java](/221205-_JSP/221220/jslhrdServlet/src/com/jslhrd/dao/NoticeDao.java)
-    - utility/
-        - [Criteria.java](/221205-_JSP/221220/jslhrdServlet/src/com/jslhrd/utility/Criteria.java)
-        - [PageDto.java](/221205-_JSP/221220/jslhrdServlet/src/com/jslhrd/utility/PageDto.java)
+        - [Notice.java](/221205-_JSP/221221/jslhrdServlet/src/com/jslhrd/controller/notice/Notice.java)
 - /WebContent/notice/
-    - [notice.jsp](/221205-_JSP/221220/jslhrdServlet/WebContent/notice/notice.jsp)
-- [**sqlinput.sql**](/221205-_JSP/221220/sqlinput.sql): FAQ1 테이블과 FAQ2 테이블 생성, 레코드 삽입, 검색 및 기타 작업 관련 쿼리
+    - [notice.jsp](/221205-_JSP/221221/jslhrdServlet/WebContent/notice/notice.jsp)
+
 
 ---
 

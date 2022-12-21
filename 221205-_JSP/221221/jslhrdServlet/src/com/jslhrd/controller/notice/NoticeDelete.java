@@ -2,6 +2,7 @@ package com.jslhrd.controller.notice;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,44 +10,34 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jslhrd.dao.NoticeDao;
-import com.jslhrd.dto.NoticeDto;
 
 /**
- * Servlet implementation class NoticeWritePro
+ * Servlet implementation class NoticeDelete
  */
-@WebServlet("/noticeWritePro.do")
-public class NoticeWritePro extends HttpServlet {
+@WebServlet("/noticedelete.do")
+public class NoticeDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NoticeWritePro() {
+    public NoticeDelete() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int bno = Integer.parseInt(request.getParameter("bno"));
+		NoticeDao.getInstance().deleteBno(bno);
+		String fwd = "/notice.do?p=" + request.getParameter("p") + "&a=" + request.getParameter("a");
+		response.sendRedirect(fwd);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		
-		NoticeDto dto = new NoticeDto();
-		
-		dto.setWriter(request.getParameter("writer"));
-		dto.setTitle(request.getParameter("title"));
-		dto.setContent(request.getParameter("content"));
-		
-		NoticeDao dao = NoticeDao.getInstance();
-		dao.noticeInsert(dto);
-		
-		response.sendRedirect("notice.do");
+		doGet(request, response);
 	}
 
 }
