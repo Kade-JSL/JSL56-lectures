@@ -69,26 +69,28 @@
 				</tr>
 			</thead>
 			<tbody>
+				<c:set var="num" value="${count - (pagemaker.cri.pageNum - 1) * pagemaker.cri.amount}"/>
 				<c:forEach var="dto" items="${noticelist}">
 					<tr>
-						<td>${dto.bno}</td>
+						<td>${num}</td>
 						<td class="title"><a href="noticeview.do?bno=${dto.bno}">${dto.title}</a></td>
 						<td>${dto.writer}</td>
 						<td>${dto.regdate}</td>
 						<td>${dto.viewcount}</td>
 					</tr>
+					<c:set var="num" value="${num - 1}"/>
 				</c:forEach>
 			</tbody>
 		</table>
 		<div class="paging">
 			<c:if test="${pagemaker.prev}">
-				<a href=""><i class="fa fa-angle-double-left"></i></a>
+				<a href="?p=${pagemaker.startPage - 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-left"></i></a>
 			</c:if>
-			<c:forEach var="num" begin="${pagemaker.startPage}" end="${pagemaker.endPage}">
-				<a href="?p=${num}" class="${pagemaker.cri.pageNum == num ? 'active':''}">${num}</a>
+			<c:forEach var="pages" begin="${pagemaker.startPage}" end="${pagemaker.endPage}">
+				<a href="?p=${pages}&a=${pagemaker.cri.amount}" class="${pagemaker.cri.pageNum == pages ? 'active':''}">${pages}</a>
 			</c:forEach>
 			<c:if test="${pagemaker.next}">
-				<a href=""><i class="fa fa-angle-double-right"></i></a>
+				<a href="?p=${pagemaker.endPage + 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-right"></i></a>
 			</c:if>
 			<a href="/noticewrite.do" class="btn_write">글쓰기</a>
 		</div>

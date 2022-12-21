@@ -226,7 +226,7 @@ public class NoticeDao {
 			while (rs.next()) {
 				dto = new NoticeDto();
 				
-				dto.setBno(size - rs.getInt("RN"));
+				dto.setBno(rs.getInt("BNO"));
 				dto.setTitle(rs.getString("TITLE"));
 				dto.setContent(rs.getString("CONTENT"));
 				dto.setWriter(rs.getString("WRITER"));

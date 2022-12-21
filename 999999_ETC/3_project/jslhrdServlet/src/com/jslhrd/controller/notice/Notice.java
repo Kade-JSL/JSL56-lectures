@@ -31,8 +31,8 @@ public class Notice extends HttpServlet {
 		if(request.getParameter("p") != null) {
 			cri.setPageNum(Integer.parseInt(request.getParameter("p")));
 		}
-		if(request.getParameter("amount") != null) {
-			cri.setAmount(Integer.parseInt(request.getParameter("amount")));
+		if(request.getParameter("a") != null) {
+			cri.setAmount(Integer.parseInt(request.getParameter("a")));
 		}
 				
 		int count = dao.noticeSize();
