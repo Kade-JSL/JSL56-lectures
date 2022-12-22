@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import com.jslhrd.dbmanager.DBManager;
@@ -211,9 +212,7 @@ public class NoticeDao {
 					"ROWNUM RN, BNO, TITLE, CONTENT, WRITER, REGDATE, VIEWCOUNT " + 
 				"FROM NOTICE WHERE ROWNUM <= ? * ?" + 
 			") WHERE RN > (? - 1) * ?";
-		
-		int size = noticeSize() + 1;
-		
+				
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, cri.getPageNum());
@@ -246,13 +245,21 @@ public class NoticeDao {
 		return noticeList;
 	}
 	
-	public int noticeSize() {
+	public int noticeSize(Criteria cri) {
 		Connection con = dbm.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet r = null;
 		int count = 0;
 		
-		String sql = "SELECT COUNT(*) AS CNT FROM NOTICE";
+		String subq = "NOTICE";
+		if (!cri.getCondition().equals("")) {
+			subq = "(SELECT * FROM ( " + 
+					"SELECT ROWNUM RN, BNO, TITLE, CONTENT, WRITER, REGDATE, VIEWCOUNT " + 
+					"FROM NOTICE WHERE " + cri.getCondition().replace(" AND ", "") + "))";
+		}
+		String sql = "SELECT COUNT(*) AS CNT FROM " + subq;
+		
+		// System.out.println(sql);
 		
 		try {
 			stmt = con.prepareStatement(sql);
@@ -268,5 +275,90 @@ public class NoticeDao {
 		}
 		
 		return count;
+	}
+	
+	List<HashMap<String, Object>> mapList = null;
+	HashMap<String, Object> map = null;
+	
+//	public List<HashMap<String, Object>> selectNoticeWithPagingMap(Criteria cri) {
+//		conn = dbm.getConnection();
+//		
+//		query = "SELECT * FROM ( " + 
+//				"SELECT /*+ INDEX_DESC (NOTICE NOTICE_PK) */ " +
+//					"ROWNUM RN, BNO, TITLE, CONTENT, WRITER, REGDATE, VIEWCOUNT " + 
+//				"FROM NOTICE WHERE ROWNUM <= ? * ?" + 
+//			") WHERE RN > (? - 1) * ?";
+//				
+//		try {
+//			pstmt = conn.prepareStatement(query);
+//			pstmt.setInt(1, cri.getPageNum());
+//			pstmt.setInt(2, cri.getAmount());
+//			pstmt.setInt(3, cri.getPageNum());
+//			pstmt.setInt(4, cri.getAmount());
+//			rs = pstmt.executeQuery();
+//			
+//			if (rs != null) { mapList = new ArrayList<HashMap<String, Object>>(); }
+//			while (rs.next()) {
+//				map = new HashMap<String, Object>();
+//				
+//				map.put("bno", rs.getInt("BNO"));
+//				map.put("title", rs.getString("TITLE"));
+//				map.put("content", rs.getString("CONTENT"));
+//				map.put("writer", rs.getString("WRITER"));
+//				String rdate = rs.getString("REGDATE");
+//				rdate = rdate.substring(0,10);
+//				map.put("regdate", rdate);
+//				map.put("viewcount", rs.getInt("VIEWCOUNT"));
+//				
+//				mapList.add(map);
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} finally {
+//			dbm.close(conn, pstmt, rs);
+//		}
+//		
+//		return mapList;
+//	}
+	
+	public List<HashMap<String, Object>> searchNoticePageMap(Criteria cri) {
+		conn = dbm.getConnection();
+		
+		query = "SELECT * FROM ( " + 
+				"SELECT /*+ INDEX_DESC (NOTICE NOTICE_PK) */ " +
+					"ROWNUM RN, BNO, TITLE, CONTENT, WRITER, REGDATE, VIEWCOUNT " + 
+				"FROM NOTICE WHERE " + cri.getCondition() + "ROWNUM <= ? * ?" + 
+			") WHERE RN > (? - 1) * ?";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, cri.getPageNum());
+			pstmt.setInt(2, cri.getAmount());
+			pstmt.setInt(3, cri.getPageNum());
+			pstmt.setInt(4, cri.getAmount());
+			rs = pstmt.executeQuery();
+			
+			if (rs != null) { mapList = new ArrayList<HashMap<String, Object>>(); }
+			while (rs.next()) {
+				map = new HashMap<String, Object>();
+				
+				map.put("bno", rs.getInt("BNO"));
+				map.put("title", rs.getString("TITLE"));
+				map.put("content", rs.getString("CONTENT"));
+				map.put("writer", rs.getString("WRITER"));
+				String rdate = rs.getString("REGDATE");
+				rdate = rdate.substring(0,10);
+				map.put("regdate", rdate);
+				map.put("viewcount", rs.getInt("VIEWCOUNT"));
+				
+				mapList.add(map);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbm.close(conn, pstmt, rs);
+		}
+		
+		return mapList;
 	}
 }

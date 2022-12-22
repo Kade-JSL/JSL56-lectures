@@ -5,6 +5,8 @@ public class Criteria {
 	private int pageNum; // 페이지 번호
 	private int amount; // 한 페이지에 출력할 레코드 수
 	
+	private String condition;
+	
 	public Criteria() {
 		this(1, 10);
 	}
@@ -13,7 +15,7 @@ public class Criteria {
 		this.pageNum = pageNum;
 		this.amount = amount;
 	}
-
+	
 	public int getPageNum() {
 		return pageNum;
 	}
@@ -29,4 +31,14 @@ public class Criteria {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+
+	public String getCondition() {
+		return condition;
+	}
+
+	public void setCondition(String condition) {
+		this.condition = condition;
+	}
+	
+	
 }
