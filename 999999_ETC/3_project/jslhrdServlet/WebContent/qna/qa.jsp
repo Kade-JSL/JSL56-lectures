@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
    
-<!-- sub contents -->
+<!-- sub content -->
 <div class="sub_title">
 	<h2>질문과답변</h2>
 	<div class="container">
@@ -111,7 +111,7 @@
 	</div>
   </div>
 </div>
-<!-- end contents -->
+<!-- end content -->
 
 <script>
 	$(function() {

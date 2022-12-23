@@ -1,4 +1,4 @@
-package com.jslhrd.controller.qna;
+package com.jslhrd.controller.portfolio;
 
 import java.io.IOException;
 
@@ -9,21 +9,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/qa.do")
-public class Qa extends HttpServlet {
+@WebServlet("/portfolio.do")
+public class Portfolio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Qa() {
+
+    public Portfolio() {
         super();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	RequestDispatcher rd = request.getRequestDispatcher("/qna/qa.jsp");
-    	rd.forward(request, response);
-    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("/portfolio/portfolio.jsp");
+		rd.forward(request, response);
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		doGet(request, response);			
 	}
 
 }

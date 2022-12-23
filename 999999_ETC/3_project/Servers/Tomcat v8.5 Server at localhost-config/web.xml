@@ -65,7 +65,7 @@
   <!--                       rejected?  [true]                              -->
   <!--                                                                      -->
   <!--   readmeFile          File to display together with the directory    -->
-  <!--                       contents. [null]                               -->
+  <!--                       content. [null]                               -->
   <!--                                                                      -->
   <!--   sendfileSize        If the connector used supports sendfile, this  -->
   <!--                       represents the minimal file size in KB for     -->

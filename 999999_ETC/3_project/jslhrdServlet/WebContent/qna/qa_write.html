@@ -30,7 +30,7 @@
  3. class 이름 붙이고 css 적용
  -->
 	<div class="sr-only">
-		<p><a href="#contents">본문 바로가기</a></p>
+		<p><a href="#content">본문 바로가기</a></p>
 	</div>
 
 	<div class="top_navigation">
@@ -131,7 +131,7 @@
 	</script>
 
 	
-	<!-- sub contents -->
+	<!-- sub content -->
 	<div class="sub_title">
 		<h2>질문답변</h2>
 		<div class="container">
@@ -185,7 +185,7 @@
 					</tr>
 					<tr>
 						<th>내용</th>
-						<td><textarea name="contents"></textarea></td>
+						<td><textarea name="content"></textarea></td>
 					</tr>
 					<tr>
 						<th>첨부</th>
@@ -200,7 +200,7 @@
 	  </div>
 	  
 	</div>
-	<!-- end contents -->
+	<!-- end content -->
 	<script>
 		function check() {
 			if(notice.writer.value=="") {
@@ -213,9 +213,9 @@
 				notice.title.focus();
 				return false;
 			}
-			if(notice.contents.value=="") {
+			if(notice.content.value=="") {
 				alert("내용을 입력");
-				notice.contents.focus();
+				notice.content.focus();
 				return false;
 			}
 			return true;

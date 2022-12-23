@@ -33,7 +33,7 @@
  3. class 이름 붙이고 css 적용
  -->
 	<div class="sr-only">
-		<p><a href="#contents">본문 바로가기</a></p>
+		<p><a href="#content">본문 바로가기</a></p>
 	</div>
 
 	<div class="top_navigation">

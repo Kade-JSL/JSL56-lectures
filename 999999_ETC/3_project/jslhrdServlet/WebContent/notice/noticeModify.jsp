@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 
-<!-- sub contents -->
+<!-- sub content -->
 	<div class="sub_title">
 		<h2>공지사항</h2>
 		<div class="container">
@@ -71,7 +71,7 @@
 	  </div>
 	  
 	</div>
-	<!-- end contents -->
+	<!-- end content -->
 	<script>
 		function check() {
 			if(notice.writer.value=="") {
@@ -84,9 +84,9 @@
 				notice.title.focus();
 				return false;
 			}
-			if(notice.contents.value=="") {
+			if(notice.content.value=="") {
 				alert("내용을 입력");
-				notice.contents.focus();
+				notice.content.focus();
 				return false;
 			}
 			return true;

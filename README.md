@@ -4,8 +4,9 @@
 
 **최근 5주간의 내용만 메인에 있습니다.**
 
-| → | [19](/221205-_JSP/221219/) | [20](/221205-_JSP/221220/) | [21](/221205-_JSP/221221/) | [22](/221205-_JSP/221222/) | _23_ | 
+| | ~~26~~ | _27_ | _28_ | _29_ | _30_ |
 |--:|:-:|:-:|:-:|:-:|:-:|
+| → | [19](/221205-_JSP/221219/) | [20](/221205-_JSP/221220/) | [21](/221205-_JSP/221221/) | [22](/221205-_JSP/221222/) | [23](/221205-_JSP/221223/) | 
 || [12](/221205-_JSP/221212/) | [13](/221205-_JSP/221213/) | [14](/221205-_JSP/221214/) | [15](/221205-_JSP/221215/) | [16](/221205-_JSP/221216/) |
 || [5](/221205-_JSP/221205/) | [6](/221205-_JSP/221206/) | [5](/221207-_JSP/221207/) | [8](/221205-_JSP/221208/) | [9](/221205-_JSP/221209/) |
 | Dec. | [28](/221011-221202_JAVA_BASICS/22-11/221128/) | [29](/221011-221202_JAVA_BASICS/22-11/221129/) | [30](/221011-221202_JAVA_BASICS/22-11/221130/) | [1](/221011-221202_JAVA_BASICS/22-11/221201/) | [2](/221011-221202_JAVA_BASICS/22-11/221202/) |
@@ -20,6 +21,7 @@
 - [**한-일 코딩 용어 간단 비교표**(Vocabulary.md)](/999999_ETC/0_docs/Vocabulary.md)
 - [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
 - 개발 환경 다운로드 링크
+    - [com.oreilly.servlet 라이브러리](http://www.servlets.com/cos/cos-22.05.zip)
     - [Jakarta Taglibs Standard 1.1.2](http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/jakarta-taglibs-standard-1.1.2.zip)
     - [Apache Tomcat 8.5.84](https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84-windows-x64.zip)
     - [Oracle SQL Developer 21.4.3(for JDK 8)](https://www.oracle.com/tools/downloads/sqldev-downloads-2143.html)
