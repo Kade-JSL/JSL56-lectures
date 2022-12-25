@@ -22,5 +22,5 @@
         - 파일 경로: `String`,
         - 최대 업로드 크기: `int`,
         - 인코딩 방법: `String`,
-        - 동일한 파일명이 존재할 때: `coㅡ.oreilly.servlet.multipart.DefaultFileRenamePolicy`
+        - 동일한 파일명이 존재할 때: `com.oreilly.servlet.multipart.DefaultFileRenamePolicy`
 - `multipart/form-data` 형태로 요청을 하면 다른 DTO 필드들 역시 `request.getParameter()` 메서드로는 가져오면 안 된다.
