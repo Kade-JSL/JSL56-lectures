@@ -21,14 +21,10 @@ public class FaqDao {
 	ResultSet rs = null;
 	DBManager dbm = DBManager.getInstance();
 	
-	FaqDto dto = null;
-	List<FaqDto> dtoList = null;
-	String sql = null;
-	
 	public List<FaqDto> selectAllFaq() {
 		conn = dbm.getConnection();
 		
-		sql = "SELECT " + 
+		String sql = "SELECT " + 
 				"A.BNO, " +
 				"A.TITLE, " + 
 				"B.CONTENT " + 
@@ -38,6 +34,9 @@ public class FaqDao {
 				"ON A.BNO = B.QNO " + 
 			"ORDER BY " + 
 				"A.BNO DESC";
+		
+		List<FaqDto> dtoList = null;
+		FaqDto dto = null;
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -90,5 +89,62 @@ public class FaqDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public List<FaqDto> selectFaqByNumber(int rn) {
+		conn = dbm.getConnection();
+		
+		String sql = "SELECT * FROM (SELECT " + 
+				"ROWNUM RN, A.BNO, A.TITLE, B.CONTENT " + 
+				"FROM FAQ1 A LEFT JOIN FAQ2 B ON A.BNO = B.QNO " + 
+				"WHERE ROWNUM <= ? " + 
+				"ORDER BY A.BNO DESC) WHERE RN > 0";
+		
+		List<FaqDto> dtoList = null;
+		FaqDto dto = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, rn);
+			rs = pstmt.executeQuery();
+			
+			if (rs != null) { dtoList = new ArrayList<FaqDto>(); }
+			while (rs.next()) {
+				dto = new FaqDto();
+				dto.setBno(rs.getInt("BNO"));
+				dto.setTitle(rs.getString("TITLE"));
+				dto.setContent(rs.getString("CONTENT"));
+				dtoList.add(dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbm.close(conn, pstmt, rs);
+		}
+		
+		return dtoList;
+	}
+	
+	public int countFaq() {
+		int count = 0;
+		
+		conn = dbm.getConnection();
+		
+		String sql = "SELECT COUNT(BNO) AS CNT FROM FAQ1";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				count = rs.getInt("CNT");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbm.close(conn, pstmt, rs);
+		}
+		
+		return count;
 	}
 }

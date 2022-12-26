@@ -37,10 +37,10 @@
 	<div class="container">
 	  <div class="search_wrap">
 		<div class="record_group">
-			<p>총게시글<span>${faqlist.size()}</span>건</p>
+			<p>총게시글<span>${pagemaker.total}</span>건</p>
 		</div>
 		<div class="search_group">
-			<form name="myform" action="">
+			<form name="myform" action="faqsearch.do">
 				<select name="sel" class="select">
 					<option value="1">제목</option>
 					<option value="2">내용</option>
@@ -57,10 +57,10 @@
 				<c:forEach var="dto" items="${faqlist}">
 					<li>
 						<button class="accordion">
-						${dto.getTitle()}
+						${dto.title}
 						</button>
 						<div class="panel">
-							<p>${dto.getContent()}</p>
+							<p>${dto.content}</p>
 						</div>
 					</li>
 				</c:forEach>
@@ -76,17 +76,10 @@
 				});
 			});
 		</script>
-
 		<div class="paging">
-			<a href=""><i class="fa fa-angle-double-left"></i></a>
-			<a href=""><i class="fa fa-angle-left"></i></a>
-			<a href="" class="active">1</a>
-			<a href="">2</a>
-			<a href="">3</a>
-			<a href="">4</a>
-			<a href="">5</a>
-			<a href=""><i class="fa fa-angle-right"></i></a>
-			<a href=""><i class="fa fa-angle-double-right"></i></a>
+			<c:if test="${pagemaker.cri.pageNum * pagemaker.cri.amount <= pagemaker.total}">
+				<a href="/faq.do?p=${pagemaker.cri.pageNum + 1}&a=${pagemaker.cri.amount}" class="active">더보기...</a>
+			</c:if>
 			<a href="faqinsert.do" class="btn_write">글쓰기</a>
 		</div>
 	  </div>

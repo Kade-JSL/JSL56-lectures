@@ -74,6 +74,8 @@ public class NoticeDao {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			dbm.close(conn, pstmt, rs);
 		}
 		
 		return noticeList;
@@ -277,9 +279,6 @@ public class NoticeDao {
 		return count;
 	}
 	
-	List<HashMap<String, Object>> mapList = null;
-	HashMap<String, Object> map = null;
-	
 //	public List<HashMap<String, Object>> selectNoticeWithPagingMap(Criteria cri) {
 //		conn = dbm.getConnection();
 //		
@@ -329,6 +328,9 @@ public class NoticeDao {
 					"ROWNUM RN, BNO, TITLE, CONTENT, WRITER, REGDATE, VIEWCOUNT " + 
 				"FROM NOTICE WHERE " + cri.getCondition() + "ROWNUM <= ? * ?" + 
 			") WHERE RN > (? - 1) * ?";
+		
+		List<HashMap<String, Object>> mapList = null;
+		HashMap<String, Object> map = null;
 		
 		try {
 			pstmt = conn.prepareStatement(query);
