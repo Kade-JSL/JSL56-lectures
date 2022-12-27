@@ -13,5 +13,4 @@
     - /portfolio/
         - [**portfolio.jsp**: 날짜 포맷 배움](/221205-_JSP/221227/jslhrdServlet/WebContent/portfolio/portfolio.jsp)
         - [**write.jsp**: 글자 카운터 구현](/221205-_JSP/221227/jslhrdServlet/WebContent/portfolio/write.jsp)
-        
     - [**header.jsp**: 썸머노트 관련 링크 추가](/221205-_JSP/221227/jslhrdServlet/WebContent/header.jsp)
