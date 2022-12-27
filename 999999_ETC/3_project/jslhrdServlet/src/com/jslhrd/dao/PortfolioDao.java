@@ -90,7 +90,7 @@ public class PortfolioDao {
 				dto.setTitle(rs.getString("TITLE"));
 				dto.setContent(rs.getString("CONTENT"));
 				dto.setImgurl(rs.getString("IMGURL"));
-				dto.setRegdate(rs.getString("REGDATE").substring(0, 10));
+				dto.setRegdate(rs.getString("REGDATE"));
 				dto.setViewcount(rs.getInt("VIEWCOUNT"));
 				
 				list.add(dto);
