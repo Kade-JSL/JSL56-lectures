@@ -36,6 +36,7 @@ public class PortfolioWrite extends HttpServlet {
 //		dto.setContent(request.getParameter("content"));
 				
 		String realPath = getServletContext().getRealPath("/upload");
+		System.out.println(realPath);
 		int maxImgSize = 1024 * 1024 * 2;
 		String encType = "UTF-8";
 		

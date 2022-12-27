@@ -50,7 +50,13 @@
 		<ul class="basic_board">
 			<c:forEach var="dto" items="${list}">
 			<li>
-				<span class="date"><em>${dto.regdate.substring(8,10)}</em>${dto.regdate.substring(0,4)}.${dto.regdate.substring(5,7)}</span>
+				<span class="date">
+					<em>
+						<fmt:parseDate var="regdate" value="${dto.regdate}" pattern="yyyy-MM-dd"/>
+						<fmt:formatDate value="${regdate}" pattern="dd"/>
+					</em>
+						<fmt:formatDate value="${regdate}" pattern="yyyy.MM"/>
+					</span>
 				<div class="text_wrap">
 					<div class="img_wrap">
 						<img src="../upload/${dto.imgurl}" alt="">

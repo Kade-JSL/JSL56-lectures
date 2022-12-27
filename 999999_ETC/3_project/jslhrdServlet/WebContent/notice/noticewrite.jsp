@@ -37,7 +37,7 @@
 	<div class="container">
 	  <div class="write_wrap">
 	  <h2 class="sr-only">공지사항 글쓰기</h2>
-	  <form name="notice" method="post" action="noticewrite.do" onsubmit="return check()">
+	  <form name="notice" method="post" enctype="multipart/form-data" action="noticewrite.do" onsubmit="return check()">
 	  <!-- action을 처리하기전에 check()사용자 함수를 실행하고 되돌아 와라-->
 			<table class="bord_table">
 				<caption class="sr-only">공지사항 입력 표</caption>
@@ -56,7 +56,7 @@
 					</tr>
 					<tr>
 						<th>내용</th>
-						<td><textarea name="content"></textarea></td>
+						<td><textarea name="content" id="summernote"></textarea></td>
 					</tr>
 				</tbody>
 			</table>
@@ -101,6 +101,37 @@
 					$(this).next().show();
 				}
 			});
+			$('#summernote').summernote({
+				height: 300,
+				codemirror: {
+					theme: 'monokai',
+					callbacks: {
+						onImageUpload: function(files, editor, welEditable) {
+							for (var i = files.length - 1 ; i >= 0; i--) {
+								sendFile(files[i], this);
+							}
+						}
+					}
+				}
+			});
+			
+			function sendFile(file, el) {
+				var form_data = new FormData();
+				form_data.append('file', file);
+				$.ajax({ // 비동기 처리
+					data: form_data,
+					type:"post",
+					url:'summernote.do',
+					cache:false,
+					contentType:false,
+					encType:'multipart/form-data',
+					processType:false,
+					success:function(img_name) {
+						alert(img_name);
+						$(el).summernote('editor.insertImage', img_name);
+					}
+				})
+			}
 		});
 	</script>
 

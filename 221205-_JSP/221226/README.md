@@ -8,5 +8,5 @@
         - /portfolio/
     - /dao
 - /WebContent
-    - /faq
-    - /portfolio
+    - /faq/
+    - /portfolio/
