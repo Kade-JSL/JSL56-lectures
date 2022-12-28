@@ -2,7 +2,26 @@
 
 # 이날 배웠던 것
 
-- 추후 정리해서 올리겠습니다.
+- /src/com/jslhrd
+    - /controller
+        - /member/
+            - [**MemberTerms.java**: 답이 없다. 그냥 서블릿인 듯하다.](/221205-_JSP/221228/jslhrdServlet/src-com-jslhrd/controller/member/MemberTerms.java)
+        - /portfolio/
+            - [**PortfolioWrite.java**: 뭔가 qna 쪽으로 넘겨주는 분기를 만들고 싶었어](/221205-_JSP/221228/jslhrdServlet/src-com-jslhrd/controller/portfolio/PortfolioWrite.java)
+        - /qna/
+            - [Qa.java: 작업중](/221205-_JSP/221228/jslhrdServlet/src-com-jslhrd/controller/qna/Qa.java)
+    - /dao
+        - [QaDao.java: 작업중](/221205-_JSP/221228/jslhrdServlet/src-com-jslhrd/dao/)
+- /WebContent
+    - /member/
+        - [**memberterms.jsp**: 메인. 제이쿼리 입문, 간단한 CSS 작업](/221205-_JSP/221228/jslhrdServlet/WebContent/member/memberterms.jsp)
+    - /notice/
+        - [**noticeWrite.jsp**: 제대로 썸머보드 적용. 오타와의 싸움은 계속된다.](/221205-_JSP/221228/jslhrdServlet/WebContent/notice/noticeWrite.jsp)
+        - [**noticeModify.jsp**: 여기도 간단하게만 썸머보드 적용.](/221205-_JSP/221228/jslhrdServlet/WebContent/notice/noticeModify.jsp)
+    - /qna/
+        - [qa.jsp: 작업중](/221205-_JSP/221228/jslhrdServlet/WebContent/qna/qa.jsp)
+    - [**header.jsp**: 링크 부분 다시 개수. 사이트 내 링크도 개수.](/221205-_JSP/221228/jslhrdServlet/WebContent/header.jsp)
+- [sqlinput.sql: 디제이 드랍 더 테이블](/221205-_JSP/221228/sqlinput.sql)
 
 ---
 
