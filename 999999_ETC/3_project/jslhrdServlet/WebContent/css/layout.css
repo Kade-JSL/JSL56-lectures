@@ -1592,3 +1592,21 @@ a:link {
 	background: #090 !important;
 	color: #fff !important;
 }
+
+/* join css */
+
+.join_title {
+	font-size: 18px;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #333;
+}
+
+.textarea_box {
+	width: 100%;
+	height: 180px;
+	padding: 10px;
+}
+
+.pd30 {
+	margin-bottom: 30px;	
+}

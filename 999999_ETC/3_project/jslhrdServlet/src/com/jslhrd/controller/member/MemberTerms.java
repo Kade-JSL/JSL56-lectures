@@ -1,4 +1,4 @@
-package com.jslhrd.controller.qna;
+package com.jslhrd.controller.member;
 
 import java.io.IOException;
 
@@ -9,18 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/tbl.do")
-public class Qa extends HttpServlet {
+@WebServlet("/memberterms.do")
+public class MemberTerms extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Qa() {
+    public MemberTerms() {
         super();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	RequestDispatcher rd = request.getRequestDispatcher("/qna/qa.jsp");
-    	rd.forward(request, response);
-    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("/member/memberterms.jsp");
+		rd.forward(request, response);
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
