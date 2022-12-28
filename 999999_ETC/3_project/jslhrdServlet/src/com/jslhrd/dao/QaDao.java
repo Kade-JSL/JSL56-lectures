@@ -21,7 +21,7 @@ public class QaDao {
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
 	
-	public void createQa(HashMap<String, Object> q) {
+	public void createQa(HashMap<String, Object> query) {
 		conn = dbm.getConnection();
 		
 		String sql = "INSERT INTO QA ("
@@ -31,10 +31,10 @@ public class QaDao {
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, (int) q.get("bno"));
-			pstmt.setString(2, (String) q.get("title"));
-			pstmt.setString(3, (String) q.get("content"));
-			pstmt.setString(4, (String) q.get("writer"));
+			pstmt.setInt(1, (int) query.get("bno"));
+			pstmt.setString(2, (String) query.get("title"));
+			pstmt.setString(3, (String) query.get("content"));
+			pstmt.setString(4, (String) query.get("writer"));
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

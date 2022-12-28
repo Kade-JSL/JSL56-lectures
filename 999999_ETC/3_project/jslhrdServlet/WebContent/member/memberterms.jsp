@@ -97,7 +97,9 @@
 		})
 		
 		$("#agree1, #agree2, #agree3").on("click", function() {
-			if($("#agree1").is(":checked") == true && $("#agree2").is(":checked") == true && $("#agree3").is(":checked") == true) {
+			if($("#agree1").is(":checked") == true 
+				&& $("#agree2").is(":checked") == true 
+				&& $("#agree3").is(":checked") == true) {
 				$("#chkCtrl").prop("checked", true);
 			} else {
 				$("#chkCtrl").prop("checked", false);
