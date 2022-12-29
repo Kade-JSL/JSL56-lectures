@@ -82,7 +82,7 @@
 </div>
 
 <script>
-	$(document).ready(function() { // 제이쿼리 시작했다
+	$(function() { // 제이쿼리 시작했다
 		var chkList = $("input[name=agree]");
 		// jQuery 선택자: name 속성이 agree라고 되어 있는 input 요소를 선택해서 저장하라
 		$("#chkCtrl").on("click", function() { // 콜백 함수
@@ -105,6 +105,24 @@
 				$("#chkCtrl").prop("checked", false);
 			}
 		})
+		
+		$("#btn_ok").on("click", function(){
+			var chk = true;
+			for(var i = 0; i < chkList.length; i++) {
+				if(!chkList[i].checked) {
+					chk = false;
+				}
+			}
+			
+			if(!chk) {
+				alert("すべての利用規約に同意してください。");
+				return false;
+			} else {
+				location.href="member.do";
+			}
+		})
+		
+		
 
 	}) // 제이쿼리 끝났다
 </script>
