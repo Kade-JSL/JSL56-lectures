@@ -71,10 +71,11 @@
 				</tr>
 				<tr>
 					<th><label for="pw_confirm">비밀번호확인<span class="must"><b>필수입력</b></span></label></th>
-					<td><input type="password" name="pw2" id="pw2" class="w300">
-						<p class="guideTxt">
-							<span class="tc_point">비밀번호 미입력시 기존비밀번호가 유지됩니다.</span>
-						</p></td>
+					<td>
+						<input type="password" name="pw2" id="pw2" class="w300">
+						<p class="guideTxt"><span class="tc_point">비밀번호를 다시 한 번 입력해 주세요.</span></p>
+						<span id="pw2msg" style="color:#f00;"></span>
+					</td>
 				</tr>
 
 				<tr>
@@ -86,9 +87,12 @@
 					<th><label for="email">이메일<span class="must"><b>필수입력</b></span></label></th>
 					<td>
 						<input type="text" name="email" id="email" class="w300"/>
-						<input type="button" value="인증번호 전송"/><br>
-						<input type="password" name="certnumber" id="certnumber" class="w300"/>
-						<input type="button" value="인증번호 확인"/><br>
+						<!-- onchange 속성을 이용하면 select가 되었을 때 거기 있는 value를 앞의 박스에 넘겨줄 수 있게 된다 -->
+						<input type="button" id="btn_email" value="인증번호 전송"/>
+						<span id="emailmsg"></span><br>
+						<!-- 버튼을 클릭했을 때 주소를 검사하고 메일 전송이 되도록 해야 함 -->
+						<input type="password" name="authnumber" id="authnumber" class="w300"/>
+						<input type="button" id="btn_auth" value="인증번호 확인"/><span id="authmsg"></span><br>
 					</td>
 				</tr>
 				<tr>
@@ -140,11 +144,11 @@
 				success:function(data){
 					if(data == -1) {
 						if($("#nickname").val() != "") {
-							$("#nickmsg").html("사용 가능한 닉네임입니다.");
+							$("#nickmsg").html("<br>사용 가능한 닉네임입니다.");
 						}
 					} else if (data == 1) {
 						if($("#nickname").val() != "") {
-							$("#nickmsg").html("<span style='color:#f00;'>이미 사용중인 닉네임입니다.</span>");
+							$("#nickmsg").html("<br><span style='color:#f00;'>이미 사용중인 닉네임입니다.</span>");
 						}
 					}
 				},
@@ -160,6 +164,15 @@
 			} else {
 				$("#idmsg").html("");
 			}
+			var idRegExp = /^[a-zA-z0-9]{4,12}$/;
+			// 단어의 시작과 끝을 ^와 $로 끊고, [] 안에 조건이 될 문자열 범위를, {} 안에 글자수 범위를 적는다
+			var idc = $("#id").val();
+			if(!idRegExp.test(idc)) {
+				$("#idmsg").html("<span style='color:#f00';>아이디는 영문자 또는 숫자 4~12자리로 입력해 주세요.</span>")
+				return; // 조건이 충족되면 프로그램을 여기서 종료하라.
+			} else {
+				$("#idmsg").html(""); // 조건이 충족되지 않으면(아이디가 조건에 맞으면) 아래로 계속 진행
+			}
 			
 			$.ajax({
 				type:"post",
@@ -168,11 +181,11 @@
 				success:function(data){
 					if(data == -1) {
 						if($("#id").val() != "") {
-							$("#idmsg").html("사용 가능한 아이디입니다.");
+							$("#idmsg").html("<br>사용 가능한 아이디입니다.");
 						}
 					} else if (data == 1) {
 						if($("#id").val() != "") {
-							$("#idmsg").html("<span style='color:#f00;'>이미 사용중인 아이디입니다.</span>");
+							$("#idmsg").html("<br><span style='color:#f00;'>이미 사용중인 아이디입니다.</span>");
 						}
 					}
 				},
@@ -180,6 +193,38 @@
 					alert("통신 에러");
 				}
 			})
+		})
+		
+		$("#pw2").blur(function(){
+			var pw1 = $("#pw1").val();
+			var pw2 = $("#pw2").val();
+			
+			if (pw1 != pw2) {
+				$("#pw2msg").html("<br>비밀번호를 다시 확인바랍니다.");
+			} else if (pw1 == "") {
+				$("#pw2msg").html("<br>비밀번호를 입력해 주세요.");
+			} else {
+				$("#pw2msg").html("<br>비밀번호가 일치합니다.");
+			}
+		})
+		
+		$("#btn_email").on("click", function(){
+			var email = $("#email").val();
+			if (email == "") {
+				$("#emailmsg").html("<span style='color:#f00;'>이메일 주소를 입력해 주세요.</span>");
+			} else {
+				$.ajax({
+					type:'post',
+					data:{"email":email}, // 위에 var로 email을 전송해 줬으니까!
+					url:"sendemail.do",
+					// dataType:json, // contentType은 '보내는' 데이터 형식, '받는' 데이터 형식은 dataType
+					success:function(data) {
+						$("#emailmsg").text("인증번호를 전송하였습니다.");
+					}, error:function(){
+						$("#emailmsg").text("통신 오류");
+					}
+				})
+			}
 		})
 		
 	});

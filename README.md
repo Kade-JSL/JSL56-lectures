@@ -19,9 +19,12 @@
 - [수업에서 사용하는 이클립스 프로젝트(**jslhrdServlet**) 파일](/999999_ETC/3_project/jslhrdServlet.zip)
 - [**한-일 코딩 용어 간단 비교표**(Vocabulary.md)](/999999_ETC/0_docs/Vocabulary.md)
 - [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
-- 개발 환경 다운로드 링크
+- 수업에서 사용한 라이브러리 JAR 링크
+    - [json-simple 1.1.1](https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar)
+    - [JavaMail API 1.4.7](https://repo1.maven.org/maven2/com/sun/mail/javax.mail/1.4.7/javax.mail-1.4.7.jar)
     - [com.oreilly.servlet 라이브러리](http://www.servlets.com/cos/cos-22.05.zip)
     - [Jakarta Taglibs Standard 1.1.2](http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/jakarta-taglibs-standard-1.1.2.zip)
+- 개발 환경 다운로드 링크
     - [Apache Tomcat 8.5.84](https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84-windows-x64.zip)
     - [Oracle SQL Developer 21.4.3(for JDK 8)](https://www.oracle.com/tools/downloads/sqldev-downloads-2143.html)
     - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)

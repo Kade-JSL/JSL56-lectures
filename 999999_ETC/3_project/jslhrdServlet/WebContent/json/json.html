@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="json1"></p>
+    <p id="json2"></p>
+    <p id="json3"></p>
+    <script>
+        var dog1 = { name: "식빵", family: "웰시코기", age: 1, weight: 2.14 }; // 자바스크립트 객체
+        var data1 = JSON.stringify(dog1);                    // 자바스크립트 객체를 문자열로 변환함.
+        document.getElementById("json1").innerHTML = data1;
+        console.log(data1);
+        // $("#json").html(data1)
+        
+        var data2 = '{"name": "식빵", "family": "웰시코기", "age": 1, "weight": 2.14}'; // JSON 형식의 문자열
+		var dog2 = JSON.parse(data2); // JSON 형식의 문자열을 자바스크립트 객체로 변환함.
+		document.getElementById("json2").innerHTML = dog2 + "<br>";
+		document.getElementById("json2").innerHTML += dog2.name + ", " + dog2.family;
+		console.log(dog2);
+		
+		var date = new Date();   // 자바스크립트 Date 객체
+		var str = date.toJSON(); // Date 객체를 JSON 형식의 문자열로 변환함.
+		document.getElementById("json3").innerHTML = date + "<br>";
+		document.getElementById("json3").innerHTML += str;
+		console.log(str);
+    </script>
+</body>
+</html>

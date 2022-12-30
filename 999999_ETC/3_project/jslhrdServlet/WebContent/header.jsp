@@ -76,16 +76,16 @@
 								<li><a href="map.do">찾아오시는길</a></li>
 							</ul>
 						</li>
-						<li><a href="portfolio.do">포트폴리오</a>
+						<li><a href="tbl.do?t=portfolio">포트폴리오</a>
 							<ul class="nav_2depth">
-								<li><a href="portfolio.do">포트폴리오</a></li>
+								<li><a href="tbl.do?t=portfolio">포트폴리오</a></li>
 							</ul>
 						</li>
-						<li><a href="notice.do">커뮤니티</a>
+						<li><a href="tbl.do?t=notice">커뮤니티</a>
 							<ul class="nav_2depth">
-								<li><a href="notice.do">공지사항</a></li>
-								<li><a href="qa.do">질문과답변</a></li>
-								<li><a href="faq.do">FAQ</a></li>
+								<li><a href="tbl.do?t=notice">공지사항</a></li>
+								<li><a href="tbl.do?t=qa">질문과답변</a></li>
+								<li><a href="tbl.do?t=faq">FAQ</a></li>
 								<li><a href="pds.do">자료실</a></li>
 								<li><a href="admin.do">관리자</a></li>
 							</ul>
