@@ -10,7 +10,7 @@
     - /dao
         - [**MemberDao.java**: 그냥 쿼리 넣으면 뱉을 뿐이다](/221205-_JSP/221229/jslhrdServlet/MemberDao.java)
     - /dto
-        - [MemberDto.java: 그냥 DTO일 뿐이다]
+        - [MemberDto.java: 그냥 DTO일 뿐이다](/221205-_JSP/221229/jslhrdServlet/member.jsp)
 - /WebContent/member/
     - [**member.jsp**: 제이쿼리가 우릴 죽이려고 해요](/221205-_JSP/221229/jslhrdServlet/member.jsp)
 - [sqlinput.sql: 디제이 드랍 더 테이블](/221205-_JSP/221229/sqlinput.sql)
