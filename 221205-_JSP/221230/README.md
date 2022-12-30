@@ -2,6 +2,9 @@
 
 # 이날 배웠던 것
 
+- [**SendEmail.java**: 죽이고 싶은 스펠링과의 10선](/221205-_JSP/221230/jslhrdServlet/SendEmail.java)
+- [**member.jsp**: 죽이고 싶은 제이쿼리와의 10선](/221205-_JSP/221230/jslhrdServlet/member.jsp)
+
 ---
 
 ## JSON
