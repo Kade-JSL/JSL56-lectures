@@ -4,12 +4,12 @@
 
 **최근 5주간의 내용만 메인에 있습니다.**
 
-| → | [~~26~~](/221205-_JSP/221226/) | [27](/221205-_JSP/221227/) | [28](/221205-_JSP/221228/) | [29](/221205-_JSP/221229/) | _30_ |
+| Jan. | 2 | 3 | 4 | 5 | 6 |
 |--:|:-:|:-:|:-:|:-:|:-:|
+| → | [~~26~~](/221205-_JSP/221226/) | [27](/221205-_JSP/221227/) | [28](/221205-_JSP/221228/) | [29](/221205-_JSP/221229/) | [30](/221205-_JSP/221230/) |
 || [19](/221205-_JSP/221219/) | [20](/221205-_JSP/221220/) | [21](/221205-_JSP/221221/) | [22](/221205-_JSP/221222/) | [23](/221205-_JSP/221223/) | 
 || [12](/221205-_JSP/221212/) | [13](/221205-_JSP/221213/) | [14](/221205-_JSP/221214/) | [15](/221205-_JSP/221215/) | [16](/221205-_JSP/221216/) |
 || [5](/221205-_JSP/221205/) | [6](/221205-_JSP/221206/) | [5](/221207-_JSP/221207/) | [8](/221205-_JSP/221208/) | [9](/221205-_JSP/221209/) |
-| Dec. | [28](/221011-221202_JAVA_BASICS/22-11/221128/) | [29](/221011-221202_JAVA_BASICS/22-11/221129/) | [30](/221011-221202_JAVA_BASICS/22-11/221130/) | [1](/221011-221202_JAVA_BASICS/22-11/221201/) | [2](/221011-221202_JAVA_BASICS/22-11/221202/) |
 || 월 | 화 | 수 | 목 | 금 |
 
 (~~취소선~~: 휴일 또는 휴강, **굵은 글씨**: 현재 주차)
@@ -21,7 +21,7 @@
 - [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
 - 수업에서 사용한 라이브러리 JAR 링크
     - [json-simple 1.1.1](https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar)
-    - [JavaMail API 1.4.7](https://repo1.maven.org/maven2/com/sun/mail/javax.mail/1.4.7/javax.mail-1.4.7.jar)
+    - [**JavaMail API 1.4.7**](https://repo1.maven.org/maven2/com/sun/mail/javax.mail/1.4.7/javax.mail-1.4.7.jar)
     - [com.oreilly.servlet 라이브러리](http://www.servlets.com/cos/cos-22.05.zip)
     - [Jakarta Taglibs Standard 1.1.2](http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/jakarta-taglibs-standard-1.1.2.zip)
 - 개발 환경 다운로드 링크
