@@ -48,6 +48,55 @@
             ]
         }
         ```
+- 그리고 좀 더 복잡하게 가자면...
+    - 배열이나 객체 역시 또 다른 배열이나 객체의 성분이 될 수 있습니다.
+
+        ```json
+        {
+            {
+                "name": "케이드",
+                "race": "human",
+                "organs" : [
+                    {
+                        "name": "brain",
+                        "function": "think"
+                    },
+                    {
+                        "name": "stomach",
+                        "function": "digest"
+                    },
+                    {
+                        "name": "colon",
+                        "function": "poop"
+                    }
+                ],
+                {
+                    "name": "흑염룡",
+                    "why": "크큭... 또 하나의 인격... 크크큭...",
+                    "could you just stop?": "흑염룡은 그 누구의 속박도 받지 않는다..."
+                }
+            },
+            {
+                "name": "치하야",
+                "race": "goddess",
+                "organs" : [
+                    {
+                        "Idols": "don't",
+                        "have": "organs,"
+                    },
+                    {
+                        "they": "are",
+                        "filled": "with"
+                    },
+                    {
+                        "hopes": "and",
+                        "dreams.": "Now",
+                        "you": "know."
+                    }
+                ]
+            }
+        }
+        ```
 
 ## `JSON.stringify()`, `JSON.parse()`, `toJSON()`
 
@@ -56,3 +105,5 @@
 - 객체 → JSON: `객체.toJSON()`
 
 ## 패스워드 암호화
+
+- 안함
