@@ -45,6 +45,9 @@ public class QaDao {
 	
 	public List<HashMap<String, Object>> readQa(Criteria cri) {
 		List<HashMap<String, Object>> list = null;
+		conn = dbm.getConnection();
+		
+		String sql = "";
 		
 		return list;
 	}

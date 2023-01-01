@@ -5,19 +5,19 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jslhrd.controller.TblMenu;
+import com.jslhrd.controller.JSLServletController;
 import com.jslhrd.dao.NoticeDao;
 import com.jslhrd.utility.Criteria;
 import com.jslhrd.utility.PageDto;
 
-public class Notice extends TblMenu {
+public class Notice extends JSLServletController {
 
 	public Notice(HttpServletRequest request, HttpServletResponse response) {
 		super(request, response);
 	}
 
 	@Override
-	public void doJavaGet() throws IOException {
+	public void doGetList() throws IOException {
 		request.setCharacterEncoding("UTF-8");
 
 		NoticeDao dao = NoticeDao.getInstance();

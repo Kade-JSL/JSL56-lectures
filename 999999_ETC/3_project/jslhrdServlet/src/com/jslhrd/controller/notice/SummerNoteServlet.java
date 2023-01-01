@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jslhrd.controller.portfolio.PortfolioWrite;
+import com.jslhrd.controller.TblWrite;
 import com.jslhrd.dto.PortfolioDto;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -18,12 +18,14 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 @WebServlet("/summernote.do")
 public class SummerNoteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
     public SummerNoteServlet() {
         super();
     }
 
+    private static String imgurl = null;
+    public static String getImgurl() { return imgurl; }
+    public static void setImgurl(String i) { imgurl = i; }
 
 //	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -47,7 +49,7 @@ public class SummerNoteServlet extends HttpServlet {
 		response.setContentType("text/html, charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		String file = mr.getFilesystemName("file");
-		PortfolioWrite.setImgurl(file);
+		imgurl = file;
 		out.print("/upload" + "/" + file);
 		out.close();
 	}
