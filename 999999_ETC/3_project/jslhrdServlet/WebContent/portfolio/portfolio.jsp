@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>	    
 
 	<!-- sub content -->
 	<div class="sub_title">
@@ -15,14 +16,13 @@
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
 						<a href="greetings.do">기업소개</a>
-						<a href="portfolio.do">포트폴리오</a>
-						<a href="notice.do">커뮤니티</a>
+						<a href="tbl.do?t=port">포트폴리오</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="portfolio.do">포트폴리오</a>
+						<a href="tbl.do?t=port">포트폴리오</a>
 					</div>
 				</li>
 			</ul>
@@ -69,25 +69,13 @@
 					<p class="title">
 						<a href="view.do?no=${dto.bno}">${dto.title}</a>
 					</p>
-					<span class="text">
-						 ${dto.content}
-					</span>
+					<span class="text">${dto.content}</span>
 				</div>
 			</li>
 			</c:forEach>
 		</ul>
-		<div class="paging">
-			<c:if test="${pagemaker.prev}">
-				<a href="/portfoilo.do?p=${pagemaker.startPage - 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-left"></i></a>
-			</c:if>
-			<c:forEach var="pages" begin="${pagemaker.startPage}" end="${pagemaker.endPage}">
-				<a href="/portfolio.do?p=${pages}&a=${pagemaker.cri.amount}" class="${pagemaker.cri.pageNum == pages ? 'active':''}">${pages}</a>
-			</c:forEach>
-			<c:if test="${pagemaker.next}">
-				<a href="/portfolio.do?p=${pagemaker.endPage + 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-right"></i></a>
-			</c:if>
-			<a href="/write.do" class="btn_write">글쓰기</a>
-		</div>
+		<!-- paging -->
+		<%@ include file="../paging.jsp" %>
 	  </div>
 	</div>
 	<!-- end content -->

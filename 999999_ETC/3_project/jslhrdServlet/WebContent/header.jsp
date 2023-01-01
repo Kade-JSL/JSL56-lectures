@@ -76,9 +76,9 @@
 								<li><a href="map.do">찾아오시는길</a></li>
 							</ul>
 						</li>
-						<li><a href="tbl.do?t=portfolio">포트폴리오</a>
+						<li><a href="tbl.do?t=port">포트폴리오</a>
 							<ul class="nav_2depth">
-								<li><a href="tbl.do?t=portfolio">포트폴리오</a></li>
+								<li><a href="tbl.do?t=port">포트폴리오</a></li>
 							</ul>
 						</li>
 						<li><a href="tbl.do?t=notice">커뮤니티</a>

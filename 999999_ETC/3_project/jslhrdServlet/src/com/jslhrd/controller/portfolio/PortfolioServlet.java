@@ -3,23 +3,28 @@ package com.jslhrd.controller.portfolio;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jslhrd.controller.TblMenu;
 import com.jslhrd.dao.PortfolioDao;
 import com.jslhrd.dto.PortfolioDto;
 import com.jslhrd.utility.Criteria;
 import com.jslhrd.utility.PageDto;
 
-public class Portfolio extends TblMenu {
+@WebServlet("/portfolio.do")
+public class PortfolioServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 
-	public Portfolio(HttpServletRequest request, HttpServletResponse response) {
-		super(request, response);
+	public PortfolioServlet() {
+		super();
 	}
 
-	@Override
-	public void doJavaGet() throws IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		PortfolioDao pageDao = PortfolioDao.getInstance();
 		int pageNum = 1, amount = 5;
 		if (request.getParameter("p") != null) {
@@ -32,12 +37,16 @@ public class Portfolio extends TblMenu {
 		Criteria cri = new Criteria(pageNum, amount);
 		PageDto pageDto = new PageDto(cri, pageDao.portCount());
 		List<PortfolioDto> tblList = pageDao.readPortList(cri);
-		for (PortfolioDto p : tblList) {
-			p.setContent(p.getContent().replaceAll("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>", ""));
-		}
-		
+
 		request.setAttribute("pagemaker", pageDto);
 		request.setAttribute("list", tblList);
+		RequestDispatcher rd = request.getRequestDispatcher("/portfolio/portfolio.jsp");
+		rd.forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
 	}
 
 }

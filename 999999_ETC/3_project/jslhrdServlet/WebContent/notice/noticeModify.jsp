@@ -18,7 +18,7 @@
 						<a href="allclass.do">학과및모집안내</a>
 						<a href="portfolio.do">포트폴리오</a>
 						<a href="online.do">온라인접수</a>
-						<a href="notice.do">커뮤니티</a>
+						<a href="tbl.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
@@ -65,7 +65,7 @@
 			<div class="btn_wrap">
 				<input type="submit" value="저장" class="btn_ok">&nbsp;&nbsp;
 				<input type="reset" value="다시쓰기" class="btn_reset">&nbsp;&nbsp;
-				<input type="button" value="목록" class="btn_list" onClick="location.href='notice.do';">
+				<input type="button" value="목록" class="btn_list" onClick="location.href='tbl.do?t=notice&;">
 			</div>
 		</form>
 	  </div>

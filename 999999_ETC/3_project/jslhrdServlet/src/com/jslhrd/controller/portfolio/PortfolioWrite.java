@@ -21,17 +21,20 @@ public class PortfolioWrite extends HttpServlet {
     public PortfolioWrite() {
         super();
     }
+    
+    private static String imgurl = null;
+    public static String getImgurl() { return imgurl; }
+    public static void setImgurl(String url) { imgurl = url; }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String url = "/portfolio";
-		String suffix = "/write.jsp";
+		String url = "/portfolio/write.jsp";
 		if (request.getParameter("tbl") != null) {
 			if (request.getParameter("tbl").equals("qa")) {
-				suffix = "/qawrite.jsp";
+				url = "/qna/qawrite.jsp";
 			}
 		}
-		RequestDispatcher rd = request.getRequestDispatcher(url + suffix);
+		RequestDispatcher rd = request.getRequestDispatcher(url);
 		rd.forward(request, response);
 	}
 
@@ -40,29 +43,31 @@ public class PortfolioWrite extends HttpServlet {
 		
 		PortfolioDto dto = new PortfolioDto();
 		
-//		dto.setTitle(request.getParameter("title"));
-//		dto.setContent(request.getParameter("content"));
-				
-		String realPath = getServletContext().getRealPath("/upload");
-		System.out.println(realPath);
-		int maxImgSize = 1024 * 1024 * 2;
-		String encType = "UTF-8";
-		
-		MultipartRequest mr = new MultipartRequest(
-				request,
-				realPath,
-				maxImgSize,
-				encType,
-				new DefaultFileRenamePolicy()
-				);
-		
-		dto.setTitle(mr.getParameter("title"));
-		dto.setContent(mr.getParameter("content"));
-		dto.setImgurl(mr.getFilesystemName("imgurl"));
+		dto.setTitle(request.getParameter("title"));
+		dto.setContent(request.getParameter("content"));
+		dto.setImgurl(imgurl);
+//				
+//		String realPath = getServletContext().getRealPath("/upload");
+//		System.out.println(realPath);
+//		int maxImgSize = 1024 * 1024 * 2;
+//		String encType = "UTF-8";
+//		
+//		MultipartRequest mr = new MultipartRequest(
+//				request,
+//				realPath,
+//				maxImgSize,
+//				encType,
+//				new DefaultFileRenamePolicy()
+//				);
+//		
+//		dto.setTitle(mr.getParameter("title"));
+//		dto.setContent(mr.getParameter("content"));
+//		dto.setImgurl(mr.getFilesystemName("imgurl"));
 		
 		PortfolioDao.getInstance().insertPort(dto);
+		imgurl = null;
 		
-		response.sendRedirect("portfolio.do");
+		response.sendRedirect("tbl.do?t=port");
 	}
 
 }

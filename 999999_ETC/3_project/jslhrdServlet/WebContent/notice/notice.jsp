@@ -15,12 +15,12 @@
 					<div class="dropdown_menu">
 						<a href="greetings.do">공지사항</a> <a href="allclass.do">학과및모집안내</a>
 						<a href="portfolio.do">포트폴리오</a> <a href="online.do">온라인접수</a> <a
-							href="notice.do">커뮤니티</a>
+							href="tbl.do?t=notice">커뮤니티</a>
 					</div></li>
 				<li class="dropdown"><a href="">공지사항<i
 						class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="notice.do">공지사항</a> <a href="qa.do">질문과답변</a> <a
+						<a href="tbl.do?t=notice">공지사항</a> <a href="qa.do">질문과답변</a> <a
 							href="faq.do">FAQ</a>
 					</div></li>
 			</ul>
@@ -37,7 +37,7 @@
 			</p>
 		</div>
 		<div class="search_group">
-			<form name="myform" method="get" action="notice.do">
+			<form name="myform" method="get" action="tbl.do?t=notice">
 				<select name="type" class="select">
 					<option value="">검색조건</option>
 					<option value="title">제목</option>
@@ -88,14 +88,14 @@
 		</table>
 		<div class="paging">
 			<c:if test="${pagemaker.prev}">
-				<a href="/notice.do?p=${pagemaker.startPage - 1}&a=${pagemaker.cri.amount}">
+				<a href="tbl.do?t=${tbltype}&p=${pagemaker.startPage - 1}&a=${pagemaker.cri.amount}">
 				<i class="fa fa-angle-double-left"></i></a>
 			</c:if>
 			<c:forEach var="pages" begin="${pagemaker.startPage}" end="${pagemaker.endPage}">
-				<a href="/notice.do?p=${pages}&a=${pagemaker.cri.amount}" class="${pagemaker.cri.pageNum == pages ? 'active':''}">${pages}</a>
+				<a href="tbl.do?t=${tbltype}&p=${pages}&a=${pagemaker.cri.amount}" class="${pagemaker.cri.pageNum == pages ? 'active':''}">${pages}</a>
 			</c:forEach>
 			<c:if test="${pagemaker.next}">
-				<a href="/notice.do?p=${pagemaker.endPage + 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-right"></i></a>
+				<a href="/tbl.do?t=${tbltype}&p=${pagemaker.endPage + 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-right"></i></a>
 			</c:if>
 			<a href="/noticewrite.do" class="btn_write">글쓰기</a>
 		</div>

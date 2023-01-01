@@ -16,7 +16,7 @@
 					<div class="dropdown_menu">
 						<a href="greetings.do">기업소개</a>
 						<a href="portfolio.do">포트폴리오</a>
-						<a href="notice.do">커뮤니티</a>
+						<a href="tbl.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
@@ -33,7 +33,7 @@
 	<div class="container">
 	  <div class="write_wrap">
 	  <h2 class="sr-only">포트폴리오 글쓰기</h2>
-	  <form name="portfolio" method="post" action="write.do" enctype="multipart/form-data" onsubmit="return check();">
+	  <form name="portfolio" method="post" action="write.do?t=${tbltype}" onsubmit="return check();">
 			<table class="bord_table">
 				<caption class="sr-only">포트폴리오 입력 표</caption>
 				<colgroup>
@@ -48,13 +48,9 @@
 					<tr>
 						<th>내용</th>
 						<td>
-							<textarea name="content" onkeyup="checkByte(this)"></textarea>
-							<span id="nowByte">0</span> / 4000 bytes
+							<textarea name="content" id="summernote" onkeyup="checkByte(this)"></textarea>
+							<span id="total-characters"></span>
 						</td>
-					</tr>
-					<tr>
-						<th>첨부</th>
-						<td><input type="file" name="imgurl"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -79,55 +75,50 @@
 				portfolio.content.focus();
 				return false;
 			}
-			var fileName = portfolio.imgurl.value;
-			var imgFormat = "\.(jpg|JPG|png|PNG)$"; // 정규표현식
-			var reg = new RegExp(imgFormat, 'i');
-			if(!reg.test(fileName)) {
-				alert("이미지 파일만 첨부 가능합니다!");
-				return false;
-			}
 			return true;
 		}
-
-	function checkByte(obj){
-	    const maxByte = 4000; //최대 100바이트
-	    const text_val = obj.value; //입력한 문자
-	    const text_len = text_val.length; //입력한 문자수
-	    
-	    let totalByte=0;
-	    for(let i=0; i<text_len; i++){
-	    	const each_char = text_val.charAt(i);
-	        const uni_char = escape(each_char); //유니코드 형식으로 변환
-	        if(uni_char.length>4){
-	        	// 한글 : 2Byte
-	            totalByte += 2;
-	        }else{
-	        	// 영문,숫자,특수문자 : 1Byte
-	            totalByte += 1;
-	        }
-	    }
-	    
-	    if(totalByte>maxByte){
-	    	alert('최대 4000Byte까지만 입력가능합니다.');
-	        	document.getElementById("nowByte").innerText = totalByte;
-	            document.getElementById("nowByte").style.color = "red";
-	        }else{
-	        	document.getElementById("nowByte").innerText = totalByte;
-	            document.getElementById("nowByte").style.color = "green";
-	        }
-	}
 	</script>
 	<script>
 		$(function() {
-			$(".location  .dropdown > a").on("click",function(e) {
+			$(".location .dropdown > a").on("click",function(e) {
 				e.preventDefault();
 				if($(this).next().is(":visible")) {
-					$(".location  .dropdown > a").next().hide();
+					$(".location .dropdown > a").next().hide();
 				} else {
-					$(".location  .dropdown > a").next().hide();
+					$(".location .dropdown > a").next().hide();
 					$(this).next().show();
 				}
 			});
+						
+			$('#summernote').summernote({
+				height : 220,
+				focus : true,
+				callbacks : {
+					onImageUpload : function(files, editor, welEditable) {
+						for (var i = files.length - 1; i >= 0; i--) {
+							sendFile(files[i], this);
+						}
+					}
+				}
+			});
+
+			function sendFile(file, el) {
+				var form_data = new FormData();
+				form_data.append('file', file);
+				$.ajax({ //비동기식 데이터 처리
+					data : form_data,
+					type : "post",
+					url : 'summernote.do',
+					cache : false,
+					contentType : false,
+					encType : 'multipart/form-data',
+					processData : false,
+					success : function(img_name) {
+						//alert(img_name);
+						$(el).summernote('editor.insertImage', img_name);
+					}
+				})
+			}
 		});
 	</script>
 

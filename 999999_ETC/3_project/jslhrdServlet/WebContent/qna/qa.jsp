@@ -15,17 +15,17 @@
 				<div class="dropdown_menu">
 					<a href="gratings.html">공지사항</a>
 					<a href="allclass.html">학과및모집안내</a>
-					<a href="portfolio.html">포트폴리오</a>
+					<a href="tbl.do?t=port">포트폴리오</a>
 					<a href="online.html">온라인접수</a>
-					<a href="notice.html">커뮤니티</a>
+					<a href="">커뮤니티</a>
 				</div>
 			</li>
 			<li class="dropdown">
 				<a href="">질문과답변<i class="fa fa-plus btn_plus"></i></a>
 				<div class="dropdown_menu">
-					<a href="notice.html">공지사항</a>
-					<a href="qa.html">질문과답변</a>
-					<a href="faq.html">취업실적</a>
+					<a href="tbl.do?t=notice">공지사항</a>
+					<a href="tbl.do?t=qa">질문과답변</a>
+					<a href="tbl.do?t=faq">취업실적</a>
 				</div>
 			</li>
 		</ul>
@@ -81,18 +81,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<div class="paging">
-		<a href=""><i class="fa  fa-angle-double-left"></i></a>
-		<a href=""><i class="fa fa-angle-left"></i></a>
-		<a href="" class="active">1</a>
-		<a href="">2</a>
-		<a href="">3</a>
-		<a href="">4</a>
-		<a href="">5</a>
-		<a href=""><i class="fa fa-angle-right"></i></a>
-		<a href=""><i class="fa  fa-angle-double-right"></i></a>
-		<a href="write.do?tbl=qa" class="btn_write">글쓰기</a>
-	</div>
+	<%@ include file="../paging.jsp" %>
   </div>
 </div>
 <!-- end content -->
