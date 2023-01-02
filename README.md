@@ -4,7 +4,7 @@
 
 **최근 5주간의 내용만 메인에 있습니다.**
 
-| Jan. | 2 | 3 | 4 | 5 | 6 |
+| Jan. | [2](/221205-_JSP/220102/) | 3 | 4 | 5 | 6 |
 |--:|:-:|:-:|:-:|:-:|:-:|
 | → | [~~26~~](/221205-_JSP/22-12/221226/) | [27](/221205-_JSP/22-12/221227/) | [28](/221205-_JSP/22-12/221228/) | [29](/221205-_JSP/22-12/221229/) | [30](/221205-_JSP/22-12/221230/) |
 || [19](/221205-_JSP/22-12/221219/) | [20](/221205-_JSP/22-12/221220/) | [21](/221205-_JSP/22-12/221221/) | [22](/221205-_JSP/22-12/221222/) | [23](/221205-_JSP/22-12/221223/) | 
@@ -16,10 +16,10 @@
 
 # 유용한 링크
 
-- [수업에서 사용하는 이클립스 프로젝트(**jslhrdServlet**) 파일](/999999_ETC/3_project/jslhrdServlet.zip)
+- [수업에서 사용하는 이클립스 프로젝트(**jslhrdServlet**)](/999999_ETC/3_project/jslhrdServlet/)
 - [**한-일 코딩 용어 간단 비교표**(Vocabulary.md)](/999999_ETC/0_docs/Vocabulary.md)
 - [**한-일 코딩 용어 설명 및 번역 정리**(Glossary.md)](/999999_ETC/0_docs/Glossary.md)
-- 수업에서 사용한 라이브러리 JAR 링크
+- 수업에서 사용한 라이브러리 링크
     - [json-simple 1.1.1](https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar)
     - [**JavaMail API 1.4.7**](https://repo1.maven.org/maven2/com/sun/mail/javax.mail/1.4.7/javax.mail-1.4.7.jar)
     - [com.oreilly.servlet 라이브러리](http://www.servlets.com/cos/cos-22.05.zip)
@@ -30,9 +30,3 @@
     - [Eclipse IDE for Enterprise Java Developers(2020-06)](https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2020-06/R/eclipse-jee-2020-06-R-win32-x86_64.zip)
     - [Java Development Kit 8u202](https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html)
     - [Oracle Database 11gR2 Express Edition](https://www.oracle.com/database/technologies/xe-prior-release-downloads.html)
-    
----
-
-# 개인 연습장에서 있었던 일
-
-- [은행 계좌 프로그램](/999999_ETC/1_Exercises/example-program/)
