@@ -41,7 +41,7 @@ public class SendEmail extends HttpServlet {
 		
 		String host = "smtp.naver.com";
 		String user = "cucupapin@naver.com";
-		String password = "MCH2FAxw3C62j29";
+		String password = "오류나면 여기 확인";
 		
 		Properties props = new Properties(); // HashTable을 상속받아 구현한 컬렉션의 한 종류. 키와 값이 String밖에 안 된다.
 		props.put("mail.smtp.host", host);
