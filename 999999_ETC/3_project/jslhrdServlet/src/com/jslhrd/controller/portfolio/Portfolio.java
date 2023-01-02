@@ -19,7 +19,6 @@ public class Portfolio extends JSLServletController {
 		super(request, response);
 	}
 
-	@Override
 	public void doGetList() throws IOException {
 		PortfolioDao pageDao = PortfolioDao.getInstance();
 		int pageNum = 1, amount = 5;

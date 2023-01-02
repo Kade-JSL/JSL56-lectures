@@ -41,10 +41,19 @@
 					<col width="*">
 				</colgroup>
 				<tbody>
+					<c:if test="${form.get(Name.TITLE)}">
 					<tr>
 						<th>제목</th>
 						<td><input type="text" name="title"></td>
 					</tr>
+					</c:if>
+					<c:if test="${form.get(Name.WRITER)}">
+					<tr>
+						<th>글쓴이</th>
+						<td><input type="text" name="writer"></td>
+					</tr>
+					</c:if>
+					<c:if test="${form.get(Name.CONTENT)}">
 					<tr>
 						<th>내용</th>
 						<td>
@@ -52,6 +61,7 @@
 							<span id="total-characters"></span>
 						</td>
 					</tr>
+					</c:if>
 				</tbody>
 			</table>
 			<div class="btn_wrap">

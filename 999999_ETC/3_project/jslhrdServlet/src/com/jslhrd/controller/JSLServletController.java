@@ -15,5 +15,7 @@ public abstract class JSLServletController {
 		this.response = response;
 	}
 
-	public abstract void doGetList() throws IOException;
+	protected void doGetList() throws IOException {}
+
+	protected void doPostWrite() throws IOException {}
 }

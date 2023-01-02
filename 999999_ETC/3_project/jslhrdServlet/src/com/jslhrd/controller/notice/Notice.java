@@ -49,4 +49,5 @@ public class Notice extends JSLServletController {
 		// request.setAttribute("noticelist", dao.getListWithPaging(cri));
 		request.setAttribute("noticelist", dao.searchNoticePageMap(cri));
 	}
+	
 }

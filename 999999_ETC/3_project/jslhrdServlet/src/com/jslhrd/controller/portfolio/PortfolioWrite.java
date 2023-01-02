@@ -14,7 +14,7 @@ import com.jslhrd.dto.PortfolioDto;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-@WebServlet("/write.do")
+@WebServlet("/portwrite.do")
 public class PortfolioWrite extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

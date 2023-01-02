@@ -18,4 +18,9 @@ public class Qa extends JSLServletController {
 		
 	}
 
+	@Override
+	protected void doPostWrite() throws IOException {
+		
+	}
+
 }

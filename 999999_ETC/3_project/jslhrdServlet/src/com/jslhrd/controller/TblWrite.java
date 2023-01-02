@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.jslhrd.controller.portfolio.Portfolio;
+import com.jslhrd.utility.FormFlags;
 
 @WebServlet("/write.do")
 public class TblWrite extends HttpServlet {
@@ -22,13 +23,17 @@ public class TblWrite extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "index.jsp";
 		String tblType = "";
+		FormFlags form = null;
 		if (request.getParameter("t") != null) {
+			tblType = request.getParameter("t");
 			if (request.getParameter("t").equals("qa")) {
 				url = "/qna/write.jsp";
-				tblType = "qa";
 			} else if (request.getParameter("t").equals("port")) {
 				url = "/portfolio/write.jsp";
-				tblType = "port";
+				form = new FormFlags(FormFlags.FormName.TITLE, FormFlags.FormName.CONTENT);
+				request.setAttribute("form", form.getList());
+			} else if (request.getParameter("t").equals("notice")) {
+				url = "/notice/noticewrite.jsp";
 			}
 		}
 		
@@ -45,8 +50,9 @@ public class TblWrite extends HttpServlet {
 		if(request.getParameter("t") != null) {
 			tblType = request.getParameter("t");
 			if (tblType.equals("port")) {
-				
-			}
+				con = new Portfolio(request, response);
+				con.doPostWrite();
+			} 
 		}
 		
 		response.sendRedirect("tbl.do?t=" + tblType);

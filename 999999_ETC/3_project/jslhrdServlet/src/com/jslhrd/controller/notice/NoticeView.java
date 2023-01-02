@@ -47,7 +47,7 @@ public class NoticeView extends HttpServlet {
 		request.setAttribute("prev", dao.prevBno(bno));
 		request.setAttribute("view", dao.selectBno(bno));
 		request.setAttribute("next", dao.nextBno(bno));
-		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeView.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeview.jsp");
 		rd.forward(request, response);
 	}
 
