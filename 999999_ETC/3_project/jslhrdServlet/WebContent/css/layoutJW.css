@@ -227,7 +227,6 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 
 .news_group .news_tit, .news_group .news_list li {
 	width: 275px;
-	height: 350px;
 	float: left;
 }
 
@@ -295,32 +294,29 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 /* transform(변형):rotate(회전) 45deg(45도) */
 .news_group .news_list li a img {
 	margin-bottom: 20px;
-	height: 140px;
-	object-fit: cover;
 }
 
 .news_group .news_list li a>strong {
 	font-size: 20px;
+	margin-bottom: 12px;
 	display: block;
 	letter-spacing: -2px;
 }
 
 .news_group .news_list li a>p {
 	color: #666;
+	margin-bottom: 8px;
 	letter-spacing: -1px;
-	padding: 12px 0;
 }
 
 .news_group .news_list li a>span {
-	display: block;
 	font-size: 14px;
 }
 
-.news_group .news_list li a {
+.news_group .news_list li  a {
 	position: relative;
 	display: block;
 	padding: 32px;
-	height: 100%;
 }
 
 .news_group .news_list li a .over strong {
@@ -510,7 +506,6 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 .main_content .box3  .recently .text {
 	padding-top: 20px;
 }
-
 
 .main_content .box3 .noticelist ul li, .main_content .box3 .graduation ul li
 	{
@@ -902,7 +897,6 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 	background: #007dc6;
 	border: 0 none;
 	color: #fff;
-	cursor: pointer;
 }
 
 .write_wrap .btn_wrap .btn_reset {
@@ -910,7 +904,6 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 	background: #F78181;
 	border: 0 none;
 	color: #fff;
-	cursor: pointer;
 }
 
 .write_wrap .btn_wrap .btn_list {
@@ -918,7 +911,6 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 	background: #F78181;
 	border: 0 none;
 	color: #fff;
-	cursor: pointer;
 }
 
 .board_view {
@@ -1602,38 +1594,36 @@ a:link {
 	color: #fff !important;
 }
 
-/* join css */
-
-.join_title {
+/* join css*/
+.joinTitle {
 	font-size: 18px;
 	padding-bottom: 12px;
 	border-bottom: 2px solid #333;
 }
 
-.textarea_box {
+.textareaBox {
 	width: 100%;
 	height: 180px;
 	padding: 10px;
 }
 
 .pd30 {
-	margin-bottom: 30px;	
+	margin-bottom: 30px;
 }
 
-/* admin css */
-
-.adm-header:after {
-	content: "";
-	clear: both;
-	display: block;
+/* admin css*/
+.admheader {
+	overflow: hidden;
 }
-.adm-left {
+
+.admleft {
 	width: 20%;
 	float: left;
 	padding: 10px;
-	border-right: 1px solid #ccc; 
+	border-right: 1px solid #ccc;
 }
-.adm-right {
+
+.admright {
 	width: 80%;
 	float: left;
 }

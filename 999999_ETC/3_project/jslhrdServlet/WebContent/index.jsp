@@ -79,49 +79,53 @@
 				</ul>
 			</nav>
 			<div class="noticelist clearfix active taball" id="tabview1">
-			<ul>
-			<c:forEach var="map" items="${noticelist}" varStatus="status">
-				<c:choose>
-					<c:when test="${status.first}">
-					<li class="recently">
-						<p class="title">
-							<a class="title" href="">${map.title}</a>
-							<fmt:parseDate var="regdate" value="${map.regdate}" pattern="yyyy-MM-dd" parseLocale="ko-KR"/>
-							<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
-						</p>
-						<p class="text">${map.content}...</p>
-					</li>
-					</c:when>
-					<c:otherwise>
-					<li>
-						<a href="">${map.title}</a>
-						<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
-					</li>
-					</c:otherwise>
-				</c:choose>
-			</c:forEach>
-			</ul>
-			</div>
-			<div class="graduation clearfix taball" id="tabview2">
-				<div class="recently">
-					<p class="title">
-						<a class="title" href="">내가 포기하지 않으면 실패은 없다</a> <span class="date">2018-09-27</span>
-					</p>
-					<p class="text">이런 저런 핑게를 대며 나는 20년간 나를 포기하면 살았다. 시간이 흐른 뒤에 ...
-					</p>
-				</div>
 				<ul>
-					<li><a href="">즐거움이 가득한 배움의 즐거움을 알다</a><span class="date">201-09-27</span></li>
-					<li><a href="">하자, 해보자, 할 수없다</a><span class="date">201-09-27</span></li>
-					<li><a href="">무엇 때문에 오늘도 다시 시작하는가</a><span class="date">201-09-27</span></li>
-					<li><a href="">남에게도 있는 시간과 노력을 투자하면</a><span class="date">201-09-27</span></li>
+					<c:forEach var="map" items="${noticelist}" varStatus="status">
+						<c:choose>
+							<c:when test="${status.first}">
+							<li class="recently">
+								<p class="title">
+									<a class="title" href="">${map.title}</a>
+									<fmt:parseDate var="regdate" value="${map.regdate}" pattern="yyyy-MM-dd" parseLocale="ko-KR"/>
+									<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
+								</p>
+								<p class="text">${map.content}...</p>
+							</li>
+							</c:when>
+							<c:otherwise>
+							<li>
+								<a href="">${map.title}</a>
+								<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
+							</li>
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>
 				</ul>
 			</div>
+				<div class="graduation clearfix taball" id="tabview2">
+					<div class="recently">
+						<p class="title">
+							<a class="title" href="">내가 포기하지 않으면 실패은 없다</a>
+							<span class="date">2018-09-27</span>
+						</p>
+						<p class="text">이런 저런 핑게를 대며 나는 20년간 나를 포기하면 살았다. 시간이 흐른 뒤에 ...
+						</p>
+					</div>
+					<ul>
+						<li><a href="">즐거움이 가득한 배움의 즐거움을 알다</a><span class="date">201-09-27</span></li>
+						<li><a href="">하자, 해보자, 할 수없다</a><span class="date">201-09-27</span></li>
+						<li><a href="">무엇 때문에 오늘도 다시 시작하는가</a><span class="date">201-09-27</span></li>
+						<li><a href="">남에게도 있는 시간과 노력을 투자하면</a><span class="date">201-09-27</span></li>
+					</ul>
+				</div>
+				<div class="box4">
+				</div>
+				<div class="box5">
+				</div>
 		</div>
-		<div class="box4"></div>
-		<div class="box5"></div>
 	</div>
-	<div class="main_right"></div>
+	<div class="main_right">
+	</div>
 </section>
 
 <section class="other">
@@ -159,16 +163,24 @@
 </section>
 
 
-<script src="/js/jquery-3.3.1.min.js">
+<script>
 	$(function() {
 		$(".taball").hide();
 		$("#tabview1").show();
 		$(".main_center .box3 nav ul li a").click(function(e) {
-			e.preventDefault();
-			$(".main_center .box3 nav ul li").removeClass("active");
-			$(this).parent().addClass("active");
-			$(".taball").hide();
-			$($(this).attr("href")).show();
+	     //$(".main_center .box3 nav ul li").click(function(e) {
+	        e.preventDefault();
+	        // nav ul li a(공지,졸업)을 클릭했을때
+	        $(".main_center .box3 nav ul li").removeClass("active");
+	        // nav ul li 태그에 선언된 active라는 클래스이름을 삭제한다
+	        //$(this).parent().addClass("active");
+	        // 공지, 졸업둘중에 하나클릭을 했다면 현재 클릭한 자기자신위에 부모에게 active 클래스가 추가되어 active css가 실행된다
+	        //$(this).addClass("active");
+	        $(this).parent().addClass("active");
+	        $(".taball").hide();
+	        $($(this).attr("href")).show();
+	        //var num = $(this).index();
+	        //$(".taball").hide().eq(num).show();
 		});
 	});
 </script>
