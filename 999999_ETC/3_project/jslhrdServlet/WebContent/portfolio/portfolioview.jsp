@@ -15,14 +15,14 @@
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
 						<a href="../about/">기업소개</a>
-						<a href="../portfolio/tbl.do?t=port">포트폴리오</a>
-						<a href="../notice/tbl.do?t=notice">커뮤니티</a>
+						<a href="../portfolio/list.do?t=port">포트폴리오</a>
+						<a href="../notice/list.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="tbl.do?t=port">포트폴리오</a>
+						<a href="list.do?t=port">포트폴리오</a>
 					</div>
 				</li>
 			</ul>
@@ -48,7 +48,7 @@
 				</span>
 				</a>
 				<div class="btn_3wrap">
-					<a href="tbl.do?t=${tbltype}">목록</a> <a href="modify.do?t=">수정</a> <a href="portfolio_delete.do" onClick="return confirm('삭제하시겠어요?')">삭제</a>
+					<a href="list.do?t=${tbltype}">목록</a> <a href="modify.do?t=">수정</a> <a href="portfolio_delete.do" onClick="return confirm('삭제하시겠어요?')">삭제</a>
 				</div>
 				<a href="" class="btn_next">
 				<span class="next_wrap">

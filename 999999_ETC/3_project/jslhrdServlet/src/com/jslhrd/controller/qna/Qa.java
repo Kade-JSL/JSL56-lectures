@@ -13,13 +13,11 @@ public class Qa extends JSLServletController {
 		super(request, response);
 	}
 
-	@Override
 	public void doGetList() throws IOException {
 		
 	}
 
-	@Override
-	protected void doPostWrite() throws IOException {
+	public void doPostWrite() throws IOException {
 		
 	}
 

@@ -11,22 +11,22 @@
 		</ul>
 		<div class="visual_inner">
 			<p class="title">
-				국가와 청년실업자를 위한<br>
-				<strong>취업선두</strong>중심기관
+				취업의 취업을 위한 취업에 의한<br>
+				<strong>여기 자바 두명이요</strong> 중심기관
 			</p>
 			<p class="txt">
-				지식, 기술, 태도를 공유하고 가치를 창출하는 역동적인 정보처리 중심기관으로<br>산학연 공통체와 함게 성장하며 국가
-				혁신 성장의 밑거름이 되겠습니다
+				ここ日本語でなにか書いてありますね？何が分かりますか？<br>
+				お分かりでしたらJSLシステムで就活はいかがですか？ニート生活よりはずっと増しですよ？
 			</p>
 		</div>
 	</div>
 </section>
 <section class="news_group">
 	<div class="news_tit">
-		<p class="sub_tit">배움의 즐거움이 있는곳</p>
-		<h2>JSL COLLEGE 소식</h2>
-		<p class="text">JSL인재개발원 다양한 소식을 확인 하실 수 있습니다</p>
-		<a href="tbl.do?t=port" class="btn-border">READ MORE</a>
+		<p class="sub_tit">웹노가다의 즐거움이 있는 곳</p>
+		<h2>JSL SYSTEM 소식</h2>
+		<p class="text">JSL시스템의 다양한 소식을 확인하실 수 있습니다</p>
+		<a href="list.do?t=port" class="btn-border">GET REKT</a>
 	</div>
 	<ul class="news_list">
 		<c:forEach var="map" items="${portlist}">
@@ -52,18 +52,18 @@
 	<div class="main_left">
 		<div class="box">
 			<div class="txt_relative">
-				<h3>간행물</h3>
-				<p>지식정보인프라지<br>05호</p>
-				<a href="" class="btn-border">READ MORE</a>
+				<h3>손가락</h3>
+				<p>손가락이 무언가<br>가리킴</p>
+				<a href="" class="btn-border">EAT FINGER</a>
 			</div>
 			<div class="img_transition">
 			</div>
 		</div>
 		<div class="box gallery">
 			<div class="txt_relative">
-				<h3>간행물</h3>
-				<p>지식정보인프라지<br>05호</p>
-				<a href="" class="btn-border">READ MORE</a>
+				<h3>인간</h3>
+				<p>인간도 맛있다<br>냠냠</p>
+				<a href="" class="btn-border">KAYU UMA</a>
 			</div>
 			<div class="img_transition">
 			</div>
@@ -83,18 +83,18 @@
 					<c:forEach var="map" items="${noticelist}" varStatus="status">
 						<c:choose>
 							<c:when test="${status.first}">
-							<li class="recently">
+							<div class="recently">
 								<p class="title">
-									<a class="title" href="">${map.title}</a>
+									<a class="title" href="/view.do?t=notice&n=${map.bno}">${map.title}</a>
 									<fmt:parseDate var="regdate" value="${map.regdate}" pattern="yyyy-MM-dd" parseLocale="ko-KR"/>
 									<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
 								</p>
 								<p class="text">${map.content}...</p>
-							</li>
+							</div>
 							</c:when>
 							<c:otherwise>
 							<li>
-								<a href="">${map.title}</a>
+								<a href="/view.do?t=notice&n=${map.bno}">${map.title}</a>
 								<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
 							</li>
 							</c:otherwise>

@@ -55,7 +55,7 @@ public class TblWrite extends HttpServlet {
 			} 
 		}
 		
-		response.sendRedirect("tbl.do?t=" + tblType);
+		response.sendRedirect("list.do?t=" + tblType);
 	}
 
 }

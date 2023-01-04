@@ -16,9 +16,9 @@
 					<div class="dropdown_menu">
 						<a href="">공지사항</a>
 						<a href="">학과및모집안내</a>
-						<a href="tbl.do?t=port">포트폴리오</a>
+						<a href="list.do?t=port">포트폴리오</a>
 						<a href="">온라인접수</a>
-						<a href="tbl.do?t=notice">커뮤니티</a>
+						<a href="list.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
@@ -65,7 +65,7 @@
 			<div class="btn_wrap">
 				<input type="submit" value="저장" class="btn_ok">&nbsp;&nbsp;
 				<input type="reset" value="다시쓰기" class="btn_reset">&nbsp;&nbsp;
-				<input type="button" value="목록" class="btn_list" onClick="location.href='tbl.do?t=notice&;">
+				<input type="button" value="목록" class="btn_list" onClick="location.href='list.do?t=notice&;">
 			</div>
 		</form>
 	  </div>

@@ -9,11 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.jslhrd.controller.notice.Notice;
 import com.jslhrd.controller.portfolio.Portfolio;
 
-/**
- * Servlet implementation class TblView
- */
 @WebServlet("/view.do")
 public class TblView extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,8 +33,11 @@ public class TblView extends HttpServlet {
 			if (tblType.equals("port")) {
 				url = "/portfolio/portfolioview.jsp";
 				con = new Portfolio(request, response);
-				con.doGetView();
+			} else if (tblType.equals("notice")) {
+				url = "/notice/noticeView.jsp";
+				con = new Notice(request, response);
 			}
+			con.doGetView();
 		}
 		
 		request.setAttribute("tbltype", tblType);

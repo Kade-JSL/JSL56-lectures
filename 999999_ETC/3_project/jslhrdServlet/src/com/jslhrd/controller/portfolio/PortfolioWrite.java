@@ -67,7 +67,7 @@ public class PortfolioWrite extends HttpServlet {
 		PortfolioDao.getInstance().insertPort(dto);
 		imgurl = null;
 		
-		response.sendRedirect("tbl.do?t=port");
+		response.sendRedirect("list.do?t=port");
 	}
 
 }

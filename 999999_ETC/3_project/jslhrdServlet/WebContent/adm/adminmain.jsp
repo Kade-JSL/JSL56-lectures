@@ -17,21 +17,26 @@
 	<script src="/js/admin.js"></script>
 </head>
 <body>
-<div class="adm-header">
+<div class="adm-box">
 	<header class="adm-left">
 		<nav>
 			<ul>
-				<li><a href="">공지사항</a></li>
-				<li><a href="">포트폴리오</a></li>
-				<li><a href="">회원답변</a></li>
-				<li><a href="">회원관리</a></li>
+				<li><a href="#notice">공지사항</a></li>
+				<li><a href="#port">포트폴리오</a></li>
+				<li><a href="#qa">회원답변</a></li>
+				<li><a href="#member">회원관리</a></li>
 				<li><a href="logout.do">로그아웃</a></li>
 			</ul>
 		</nav>
 	</header>
-	<aside class="adm-right">
-		<h2>공지사항</h2>
+	<aside id="top" class="adm-right active">
+		<p>메뉴를 선택하세요</p>
+	</aside>
+	<aside id="notice" class="adm-right">
 		<p>내용입력</p>
+	</aside>
+	<aside id="port" class="adm-right">
+		<p>포트폴리오</p>
 	</aside>
 </div>
 	<footer>

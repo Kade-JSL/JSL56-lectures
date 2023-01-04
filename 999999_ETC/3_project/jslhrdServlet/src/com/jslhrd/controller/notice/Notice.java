@@ -50,4 +50,25 @@ public class Notice extends JSLServletController {
 		request.setAttribute("noticelist", dao.searchNoticePageMap(cri));
 	}
 	
+	@Override
+	public void doGetView() throws IOException {
+		int bno = Integer.parseInt(request.getParameter("n"));
+		
+		NoticeDao dao = NoticeDao.getInstance();
+		dao.viewCount(bno);
+		
+		int p = 1, a = 10;
+		String pageParam = request.getParameter("p");
+		String amountParam = request.getParameter("a");
+		if (pageParam != null) { p = Integer.parseInt(pageParam); }
+		if (amountParam != null) { a = Integer.parseInt(amountParam); }
+		
+		Criteria cri = new Criteria(p, a);
+		
+		request.setAttribute("cri", cri);
+		request.setAttribute("prev", dao.prevBno(bno));
+		request.setAttribute("view", dao.selectBno(bno));
+		request.setAttribute("next", dao.nextBno(bno));
+	}
+	
 }

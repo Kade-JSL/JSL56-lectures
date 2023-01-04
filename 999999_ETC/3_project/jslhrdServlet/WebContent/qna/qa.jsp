@@ -15,7 +15,7 @@
 				<div class="dropdown_menu">
 					<a href="gratings.html">공지사항</a>
 					<a href="allclass.html">학과및모집안내</a>
-					<a href="tbl.do?t=port">포트폴리오</a>
+					<a href="list.do?t=port">포트폴리오</a>
 					<a href="online.html">온라인접수</a>
 					<a href="">커뮤니티</a>
 				</div>
@@ -23,9 +23,9 @@
 			<li class="dropdown">
 				<a href="">질문과답변<i class="fa fa-plus btn_plus"></i></a>
 				<div class="dropdown_menu">
-					<a href="tbl.do?t=notice">공지사항</a>
-					<a href="tbl.do?t=qa">질문과답변</a>
-					<a href="tbl.do?t=faq">취업실적</a>
+					<a href="list.do?t=notice">공지사항</a>
+					<a href="list.do?t=qa">질문과답변</a>
+					<a href="list.do?t=faq">취업실적</a>
 				</div>
 			</li>
 		</ul>
@@ -81,7 +81,19 @@
 			</tr>
 		</tbody>
 	</table>
-	<%@ include file="../paging.jsp" %>
+	<div class="paging">
+	<c:if test="${pagemaker.prev}">
+		<a href="list.do?t=${tbltype}&p=${pagemaker.startPage - 1}&a=${pagemaker.cri.amount}">
+		<i class="fa fa-angle-double-left"></i></a>
+	</c:if>
+	<c:forEach var="pages" begin="${pagemaker.startPage}" end="${pagemaker.endPage}">
+		<a href="list.do?t=${tbltype}&p=${pages}&a=${pagemaker.cri.amount}" class="${pagemaker.cri.pageNum == pages ? 'active':''}">${pages}</a>
+	</c:forEach>
+	<c:if test="${pagemaker.next}">
+		<a href="/list.do?t=${tbltype}&p=${pagemaker.endPage + 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-right"></i></a>
+	</c:if>
+	<a href="/write.do?t=${tbltype}" class="btn_write">글쓰기</a>
+</div>
   </div>
 </div>
 <!-- end content -->

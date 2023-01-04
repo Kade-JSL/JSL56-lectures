@@ -153,29 +153,10 @@ html, body {
 	animation: zoomin 20s 0.3s ease-out infinite;
 }
 
-@
-keyframes zoomin { 0% {
-	transform: scale(1);
-}
-
-50
-%
-{
-transform
-:
-scale(
-1.2
-);
-}
-100
-%
-{
-transform
-:
-scale(
-1
-);
-}
+@keyframes zoomin { 
+	0% { transform: scale(1); }
+	50% { transform: scale(1.2); }
+	100% { transform: scale(1); }
 }
 
 /* 
@@ -1622,7 +1603,7 @@ a:link {
 
 /* admin css */
 
-.adm-header:after {
+.adm-box:after {
 	content: "";
 	clear: both;
 	display: block;
@@ -1630,10 +1611,11 @@ a:link {
 .adm-left {
 	width: 20%;
 	float: left;
-	padding: 10px;
+	padding: 20px;
 	border-right: 1px solid #ccc; 
 }
 .adm-right {
 	width: 80%;
 	float: left;
+	padding: 20px;
 }

@@ -38,7 +38,7 @@ public class NoticeWrite extends HttpServlet {
 		NoticeDao dao = NoticeDao.getInstance();
 		dao.noticeInsert(dto);
 		
-		response.sendRedirect("tbl.do?t=notice");
+		response.sendRedirect("list.do?t=notice");
 	}
 
 }

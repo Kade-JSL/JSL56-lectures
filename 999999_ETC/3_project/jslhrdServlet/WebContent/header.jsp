@@ -49,9 +49,9 @@
 			<nav class="top_left">
 			  <ul>
 			  	<li class="first"><a href="/">HOME</a></li>
-				<li><a href="">모집안내</a></li>
-				<li><a href="">입학상담</a></li>
-				<li><a href="">교육신청</a></li>
+				<li><a href="">아이돌마</a></li>
+				<li><a href="">스터밀리</a></li>
+				<li><a href="">언라이브</a></li>
 			  </ul>
 			</nav>
 			<nav class="top_right">
@@ -70,28 +70,28 @@
 			</nav>
 			
 			<div class="gnb_group">
-				<h1 class="logo">JSL CO</h1>
+				<h1 class="logo">JSL시스템</h1>
 				<nav class="gnb">
 					<ul class="nav_1depth">
 						<li><a href="">기업소개</a>
 							<ul class="nav_2depth">
 								<li><a href="">인사말</a></li>
-								<li><a href="">연혁 및 </a></li>
-								<li><a href="">교직원소개</a></li>
-								<li><a href="">대우갤러리</a></li>
-								<li><a href="">찾아오시는길</a></li>
+								<li><a href="">연혁</a></li>
+								<li><a href="">직원소개</a></li>
+								<li><a href="">국내 자바 갤러리</a></li>
+								<li><a href="">기어오시는길</a></li>
 							</ul>
 						</li>
-						<li><a href="tbl.do?t=port">포트폴리오</a>
+						<li><a href="list.do?t=port">포트폴리오</a>
 							<ul class="nav_2depth">
-								<li><a href="tbl.do?t=port">포트폴리오</a></li>
+								<li><a href="list.do?t=port">포트폴리오</a></li>
 							</ul>
 						</li>
-						<li><a href="tbl.do?t=notice">커뮤니티</a>
+						<li><a href="list.do?t=notice">커뮤니티</a>
 							<ul class="nav_2depth">
-								<li><a href="tbl.do?t=notice">공지사항</a></li>
-								<li><a href="tbl.do?t=qa">질문과답변</a></li>
-								<li><a href="tbl.do?t=faq">FAQ</a></li>
+								<li><a href="list.do?t=notice">공지사항</a></li>
+								<li><a href="list.do?t=qa">질문과답변</a></li>
+								<li><a href="list.do?t=faq">FAQ</a></li>
 								<li><a href="">자료실</a></li>
 								<li><a href="admin.do">관리자</a></li>
 							</ul>

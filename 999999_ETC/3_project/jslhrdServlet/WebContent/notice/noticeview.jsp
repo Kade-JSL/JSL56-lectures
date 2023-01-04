@@ -16,15 +16,15 @@
 					<div class="dropdown_menu">
 						<a href="">공지사항</a>
 						<a href="">학과및모집안내</a>
-						<a href="tbl.do?t=port">포트폴리오</a>
+						<a href="list.do?t=port">포트폴리오</a>
 						<a href="">온라인접수</a>
-						<a href="tbl.do?t=notice">커뮤니티</a>
+						<a href="list.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">질문답변<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="tbl.do?t=notice">공지사항</a>
+						<a href="list.do?t=notice">공지사항</a>
 						<a href="">질문답변</a>
 						<a href="">취업실적</a>
 					</div>
@@ -51,7 +51,7 @@
 					</a>
 				</c:if>
 				<div class="btn_3wrap">
-					<a href="tbl.do?t=notice&p=${cri.pageNum}&a=${cri.amount}">목록</a>
+					<a href="list.do?t=notice&p=${cri.pageNum}&a=${cri.amount}">목록</a>
 					<a href="noticemodify.do?bno=${view.bno}&p=${cri.pageNum}&a=${cri.amount}">수정</a>
 					<a href="noticedelete.do?bno=${view.bno}&p=${cri.pageNum}&a=${cri.amount}" onClick="return confirm('삭제하시겠어요?')">삭제</a>
 				</div>

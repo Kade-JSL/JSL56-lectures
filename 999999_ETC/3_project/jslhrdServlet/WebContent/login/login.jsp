@@ -14,9 +14,9 @@
 			<li class="dropdown">
 				<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
 				<div class="dropdown_menu">
-					<a href="tbl.do?t=notice">공지사항</a>
+					<a href="list.do?t=notice">공지사항</a>
 					<a href="">학과및모집안내</a>
-					<a href="tbl.do?t=port">포트폴리오</a>
+					<a href="list.do?t=port">포트폴리오</a>
 					<a href="">온라인접수</a>
 					<a href="">커뮤니티</a>
 				</div>
@@ -24,9 +24,9 @@
 			<li class="dropdown">
 				<a href="">공지사항<i class="fa fa-plus btn_plus"></i></a>
 				<div class="dropdown_menu">
-					<a href="tbl.do?t=notice">공지사항</a>
-					<a href="tbl.do?t=qa">질문과답변</a>
-					<a href="tbl.do?t=faq">FAQ</a>
+					<a href="list.do?t=notice">공지사항</a>
+					<a href="list.do?t=qa">질문과답변</a>
+					<a href="list.do?t=faq">FAQ</a>
 				</div>
 			</li>
 		</ul>

@@ -13,7 +13,7 @@ import com.jslhrd.controller.notice.Notice;
 import com.jslhrd.controller.portfolio.Portfolio;
 import com.jslhrd.controller.qna.Qa;
 
-@WebServlet("/tbl.do")
+@WebServlet("/list.do")
 public class TblList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

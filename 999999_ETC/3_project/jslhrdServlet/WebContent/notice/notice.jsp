@@ -14,13 +14,13 @@
 						class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
 						<a href="">공지사항</a> <a href="">학과및모집안내</a>
-						<a href="tbl.do?t=port">포트폴리오</a> <a href="">온라인접수</a> <a
-							href="tbl.do?t=notice">커뮤니티</a>
+						<a href="list.do?t=port">포트폴리오</a> <a href="">온라인접수</a> <a
+							href="list.do?t=notice">커뮤니티</a>
 					</div></li>
 				<li class="dropdown"><a href="">공지사항<i
 						class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="tbl.do?t=notice">공지사항</a> <a href="qa.do">질문과답변</a> <a
+						<a href="list.do?t=notice">공지사항</a> <a href="qa.do">질문과답변</a> <a
 							href="faq.do">FAQ</a>
 					</div></li>
 			</ul>
@@ -37,7 +37,7 @@
 			</p>
 		</div>
 		<div class="search_group">
-			<form name="myform" method="get" action="tbl.do?t=notice">
+			<form name="myform" method="get" action="list.do?t=notice">
 				<select name="type" class="select">
 					<option value="">검색조건</option>
 					<option value="title">제목</option>
@@ -77,7 +77,7 @@
 					<tr>
 						<td>${num}</td>
 						<td class="title"><a
-							href="noticeview.do?bno=${notice.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}">${notice.title}</a></td>
+							href="view.do?t=${tbltype}&n=${notice.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}">${notice.title}</a></td>
 						<td>${notice.writer}</td>
 						<td>${notice.regdate}</td>
 						<td>${notice.viewcount}</td>
