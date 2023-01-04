@@ -25,7 +25,7 @@
 				<li><a href="">포트폴리오</a></li>
 				<li><a href="">회원답변</a></li>
 				<li><a href="">회원관리</a></li>
-				<li><a href="logout.do">로그아웃</a></li>
+				<li><a href="">로그아웃</a></li>
 			</ul>
 		</nav>
 	</header>
