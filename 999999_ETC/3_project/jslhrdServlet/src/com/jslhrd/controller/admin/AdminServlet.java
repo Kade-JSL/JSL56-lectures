@@ -1,34 +1,22 @@
-package com.jslhrd.controller;
+package com.jslhrd.controller.admin;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jslhrd.dao.MainDao;
-
-@WebServlet("/main.do")
-public class Index extends HttpServlet {
+@WebServlet("/admin.do")
+public class AdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Index() {
+    public AdminServlet() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-		MainDao dao = MainDao.getInstance();
-		ArrayList<HashMap<String, Object>> list = dao.readMainPort();
-		request.setAttribute("portlist", list);
-		list = dao.readMainNotice();
-		request.setAttribute("noticelist", list);
-		rd.forward(request, response);
+		request.getRequestDispatcher("/adm/admin.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

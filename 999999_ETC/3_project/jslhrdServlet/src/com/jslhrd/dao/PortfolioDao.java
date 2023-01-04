@@ -5,7 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.jslhrd.dbmanager.DBManager;
 import com.jslhrd.dto.PortfolioDto;
@@ -43,26 +45,30 @@ public class PortfolioDao {
 		}
 	}
 	
-	public PortfolioDto readPortContent(int bno) {
+	public Map<String, Object> readPortContent(int bno) {
 		conn = dbm.getConnection();
 		
 		String sql = "SELECT * FROM PORTFOLIO WHERE BNO = ?";
+		viewCount(conn, bno);
 		
-		PortfolioDto dto = null;
+		Map<String, Object> map = null;
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, bno);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				dto = new PortfolioDto();
-				dto.setTitle(rs.getString("TITLE"));
+				map = new HashMap<String, Object>();
+				map.put("title", rs.getString("TITLE"));
+				map.put("writer", rs.getString("WRITER"));
+				map.put("regdate", rs.getString("REGDATE"));
+				map.put("viewcount", rs.getInt("VIEWCOUNT"));
+				map.put("content", rs.getString("CONTENT"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		return dto;
+		return map;
 	}
 	
 	public List<PortfolioDto> readPortList(Criteria cri) {
@@ -122,5 +128,18 @@ public class PortfolioDao {
 		}
 		
 		return cnt;
+	}
+	
+	public void viewCount(Connection conn, int bno) {
+		
+		String sql = "UPDATE PORTFOLIO SET VIEWCOUNT = VIEWCOUNT + 1 WHERE BNO = " + bno;
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			pstmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }

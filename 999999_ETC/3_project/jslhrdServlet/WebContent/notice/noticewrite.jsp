@@ -24,8 +24,8 @@
 					<a href="">공지사항<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
 						<a href="tbl.do?t=notice">공지사항</a>
-						<a href="greetings.do">DW인터뷰</a>
-						<a href="greetings.do">취업실적</a>
+						<a href="">DW인터뷰</a>
+						<a href="">취업실적</a>
 					</div>
 				</li>
 			</ul>

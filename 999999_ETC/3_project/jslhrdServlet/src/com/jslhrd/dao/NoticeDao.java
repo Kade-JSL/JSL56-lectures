@@ -46,6 +46,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt);
+			query = null;
 		}
 	}
 	
@@ -76,6 +77,8 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt, rs);
+			query = null;
+
 		}
 		
 		return noticeList;
@@ -107,6 +110,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt, rs);
+			query = null;
 		}
 		
 		return dto;
@@ -124,6 +128,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt);
+			query = null;
 		}
 	}
 	
@@ -145,6 +150,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt, rs);
+			query = null;
 		}
 		
 		return dto;
@@ -168,6 +174,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt, rs);
+			query = null;
 		}
 		
 		return dto;
@@ -188,6 +195,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt);
+			query = null;
 		}
 	}
 	
@@ -203,6 +211,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt);
+			query = null;
 		}
 	}
 	
@@ -242,6 +251,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt, rs);
+			query = null;
 		}
 		
 		return noticeList;
@@ -359,6 +369,7 @@ public class NoticeDao {
 			e.printStackTrace();
 		} finally {
 			dbm.close(conn, pstmt, rs);
+			query = null;
 		}
 		
 		return mapList;

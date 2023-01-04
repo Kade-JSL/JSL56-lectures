@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.jslhrd.dbmanager.DBManager;
 import com.jslhrd.utility.Criteria;
@@ -43,11 +45,33 @@ public class QaDao {
 		}
 	}
 	
-	public List<HashMap<String, Object>> readQa(Criteria cri) {
+	public List<HashMap<String, Object>> readQaList(Criteria cri) {
 		List<HashMap<String, Object>> list = null;
+		Map<String, Object> map = null;
 		conn = dbm.getConnection();
 		
-		String sql = "";
+		String sql = "SELECT * FROM QA";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if (rs != null) { list = new ArrayList<HashMap<String, Object>>(); }
+			while (rs.next()) {
+				map = new HashMap<String, Object>();
+				map.put("bno", rs.getInt("BNO"));
+				map.put("title", rs.getString("TITLE"));
+				map.put("status", rs.getString("STATUS"));
+				map.put("regdate", rs.getString("REGDATE"));
+				map.put("writer", rs.getString("WRITER"));
+				map.put("viewcount", rs.getInt("VIEWCOUNT"));
+				list.add((HashMap<String, Object>) map);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		return list;
 	}

@@ -14,15 +14,15 @@
 				<li class="dropdown">
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="greetings.do">기업소개</a>
-						<a href="portfolio.do">포트폴리오</a>
+						<a href="">기업소개</a>
+						<a href="tbl.do?t=port">포트폴리오</a>
 						<a href="tbl.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="portfolio.do">포트폴리오</a>
+						<a href="tbl.do?t=port">포트폴리오</a>
 					</div>
 				</li>
 			</ul>
@@ -55,7 +55,7 @@
 				</tbody>
 			</table>
 			<div class="btn_wrap">
-				<input type="submit" value="저장" class="btn_ok">&nbsp;&nbsp;<input type="reset" value="다시쓰기" class="btn_reset">&nbsp;&nbsp;<input type="button" value="목록" class="btn_list" onClick="location.href='portfolio.do';">
+				<input type="submit" value="저장" class="btn_ok">&nbsp;&nbsp;<input type="reset" value="다시쓰기" class="btn_reset">&nbsp;&nbsp;<input type="button" value="목록" class="btn_list" onClick="location.href='tbl.do?t=port';">
 			</div>
 		</form>
 	  </div>

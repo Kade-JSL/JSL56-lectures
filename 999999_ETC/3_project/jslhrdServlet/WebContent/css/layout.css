@@ -227,6 +227,7 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 
 .news_group .news_tit, .news_group .news_list li {
 	width: 275px;
+	height: 350px;
 	float: left;
 }
 
@@ -294,29 +295,32 @@ background:url(이미지경로/이미지파일) 반복여부 x축기준점 y축�
 /* transform(변형):rotate(회전) 45deg(45도) */
 .news_group .news_list li a img {
 	margin-bottom: 20px;
+	height: 140px;
+	object-fit: cover;
 }
 
 .news_group .news_list li a>strong {
 	font-size: 20px;
-	margin-bottom: 12px;
 	display: block;
 	letter-spacing: -2px;
 }
 
 .news_group .news_list li a>p {
 	color: #666;
-	margin-bottom: 8px;
 	letter-spacing: -1px;
+	padding: 12px 0;
 }
 
 .news_group .news_list li a>span {
+	display: block;
 	font-size: 14px;
 }
 
-.news_group .news_list li  a {
+.news_group .news_list li a {
 	position: relative;
 	display: block;
 	padding: 32px;
+	height: 100%;
 }
 
 .news_group .news_list li a .over strong {

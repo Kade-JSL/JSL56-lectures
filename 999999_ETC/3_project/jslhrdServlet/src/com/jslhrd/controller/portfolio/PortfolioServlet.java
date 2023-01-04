@@ -15,7 +15,7 @@ import com.jslhrd.dto.PortfolioDto;
 import com.jslhrd.utility.Criteria;
 import com.jslhrd.utility.PageDto;
 
-@WebServlet("/portfolio.do")
+@WebServlet("/tbl.do?t=port")
 public class PortfolioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

@@ -14,10 +14,10 @@
 				<li class="dropdown">
 					<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="greetings.do">공지사항</a>
-						<a href="allclass.do">학과및모집안내</a>
-						<a href="portfolio.do">포트폴리오</a>
-						<a href="online.do">온라인접수</a>
+						<a href="">공지사항</a>
+						<a href="">학과및모집안내</a>
+						<a href="tbl.do?t=port">포트폴리오</a>
+						<a href="">온라인접수</a>
 						<a href="tbl.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
@@ -25,8 +25,8 @@
 					<a href="">질문답변<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
 						<a href="tbl.do?t=notice">공지사항</a>
-						<a href="greetings.do">질문답변</a>
-						<a href="greetings.do">취업실적</a>
+						<a href="">질문답변</a>
+						<a href="">취업실적</a>
 					</div>
 				</li>
 			</ul>

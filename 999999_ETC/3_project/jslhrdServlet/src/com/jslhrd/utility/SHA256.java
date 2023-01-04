@@ -19,7 +19,7 @@ public class SHA256 {
 				// 전달된 배열은 digest() 메서드로 암호화, 그리고 byte[]에 저장된다
 				byte[] encodedData = md.digest();
 				for (int i = 0; i < encodedData.length; i++) {
-					newPw += Integer.toHexString(encodedData[i]&0xFF);
+					newPw += Integer.toHexString(encodedData[i]&0x7A);
 				}
 			} catch (NoSuchAlgorithmException e) {
 				// TODO Auto-generated catch block

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@ include file="header.jsp"%>
 
 <section id="main_visual">
@@ -12,10 +11,11 @@
 		</ul>
 		<div class="visual_inner">
 			<p class="title">
-				국가와 청년실업자를 을 위한<br /> <strong>취업선두</strong> 중심기관
+				국가와 청년실업자를 위한<br>
+				<strong>취업선두</strong>중심기관
 			</p>
 			<p class="txt">
-				지식, 기술, 태도를 공유하고 가치를 창출하는 역동적인 정보처리 중심기관으로<br />산학연 공통체와 함게 성장하며 국가
+				지식, 기술, 태도를 공유하고 가치를 창출하는 역동적인 정보처리 중심기관으로<br>산학연 공통체와 함게 성장하며 국가
 				혁신 성장의 밑거름이 되겠습니다
 			</p>
 		</div>
@@ -24,41 +24,27 @@
 <section class="news_group">
 	<div class="news_tit">
 		<p class="sub_tit">배움의 즐거움이 있는곳</p>
-		<h2>JSL COLEGE 소식</h2>
+		<h2>JSL COLLEGE 소식</h2>
 		<p class="text">JSL인재개발원 다양한 소식을 확인 하실 수 있습니다</p>
-		<a href="" class="btn-border">READ MORE</a>
+		<a href="tbl.do?t=port" class="btn-border">READ MORE</a>
 	</div>
 	<ul class="news_list">
-		<li><a href=""> <img src="./images/news01.jpg"
-				alt="식품경진대회 우수상 사진" class="w100"> <strong>식품경진대회 우수상
-					수상</strong>
-				<p>2017년 식품안전분야 공공데이터 활용 경진대회 우수상을 또 수상하였습니다.</p> <span>2018.09.20</span>
+		<c:forEach var="map" items="${portlist}">
+		<li>
+			<a href="view.do?t=port&n=${map.bno}">
+				<img src="/upload/${map.imgurl}" alt="식품경진대회 우수상 사진" class="w100">
+				<strong>${map.title}</strong>
+				<p>${map.content}</p>
+				<fmt:parseDate var="regdate" value="${map.regdate}" pattern="yyyy-MM-dd" parseLocale="ko-KR"/>
+				<span><fmt:formatDate value="${regdate}" pattern="yyyy.MM.dd"/></span>
 				<div class="over">
-					<strong>식품경진대회 우수상 수상</strong>
-					<p>2017년 식품안전분야 공공데이터 활용 경진대회 우수상을 또 수상하였습니다.</p>
-					<span>2018.09.20</span>
+					<strong>${map.title}</strong>
+					<p>${map.content}</p>
+					<span><fmt:formatDate value="${regdate}" pattern="yyyy.MM.dd"/></span>
 				</div>
-		</a></li>
-		<li><a href=""> <img src="./images/news02.jpg"
-				alt="식품경진대회 우수상 사진" class="w100"> <strong>식품경진대회 우수상
-					수상</strong>
-				<p>2017년 식품안전분야 공공데이터 활용 경진대회 우수상을 또 수상하였습니다.</p> <span>2018.09.20</span>
-				<div class="over">
-					<strong>식품경진대회 우수상 수상</strong>
-					<p>2017년 식품안전분야 공공데이터 활용 경진대회 우수상을 또 수상하였습니다.</p>
-					<span>2018.09.20</span>
-				</div>
-		</a></li>
-		<li class="news_end"><a href=""> <img
-				src="./images/news03.jpg" alt="식품경진대회 우수상 사진" class="w100"> <strong>식품경진대회
-					우수상 수상</strong>
-				<p>2017년 식품안전분야 공공데이터 활용 경진대회 우수상을 또 수상하였습니다.</p> <span>2018.09.20</span>
-				<div class="over">
-					<strong>식품경진대회 우수상 수상</strong>
-					<p>2017년 식품안전분야 공공데이터 활용 경진대회 우수상을 또 수상하였습니다.</p>
-					<span>2018.09.20</span>
-				</div>
-		</a></li>
+			</a>
+		</li>
+		</c:forEach>
 	</ul>
 </section>
 <section class="main_content">
@@ -67,22 +53,20 @@
 		<div class="box">
 			<div class="txt_relative">
 				<h3>간행물</h3>
-				<p>
-					지식정보인프라지<br>05호
-				</p>
+				<p>지식정보인프라지<br>05호</p>
 				<a href="" class="btn-border">READ MORE</a>
 			</div>
-			<div class="img_transition"></div>
+			<div class="img_transition">
+			</div>
 		</div>
 		<div class="box gallery">
 			<div class="txt_relative">
 				<h3>간행물</h3>
-				<p>
-					지식정보인프라지<br>05호
-				</p>
+				<p>지식정보인프라지<br>05호</p>
 				<a href="" class="btn-border">READ MORE</a>
 			</div>
-			<div class="img_transition"></div>
+			<div class="img_transition">
+			</div>
 		</div>
 	</div>
 	<div class="main_center">
@@ -95,21 +79,30 @@
 				</ul>
 			</nav>
 			<div class="noticelist clearfix active taball" id="tabview1">
-				<div class="recently">
-					<p class="title">
-						<a class="title" href="">빅데이터응용SW개발 양성과정 모집</a> <span class="date">2018-09-27</span>
-					</p>
-					<p class="text">빅데이터처리, JAVA, JSP, PHP, DB을 이용한 응용소프트웨어 개발자를
-						모집중입니다...</p>
-				</div>
-				<ul>
-					<li><a href="">HCI기반 UI/UX전문가양성과종 훈련생 모집</a><span class="date">201-09-27</span></li>
-					<li><a href="">품질경영전문가 훈련생 모집</a><span class="date">201-09-27</span></li>
-					<li><a href="">대전디자인경진대회 공지</a><span class="date">201-09-27</span></li>
-					<li><a href="">국비전액무료교육생 모집</a><span class="date">201-09-27</span></li>
-				</ul>
+			<ul>
+			<c:forEach var="map" items="${noticelist}" varStatus="status">
+				<c:choose>
+					<c:when test="${status.first}">
+					<li class="recently">
+						<p class="title">
+							<a class="title" href="">${map.title}</a>
+							<fmt:parseDate var="regdate" value="${map.regdate}" pattern="yyyy-MM-dd" parseLocale="ko-KR"/>
+							<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
+						</p>
+						<p class="text">${map.content}...</p>
+					</li>
+					</c:when>
+					<c:otherwise>
+					<li>
+						<a href="">${map.title}</a>
+						<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
+					</li>
+					</c:otherwise>
+				</c:choose>
+			</c:forEach>
+			</ul>
 			</div>
-			<div class="graduation  clearfix taball" id="tabview2">
+			<div class="graduation clearfix taball" id="tabview2">
 				<div class="recently">
 					<p class="title">
 						<a class="title" href="">내가 포기하지 않으면 실패은 없다</a> <span class="date">2018-09-27</span>
@@ -171,19 +164,11 @@
 		$(".taball").hide();
 		$("#tabview1").show();
 		$(".main_center .box3 nav ul li a").click(function(e) {
-			//$(".main_center .box3 nav ul li").click(function(e) {
 			e.preventDefault();
-			// nav ul li a(공지,졸업)을 클릭했을때
 			$(".main_center .box3 nav ul li").removeClass("active");
-			// nav ul li 태그에 선언된 active라는 클래스이름을 삭제한다
-			//$(this).parent().addClass("active");
-			// 공지, 졸업둘중에 하나클릭을 했다면 현재 클릭한 자기자신위에 부모에게 active 클래스가 추가되어 active css가 실행된다
-			//$(this).addClass("active");
 			$(this).parent().addClass("active");
 			$(".taball").hide();
 			$($(this).attr("href")).show();
-			//var num = $(this).index();
-			//$(".taball").hide().eq(num).show();
 		});
 	});
 </script>

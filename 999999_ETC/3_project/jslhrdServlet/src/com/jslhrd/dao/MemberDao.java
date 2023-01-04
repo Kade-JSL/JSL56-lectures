@@ -93,4 +93,32 @@ public class MemberDao {
 			dbm.close(conn, pstmt);
 		}
 	}
+	
+	public int memberIdPwCheck(String id, String pw) {
+		int result = 0;
+		conn = dbm.getConnection();
+		
+		String sql = "SELECT ID, PW FROM MEMBER WHERE ID = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if (rs.next()) { // 아이디가 존재한다면...
+				if (rs.getString("PW") != null && rs.getString("PW").equals(pw)) {
+					result = 1; // 아이디와 패스워드가 같다
+				} else {
+					result = 0; // 아이디는 있는데 패스워드가 틀렸다
+				}
+			} else { // 아이디가 없다 == 회원가입한 사람이 없다
+				result = -1;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbm.close(conn, pstmt, rs);
+		}
+		
+		return result;
+	}
 }

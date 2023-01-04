@@ -16,6 +16,8 @@ public abstract class JSLServletController {
 	}
 
 	protected void doGetList() throws IOException {}
+	
+	protected void doGetView() throws IOException {}
 
 	protected void doPostWrite() throws IOException {}
 }

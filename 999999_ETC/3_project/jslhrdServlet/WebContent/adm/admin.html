@@ -30,7 +30,7 @@
  3. class 이름 붙이고 css 적용
  -->
 	<div class="sr-only">
-		<p><a href="#content">본문 바로가기</a></p>
+		<p><a href="#contents">본문 바로가기</a></p>
 	</div>
 
 	<div class="top_navigation">
@@ -38,7 +38,7 @@
 		<header class="header">
 			<nav class="top_left">
 			  <ul>
-			  	<li class="first"><a href="../">HOME</a></li>
+			  	<li class="first"><a href="../index.html">HOME</a></li>
 				<li><a href="">모집안내</a></li>
 				<li><a href="">입학상담</a></li>
 				<li><a href="">교육신청</a></li>
@@ -57,39 +57,39 @@
 				<h1 class="logo">JSL CO</h1>
 				<nav class="gnb">
 					<ul class="nav_1depth">
-						<li><a href="">기업소개</a>
+						<li><a href="gratings.html">기업소개</a>
 							<ul class="nav_2depth">
-								<li><a href="../about/">인사말</a></li>
-								<li><a href="../about/history.do">연혁 및 </a></li>
-								<li><a href="../about/">교직원소개</a></li>
-								<li><a href="../gallery/photo.do">대우갤러리</a></li>
-								<li><a href="../about/map.do">찾아오시는길</a></li>
+								<li><a href="gratings.html">인사말</a></li>
+								<li><a href="history.html">연혁 및 </a></li>
+								<li><a href="gratings.html">교직원소개</a></li>
+								<li><a href="../gallery/photo.html">대우갤러리</a></li>
+								<li><a href="map.html">찾아오시는길</a></li>
 							</ul>
 						</li>
-						<!-- <li><a href="">학과및모집안내</a>
+						<!-- <li><a href="allclass.html">학과및모집안내</a>
 							<ul class="nav_2depth">
 								<li><a href="#">전체모집과정</a></li>
 								<li><a href="#">스마트웹콘텐츠개발과정</a></li>
 							</ul>
 						</li> -->
-						<li><a href="portfolio/tbl.do?t=port">포트폴리오</a>
+						<li><a href="../portfolio.html">포트폴리오</a>
 							<ul class="nav_2depth">
-								<li><a href="portfolio/tbl.do?t=port">포트폴리오</a></li>
+								<li><a href="../portfolio/portfolio.html">포트폴리오</a></li>
 							</ul>
 						</li>
-						<!-- <li><a href="">온라인접수</a>
+						<!-- <li><a href="online.html">온라인접수</a>
 							<ul class="nav_2depth">
 								<li><a href="#">온라인접수</a></li>
 								<li><a href="#">취업성공패키지</a></li>
 							</ul>
 						</li> -->
-						<li><a href="../tbl.do?t=notice">커뮤니티</a>
+						<li><a href="../notice.html">커뮤니티</a>
 							<ul class="nav_2depth">
-								<li><a href="../notice/tbl.do?t=notice">공지사항</a></li>
-								<li><a href="../qna/qa.do">질문과답변</a></li>
-								<li><a href="../faq/faq.do">FAQ</a></li>
-								<li><a href="../pds/pds.do">자료실</a></li>
-								<li><a href="../adm/admin.do">관리자</a></li>
+								<li><a href="../notice/notice.html">공지사항</a></li>
+								<li><a href="../qna/qa.html">질문과답변</a></li>
+								<li><a href="../faq/faq.html">FAQ</a></li>
+								<li><a href="../pds/pds.html">자료실</a></li>
+								<li><a href="../adm/admin.html">관리자</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -131,27 +131,32 @@
 	</script>
 
 	
-	<!-- sub content -->
+	<!-- sub contents -->
 	<div class="sub_title">
-		<h2>포트폴리오</h2>
+		<h2>관리자 로그인</h2>
 		<div class="container">
 		  <div class="location">
 			<ul>
 				<li class="btn_home">
-					<a href="/"><i class="fa fa-home btn_plus"></i></a>
+					<a href="index.html"><i class="fa fa-home btn_plus"></i></a>
 				</li>
 				<li class="dropdown">
-					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
+					<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="../about/">기업소개</a>
-						<a href="../portfolio/tbl.do?t=port">포트폴리오</a>
-						<a href="../notice/tbl.do?t=notice">커뮤니티</a>
+						<a href="gratings.html">공지사항</a>
+						<a href="allclass.html">학과및모집안내</a>
+						<a href="portfolio.html">포트폴리오</a>
+						<a href="online.html">온라인접수</a>
+						<a href="notice.html">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
-					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
+					<a href="">관리자<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="tbl.do?t=port">포트폴리오</a>
+						<a href="notice.html">공지사항</a>
+						<a href="qa.html">질문과답변</a>
+						<a href="faq.html">FAQ</a>
+						<a href="admin.html">관리자</a>
 					</div>
 				</li>
 			</ul>
@@ -159,57 +164,37 @@
 		</div><!-- container end -->
 	</div>
 
-	<div class="container">
-	  <div class="write_wrap">
-	  <h2 class="sr-only">포트폴리오 글쓰기</h2>
-	  <form name="portfolio" method="post" action="portfolio_insert.do" onsubmit="return check()">
-	  <!-- action을 처리하기전에 check()사용자 함수를 실행하고 되돌아 와라-->
-			<table class="bord_table">
-				<caption class="sr-only">포트폴리오 입력 표</caption>
-				<colgroup>
-					<col width="20%">
-					<col width="*">
-				</colgroup>
-				<tbody>
-					
-					<tr>
-						<th>제목</th>
-						<td><input type="text" name="title"></td>
-					</tr>
-					<tr>
-						<th>내용</th>
-						<td><textarea name="content"></textarea></td>
-					</tr>
-					<tr>
-						<th>첨부</th>
-						<td><input type="file" name="photo"></td>
-					</tr>
-				</tbody>
-			</table>
-			<div class="btn_wrap">
-				<input type="submit" value="저장" class="btn_ok">&nbsp;&nbsp;<input type="reset" value="다시쓰기" class="btn_reset">&nbsp;&nbsp;<input type="button" value="목록" class="btn_list" onClick="location.href='tbl.do?t=port';">
+	<div class="bg_admim">
+		<div class="container">
+			<div class="grap">
+				<form name="admin" method="post" action="">
+					<fieldset>
+						<legend class="sr-only">관리자로그인</legend>
+						<label for="id" class="sr-only">아이디입력</label><input type="text" name="id" placeholder="아이디를 입력하세요" id="id">
+						<label for="pw" class="sr-only">패스워드입력</label><input type="password" name="pw" placeholder="패스워드를 입력하세요" id="pw">
+						<a href="javascript:void(0)" onClick="admin_check();" class="btn_admin">로그인</a>
+					</fieldset>
+				</form>
 			</div>
-		</form>
-	  </div>
-	  
+		</div>
 	</div>
-	<!-- end content -->
-	<script>
-		function check() {
-			
-			if(portfolio.title.value=="") {
-				alert("제목을 입력");
-				portfolio.title.focus();
+	<!-- end contents -->
+	<script type="text/javascript">
+		function admin_check() {
+			if(admin.id.value=="") {
+				alert("아이디입력");
+				admin.id.focus();
 				return false;
 			}
-			if(portfolio.content.value=="") {
-				alert("내용을 입력");
-				portfolio.content.focus();
+			if (admin.pw.value=="") {
+				alert("패스워드입력");
+				admin.pw.focus();
 				return false;
 			}
-			return true;
+			admin.submit();
 		}
 	</script>
+
 	<script>
 		$(function() {
 			$(".location  .dropdown > a").on("click",function(e) {
@@ -225,15 +210,9 @@
 	</script>
 	
 
-<footer class="footer">
-		<div class="container clearfix">
-			<address class="address">
-				<p class="title">본사</p>
-				(우)12345 대전광역시 중구 계룡로 825 (용두동, 희영빌딩) 5층,6층/고객센터: 042-242-4412 	사업자등록번호: 305-86-06709
-			</address>
-			<p class="copyright">Copyright &copy JSL 인재개발원주식회사. All rights reserved.</p>
-		</div>
-</footer>
+	<?php
+		include "footer.html";
+	?>
 
  </body>
 </html>

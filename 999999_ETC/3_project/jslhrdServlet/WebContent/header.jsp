@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>	    
 <!doctype html>
 <html lang="ko">
  <head>
@@ -55,11 +56,16 @@
 			</nav>
 			<nav class="top_right">
 				<ul>
-
-					<li class="first"><a href="login.do">로그인</a></li>
-					<li><a href="memberterms.do">회원가입</a></li>
-					<!--<li class="first"><a href="">로그아웃</a></li>
-					<li><a href="">마이페이지</a></li> -->
+					<c:choose>
+						<c:when test="${not empty id}">
+							<li class="first"><a href="logout.do">로그아웃</a></li>
+							<li><a href="mypage.do">마이페이지</a></li>
+						</c:when>
+						<c:otherwise>
+							<li class="first"><a href="login.do">로그인</a></li>
+							<li><a href="memberterms.do">회원가입</a></li>
+						</c:otherwise>
+					</c:choose>
 				</ul>
 			</nav>
 			
@@ -67,13 +73,13 @@
 				<h1 class="logo">JSL CO</h1>
 				<nav class="gnb">
 					<ul class="nav_1depth">
-						<li><a href="greetings.do">기업소개</a>
+						<li><a href="">기업소개</a>
 							<ul class="nav_2depth">
-								<li><a href="greetings.do">인사말</a></li>
-								<li><a href="history.do">연혁 및 </a></li>
+								<li><a href="">인사말</a></li>
+								<li><a href="">연혁 및 </a></li>
 								<li><a href="">교직원소개</a></li>
 								<li><a href="">대우갤러리</a></li>
-								<li><a href="map.do">찾아오시는길</a></li>
+								<li><a href="">찾아오시는길</a></li>
 							</ul>
 						</li>
 						<li><a href="tbl.do?t=port">포트폴리오</a>
@@ -86,7 +92,7 @@
 								<li><a href="tbl.do?t=notice">공지사항</a></li>
 								<li><a href="tbl.do?t=qa">질문과답변</a></li>
 								<li><a href="tbl.do?t=faq">FAQ</a></li>
-								<li><a href="pds.do">자료실</a></li>
+								<li><a href="">자료실</a></li>
 								<li><a href="admin.do">관리자</a></li>
 							</ul>
 						</li>

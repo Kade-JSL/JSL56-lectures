@@ -14,19 +14,19 @@
 				<li class="dropdown">
 					<a href="">커뮤니티<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="greetings.do">공지사항</a>
-						<a href="allclass.do">학과및모집안내</a>
-						<a href="portfolio.do">포트폴리오</a>
-						<a href="online.do">온라인접수</a>
+						<a href="">공지사항</a>
+						<a href="">학과및모집안내</a>
+						<a href="tbl.do?t=port">포트폴리오</a>
+						<a href="">온라인접수</a>
 						<a href="tbl.do?t=notice">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">공지사항<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="greetings.do">공지사항</a>
-						<a href="greetings.do">DW인터뷰</a>
-						<a href="greetings.do">취업실적</a>
+						<a href="">공지사항</a>
+						<a href="">DW인터뷰</a>
+						<a href="">취업실적</a>
 					</div>
 				</li>
 			</ul>
@@ -105,8 +105,32 @@
 			});
 			$('#summernote').summernote({
 				height : 220,
-				focus : true
+				focus : true,
+				callbacks : {
+					onImageUpload : function(files, editor, welEditable) {
+						for (var i = files.length - 1; i >= 0; i--) {
+							sendFile(files[i], this);
+						}
+					}
+				}
 			});
+
+			function sendFile(file, el) {
+				var form_data = new FormData();
+				form_data.append('file', file);
+				$.ajax({
+					data : form_data,
+					type : "post",
+					url : 'summernote.do',
+					cache : false,
+					contentType : false,
+					encType : 'multipart/form-data',
+					processData : false,
+					success : function(img_name) {
+						$(el).summernote('editor.insertImage', img_name);
+					}
+				})
+			}
 		});
 	</script>
 	

@@ -15,7 +15,7 @@
 				<li class="dropdown">
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="greetings.do">기업소개</a>
+						<a href="">기업소개</a>
 						<a href="tbl.do?t=port">포트폴리오</a>
 					</div>
 				</li>
@@ -59,7 +59,7 @@
 					</span>
 				<div class="text_wrap">
 					<div class="img_wrap">
-						<img src="../upload/${dto.imgurl}" alt="">
+						<a href="view.do?t=${tbltype}&n=${dto.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}"><img src="../upload/${dto.imgurl}" alt=""/></a>
 					</div>
 					<span class="info">
 						<span class="blue_text">No. ${dto.bno}</span>
@@ -67,7 +67,7 @@
 						<i class="fa fa-eye"></i>${dto.viewcount}
 					</span>
 					<p class="title">
-						<a href="view.do?no=${dto.bno}">${dto.title}</a>
+						<a href="view.do?t=${tbltype}&n=${dto.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}">${dto.title}</a>
 					</p>
 					<span class="text">${dto.content}</span>
 				</div>

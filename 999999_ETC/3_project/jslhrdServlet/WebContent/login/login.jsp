@@ -35,29 +35,28 @@
 </div>
 
 <div class="container">
-	<form>
-		<div class="member_boxL">
-        	<h2>개인회원</h2>
-        	<div class="login_form">
-	           	<form name="login" id="frmLogin" method="post" action="login.do">
-	        		<div class="fl_clear">
-	            		<label for="mbrId">아이디</label>
-	            		<input name="mbrId" id="mbrId" type="text">
-	            	</div>
-	            	<div class="fl_clear">
-	            		<label for="scrtNo">비밀번호</label>
-	            		<input name="scrtNo" id="scrtNo" type="password">
-	            	</div>
-	            	<a class="btn_login btn_Blue" href="javascript:fn_login();">로그인</a>
-	            </form>
-       		</div>  
-        </div>
-	</form>
+	<div class="member_boxL">
+       	<h2>개인회원</h2>
+       	<div class="login_form">
+           	<form name="login" id="frmlogin">
+        		<div class="fl_clear">
+            		<label for="mbrId">아이디</label>
+            		<input name="id" id="mbrid" type="text">
+            	</div>
+            	<div class="fl_clear">
+            		<label for="scrtNo">비밀번호</label>
+            		<input name="pw" id="scrtno" type="password">
+            	</div>
+<!-- 				<a class="btn_login btn_Blue" href="javascript:fn_login();">로그인</a> -->
+            	<button class="btn_login btn_Blue" id="btnlogin">로그인</button>
+            </form>
+      		</div>  
+       </div>
 </div>
 <!-- end contents -->
 <script>
 	$(function() {
-		$(".location  .dropdown > a").on("click",function(e) {
+		$(".location .dropdown > a").on("click",function(e) {
 			e.preventDefault();
 			if($(this).next().is(":visible")) {
 				$(".location  .dropdown > a").next().hide();
@@ -66,6 +65,22 @@
 				$(this).next().show();
 			}
 		});
+		
+		var btnlogin = $("#btnlogin");
+		$(btnlogin).on("click", function() {
+			const formElement = $("#frmlogin");
+			formElement.attr("action", "login.do"); // Attribute, 곧 속성
+			formElement.attr("method", "post");
+			formElement.submit();
+		})
 	});
+</script>
+<script>
+// 	function fn_login() {
+// 		var form = document.login;
+// 		form.method = "post";
+// 		form.action = "login.do";
+// 		form.submit();
+// 	}
 </script>
 <%@ include file="../footer.jsp" %>
