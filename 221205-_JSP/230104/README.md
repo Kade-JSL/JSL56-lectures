@@ -4,7 +4,7 @@
 
 - [login.jsp](/221205-_JSP/230104/jslhrdServlet/login.jsp): 회원 로그인 기능 구현
     - 관련 서블릿 구현([LoginServlet.java : /login.do](/221205-_JSP/230104/jslhrdServlet/LoginServlet.java))
-        - `HttpSession` 객체로 로그인 상태를 브라우저(=세션)가 닫힐 때까지 유지시키고 header.jsp에서도 JSTL core 태그로 로그아웃과 마이페이지 메뉴가 뜨도록 구현_(작은 수정이라 링크하지 않음)_
+        - `HttpSession` 객체로 로그인 상태를 브라우저(=세션)가 닫힐 때까지 유지시키고 header.jsp에서도 JSTL core 태그로 로그아웃과 마이페이지 메뉴가 뜨도록 구현 _(작은 수정이라 링크하지 않음)_
     - 로그아웃 기능 구현([LogoutServlet.java : /logout.do](/221205-_JSP/230104/jslhrdServlet/LogoutServlet.java)
         - `HttpSession.removeAttribute()`
         - `HttpSession.invalidate()`
