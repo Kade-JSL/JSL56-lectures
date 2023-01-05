@@ -85,7 +85,7 @@
 							<c:when test="${status.first}">
 							<div class="recently">
 								<p class="title">
-									<a class="title" href="/view.do?t=notice&n=${map.bno}">${map.title}</a>
+									<a class="title" href="/noticeview.do&n=${map.bno}">${map.title}</a>
 									<fmt:parseDate var="regdate" value="${map.regdate}" pattern="yyyy-MM-dd" parseLocale="ko-KR"/>
 									<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
 								</p>
@@ -94,7 +94,7 @@
 							</c:when>
 							<c:otherwise>
 							<li>
-								<a href="/view.do?t=notice&n=${map.bno}">${map.title}</a>
+								<a href="/noticeview.do&n=${map.bno}">${map.title}</a>
 								<span class="date"><fmt:formatDate value="${regdate}" pattern="yyyy-MM-dd"/></span>
 							</li>
 							</c:otherwise>

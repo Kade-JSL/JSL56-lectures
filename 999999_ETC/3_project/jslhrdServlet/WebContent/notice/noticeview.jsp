@@ -18,13 +18,13 @@
 						<a href="">학과및모집안내</a>
 						<a href="list.do?t=port">포트폴리오</a>
 						<a href="">온라인접수</a>
-						<a href="list.do?t=notice">커뮤니티</a>
+						<a href="notice.do">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">질문답변<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="list.do?t=notice">공지사항</a>
+						<a href="notice.do">공지사항</a>
 						<a href="">질문답변</a>
 						<a href="">취업실적</a>
 					</div>
@@ -43,7 +43,7 @@
 			</div>
 			<div class="prev_next">
 				<c:if test="${prev.bno != view.bno}">
-					<a href="/noticeview.do?bno=${prev.bno}&p=${cri.pageNum}&a=${cri.amount}" class="btn_prev">
+					<a href="/view.do?t=${tbltype}&n=${prev.bno}&p=${cri.pageNum}&a=${cri.amount}" class="btn_prev">
 						<i class="fa fa-angle-left"></i>
 						<span class="prev_wrap">
 							<strong>이전글</strong><span>${prev.title}</span>
@@ -51,12 +51,12 @@
 					</a>
 				</c:if>
 				<div class="btn_3wrap">
-					<a href="list.do?t=notice&p=${cri.pageNum}&a=${cri.amount}">목록</a>
+					<a href="notice.do?p=${cri.pageNum}&a=${cri.amount}">목록</a>
 					<a href="noticemodify.do?bno=${view.bno}&p=${cri.pageNum}&a=${cri.amount}">수정</a>
 					<a href="noticedelete.do?bno=${view.bno}&p=${cri.pageNum}&a=${cri.amount}" onClick="return confirm('삭제하시겠어요?')">삭제</a>
 				</div>
 				<c:if test="${next.bno != view.bno}">
-					<a href="/noticeview.do?bno=${next.bno}&p=${cri.pageNum}&a=${cri.amount}" class="btn_next">
+					<a href="/view.do?t=${tbltype}&n=${next.bno}&p=${cri.pageNum}&a=${cri.amount}" class="btn_next">
 						<span class="next_wrap">
 							<strong>다음글</strong><span>${next.title}</span>
 						</span>

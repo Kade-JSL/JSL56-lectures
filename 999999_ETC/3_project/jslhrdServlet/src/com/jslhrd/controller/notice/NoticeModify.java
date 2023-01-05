@@ -13,7 +13,7 @@ import com.jslhrd.dao.NoticeDao;
 import com.jslhrd.dto.NoticeDto;
 import com.jslhrd.utility.Criteria;
 
-@WebServlet("/noticemodify.do")
+@WebServlet("/adm-notice-modify.do")
 public class NoticeModify extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,7 +30,7 @@ public class NoticeModify extends HttpServlet {
 		int a = Integer.parseInt(request.getParameter("a"));
 		request.setAttribute("cri", new Criteria(p, a));
 		request.setAttribute("modify", dto);
-		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeModify.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("adm/notice/noticemodify.jsp");
 		
 		rd.forward(request, response);
 	}
@@ -46,7 +46,7 @@ public class NoticeModify extends HttpServlet {
 		
 		NoticeDao.getInstance().noticeUpdate(dto);
 		
-		String fwd = "/noticeview.do?bno=" + dto.getBno() + "&p=" + request.getParameter("p") + "&a="+ request.getParameter("a");
+		String fwd = "/adm-notice-view.do?n=" + dto.getBno() + "&p=" + request.getParameter("p") + "&a="+ request.getParameter("a");
 		response.sendRedirect(fwd);
 	}
 

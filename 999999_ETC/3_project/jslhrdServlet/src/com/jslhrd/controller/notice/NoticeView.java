@@ -15,7 +15,7 @@ import com.jslhrd.utility.Criteria;
 /**
  * Servlet implementation class NoticeView
  */
-@WebServlet("/noticeview.do")
+@WebServlet(urlPatterns = {"/noticeview.do", "/adm-notice-view.do"})
 public class NoticeView extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -33,7 +33,7 @@ public class NoticeView extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
-		int bno = Integer.parseInt(request.getParameter("bno"));
+		int bno = Integer.parseInt(request.getParameter("n"));
 		
 		NoticeDao dao = NoticeDao.getInstance();
 		dao.viewCount(bno);
@@ -47,7 +47,17 @@ public class NoticeView extends HttpServlet {
 		request.setAttribute("prev", dao.prevBno(bno));
 		request.setAttribute("view", dao.selectBno(bno));
 		request.setAttribute("next", dao.nextBno(bno));
-		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeview.jsp");
+		
+		String command = request.getServletPath();
+		String path = "/main.do";
+		
+		if (command.equals("/noticeview.do")) {
+			path = "/notice/noticeview.jsp";
+		} else if (command.equals("/adm-notice-view.do")) {
+			path = "/adm/notice/noticeview.jsp";
+		}
+		
+		RequestDispatcher rd = request.getRequestDispatcher(path);
 		rd.forward(request, response);
 	}
 

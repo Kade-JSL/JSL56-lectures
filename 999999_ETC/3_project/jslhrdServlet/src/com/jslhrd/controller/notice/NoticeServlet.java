@@ -13,7 +13,7 @@ import com.jslhrd.dao.NoticeDao;
 import com.jslhrd.utility.Criteria;
 import com.jslhrd.utility.PageDto;
 
-@WebServlet("/notice.do")
+@WebServlet(urlPatterns = {"/notice.do", "/adm-notice.do"})
 public class NoticeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -53,7 +53,15 @@ public class NoticeServlet extends HttpServlet {
 		// request.setAttribute("noticelist", dao.getListWithPaging(cri));
 		request.setAttribute("noticelist", dao.searchNoticePageMap(cri));
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/notice/notice.jsp");
+		String command = request.getServletPath();
+		String path = "/main.do";
+		
+		if (command.equals("/notice.do")) {
+			path = "/notice/notice.jsp";
+		} else if (command.equals("/adm-notice.do")) {
+			path = "/adm/notice/notice.jsp";
+		}
+		RequestDispatcher rd = request.getRequestDispatcher(path);
 		rd.forward(request, response);
 	}
 

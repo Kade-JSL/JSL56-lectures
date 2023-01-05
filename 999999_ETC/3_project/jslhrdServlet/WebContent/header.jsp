@@ -87,9 +87,9 @@
 								<li><a href="list.do?t=port">포트폴리오</a></li>
 							</ul>
 						</li>
-						<li><a href="list.do?t=notice">커뮤니티</a>
+						<li><a href="notice.do">커뮤니티</a>
 							<ul class="nav_2depth">
-								<li><a href="list.do?t=notice">공지사항</a></li>
+								<li><a href="notice.do">공지사항</a></li>
 								<li><a href="list.do?t=qa">질문과답변</a></li>
 								<li><a href="list.do?t=faq">FAQ</a></li>
 								<li><a href="">자료실</a></li>

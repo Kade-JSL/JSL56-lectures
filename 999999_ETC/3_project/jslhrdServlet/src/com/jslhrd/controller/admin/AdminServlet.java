@@ -32,6 +32,7 @@ public class AdminServlet extends HttpServlet {
 			case 1:
 				HttpSession session = request.getSession();
 				session.setAttribute("id", "admin");
+				session.setAttribute("admin", true);
 				request.getRequestDispatcher("/adm/adminmain.jsp").forward(request, response);
 				break;
 			case 0:	case -1:

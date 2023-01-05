@@ -16,7 +16,7 @@
 					<div class="dropdown_menu">
 						<a href="../about/">기업소개</a>
 						<a href="../portfolio/list.do?t=port">포트폴리오</a>
-						<a href="../notice/list.do?t=notice">커뮤니티</a>
+						<a href="../notice/notice.do">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">

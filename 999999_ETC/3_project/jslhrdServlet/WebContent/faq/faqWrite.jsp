@@ -18,13 +18,13 @@
 						<a href="">학과및모집안내</a>
 						<a href="list.do?t=port">포트폴리오</a>
 						<a href="">온라인접수</a>
-						<a href="list.do?t=notice">커뮤니티</a>
+						<a href="notice.do">커뮤니티</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">자주하는질문<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="list.do?t=notice">공지사항</a>
+						<a href="notice.do">공지사항</a>
 						<a href="qa.do">질문과답변</a>
 						<a href="faq.do">자주하는질문</a>
 					</div>

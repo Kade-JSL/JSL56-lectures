@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jslhrd.dao.PortfolioDao;
 import com.jslhrd.dto.PortfolioDto;
-import com.oreilly.servlet.MultipartRequest;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @WebServlet("/portwrite.do")
 public class PortfolioWrite extends HttpServlet {

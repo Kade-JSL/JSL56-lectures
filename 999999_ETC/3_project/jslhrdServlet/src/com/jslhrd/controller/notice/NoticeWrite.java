@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.jslhrd.dao.NoticeDao;
 import com.jslhrd.dto.NoticeDto;
 
-@WebServlet("/noticewrite.do")
+@WebServlet("/adm-notice-write.do")
 public class NoticeWrite extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -22,7 +22,7 @@ public class NoticeWrite extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/notice/noticeWrite.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/adm/notice/noticewrite.jsp");
 		rd.forward(request, response);
 	}
 
@@ -38,7 +38,7 @@ public class NoticeWrite extends HttpServlet {
 		NoticeDao dao = NoticeDao.getInstance();
 		dao.noticeInsert(dto);
 		
-		response.sendRedirect("list.do?t=notice");
+		response.sendRedirect("adm-notice.do");
 	}
 
 }

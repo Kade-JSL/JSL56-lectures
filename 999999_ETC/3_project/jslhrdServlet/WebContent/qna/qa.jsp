@@ -23,7 +23,7 @@
 			<li class="dropdown">
 				<a href="">질문과답변<i class="fa fa-plus btn_plus"></i></a>
 				<div class="dropdown_menu">
-					<a href="list.do?t=notice">공지사항</a>
+					<a href="notice.do">공지사항</a>
 					<a href="list.do?t=qa">질문과답변</a>
 					<a href="list.do?t=faq">취업실적</a>
 				</div>
