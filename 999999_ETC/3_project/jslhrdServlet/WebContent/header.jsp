@@ -82,9 +82,9 @@
 								<li><a href="">기어오시는길</a></li>
 							</ul>
 						</li>
-						<li><a href="list.do?t=port">포트폴리오</a>
+						<li><a href="portfolio.do">포트폴리오</a>
 							<ul class="nav_2depth">
-								<li><a href="list.do?t=port">포트폴리오</a></li>
+								<li><a href="portfolio.do">포트폴리오</a></li>
 							</ul>
 						</li>
 						<li><a href="notice.do">커뮤니티</a>

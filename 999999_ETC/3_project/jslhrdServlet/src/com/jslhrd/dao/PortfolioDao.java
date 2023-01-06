@@ -59,6 +59,7 @@ public class PortfolioDao {
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
 				map = new HashMap<String, Object>();
+				map.put("bno", rs.getInt("BNO"));
 				map.put("title", rs.getString("TITLE"));
 				map.put("writer", rs.getString("WRITER"));
 				map.put("regdate", rs.getString("REGDATE"));
@@ -94,7 +95,7 @@ public class PortfolioDao {
 				dto = new PortfolioDto();
 				dto.setBno(rs.getInt("BNO"));
 				dto.setTitle(rs.getString("TITLE"));
-				dto.setContent(rs.getString("CONTENT"));
+				dto.setContent(rs.getString("CONTENT").replaceAll("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>", ""));
 				dto.setImgurl(rs.getString("IMGURL"));
 				dto.setRegdate(rs.getString("REGDATE"));
 				dto.setViewcount(rs.getInt("VIEWCOUNT"));
@@ -110,6 +111,36 @@ public class PortfolioDao {
 		return list;
 	}
 	
+	public void updatePort(Map<String, Object> map) {
+		conn = dbm.getConnection();
+		
+		String ddtnl = "";
+		String imgurl = (String) map.get("imgurl");
+		boolean isUrlExists = imgurl.equals("");
+		if(!isUrlExists) { ddtnl = ", IMGURL = '" + imgurl + "' ";}
+		
+		String sql = "UPDATE PORTFOLIO SET "
+				+ "TITLE = ?, CONTENT = ? " + ddtnl
+				+ "WHERE BNO = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, (String) map.get("title"));
+			pstmt.setString(2, (String) map.get("content"));
+			pstmt.setInt(3, (int) map.get("bno"));
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbm.close(conn, pstmt);
+		}
+	}
+	
+	public void deletePort(int bno) {
+		
+	}
+	
+	/* utility methods */
 	public int portCount() {
 		conn = dbm.getConnection();
 		

@@ -9,29 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.jslhrd.controller.notice.SummerNoteServlet;
 import com.jslhrd.dao.PortfolioDao;
 import com.jslhrd.dto.PortfolioDto;
 
-@WebServlet("/portwrite.do")
+@WebServlet("/adm-port-write.do")
 public class PortfolioWrite extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     public PortfolioWrite() {
         super();
     }
-    
-    private static String imgurl = null;
-    public static String getImgurl() { return imgurl; }
-    public static void setImgurl(String url) { imgurl = url; }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String url = "/portfolio/write.jsp";
-		if (request.getParameter("tbl") != null) {
-			if (request.getParameter("tbl").equals("qa")) {
-				url = "/qna/qawrite.jsp";
-			}
-		}
+		String url = "/adm/port/portwrite.jsp";
 		RequestDispatcher rd = request.getRequestDispatcher(url);
 		rd.forward(request, response);
 	}
@@ -43,7 +34,7 @@ public class PortfolioWrite extends HttpServlet {
 		
 		dto.setTitle(request.getParameter("title"));
 		dto.setContent(request.getParameter("content"));
-		dto.setImgurl(imgurl);
+		dto.setImgurl(SummerNoteServlet.getImgurl());
 //				
 //		String realPath = getServletContext().getRealPath("/upload");
 //		System.out.println(realPath);
@@ -63,9 +54,9 @@ public class PortfolioWrite extends HttpServlet {
 //		dto.setImgurl(mr.getFilesystemName("imgurl"));
 		
 		PortfolioDao.getInstance().insertPort(dto);
-		imgurl = null;
+		SummerNoteServlet.setImgurl("");
 		
-		response.sendRedirect("list.do?t=port");
+		response.sendRedirect("portfolio.do");
 	}
 
 }

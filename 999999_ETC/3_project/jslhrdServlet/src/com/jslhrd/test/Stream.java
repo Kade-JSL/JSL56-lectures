@@ -30,5 +30,6 @@ public class Stream {
 				System.out.print(Character.toChars(buffer[i]));
 			}
 		}
+		in.close();
 	}
 }

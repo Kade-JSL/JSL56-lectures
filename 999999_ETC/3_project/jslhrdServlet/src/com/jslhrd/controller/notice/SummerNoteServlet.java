@@ -21,7 +21,7 @@ public class SummerNoteServlet extends HttpServlet {
         super();
     }
 
-    private static String imgurl = null;
+    private static String imgurl = "";
     public static String getImgurl() { return imgurl; }
     public static void setImgurl(String i) { imgurl = i; }
 

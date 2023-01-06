@@ -26,7 +26,7 @@
 		<p class="sub_tit">웹노가다의 즐거움이 있는 곳</p>
 		<h2>JSL SYSTEM 소식</h2>
 		<p class="text">JSL시스템의 다양한 소식을 확인하실 수 있습니다</p>
-		<a href="list.do?t=port" class="btn-border">GET REKT</a>
+		<a href="portfolio.do" class="btn-border">GET REKT</a>
 	</div>
 	<ul class="news_list">
 		<c:forEach var="map" items="${portlist}">

@@ -16,13 +16,13 @@
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
 						<a href="">기업소개</a>
-						<a href="list.do?t=port">포트폴리오</a>
+						<a href="portfolio.do">포트폴리오</a>
 					</div>
 				</li>
 				<li class="dropdown">
 					<a href="">포트폴리오<i class="fa fa-plus btn_plus"></i></a>
 					<div class="dropdown_menu">
-						<a href="list.do?t=port">포트폴리오</a>
+						<a href="portfolio.do">포트폴리오</a>
 					</div>
 				</li>
 			</ul>
@@ -59,7 +59,7 @@
 					</span>
 				<div class="text_wrap">
 					<div class="img_wrap">
-						<a href="view.do?t=${tbltype}&n=${dto.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}"><img src="../upload/${dto.imgurl}" alt=""/></a>
+						<a href="portview.do?n=${dto.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}"><img src="../upload/${dto.imgurl}" alt=""/></a>
 					</div>
 					<span class="info">
 						<span class="blue_text">No. ${dto.bno}</span>
@@ -67,7 +67,7 @@
 						<i class="fa fa-eye"></i>${dto.viewcount}
 					</span>
 					<p class="title">
-						<a href="view.do?t=${tbltype}&n=${dto.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}">${dto.title}</a>
+						<a href="portview.do?n=${dto.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}">${dto.title}</a>
 					</p>
 					<span class="text">${dto.content}</span>
 				</div>
@@ -75,7 +75,18 @@
 			</c:forEach>
 		</ul>
 		<!-- paging -->
-		<%@ include file="../paging.jsp" %>
+		<div class="paging">
+			<c:if test="${pagemaker.prev}">
+				<a href="portfolio.do?p=${pagemaker.startPage - 1}&a=${pagemaker.cri.amount}">
+				<i class="fa fa-angle-double-left"></i></a>
+			</c:if>
+			<c:forEach var="pages" begin="${pagemaker.startPage}" end="${pagemaker.endPage}">
+				<a href="portfolio.do?p=${pages}&a=${pagemaker.cri.amount}" class="${pagemaker.cri.pageNum == pages ? 'active':''}">${pages}</a>
+			</c:forEach>
+			<c:if test="${pagemaker.next}">
+				<a href="portfolio.do&p=${pagemaker.endPage + 1}&a=${pagemaker.cri.amount}"><i class="fa fa-angle-double-right"></i></a>
+			</c:if>
+		</div>
 	  </div>
 	</div>
 	<!-- end content -->

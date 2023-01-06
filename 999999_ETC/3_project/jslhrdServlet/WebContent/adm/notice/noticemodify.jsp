@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../admheader.jsp"%>
 
-<form name="notice" method="post" action="adm-notice-modify.do" onsubmit="return check()">
+<form name="notice" method="post" action="adm-port-mod.do" onsubmit="return check()">
 	<input type="hidden" name="bno" value="${modify.bno}"/>
 	<input type="hidden" name="p" value="${cri.pageNum}"/>
 	<input type="hidden" name="a" value="${cri.amount}"/>
@@ -19,7 +19,6 @@
 				<th>내용</th>
 				<td><textarea name="content" id="summernote">${modify.content}</textarea></td>
 			</tr>
-		</tbody>
 	</table>
 	<div class="btn_wrap">
 		<input type="submit" value="저장" class="btn_ok">&nbsp;&nbsp;
@@ -27,66 +26,66 @@
 		<input type="button" value="목록" class="btn_list" onClick="location.href='adm-notice.do&;">
 	</div>
 </form>
-	<script>
-		function check() {
-			if(notice.writer.value=="") {
-				alert("글쓴이 입력");
-				notice.writer.focus();
-				return false;
-			}
-			if(notice.title.value=="") {
-				alert("제목을 입력");
-				notice.title.focus();
-				return false;
-			}
-			if(notice.content.value=="") {
-				alert("내용을 입력");
-				notice.content.focus();
-				return false;
-			}
-			return true;
+<script>
+	function check() {
+		if(notice.writer.value=="") {
+			alert("글쓴이 입력");
+			notice.writer.focus();
+			return false;
 		}
-	</script>
-	<script>
-		$(function() {
-			$(".location  .dropdown > a").on("click",function(e) {
-				e.preventDefault();
-				if($(this).next().is(":visible")) {
-					$(".location  .dropdown > a").next().hide();
-				} else {
-					$(".location  .dropdown > a").next().hide();
-					$(this).next().show();
-				}
-			});
-			$('#summernote').summernote({
-				height : 220,
-				focus : true,
-				callbacks : {
-					onImageUpload : function(files, editor, welEditable) {
-						for (var i = files.length - 1; i >= 0; i--) {
-							sendFile(files[i], this);
-						}
-					}
-				}
-			});
-
-			function sendFile(file, el) {
-				var form_data = new FormData();
-				form_data.append('file', file);
-				$.ajax({
-					data : form_data,
-					type : "post",
-					url : 'summernote.do',
-					cache : false,
-					contentType : false,
-					encType : 'multipart/form-data',
-					processData : false,
-					success : function(img_name) {
-						$(el).summernote('editor.insertImage', img_name);
-					}
-				})
+		if(notice.title.value=="") {
+			alert("제목을 입력");
+			notice.title.focus();
+			return false;
+		}
+		if(notice.content.value=="") {
+			alert("내용을 입력");
+			notice.content.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+<script>
+	$(function() {
+		$(".location  .dropdown > a").on("click",function(e) {
+			e.preventDefault();
+			if($(this).next().is(":visible")) {
+				$(".location  .dropdown > a").next().hide();
+			} else {
+				$(".location  .dropdown > a").next().hide();
+				$(this).next().show();
 			}
 		});
-	</script>
+		$('#summernote').summernote({
+			height : 220,
+			focus : true,
+			callbacks : {
+				onImageUpload : function(files, editor, welEditable) {
+					for (var i = files.length - 1; i >= 0; i--) {
+						sendFile(files[i], this);
+					}
+				}
+			}
+		});
+
+		function sendFile(file, el) {
+			var form_data = new FormData();
+			form_data.append('file', file);
+			$.ajax({
+				data : form_data,
+				type : "post",
+				url : 'summernote.do',
+				cache : false,
+				contentType : false,
+				encType : 'multipart/form-data',
+				processData : false,
+				success : function(img_name) {
+					$(el).summernote('editor.insertImage', img_name);
+				}
+			})
+		}
+	});
+</script>
 	
 <%@ include file="../admfooter.jsp" %>

@@ -2,6 +2,10 @@
 
 # 이날 배웠던 것
 
+<https://github.com/Kade-JSL/JSL56-lectures/releases/tag/0.1.1-web>
+
+- 위의 링크를 참고해 주세요.
+
 ---
 
 ## 입출력 스트림

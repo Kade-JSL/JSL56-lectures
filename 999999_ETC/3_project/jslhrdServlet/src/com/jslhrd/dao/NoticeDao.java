@@ -39,7 +39,7 @@ public class NoticeDao {
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, dto.getTitle());
-			pstmt.setString(2, dto.getContent());
+			pstmt.setString(2, dto.getContent().replace("src=upload", "src=/upload"));
 			pstmt.setString(3, dto.getWriter());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {

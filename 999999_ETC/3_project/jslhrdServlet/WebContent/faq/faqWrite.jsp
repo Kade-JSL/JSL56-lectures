@@ -16,7 +16,7 @@
 					<div class="dropdown_menu">
 						<a href="">공지사항</a>
 						<a href="">학과및모집안내</a>
-						<a href="list.do?t=port">포트폴리오</a>
+						<a href="portfolio.do">포트폴리오</a>
 						<a href="">온라인접수</a>
 						<a href="notice.do">커뮤니티</a>
 					</div>

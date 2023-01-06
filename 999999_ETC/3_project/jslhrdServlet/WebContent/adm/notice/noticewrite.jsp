@@ -30,7 +30,7 @@
 			<div class="btn_wrap">
 				<input type="submit" value="저장" class="btn_ok cur">&nbsp;&nbsp;
 				<input type="reset" value="다시쓰기" class="btn_reset cur">&nbsp;&nbsp;
-				<input type="button" value="목록" class="btn_list cur" onClick="location.href='notice.do';">
+				<input type="button" value="목록" class="btn_list cur" onClick="location.href='adm-notice.do';">
 			</div>
 		</form>
 	</div>

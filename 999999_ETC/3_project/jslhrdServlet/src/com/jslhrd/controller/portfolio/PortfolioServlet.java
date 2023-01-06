@@ -15,7 +15,7 @@ import com.jslhrd.dto.PortfolioDto;
 import com.jslhrd.utility.Criteria;
 import com.jslhrd.utility.PageDto;
 
-@WebServlet("/list.do?t=port")
+@WebServlet(urlPatterns = { "/portfolio.do", "/adm-port.do" })
 public class PortfolioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -23,8 +23,7 @@ public class PortfolioServlet extends HttpServlet {
 		super();
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PortfolioDao pageDao = PortfolioDao.getInstance();
 		int pageNum = 1, amount = 5;
 		if (request.getParameter("p") != null) {
@@ -40,12 +39,17 @@ public class PortfolioServlet extends HttpServlet {
 
 		request.setAttribute("pagemaker", pageDto);
 		request.setAttribute("list", tblList);
-		RequestDispatcher rd = request.getRequestDispatcher("/portfolio/portfolio.jsp");
+		String command = request.getServletPath(), path = "";
+		if (command.equals("/portfolio.do")) {
+			path = "/portfolio/portfolio.jsp";
+		} else if (command.equals("/adm-port.do")) {
+			path = "/adm/port/port.jsp";
+		}
+		RequestDispatcher rd = request.getRequestDispatcher(path);
 		rd.forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
 
