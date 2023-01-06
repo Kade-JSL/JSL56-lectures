@@ -39,7 +39,7 @@
 ## 출력 스트림 실습
 
 ```java
-OutputStream out = new FileOutputStream(".../221205-_JSP/230106");
+OutputStream out = new FileOutputStream(".../221205-_JSP/230106/hello.txt");
 // 출력할 파일을 생성자에 넣어 출력 스트림 객체를 생성
 
 byte[] array = new byte[] { 'H', 'e', 'l', 'l', 'o', ',', ' ', 'W', 'o', 'r', 'l', 'd', '!' };
