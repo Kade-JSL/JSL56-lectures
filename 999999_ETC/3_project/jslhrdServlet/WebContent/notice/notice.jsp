@@ -77,7 +77,7 @@
 					<tr>
 						<td>${num}</td>
 						<td class="title"><a
-							href="view.do?t=${tbltype}&n=${notice.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}">${notice.title}</a></td>
+							href="noticeview.do?n=${notice.bno}&p=${pagemaker.cri.pageNum}&a=${pagemaker.cri.amount}">${notice.title}</a></td>
 						<td>${notice.writer}</td>
 						<td>${notice.regdate}</td>
 						<td>${notice.viewcount}</td>
