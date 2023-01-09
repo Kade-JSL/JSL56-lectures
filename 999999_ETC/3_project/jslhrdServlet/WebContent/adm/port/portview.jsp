@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../admheader.jsp"%>
-    
+
+<aside id="port" class="adm-right">
 <!-- sub content -->
 	<div class="container">
 		<div class="board_view">
@@ -33,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-
+</aside>
 	<!-- end content -->
 	
 	<script>

@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../admheader.jsp"%>
 
+<aside id="port" class="adm-right">
 	  <div class="write_wrap">
 	  <h2 class="sr-only">포트폴리오 글쓰기</h2>
 	  <form name="portfolio" method="post" action="adm-port-write.do" onsubmit="return check();">
@@ -32,7 +33,7 @@
 			</div>
 		</form>
 	  </div>
-	  
+	  </aside>
 	<!-- end content -->
 	<script>
 		function check() {

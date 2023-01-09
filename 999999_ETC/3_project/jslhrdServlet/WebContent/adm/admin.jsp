@@ -41,8 +41,8 @@
 				<form name="admin" method="post" action="admin.do">
 					<fieldset>
 						<legend class="sr-only">관리자로그인</legend>
-						<label for="id" class="sr-only">아이디입력</label><input type="text" name="id" placeholder="아이디를 입력하세요" id="id">
-						<label for="pw" class="sr-only">패스워드입력</label><input type="password" name="pw" placeholder="패스워드를 입력하세요" id="pw">
+						<label for="id" class="sr-only">아이디입력</label><input type="text" id="id" name="id" placeholder="아이디를 입력하세요" id="id">
+						<label for="pw" class="sr-only">패스워드입력</label><input type="password" id="pw" name="pw" placeholder="패스워드를 입력하세요" id="pw">
 						<a href="javascript:void(0)" onClick="admin_check();" class="btn_admin">로그인</a>
 					</fieldset>
 				</form>
@@ -77,6 +77,12 @@
 					$(this).next().show();
 				}
 			});
+			$("#id, #pw").on("keydown", function(e) {
+				if (e.code == "Enter") {
+					$(".btn_admin").click();
+				}
+			})
+			
 		});
 	</script>
 

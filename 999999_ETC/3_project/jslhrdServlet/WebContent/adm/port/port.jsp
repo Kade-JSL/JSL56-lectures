@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../admheader.jsp"%>
 
+<aside id="port" class="adm-right">
 <div class="container">
   <div class="search_wrap">
 	<div class="record_group">
@@ -63,5 +64,6 @@
 	  </div>
 	</div>
 	<!-- end content -->
+	</aside>
 
 <%@ include file="../admfooter.jsp"%>

@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../admheader.jsp"%>
 
+<aside id="port" class="adm-right">
 	<div class="write_wrap">
 		<h2 class="sr-only">공지사항 글쓰기</h2>
 		<form name="notice" method="post" action="adm-notice-write.do" onsubmit="return check()">
@@ -35,6 +36,7 @@
 		</form>
 	</div>
 <!-- end content -->
+</aside>
 <script>
 	function check() {
 		if (notice.writer.value == "") {

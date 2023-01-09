@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../admheader.jsp"%>
 
+<aside id="port" class="adm-right">
 <form name="portfolio" method="post" action="adm-port-mod.do" onsubmit="return check()">
 	<input type="hidden" name="bno" value="${modify.bno}"/>
 	<input type="hidden" name="p" value="${cri.pageNum}"/>
@@ -26,6 +27,7 @@
 		<input type="button" value="목록" class="btn_list" onClick="location.href='adm-notice.do?p=${cri.pageNum}&a=${cri.amount}';">
 	</div>
 </form>
+</aside>
 	<script>
 		function check() {
 			if(portfolio.writer.value=="") {

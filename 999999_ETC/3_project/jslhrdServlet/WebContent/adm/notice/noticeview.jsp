@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../admheader.jsp"%>
 
+<aside id="port" class="adm-right">
 <div class="board_view">
 	<h2>${view.title}</h2>
 	<p class="info"><span class="user">${view.writer}</span> | ${view.regdate} | <i class="fa fa-eye"></i> ${view.viewcount}</p>
@@ -32,5 +33,6 @@
 		</c:if>
 	</div>
 </div>
+</aside>
 
 <%@ include file="../admfooter.jsp" %>
