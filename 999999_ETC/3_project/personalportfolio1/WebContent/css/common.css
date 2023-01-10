@@ -26,6 +26,10 @@
     border-bottom: 1px solid #000;
 }
 
+.navbar-brand {
+	font-weight: 600;
+}
+
 .carousel-inner .item img {
 	width: 100%;
 	height: fit-content;
@@ -40,7 +44,42 @@
 	padding: 30px 0;
 }
 
+.pd60 {
+	padding: 60px 0;
+}
+
 .footer {
 	background: #333;
 	color: #ccc;
+}
+
+/* pieces styles */
+
+.pieces .img {
+	background: url(../images/c1.jpg) no-repeat center center;
+	background-size: cover;
+	display: block;
+	height: 300px;
+}
+
+.pieces .text .authorimg {
+	background: url(../images/t1.jpg) no-repeat center center;
+	background-size: cover;
+	display: block;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.search {
+	display: inline;
+	border: 1px solid #ccc;
+	width: 60%;
+}
+
+.btn-success {
+	display: inline;
+}
+
+.btn-success:after {
+	display: block;
 }
