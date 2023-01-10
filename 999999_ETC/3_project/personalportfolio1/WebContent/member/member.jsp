@@ -72,67 +72,56 @@
 			</nav><!-- /.navbar --> 
 		</div><!-- /.container -->
 	</header>
-
+	
 	<!-- content start -->
-	<div class="container pd60">
-
-		<div class="row">
-			<div class="col-md-3">
-				<h2>作品検索</h2>
-				<form action="search.do">
-					<input type="text" name="keyword" class="form-control search" placeholder="検索…"/>
-					<button type="button" class="btn btn-success">入力</button>
+	
+	<div class="row">
+		<div class="col-md-3">
+			<h2>作品検索</h2>
+			<form action="search.do">
+				<input type="text" name="keyword" class="form-control search" placeholder="検索…"/>
+				<button type="button" class="btn btn-success">入力</button>
+			</form>
+		</div>
+		<div class="col-md-9">
+			<div class="col-md-12 pd30">
+				<h2 class="text-center">会員登録</h2>
+				<form class="form-horizontal" name="login" method="post" enctype="multipart/form-data" action="return check()">
+				  <div class="form-group">
+				    <label for="id" class="col-sm-2 control-label">Username</label>
+				    <div class="col-sm-10">
+				      <input type="text" name="id" class="form-control" id="id" placeholder="ユーザー名">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="pw1" class="col-sm-2 control-label">Password</label>
+				    <div class="col-sm-10">
+				      <input type="password" name="pw1" class="form-control" id="pw1" placeholder="暗証番号">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="pw2" class="col-sm-2 control-label">Confirm</label>
+				    <div class="col-sm-10">
+				      <input type="password" name="pw2" class="form-control" id="pw1" placeholder="暗証番号をもう一度入力してください。">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="email" class="col-sm-2 control-label">Email</label>
+				    <div class="col-sm-10">
+				      <input type="email" class="form-control" id="email" placeholder="メールアドレス" style="width:70%; display:inline;">
+				      <button type="button" class="btn btn-default" style="display:inline;">認証メール発送</button>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				      <button type="submit" class="btn btn-default">会員登録</button>
+				    </div>
+				  </div>
 				</form>
 			</div>
-
-			<div class="col-md-9">
-				<div class="col-md-12 pieces pd30">
-					<div class="col-md-12 text">
-						<img src="../images/c1.jpg" alt="" style="width:100%;"/>
-						<h2>白いクジラ</h2>
-						<p>大清湖が渇いた。ある者は海が渇いてしまったという。水どころか、燃やす薪もない。</p>
-						<p>어디가 어느 산인지, 구별할 수 없다.<br>주위를 둘러보면 사방이 전부 산이다. 애초에 사방에 있는 것이 애초에 산인 건지, 아니면 그냥 회색 아마포를 덮은 </p>
-					</div>
-					<h2 style="padding:20px 0;">コメント</h2>
-					<div class="col-md-2">
-						<a href="" class="authorimg"></a>
-					</div>
-					<div class="col-md-10">
-						<p>所恵美</p>
-						<p>2023.01.10</p>
-						<p>すごいね！</p>
-					</div>
-					<div class="col-md-2">
-						<a href="" class="authorimg"></a>
-					</div>
-					<div class="col-md-10">
-						<p>所恵美</p>
-						<p>2023.01.10</p>
-						<p>すごいね！</p>
-					</div>
-					<div class="col-md-2">
-						<a href="" class="authorimg"></a>
-					</div>
-					<div class="col-md-10">
-						<p>所恵美</p>
-						<p>2023.01.10</p>
-						<p>이거 코딩은 ajax로 할 것</p>
-					</div>
-					<p class="text-center"><button type="button" class="btn btn-success">作品リスト</button></p>
-					<div class="col-md-12">
-						<h3>コメント作成</h3>
-						<form>
-							<textarea name="comment" style="width: 100%; height: 200px; border: 1px solid #ccc; padding: 16px;"></textarea>
-							<p style="padding:16px 0;">
-								<button type="button" class="btn btn-success">ポスト</button>
-							</p>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div><!-- /.row (1st) -->
-
+		</div>
 	</div>
+	
 	<!-- content end -->
 	
 	<footer class="main-bottom container-fluid footer" style="margin-top:40px;">
