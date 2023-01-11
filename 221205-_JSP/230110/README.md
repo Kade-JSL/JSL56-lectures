@@ -107,6 +107,11 @@
 ## 15. 데이터 조작어(DML)의 종류
 
 1. INSERT 명령어를 사용하는 방법
+    - INSERT INTO [테이블명] (컬럼명...) VALUES (세팅값)
+1. UPDATE
+    - UPDATE [테이블명] SET [컬럼명]=[세팅값] WHERE [조건]
+1. DELETE
+    - DELETE FROM [테이블명] WHERE [조건]
 
 ## 16. 데이터 제어어(DCL) 사용
 
