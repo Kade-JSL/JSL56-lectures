@@ -1,45 +1,69 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<!doctype html>
-<html>
+<%@ include file="/header.jsp" %>
+		<ul class="list-unstyled">
+			<li class="menu col-md-12 col-sm-3 col-xs-4"><a href="pieces.do?where=0">はじめる</a></li>
+			<c:choose>
+				<c:when test="${not empty user}">
+				<li class="menu col-md-12 col-sm-3 col-xs-4">
+					<a href="pieces.do?where=${user.lastread}">続きから</a>
+				</li>
+				</c:when>
+				<c:otherwise>
+				<li class="inactive menu col-md-12 col-sm-3 col-xs-4">続きから</li>
+				</c:otherwise>
+			</c:choose>
+			<li class="menu col-md-12 col-sm-3 col-xs-4">
+				<a href="outer-pieces.do${user.yourpieces}">あなたの</a>
+			</li>
+			<li class="menu col-md-12 col-sm-3 col-xs-4">
+				<a href="notice.do">おしらせ</a>
+			</li>
+			<li class="menu col-md-12 col-sm-3 col-xs-4">
+				<a href="signup.do">とうろく</a>
+			</li>
+		</ul>
+	</header><!-- sidebar end -->
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ブログ</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/common.css" rel="stylesheet" />
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-</head>
-
-<body style="font-family: 'Pretendard Variable';">
-	<header>
-
-	</header>
-
-	<section>
-		<p>
-			${msg}
-		</p>
-	</section>
-	<footer class="main-bottom container-fluid footer" style="margin-top:40px;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<h2>ポートフォリオ</h2>
-				</div>
-				<div class="col-md-8 pd30">
-					<p>&copy; Kyuhyun Shim, all rights reserved.</p>
-				</div>
-			</div>
+	<section class="col-md-9 pd30">
+		<div class="col-md-9">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th colspan="2"><a href="pieces.do" class="bolder px24">私の最新作品</a></th>
+					</tr>
+					<tr>
+						<td class="col-md-9 col-xs-9"><a href="">白いクジラ(72)</a></td>
+						<td class="col-md-3 col-xs-3"><a href="">2072-07-02</a></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-	</footer>
-</body>
-</html>
+		<div class="col-md-9">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th colspan="2"><a href="outer-pieces.do" class="bolder px24">ユーザー作品</a></th>
+					</tr>
+					<tr>
+						<td class="col-md-9 col-xs-9"><a href="">白いクジラ(72)</a></td>
+						<td class="col-md-3 col-xs-9"><a href="">2072-07-02</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-9">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th colspan="2"><a href="notice.do" class="bolder px24">雑談・お知らせ</a></th>
+					</tr>
+					<tr>
+						<td class="col-md-9 col-xs-9"><a href="">白いクジラ(72)</a></td>
+						<td class="col-md-3 col-xs-9"><a href="">2072-07-02</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+</div> <!-- row end -->
+<%@ include file="../footer.jsp"%>
