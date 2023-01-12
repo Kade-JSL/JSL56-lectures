@@ -13,7 +13,7 @@
 				</c:otherwise>
 			</c:choose>
 			<li class="menu col-md-12 col-sm-3 col-xs-4">
-				<a href="outer-pieces.do${user.yourpieces}">あなたの</a>
+				<a href="outer-pieces.do${user.outerpiece}">あなたの</a>
 			</li>
 			<li class="menu col-md-12 col-sm-3 col-xs-4">
 				<a href="notice.do">おしらせ</a>
@@ -25,7 +25,7 @@
 	</header><!-- sidebar end -->
 
 	<section class="col-md-9 pd30">
-		<div class="col-md-9">
+		<div class="col-md-8">
 			<table class="table">
 				<tbody>
 					<tr>
@@ -38,7 +38,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-8">
 			<table class="table">
 				<tbody>
 					<tr>
@@ -51,7 +51,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-8">
 			<table class="table">
 				<tbody>
 					<tr>
@@ -64,6 +64,7 @@
 				</tbody>
 			</table>
 		</div>
+		${msg}
 	</section>
 </div> <!-- row end -->
 <%@ include file="../footer.jsp"%>

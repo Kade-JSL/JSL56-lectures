@@ -20,6 +20,9 @@ a, a:active, a:hover, a:focus { color: #333; text-decoration: none; }
 
 .menu { font-size: 24px; }
 
+@media(min-width:768px) {
+	.form-horizontal .control-label { text-align: left; }
+}
 /* footer.jsp */
 
 .footer { background-color: #ccc; margin-top: 60px; }
